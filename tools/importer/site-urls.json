@@ -1,0 +1,122 @@
+{
+  "originUrl": "https://www.ibrance.co.nz",
+  "lastCrawled": "https://www.ibrance.co.nz/",
+  "urls": [
+    {
+      "url": "https://www.ibrance.co.nz/",
+      "source": "SITEMAPS",
+      "targetPath": "/",
+      "id": "cc83580b3df37ec256492e1c23a2a81d4c1f0ef3"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/about-ibrance",
+      "source": "SITEMAPS",
+      "targetPath": "/about-ibrance",
+      "id": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+      "source": "SITEMAPS",
+      "targetPath": "/about-ibrance/taking-ibrance",
+      "id": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/caremate",
+      "source": "SITEMAPS",
+      "targetPath": "/caremate",
+      "id": "23058130c523237772bdf1922f4de301900e0294"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/caremateMBCNZ",
+      "source": "SITEMAPS",
+      "targetPath": "/carematembcnz",
+      "id": "0cd15d8e1e3406d93c16493d97d5557716f13461"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/family-and-friends-support",
+      "source": "SITEMAPS",
+      "targetPath": "/family-and-friends-support",
+      "id": "d23620c7cb99a1493149d3bc758de47b1245d398"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/home",
+      "source": "SITEMAPS",
+      "targetPath": "/home",
+      "id": "29f4a960ed914e31dfdb16a5b96707f4962e051f"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+      "source": "SITEMAPS",
+      "targetPath": "/metastatic-breast-cancer-diagnosis",
+      "id": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/page-not-found",
+      "source": "SITEMAPS",
+      "targetPath": "/page-not-found",
+      "id": "b8d9ed45cf109b52cdf0b69206dae0c7938e3ad8"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support",
+      "source": "SITEMAPS",
+      "targetPath": "/patient-support",
+      "id": "74a8a170b3b7d1087514219f73255d3fce284e26"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
+      "source": "SITEMAPS",
+      "targetPath": "/patient-support/connecting-others",
+      "id": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/download-resources",
+      "source": "SITEMAPS",
+      "targetPath": "/patient-support/download-resources",
+      "id": "15ea179ad494aa565c9390255cae952db39bed1d"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
+      "source": "SITEMAPS",
+      "targetPath": "/patient-support/helpful-terminology",
+      "id": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
+      "source": "SITEMAPS",
+      "targetPath": "/patient-support/latest-articles",
+      "id": "d87d7ca4a50d5dfd06d2e8d0096d878b5c9c193a"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
+      "source": "SITEMAPS",
+      "targetPath": "/patient-support/mbc-advice",
+      "id": "ef969107518db08dfd1a6be6a76048b78342f2d5"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
+      "source": "SITEMAPS",
+      "targetPath": "/patient-support/talk-doctor",
+      "id": "9fd89019706b806518bbe8164befb8f54a59f2f5"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/sitemap",
+      "source": "SITEMAPS",
+      "targetPath": "/sitemap",
+      "id": "eb586c1d50235bd2173365f96359fd99dfaed097"
+    }
+  ],
+  "crawlOptions": {
+    "timeout": 64800000,
+    "inclusionPatterns": [],
+    "exclusionPatterns": [],
+    "limit": -1,
+    "sameDomain": true,
+    "keepHash": false,
+    "strategy": "sitemaps",
+    "logger": {},
+    "strategiesAttempted": [
+      "SITEMAPS"
+    ]
+  },
+  "extractionErrors": []
+}
