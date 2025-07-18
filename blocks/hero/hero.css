@@ -45,3 +45,143 @@
     padding: 40px 32px;
   }
 }
+
+.hero.hero40 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100vw;
+  min-height: 420px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  top: 0;
+}
+
+.hero.hero40 > div:first-child {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero.hero40 picture,
+.hero.hero40 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Compact text overlay closer to top/left */
+.hero.hero40 > div:last-child {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 12px;
+  min-width: 0;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Overlay background & margin-bottom */
+.hero.hero40 > div:last-child > div {
+  background: rgb(44 19 56 / 28%);
+  padding: 10px 12px 8px 14px;
+  border-radius: 2.5px;
+  max-width: 255px;
+  min-width: 186px;
+  box-sizing: border-box;
+  color: #fff;
+  margin-bottom: 29px;
+  margin-top: 0;
+  box-shadow: none;
+  position: relative;
+}
+
+/* Headline and text */
+.hero.hero40 h1 {
+  color: #fff;
+  font-size: 1.36rem;
+  font-weight: 700;
+  line-height: 1.12;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.hero.hero40 p {
+  color: #f3f3f3;
+  font-size: 0.95rem;
+  line-height: 1.32;
+  margin-bottom: 0.45em;
+  margin-top: 0;
+}
+
+/* Bottom bar for CTA/link - last p visually in a bar below overlay, slightly wider */
+.hero.hero40 > div:last-child > div p:last-child {
+  position: absolute;
+  left: -9px;
+  right: auto;
+  bottom: -32px;
+  margin: 0;
+  padding: 11px 18px;
+  background: rgb(255 255 255 / 80%);
+  color: #333;
+  font-size: 0.99rem;
+  border-radius: 0 0 6px 6px;
+  width: 274px;
+  max-width: 100vw;
+  z-index: 3;
+  box-sizing: border-box;
+  font-weight: 500;
+  line-height: 1.32;
+  box-shadow: 0 1px 7px 0 rgb(44 19 56 / 8%);
+}
+
+/* Make the link in the CTA stand out */
+.hero.hero40 > div:last-child > div p:last-child a {
+  color: #2d3ea4;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (width <= 900px) {
+  .hero.hero40 {
+    flex-direction: column;
+    min-height: 320px;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .hero.hero40 > div:last-child {
+    padding: 0 2vw 0 6px;
+    max-width: 100vw;
+  }
+
+  .hero.hero40 > div:last-child > div {
+    max-width: 88vw;
+    min-width: 0;
+    padding: 8px 7px 6px 8px;
+  }
+
+  .hero.hero40 > div:last-child > div p:last-child {
+    width: 96vw;
+    left: 0;
+    right: 0;
+    padding: 11px 7px 11px 8px;
+    font-size: 0.96rem;
+    bottom: -28px;
+    border-radius: 0 0 4px 4px;
+  }
+}
