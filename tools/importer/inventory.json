@@ -829,21 +829,6 @@
       ]
     },
     {
-      "name": "header",
-      "cluster": 20,
-      "source": "Header",
-      "target": "Header (header20)",
-      "key": "header20",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/caremateMBCNZ",
-          "urlHash": "0cd15d8e1e3406d93c16493d97d5557716f13461",
-          "uuid": "0cd15d8e-00-2286d10cca2c259ec5069da737345e806b8d88ad",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]"
-        }
-      ]
-    },
-    {
       "name": "Cards",
       "cluster": 21,
       "source": "Cards",
@@ -1492,6 +1477,18 @@
           "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
           "uuid": "9fd89019-04-2e07e78cf4c3cda6ab0785c611a7238fff7bcb38",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/ul[1]"
+        }
+      ]
+    },
+    {
+      "name": "new",
+      "cluster": 51,
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/caremateMBCNZ",
+          "urlHash": "0cd15d8e1e3406d93c16493d97d5557716f13461",
+          "uuid": "0cd15d8e-00-2286d10cca2c259ec5069da737345e806b8d88ad",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]"
         }
       ]
     }
