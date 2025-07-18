@@ -55,7 +55,8 @@
       "url": "https://www.ibrance.co.nz/page-not-found",
       "source": "SITEMAPS",
       "targetPath": "/page-not-found",
-      "id": "b8d9ed45cf109b52cdf0b69206dae0c7938e3ad8"
+      "id": "b8d9ed45cf109b52cdf0b69206dae0c7938e3ad8",
+      "status": "EXCLUDED"
     },
     {
       "url": "https://www.ibrance.co.nz/patient-support",
