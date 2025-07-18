@@ -608,12 +608,6 @@
         {
           "url": "https://www.ibrance.co.nz/family-and-friends-support",
           "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-08-827ee17b5623177149894187d722c359fc12eabe",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/family-and-friends-support",
-          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
           "uuid": "d23620c7-09-01bcdd961625a7f5cf80ad4e6a7445b8503ab116",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[7]"
         },
@@ -773,6 +767,12 @@
           "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
           "uuid": "3b855fb5-04-508cf17d42e9f5962a963dab4853263abb3bbf7b",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+          "uuid": "d23620c7-08-827ee17b5623177149894187d722c359fc12eabe",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]"
         }
       ]
     },
