@@ -30,7 +30,8 @@
       "url": "https://www.ibrance.co.nz/caremateMBCNZ",
       "source": "SITEMAPS",
       "targetPath": "/carematembcnz",
-      "id": "0cd15d8e1e3406d93c16493d97d5557716f13461"
+      "id": "0cd15d8e1e3406d93c16493d97d5557716f13461",
+      "status": "EXCLUDED"
     },
     {
       "url": "https://www.ibrance.co.nz/family-and-friends-support",
@@ -105,6 +106,7 @@
       "id": "eb586c1d50235bd2173365f96359fd99dfaed097"
     }
   ],
+  "extractionErrors": [],
   "crawlOptions": {
     "timeout": 64800000,
     "inclusionPatterns": [],
@@ -117,6 +119,5 @@
     "strategiesAttempted": [
       "SITEMAPS"
     ]
-  },
-  "extractionErrors": []
+  }
 }
