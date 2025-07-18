@@ -18,8 +18,8 @@
 }
 
 @font-face {
-  font-family: "Avenir LT W05_85 Heavy";      
-  src: url('../fonts/avenir-lt-w05-85-heavy-normal-normal.ashx') format('ashx');
+  font-family: "Avenir LT W05_55 Roman";      
+  src: url('../fonts/avenir-lt-w05-55-roman-normal-normal.ashx') format('ashx');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -27,8 +27,8 @@
 }
 
 @font-face {
-  font-family: "Avenir LT W05_55 Roman";      
-  src: url('../fonts/avenir-lt-w05-55-roman-normal-normal.ashx') format('ashx');
+  font-family: "Avenir LT W05_85 Heavy";      
+  src: url('../fonts/avenir-lt-w05-85-heavy-normal-normal.ashx') format('ashx');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
