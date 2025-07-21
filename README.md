@@ -1,4 +1,4 @@
-# dave-fink-250714-3 - https://ibrance.co.nz
+# dave-fink-250714-3
 
 This is a project created by AEMY.
 
