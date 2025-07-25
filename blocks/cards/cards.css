@@ -9,14 +9,13 @@
 .cards > ul > li {
   border: 1px solid #dadada;
   width: 33.33%;
-  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   height: auto;
   position: relative;
   background-color: #3e3092;
   padding: 16px 0 0 16px;
-  border-radius: 40px 4px 4px 4px !important;
+  border-radius: 40px 4px 4px;
 }
 
 .cards .cards-card-body {
@@ -48,7 +47,7 @@
   display: block;
   margin: 0;
   overflow: hidden;
-  border-radius: 52px 0 0 0;
+  border-radius: 52px 0 0;
 }
 
 .cards .cards-card-body p picture img {
@@ -82,10 +81,6 @@
   border-radius: 4px;
   margin-bottom: 25px;
   font-family: "Avenir LT W05_85 Heavy", sans-serif;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
