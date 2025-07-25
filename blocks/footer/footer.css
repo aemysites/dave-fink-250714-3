@@ -34,7 +34,7 @@ footer .section.links > div > p {
   padding: 0;
 }
 
-footer .section.links > div > p > a:after {
+footer .section.links > div > p > a::after {
   content: "|";
   padding: 0 8px;
   color: #fff;
@@ -94,16 +94,19 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
 }
 
 @media (width>=900px) {
-  
   footer .footer p {
     font-size: 11px;
+  }
+
+  footer .section.info-floater-open > p > a {
+    color: #fff;
   }
 
   footer .section.links > div > p > a {
   font-size: 18px;
   }
 
-  footer .section.links > div > p > a:after {
+  footer .section.links > div > p > a::after {
     content: '|';
     display: inline-block;
     color: #fff;
@@ -112,12 +115,28 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
     line-height: 1;
   }
 
-  footer .section.links > div > p:last-child > a:after {
+  footer .section.links > div > p:last-child > a::after {
     display: none;
   }
 
   footer .footer.block {
     padding-bottom: 68px
+  }
+
+  footer .section.info-floater > div > p {
+    display: none;
+  }
+
+  footer .section.info-floater-open > div > p {
+    position: relative;
+    padding: 15px 30px 15px 110px;
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    float: left;
+    height: 100%;
+    width: 550px;
+    margin-top: 0;
   }
 
   footer .section.columns-container > div.columns-wrapper > div > div > div:nth-child(2) {
@@ -139,21 +158,11 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
     overflow: hidden;
     background-color: #3e3092;
     cursor: pointer;
-    -webkit-border-radius: 54px 54px 0 0;
-    -moz-border-radius: 54px 54px 0 0;
     border-radius: 54px 54px 0 0;
-    -webkit-transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
-    -moz-transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
-    -ms-transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
-    -o-transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
     transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
   }
 
-  footer .section.info-floater > div > p {
-    display: none;
-  }
-
-  footer .section.info-floater:before {
+  footer .section.info-floater::before {
     content: '';
     position: absolute;
     top: 17px;
@@ -162,11 +171,9 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
     display: block;
     width: 46px;
     height: 46px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     text-align: center;
-    background: #fff url(/icons/information.svg) no-repeat center center;
+    background: #fff url("/icons/information.svg") no-repeat center center;
   }
 
   footer .section.info-floater-open {
@@ -178,21 +185,17 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
     overflow: hidden;
     background-color: #3e3092;
     cursor: pointer;
-    -webkit-transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
-    -moz-transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
-    -ms-transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
-    -o-transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
     transition: all 0.5s cubic-bezier(0.21,0.83,0.41,0.93);
     border-radius: 54px 10px 0 0;
     width: 700px;
     height: auto;
-    background-image: url(/icons/close.svg);
+    background-image: url("/icons/close.svg");
     background-size: 26px;
     background-position: 10px 10px;
     background-repeat: no-repeat;
   }
 
-  footer .section.info-floater-open:before {
+  footer .section.info-floater-open::before {
     content: '';
     position: absolute;
     top: 17px;
@@ -201,26 +204,8 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
     display: block;
     width: 46px;
     height: 46px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     text-align: center;
-    background: #fff url(/icons/information.svg) no-repeat center center;
-  }
-
-  footer .section.info-floater-open > div > p {
-    position: relative;
-    padding: 15px 30px 15px 110px;
-    font-size: 20px;
-    line-height: 26px;
-    color: #fff;
-    float: left;
-    height: 100%;
-    width: 550px;
-    margin-top: 0;
-  }
-
-  footer .section.info-floater-open > p > a {
-    color: #fff;
+    background: #fff url("/icons/information.svg") no-repeat center center;
   }
 }
