@@ -45,3 +45,177 @@
     padding: 40px 32px;
   }
 }
+
+.hero.hero40.block {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  max-width: unset;
+  min-height: 80vh;
+  padding: 0;
+  position: relative;
+  align-items: stretch;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* IMAGE SIDE (right) */
+.hero.hero40.block > div:first-child {
+  flex: 1 1 0;
+  order: 2;
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.hero.hero40.block > div:first-child picture,
+.hero.hero40.block > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXT SIDE (left) */
+.hero.hero40.block > div:last-child {
+  flex: 0 0 390px;
+  max-width: 390px;
+  min-width: 280px;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgb(85 76 120 / 96%) 65%,
+    rgb(85 76 120 / 0%) 97%
+  );
+  padding: 18px 30px 0;
+  box-sizing: border-box;
+  z-index: 1;
+  min-height: 100%;
+}
+
+/* Inner content for vertical alignment and band anchoring */
+.hero.hero40.block > div:last-child > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Typography */
+.hero.hero40.block > div:last-child h1 {
+  font-size: 1.99rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: #fff;
+  line-height: 1.12;
+  max-width: 99%;
+  letter-spacing: -0.01em;
+}
+
+.hero.hero40.block > div:last-child h1 + p {
+  margin-top: 0;
+}
+
+.hero.hero40.block > div:last-child p + p {
+  margin-top: 2px;
+}
+
+.hero.hero40.block > div:last-child p {
+  font-size: 1.03rem;
+  line-height: 1.33;
+  color: #e5e5ef;
+  margin: 0 0 6px;
+  max-width: 100%;
+}
+
+.hero.hero40.block > div:last-child p:first-of-type {
+  color: #fff;
+}
+
+/* Supporting band anchored to the bottom, flush left/right, no border radius */
+.hero.hero40.block > div:last-child p:last-of-type {
+  background: rgb(255 255 255 / 97%);
+  color: #36363a;
+  margin: 0;
+  margin-top: auto;
+  padding: 11px 0 11px 14px;
+  border-radius: 0;
+  font-size: 1.01rem;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 6px 0 rgb(60 60 60 / 4%);
+  align-self: flex-end;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Link style in hero */
+.hero.hero40.block > div:last-child a {
+  color: #3b63fb;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (width <= 1100px) {
+  .hero.hero40.block > div:last-child {
+    max-width: 96vw;
+    flex-basis: 360px;
+    padding: 12px 8vw 0;
+  }
+}
+
+@media (width <= 900px) {
+  .hero.hero40.block {
+    flex-direction: column;
+    min-height: unset;
+    width: 100vw;
+  }
+
+  .hero.hero40.block > div:first-child,
+  .hero.hero40.block > div:last-child {
+    order: unset;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: unset;
+  }
+
+  .hero.hero40.block > div:first-child {
+    height: 200px;
+    min-height: 150px;
+  }
+
+  .hero.hero40.block > div:last-child {
+    background: linear-gradient(
+      180deg,
+      rgb(85 76 120 / 97%) 90%,
+      rgb(85 76 120 / 9%) 100%
+    );
+    padding: 13px 3vw 0;
+    min-height: unset;
+    max-width: none;
+  }
+
+  .hero.hero40.block > div:last-child h1,
+  .hero.hero40.block > div:last-child p {
+    max-width: 100%;
+  }
+
+  .hero.hero40.block > div:last-child p:last-of-type {
+    margin-top: 12px;
+    border-radius: 0;
+    padding: 10px 0 10px 8px;
+    width: 100%;
+  }
+}
