@@ -6,7 +6,6 @@
 .table.block table {
   width: 100%;
   max-width: 100%;
-  border-collapse: collapse;
   font-size: var(--body-font-size-xs);
 }
 
@@ -23,12 +22,12 @@
 }
 
 .table.block table thead tr {
-  border-top: 2px solid;
-  border-bottom: 2px solid;
+  border-top: none;
+  border-bottom: none;
 }
 
 .table.block table tbody tr {
-  border-bottom: 1px solid;
+  border-bottom: none;
 }
 
 .table.block table th {
@@ -52,7 +51,7 @@
 
 /* no header variant */
 .table.block.no-header table tbody tr {
-  border-top: 1px solid;
+  border-top: none;
 }
 
 /* striped variant */
@@ -65,3 +64,159 @@
 .table.block.bordered table td {
   border: 1px solid;
 }
+
+
+/* index page news-table customization */
+
+a.button:any-link, button { 
+  box-sizing: none;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  border: none;
+  border-radius: none;
+  padding: 0 0 0 0;
+  font-family: Avenir LT W05_55 Roman, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: rgb(51, 51, 51);
+  background-color: rgba(0, 0, 0, 0);
+  color: #333;
+  cursor: pointer;
+  overflow: default;
+  white-space: nowrap;
+  text-overflow: none;
+  white-space: nowrap;
+}
+
+.news-header {
+  align-items: bottom;
+  display: inline;
+  flex-direction: row;
+  margin-bottom: 0;
+  margin-left: 100px; 
+}
+
+.news-header .button-container {
+  display: inline-block;
+  margin-left: 20px;
+  
+}
+
+.news-header .button-container a {
+  color: rgb(67, 0, 152);
+  text-decoration: none;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  font-size: 28px;
+}
+
+
+div.section.table-container {
+  margin-top:0;
+}
+
+.news-header a, button {
+  box-sizing: none;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  border: none;
+  border-radius: none;
+  padding: 0 0 0 0;
+  font-family: Avenir LT W05_55 Roman, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: rgb(51, 51, 51);
+  background-color: rgba(0, 0, 0, 0);
+  color: #333;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news-table {
+  width: 846px; /* Ensure the parent container matches the table width */
+  max-width: 846px;
+  overflow-x: auto; /* Prevent horizontal overflow issues */
+}
+
+.news-table table {
+  width: 846px; /* Ensures the table is exactly 846 pixels wide */
+  max-width: none; /* Overrides any max-width restrictions */
+  border: none;
+  border-collapse: separate; /* Use 'separate' to enable border-spacing */
+  border-spacing: 15px; /* Adds 10px of white space between cells */
+  background-color: white;
+}
+
+.news-table table tr {
+  border: none; /* Remove any borders from table rows */
+  margin-bottom: 20px;
+}
+
+.news-table td {
+  background-color: #F5F5F5; /* Light gray background for table cells */
+  border: none; /* Remove borders from table cells */
+  margin-top: 15px;
+  padding: 10px 15px 18px;
+  border: none;
+  
+}
+
+/* Target the first <p> tag in news table cell */
+.news-table td p:nth-child(1) {
+  color: white;
+  background-color: #82BC00;
+  background-size: auto;
+  background-origin: padding-box;
+  background-repeat: repeat;
+  border-image-repeat: stretch;
+  border-image-width: 1;
+  box-sizing: border-box;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.2px;
+  
+}
+
+/* Target the second <p> tag in news table cell */
+.news-table td p:nth-child(2) {
+  color: #82BC00;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+/* Target the third <p> tag in news table cell */
+.news-table td p:nth-child(3) {
+  color:rgb(67, 0, 152);
+  line-height: 26px;
+  font-size: 20px;
+}
+
+/* Target the fourth <p> tag in news table cell */
+.news-table td p:nth-child(4) {
+  color:rgb(51, 51, 51);
+}
+
+/* Target the fifth <p> tag in news table cell */
+.news-table td p:nth-child(5) {
+  .button {
+    color:rgb(51, 51, 51);
+  }
+}
+
