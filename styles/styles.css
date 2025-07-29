@@ -89,6 +89,7 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 body.appear {
@@ -239,7 +240,7 @@ main>.section {
 }
 
 main>.section>div {
-  max-width: 1200px;
+  max-width: 876px;
   margin: auto;
   padding: 0 24px;
 }
@@ -266,34 +267,35 @@ main .section.light, main .section.highlight {
 }
 
 .section.section-1 {
-  background: rgb(114, 114, 114) none repeat scroll 0% 0% / auto padding-box border-box;
+  background: rgb(114 114 114) none repeat scroll 0% 0% / auto padding-box border-box;
 }
 
 .section.section-2 {
-  background: rgb(222, 209, 238) none repeat scroll 0% 0% / auto padding-box border-box;
+  background: rgb(222 209 238) none repeat scroll 0% 0% / auto padding-box border-box;
 }
 
 .section.section-3 {
-  background: rgb(62, 48, 146) none repeat scroll 0% 0% / auto padding-box border-box;
+  background: rgb(62 48 146) none repeat scroll 0% 0% / auto padding-box border-box;
 }
 
 .section.section-4 {
-  background: rgb(245, 242, 250) none repeat scroll 0% 0% / auto padding-box border-box;
+  background: rgb(245 242 250) none repeat scroll 0% 0% / auto padding-box border-box;
 }
 
 .section.section-5 {
-  background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
+  background: rgb(245 245 245) none repeat scroll 0% 0% / auto padding-box border-box;
 }
 
 .section.section-6 {
-  background: rgb(245, 242, 251) none repeat scroll 0% 0% / auto padding-box border-box;
+  background: rgb(245 242 251) none repeat scroll 0% 0% / auto padding-box border-box;
 }
 
 .section.section-7 {
-  background: rgb(245, 245, 245) none repeat scroll 0% 0%/auto padding-box border-box;
+  background: rgb(245 245 245) none repeat scroll 0% 0%/auto padding-box border-box;
 }
 
 .section.section-8 {
-  background: rgb(245, 242, 251) none repeat scroll 0% 0%/auto padding-box border-box;
+
+  background: rgb(245 242 251) none repeat scroll 0% 0%/auto padding-box border-box;
 }
 

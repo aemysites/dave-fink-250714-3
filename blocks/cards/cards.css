@@ -2,26 +2,98 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  display: flex;
+  gap: 15px;
 }
 
 .cards > ul > li {
   border: 1px solid #dadada;
-  background-color: var(--background-color);
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  background-color: #3e3092;
+  padding: 16px 0 0 16px;
+  border-radius: 40px 4px 4px;
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: auto;
+}
+
+.cards .cards-card-body h3 {
+  font-size: 20px;
+  line-height: 26px;
+  color: #fff;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+}
+
+.cards .cards-card-body p {
+  font-size: 16px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  line-height: 26px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  padding-right: 20px;
+}
+
+.cards .cards-card-body p:last-child {
+  padding-right: 0;
+  padding-top: 7px;
+}
+
+.cards .cards-card-body p picture {
+  position: relative;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 52px 0 0;
+}
+
+.cards .cards-card-body p picture img {
+  margin-bottom: -8px;
 }
 
 .cards .cards-card-image {
   line-height: 0;
 }
 
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.cards.cards9.block > ul > li .cards-card-image img {
+  width: 67px;
+  height: 67px;
+}
+
+.cards .cards-card-body .button-container {
+  width: 166px;
+  height: 45px;
+}
+
+.cards .cards-card-body .button-container > a {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  line-height: 45px;
+  background-color: #6ca100;
+  color: #fff;
+  text-align: center;
+  border: unset;
+  border-radius: 4px;
+  margin-top: 13px;
+  margin-bottom: 32px;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  transition: all 0.5s ease;
+}
+
+.cards .cards-card-body p:nth-child(3) {
+  margin-top: auto;
+  margin-bottom: 32px;
 }
