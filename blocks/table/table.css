@@ -3,6 +3,15 @@
   overflow-x: auto;
 }
 
+.news-table table {
+  width: 846px; /* Ensures the table is exactly 846 pixels wide */
+  max-width: none; /* Overrides any max-width restrictions */
+  border: none;
+  border-collapse: separate; /* Use 'separate' to enable border-spacing */
+  border-spacing: 15px; /* Adds 10px of white space between cells */
+  background-color: white;
+}
+
 .table.block table {
   width: 100%;
   max-width: 100%;
@@ -21,6 +30,11 @@
   }
 }
 
+.news-table table tr {
+  border: none; /* Remove any borders from table rows */
+  margin-bottom: 20px;
+}
+
 .table.block table thead tr {
   border-top: none;
   border-bottom: none;
@@ -32,6 +46,13 @@
 
 .table.block table th {
   font-weight: 700;
+}
+
+.news-table td {
+  background-color: #F5F5F5; /* Light gray background for table cells */
+  margin-top: 15px;
+  padding: 10px 15px 18px;
+  border: unset;
 }
 
 .table.block table th,
@@ -69,32 +90,31 @@
 /* index page news-table customization */
 
 a.button:any-link, button { 
-  box-sizing: none;
+  box-sizing: unset;
   display: inline-block;
   max-width: 100%;
   margin: 0;
   border: none;
-  border-radius: none;
-  padding: 0 0 0 0;
-  font-family: Avenir LT W05_55 Roman, sans-serif;
+  border-radius: unset;
+  padding: 0;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25;
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: rgb(51, 51, 51);
-  background-color: rgba(0, 0, 0, 0);
+  text-decoration-color: rgb(51 51 51);
+  background-color: #000;
   color: #333;
   cursor: pointer;
-  overflow: default;
+  overflow: unset;
   white-space: nowrap;
-  text-overflow: none;
-  white-space: nowrap;
+  text-overflow: unset;
 }
 
 .news-header {
-  align-items: bottom;
+  align-items: end;
   display: inline;
   flex-direction: row;
   margin-bottom: 0;
@@ -107,35 +127,23 @@ a.button:any-link, button {
   
 }
 
-.news-header .button-container a {
-  color: rgb(67, 0, 152);
-  text-decoration: none;
-  font-family: "Avenir LT W05_85 Heavy", sans-serif;
-  font-size: 28px;
-}
-
-
-div.section.table-container {
-  margin-top:0;
-}
-
 .news-header a, button {
-  box-sizing: none;
+  box-sizing: unset;
   display: inline-block;
   max-width: 100%;
   margin: 0;
-  border: none;
-  border-radius: none;
-  padding: 0 0 0 0;
-  font-family: Avenir LT W05_55 Roman, sans-serif;
+  border: unset;
+  border-radius: unset;
+  padding: 0;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25;
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: rgb(51, 51, 51);
-  background-color: rgba(0, 0, 0, 0);
+  text-decoration-color: rgb(51 51 51);
+  background-color: #000;
   color: #333;
   cursor: pointer;
   overflow: hidden;
@@ -143,33 +151,21 @@ div.section.table-container {
   white-space: nowrap;
 }
 
+.news-header .button-container a {
+  color: rgb(67 0 152);
+  text-decoration: none;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  font-size: 28px;
+}
+
+div.section.table-container {
+  margin-top:0;
+}
+
 .news-table {
   width: 846px; /* Ensure the parent container matches the table width */
   max-width: 846px;
   overflow-x: auto; /* Prevent horizontal overflow issues */
-}
-
-.news-table table {
-  width: 846px; /* Ensures the table is exactly 846 pixels wide */
-  max-width: none; /* Overrides any max-width restrictions */
-  border: none;
-  border-collapse: separate; /* Use 'separate' to enable border-spacing */
-  border-spacing: 15px; /* Adds 10px of white space between cells */
-  background-color: white;
-}
-
-.news-table table tr {
-  border: none; /* Remove any borders from table rows */
-  margin-bottom: 20px;
-}
-
-.news-table td {
-  background-color: #F5F5F5; /* Light gray background for table cells */
-  border: none; /* Remove borders from table cells */
-  margin-top: 15px;
-  padding: 10px 15px 18px;
-  border: none;
-  
 }
 
 /* Target the first <p> tag in news table cell */
@@ -182,10 +178,7 @@ div.section.table-container {
   border-image-repeat: stretch;
   border-image-width: 1;
   box-sizing: border-box;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 2px 5px;
   display: inline-block;
   font-size: 12px;
   font-weight: 400;
@@ -203,20 +196,20 @@ div.section.table-container {
 
 /* Target the third <p> tag in news table cell */
 .news-table td p:nth-child(3) {
-  color:rgb(67, 0, 152);
+  color:rgb(67 0 152);
   line-height: 26px;
   font-size: 20px;
 }
 
 /* Target the fourth <p> tag in news table cell */
 .news-table td p:nth-child(4) {
-  color:rgb(51, 51, 51);
+  color:rgb(51 51 51);
 }
 
 /* Target the fifth <p> tag in news table cell */
 .news-table td p:nth-child(5) {
   .button {
-    color:rgb(51, 51, 51);
+    color:rgb(51 51 51);
   }
 }
 
