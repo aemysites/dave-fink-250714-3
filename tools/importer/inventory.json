@@ -1685,15 +1685,21 @@
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]"
         }
       ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 48,
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/download-resources",
+          "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
+          "uuid": "15ea179a-03-89daafe2ad1593714118d4a00fe986c3053e8bd2",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[2]"
+        }
+      ]
     }
   ],
   "outliers": [
-    {
-      "url": "https://www.ibrance.co.nz/patient-support/download-resources",
-      "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
-      "uuid": "15ea179a-03-89daafe2ad1593714118d4a00fe986c3053e8bd2",
-      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[2]"
-    },
     {
       "url": "https://www.ibrance.co.nz/patient-support/download-resources",
       "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
