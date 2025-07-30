@@ -1,6 +1,10 @@
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  object-fit: cover;
 }
 
 .hero {
@@ -26,8 +30,27 @@
   color: var(--text-color);
 }
 
-.hero picture {
-  position: absolute;
+.hero picture:nth-child(1) {
+  display: block;
+  position: relative;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero picture:nth-child(2) {
+  display: none;
+  position: relative;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero picture:nth-child(3) {
+  display: none;
+  position: relative;
   z-index: -1;
   inset: 0;
   object-fit: cover;
@@ -35,13 +58,285 @@
 }
 
 .hero img {
-  object-fit: cover;
   width: 100%;
-  height: 100%;
+  object-fit: cover;
+  display: block;
+  height: auto;
 }
 
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+  }
+}
+
+.hero.hero40 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 320px;
+  height: auto;
+  max-height: 465px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  background: none;
+}
+
+/* Background image covers the entire hero */
+.hero.hero40 > div:first-child {
+  position: relative;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+}
+
+.hero.hero40 > div:first-child::before {
+  content: 'x';
+  color: transparent;
+  position: absolute;
+  display: block;
+  background-color: #430098;
+  left: -15%;
+  width: 66%;
+  height: 100%;
+  z-index: 2;
+  transform: skew(-40deg);
+  opacity: 0.32;
+}
+
+.hero.hero40 > div:nth-child(2) {
+  display: flex;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  max-width: 876px;
+  height: calc(100% - 103px);
+  align-items: center;
+  justify-self: center;
+}
+
+.hero.hero40 > div:last-child {
+  position: absolute;
+  bottom: -2px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 0;
+  margin-top: auto;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.hero.hero40 > div:nth-child(2) > div {
+  width: 45%;
+}
+
+.hero.hero40 > p:last-of-type {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  background: rgb(255 255 255 / 68%);
+  color: #36363a;
+  padding: 22px 0 20px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.13rem;
+  z-index: 3;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5;
+  display: block;
+  pointer-events: auto;
+}
+
+.hero.hero40 > div:first-child p{
+  max-width: unset;
+  margin: 0;
+  padding: 0;
+}
+
+.hero.hero40 > div:first-child img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero.hero40 > p:last-of-type a {
+  color: #3b63fb;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.hero.hero40 > div:last-child > div {
+  max-width: 876px;
+}
+
+.hero.hero40 > div:last-child::before {
+  content: 'a';
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.64;
+}
+
+.hero.hero40 > div:nth-child(2) h1 {
+  color: #fff;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.hero.hero40 > div:nth-child(2) p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 16px;
+}
+
+.hero.hero40 > div:last-child p:nth-child(1) {
+  position: relative;
+  z-index: 3;
+  line-height: 27px;
+  font-size: 16px;
+  color: #121113;
+  margin: 0;
+  padding-top: 8px;
+}
+
+.hero.hero40 > div:nth-child(2) p:last-child {
+  color: #fff;
+  line-height: 23px;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.hero.hero40 > div:last-child p:nth-child(1) sup {
+  font-size: 10px;
+  top: -.8em;
+}
+
+.hero.hero40 > div:last-child p:nth-child(2) {
+  position: relative;
+  z-index: 3;
+  line-height: 27px;
+  font-size: 16px;
+  margin: 0;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  color: #43169d;
+  padding-bottom: 10px;
+}
+
+
+@media (width <= 1024px) {
+  .hero picture:nth-child(1) {
+    display: none;
+
+  }
+  
+  .hero picture:nth-child(2) {
+    display: block;
+
+  }
+
+  .hero.hero40 > div:last-child p:nth-child(1){
+    line-height: 22px;
+    font-size: 14px;
+  }
+
+  .hero.hero40 > div:last-child p:nth-child(2){
+    line-height: 22px;
+    font-size: 14px;
+  }
+
+  .hero.hero40 {
+    max-height: unset;
+  }
+
+  .hero.hero40 > div:first-child::before {
+    left: -26%;
+    width: 80%;
+  }
+
+  .hero.hero40 > div:nth-child(2) {
+    padding-left: 20px;
+  }
+
+  .hero.hero40 > div:nth-child(2) h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .hero.hero40 > div:nth-child(2) p:last-child {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+  }
+
+  .hero.hero40 > div:last-child > div {
+    padding-left: 20px;
+  }
+
+  .hero.hero40 > div:nth-child(2) > div {
+    width: 45%;
+  }
+  
+}
+
+@media (width <= 768px) {
+  .hero picture:nth-child(2) {
+    display: none;
+  }
+
+  .hero picture:nth-child(3) {
+    display: block;
+  }
+
+  .hero.hero40 > div:first-child::before {
+    left: -40%;
+    width: 102%;
+  }
+
+  .hero.hero40 > div:nth-child(2) h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .hero.hero40 > div:nth-child(2) p:last-child {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+  }
+
+  .hero.hero40 > div:nth-child(2) > div {
+    width: 43%;
   }
 }
