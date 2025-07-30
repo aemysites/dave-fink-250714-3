@@ -531,7 +531,7 @@
       ]
     },
     {
-      "name": "Cards",
+      "name": "Columns",
       "cluster": 3,
       "source": "Cards",
       "target": "Cards (cards3)",
