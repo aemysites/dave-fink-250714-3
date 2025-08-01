@@ -1,5 +1,5 @@
 .table.block {
-  width: 100%;
+  width: auto;
   overflow-x: auto;
 }
 
@@ -144,24 +144,23 @@ div.section.table-container {
 }
 
 .news-table {
-  width: 996px; /* Ensure the parent container matches the table width */
-  max-width: 996px;
+  width: 1996px; 
+  /* max-width: 996px; */
   overflow-x: auto; /* Prevent horizontal overflow issues */
-  margin-left: -20px; /* Add negative margin to the left */
-  margin-right: -20px; /* Add negative margin to the right */
+  margin-left: -10px; /* Add negative margin to the left */
+  margin-right: -10px; /* Add negative margin to the right */
 }
 
 .news-table table {
-  width: 996px; /* Ensures the table is exactly 846 pixels wide */
-  max-width: none; /* Overrides any max-width restrictions */
+  width: auto; 
+  /* max-width: 996px;  */
   border: none;
   border-collapse: separate; /* Use 'separate' to enable border-spacing */
-  border-spacing: 10px; /* Adds 10px of white space between cells */
+  border-spacing: 15px; /* Adds 10px of white space between cells */
   background-color: white;
 }
 
 .news-table table tr {
-  border: none; /* Remove any borders from table rows */
   margin-bottom: 20px;
 }
 
