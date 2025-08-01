@@ -144,17 +144,19 @@ div.section.table-container {
 }
 
 .news-table {
-  width: 846px; /* Ensure the parent container matches the table width */
-  max-width: 846px;
+  width: 996px; /* Ensure the parent container matches the table width */
+  max-width: 996px;
   overflow-x: auto; /* Prevent horizontal overflow issues */
+  margin-left: -20px; /* Add negative margin to the left */
+  margin-right: -20px; /* Add negative margin to the right */
 }
 
 .news-table table {
-  width: 846px; /* Ensures the table is exactly 846 pixels wide */
+  width: 996px; /* Ensures the table is exactly 846 pixels wide */
   max-width: none; /* Overrides any max-width restrictions */
   border: none;
   border-collapse: separate; /* Use 'separate' to enable border-spacing */
-  border-spacing: 15px; /* Adds 10px of white space between cells */
+  border-spacing: 10px; /* Adds 10px of white space between cells */
   background-color: white;
 }
 
@@ -167,7 +169,9 @@ div.section.table-container {
   background-color: #F5F5F5; /* Light gray background for table cells */
   border: none; /* Remove borders from table cells */
   margin-top: 15px;
-  padding: 10px 15px 18px;
+  padding-bottom: 18px;
+  padding-left: 0;
+  padding-right: 0;
   border: none;
   
 }
