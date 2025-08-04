@@ -205,14 +205,7 @@ a.button:any-link, button {
   border-radius: 0;
 }
 
-.news-header .default-content-wrapper{
-  align-items: flex-end;
-  display: inline;
-  flex-direction: row;
-  margin-bottom: 0;
-  margin-left: 100px; 
-}
-
+/* News header selectors ordered by specificity (least to most specific) */
 .news-header a {
   box-sizing: border-box;
   display: inline-block;
@@ -235,6 +228,14 @@ a.button:any-link, button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.news-header .default-content-wrapper{
+  align-items: flex-end;
+  display: inline;
+  flex-direction: row;
+  margin-bottom: 0;
+  margin-left: 100px; 
 }
 
 .news-header .button-container {
