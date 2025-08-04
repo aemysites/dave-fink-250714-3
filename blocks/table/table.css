@@ -85,38 +85,37 @@
   margin-bottom: 0;
 }
 
-.default-content-wrapper p a.button:any-link,
-.default-content-wrapper p button {
-  border-radius: 0;
-}
-
 a.button:any-link, button { 
-  box-sizing: none;
+  box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
   margin: 0;
   border: none;
   border-radius: 0;
-  padding: 0 0 0 0;
-  font-family: Avenir LT W05_55 Roman, sans-serif;
+  padding: 0;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25;
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: rgb(51, 51, 51);
-  background-color: rgba(0, 0, 0, 0);
+  text-decoration-color: rgb(51 51 51);
+  background-color: rgb(0 0 0 / 0%);
   color: #333;
   cursor: pointer;
-  overflow: default;
+  overflow: hidden;
   white-space: nowrap;
-  text-overflow: none;
-  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.default-content-wrapper p a.button:any-link,
+.default-content-wrapper p button {
+  border-radius: 0;
 }
 
 .news-header .default-content-wrapper{
-  align-items: bottom;
+  align-items: flex-end;
   display: inline;
   flex-direction: row;
   margin-bottom: 0;
@@ -126,11 +125,10 @@ a.button:any-link, button {
 .news-header .button-container {
   display: inline-block;
   margin-left: 20px;
-  
 }
 
 .news-header .button-container a {
-  color: rgb(67, 0, 152);
+  color: rgb(67 0 152);
   text-decoration: none;
   font-family: "Avenir LT W05_85 Heavy", sans-serif;
   font-size: 28px;
@@ -141,23 +139,23 @@ div.section.table-container {
   margin-top:0;
 }
 
-.news-header a, button {
-  box-sizing: none;
+.news-header a {
+  box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
   margin: 0;
   border: none;
-  border-radius: none;
-  padding: 0 0 0 0;
-  font-family: Avenir LT W05_55 Roman, sans-serif;
+  border-radius: 0;
+  padding: 0;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25;
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: rgb(51, 51, 51);
-  background-color: rgba(0, 0, 0, 0);
+  text-decoration-color: rgb(51 51 51);
+  background-color: rgb(0 0 0 / 0%);
   color: #333;
   cursor: pointer;
   overflow: hidden;
@@ -168,17 +166,28 @@ div.section.table-container {
 .news-table {
   width: 1996px; 
   /* max-width: 996px; */
-  overflow-x: auto; /* Prevent horizontal overflow issues */
-  margin-left: -10px; /* Add negative margin to the left */
-  margin-right: -10px; /* Add negative margin to the right */
+  overflow-x: auto;
+
+  /* Prevent horizontal overflow issues */
+  margin-left: -10px;
+
+  /* Add negative margin to the left */
+  margin-right: -10px;
+
+  /* Add negative margin to the right */
 }
 
 .news-table table {
-  width: auto; 
+  width: auto;
+
   /* max-width: 996px;  */
   border: none;
-  border-collapse: separate; /* Use 'separate' to enable border-spacing */
-  border-spacing: 12px; /* Adds 10px of white space between cells */
+  border-collapse: separate;
+
+  /* Use 'separate' to enable border-spacing */
+  border-spacing: 12px;
+
+  /* Adds 10px of white space between cells */
   background-color: white;
 }
 
@@ -187,14 +196,20 @@ div.section.table-container {
 }
 
 .news-table.table.block td {
-  background-color: #F5F5F5; /* Light gray background for table cells */
-  border: none; /* Remove borders from table cells */
-  margin-top: 15px;
-  /* padding-bottom: 18px; */
-  padding: 15px; /* Add padding to the cells */
+  background-color: #F5F5F5;
+
+  /* Light gray background for table cells */
   border: none;
-  
+
+  /* Remove borders from table cells */
+  margin-top: 15px;
+
+  /* padding-bottom: 18px; */
+  padding: 15px;
+
+  /* Add padding to the cells */
 }
+
 
 /* Target the first <p> tag in news table cell */
 .news-table td p:nth-child(1) {
@@ -206,10 +221,7 @@ div.section.table-container {
   border-image-repeat: stretch;
   border-image-width: 1;
   box-sizing: border-box;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 2px 5px;
   display: block;
   font-size: 12px;
   font-weight: 400;
@@ -226,23 +238,25 @@ div.section.table-container {
   line-height: 26px;
 }
 
+
 /* Target the third <p> tag in news table cell */
 .news-table td p:nth-child(3) {
-  color:rgb(67, 0, 152);
+  color: rgb(67 0 152);
   line-height: 26px;
-  font-family: Avenir LT W05_85 Heavy, sans-serif;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
   font-size: 20px;
 }
 
 /* Target the fourth <p> tag in news table cell */
 .news-table td p:nth-child(4) {
-  color:rgb(51, 51, 51);
+  color: rgb(51 51 51);
 }
+
 
 /* Target the fifth <p> tag in news table cell */
 .news-table td p:nth-child(5) {
   .button {
-    color:rgb(51, 51, 51);
+    color: rgb(51 51 51);
   }
 }
 
