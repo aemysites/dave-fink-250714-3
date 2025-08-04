@@ -68,13 +68,24 @@
 
 /* index page news-table customization */
 
+.default-content-wrapper {
+  padding-left: 0;
+  margin-left: -24px;  /* Offset the section's 24px left padding */
+
+}
+
+.default-content-wrapper p a.button:any-link,
+.default-content-wrapper p button {
+  border-radius: 0;
+}
+
 a.button:any-link, button { 
   box-sizing: none;
   display: inline-block;
   max-width: 100%;
   margin: 0;
   border: none;
-  border-radius: none;
+  border-radius: 0;
   padding: 0 0 0 0;
   font-family: Avenir LT W05_55 Roman, sans-serif;
   font-size: 16px;
@@ -156,7 +167,7 @@ div.section.table-container {
   /* max-width: 996px;  */
   border: none;
   border-collapse: separate; /* Use 'separate' to enable border-spacing */
-  border-spacing: 15px; /* Adds 10px of white space between cells */
+  border-spacing: 12px; /* Adds 10px of white space between cells */
   background-color: white;
 }
 
@@ -164,13 +175,12 @@ div.section.table-container {
   margin-bottom: 20px;
 }
 
-.news-table td {
+.news-table.table.block td {
   background-color: #F5F5F5; /* Light gray background for table cells */
   border: none; /* Remove borders from table cells */
   margin-top: 15px;
-  padding-bottom: 18px;
-  padding-left: 0;
-  padding-right: 0;
+  /* padding-bottom: 18px; */
+  padding: 15px; /* Add padding to the cells */
   border: none;
   
 }
@@ -189,11 +199,12 @@ div.section.table-container {
   padding-top: 2px;
   padding-left: 5px;
   padding-right: 5px;
-  display: inline-block;
+  display: block;
   font-size: 12px;
   font-weight: 400;
   line-height: 13.2px;
-  
+  width: 60px;
+  text-align: center;
 }
 
 /* Target the second <p> tag in news table cell */
@@ -208,6 +219,7 @@ div.section.table-container {
 .news-table td p:nth-child(3) {
   color:rgb(67, 0, 152);
   line-height: 26px;
+  font-family: Avenir LT W05_85 Heavy, sans-serif;
   font-size: 20px;
 }
 
