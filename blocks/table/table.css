@@ -21,6 +21,8 @@
   }
 }
 
+
+
 .table.block table thead tr {
   border-top: none;
   border-bottom: none;
@@ -74,6 +76,15 @@
 
 }
 
+.section.news-header {
+  margin-bottom: 0;
+}
+
+.news-header .default-content-wrapper .button-container {
+  margin-left: 385px;
+  margin-bottom: 0;
+}
+
 .default-content-wrapper p a.button:any-link,
 .default-content-wrapper p button {
   border-radius: 0;
@@ -104,7 +115,7 @@ a.button:any-link, button {
   white-space: nowrap;
 }
 
-.news-header {
+.news-header .default-content-wrapper{
   align-items: bottom;
   display: inline;
   flex-direction: row;
