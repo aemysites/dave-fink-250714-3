@@ -1,5 +1,124 @@
+/* news-table styles - positioned first for proper CSS specificity hierarchy */
+
+/* Base news-table container */
+.news-table {
+  width: 1996px;
+
+  /* max-width: 996px; */
+  overflow-x: auto;
+
+  /* Prevent horizontal overflow issues */
+  margin-left: -10px;
+
+  /* Add negative margin to the left */
+  margin-right: -10px;
+
+  /* Add negative margin to the right */
+}
+
+/* news-table table - MUST come before .table.block table for specificity */
+.news-table table {
+  width: auto;
+
+  /* max-width: 996px;  */
+  border: none;
+  border-collapse: separate;
+
+  /* Use 'separate' to enable border-spacing */
+  border-spacing: 12px;
+
+  /* Adds 10px of white space between cells */
+  background-color: white;
+}
+
+/* news-table table tr - MUST come before .table.block table thead tr for specificity */
+.news-table table tr {
+  margin-bottom: 20px;
+}
+
+/* General table selectors - MUST come before specific news-table selectors for specificity */
+.table.block table th {
+  font-weight: 700;
+}
+
+.table.block table td {
+  padding: 0.5em;
+  text-align: left;
+}
+
+.table table th p,
+.table table td p {
+  margin: 0;
+}
+
+.table table td p + p {
+  margin-top: 0.25em;
+}
+
+.news-table.table.block td {
+  background-color: #F5F5F5;
+
+  /* Light gray background for table cells */
+  border: none;
+
+  /* Remove borders from table cells */
+  margin-top: 15px;
+
+  /* padding-bottom: 18px; */
+  padding: 15px;
+
+  /* Add padding to the cells */
+}
+
+/* Target the first <p> tag in news table cell */
+.news-table td p:nth-child(1) {
+  color: white;
+  background-color: #82BC00;
+  background-size: auto;
+  background-origin: padding-box;
+  background-repeat: repeat;
+  border-image-repeat: stretch;
+  border-image-width: 1;
+  box-sizing: border-box;
+  padding: 2px 5px;
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.2px;
+  width: 60px;
+  text-align: center;
+}
+
+/* Target the second <p> tag in news table cell */
+.news-table td p:nth-child(2) {
+  color: #82BC00;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+/* Target the third <p> tag in news table cell */
+.news-table td p:nth-child(3) {
+  color: rgb(67 0 152);
+  line-height: 26px;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  font-size: 20px;
+}
+
+/* Target the fourth <p> tag in news table cell */
+.news-table td p:nth-child(4) {
+  color: rgb(51 51 51);
+}
+
+/* Target the fifth <p> tag in news table cell */
+.news-table td p:nth-child(5) {
+  .button {
+    color: rgb(51 51 51);
+  }
+}
+
 .table.block {
-  width: 100%;
+  width: auto;
   overflow-x: auto;
 }
 
@@ -21,6 +140,8 @@
   }
 }
 
+
+
 .table.block table thead tr {
   border-top: none;
   border-bottom: none;
@@ -28,25 +149,6 @@
 
 .table.block table tbody tr {
   border-bottom: none;
-}
-
-.table.block table th {
-  font-weight: 700;
-}
-
-.table.block table th,
-.table.block table td {
-  padding: 0.5em;
-  text-align: left;
-}
-
-.table table th p,
-.table table td p {
-  margin: 0;
-}
-
-.table table td p + p {
-  margin-top: 0.25em;
 }
 
 /* no header variant */
@@ -65,36 +167,74 @@
   border: 1px solid;
 }
 
-
 /* index page news-table customization */
 
+.default-content-wrapper {
+  padding-left: 0;
+  margin-left: -24px;  /* Offset the section's 24px left padding */
+
+}
+
+.section.news-header {
+  margin-bottom: 0;
+}
+
 a.button:any-link, button { 
-  box-sizing: none;
+  box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
   margin: 0;
   border: none;
-  border-radius: none;
-  padding: 0 0 0 0;
-  font-family: Avenir LT W05_55 Roman, sans-serif;
+  border-radius: 0;
+  padding: 0;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25;
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: rgb(51, 51, 51);
-  background-color: rgba(0, 0, 0, 0);
+  text-decoration-color: rgb(51 51 51);
+  background-color: rgb(0 0 0 / 0%);
   color: #333;
   cursor: pointer;
-  overflow: default;
+  overflow: hidden;
   white-space: nowrap;
-  text-overflow: none;
+  text-overflow: ellipsis;
+}
+
+.default-content-wrapper p a.button:any-link,
+.default-content-wrapper p button {
+  border-radius: 0;
+}
+
+/* News header selectors ordered by specificity (least to most specific) */
+.news-header a {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: rgb(51 51 51);
+  background-color: rgb(0 0 0 / 0%);
+  color: #333;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.news-header {
-  align-items: bottom;
+.news-header .default-content-wrapper{
+  align-items: flex-end;
   display: inline;
   flex-direction: row;
   margin-bottom: 0;
@@ -104,119 +244,20 @@ a.button:any-link, button {
 .news-header .button-container {
   display: inline-block;
   margin-left: 20px;
-  
 }
 
 .news-header .button-container a {
-  color: rgb(67, 0, 152);
+  color: rgb(67 0 152);
   text-decoration: none;
   font-family: "Avenir LT W05_85 Heavy", sans-serif;
   font-size: 28px;
 }
 
+.news-header .default-content-wrapper .button-container {
+  margin-left: 385px;
+  margin-bottom: 0;
+}
 
 div.section.table-container {
   margin-top:0;
 }
-
-.news-header a, button {
-  box-sizing: none;
-  display: inline-block;
-  max-width: 100%;
-  margin: 0;
-  border: none;
-  border-radius: none;
-  padding: 0 0 0 0;
-  font-family: Avenir LT W05_55 Roman, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.25;
-  text-align: center;
-  text-decoration: underline;
-  text-decoration-color: rgb(51, 51, 51);
-  background-color: rgba(0, 0, 0, 0);
-  color: #333;
-  cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.news-table {
-  width: 846px; /* Ensure the parent container matches the table width */
-  max-width: 846px;
-  overflow-x: auto; /* Prevent horizontal overflow issues */
-}
-
-.news-table table {
-  width: 846px; /* Ensures the table is exactly 846 pixels wide */
-  max-width: none; /* Overrides any max-width restrictions */
-  border: none;
-  border-collapse: separate; /* Use 'separate' to enable border-spacing */
-  border-spacing: 15px; /* Adds 10px of white space between cells */
-  background-color: white;
-}
-
-.news-table table tr {
-  border: none; /* Remove any borders from table rows */
-  margin-bottom: 20px;
-}
-
-.news-table td {
-  background-color: #F5F5F5; /* Light gray background for table cells */
-  border: none; /* Remove borders from table cells */
-  margin-top: 15px;
-  padding: 10px 15px 18px;
-  border: none;
-  
-}
-
-/* Target the first <p> tag in news table cell */
-.news-table td p:nth-child(1) {
-  color: white;
-  background-color: #82BC00;
-  background-size: auto;
-  background-origin: padding-box;
-  background-repeat: repeat;
-  border-image-repeat: stretch;
-  border-image-width: 1;
-  box-sizing: border-box;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 13.2px;
-  
-}
-
-/* Target the second <p> tag in news table cell */
-.news-table td p:nth-child(2) {
-  color: #82BC00;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 26px;
-}
-
-/* Target the third <p> tag in news table cell */
-.news-table td p:nth-child(3) {
-  color:rgb(67, 0, 152);
-  line-height: 26px;
-  font-size: 20px;
-}
-
-/* Target the fourth <p> tag in news table cell */
-.news-table td p:nth-child(4) {
-  color:rgb(51, 51, 51);
-}
-
-/* Target the fifth <p> tag in news table cell */
-.news-table td p:nth-child(5) {
-  .button {
-    color:rgb(51, 51, 51);
-  }
-}
-
