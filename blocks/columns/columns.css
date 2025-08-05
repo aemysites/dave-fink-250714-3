@@ -1,4 +1,3 @@
-/* The fixed CSS code */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -33,33 +32,49 @@
   }
 }
 
+
+.columns.columns1 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+}
+
+/* Main columns row: slightly increased gap for better visual grouping */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 40px;
+  justify-content: flex-start;
+  gap: 20px;
   width: 100%;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Left column - narrow for correct text wrap */
+/* Responsive: stack columns on small screens */
+@media (width <= 700px) {
+  .columns.columns1 > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Left text column: slightly wider for less line wrap */
 .columns.columns1 > div > div:first-child {
-  flex: 0 1 310px;
-  max-width: 310px;
+  flex: 0 1 440px;
+  max-width: 440px;
+  min-width: 320px;
   font-size: 16px;
   color: #222;
-  line-height: 1.5;
+  line-height: 1.45;
   font-family: var(--body-font-family);
   font-weight: 400;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.columns.columns1 > div > div:first-child p {
-  margin: 0;
-  padding: 0;
 }
 
 .columns.columns1 > div > div:first-child strong {
@@ -67,106 +82,104 @@
   font-weight: 700;
 }
 
-/* Right column: list */
-.columns.columns1 > div > div:last-child {
-  flex: 0 1 260px;
-  max-width: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+.columns.columns1 > div > div:first-child p {
   margin: 0;
   padding: 0;
 }
 
+/* Right column: vertical nav, align top with left column baseline */
+.columns.columns1 > div > div:last-child {
+  flex: 0 1 230px;
+  max-width: 250px;
+  font-size: 16px;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  /* Remove padding-top to bring list up, fine-tune icon alignment instead */
+}
+
 .columns.columns1 > div > div:last-child ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .columns.columns1 > div > div:last-child ul li {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* Center icon and text vertically */
   font-size: 16px;
-  color: #8cc63f;
+  color: #a4c639;
   font-family: var(--body-font-family);
   font-weight: 400;
   line-height: 1.5;
-  margin-bottom: 18px;
-  min-height: 20px;
   padding-left: 0;
+  margin-bottom: 2px; /* Slightly more vertical space for visual match */
 }
 
 .columns.columns1 > div > div:last-child ul li:last-child {
   margin-bottom: 0;
 }
 
-.columns.columns1 > div > div:last-child ul li::before {
-  display: inline-block;
-  width: 14px;
-  height: 18px;
-  min-width: 14px;
-  min-height: 18px;
-  margin-right: 8px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  vertical-align: middle;
-  flex-shrink: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%238cc63f' stroke-width='2' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'><path d='M8 19s6-6.228 6-11A6 6 0 0 0 2 8c0 4.772 6 11 6 11Z'/><circle cx='8' cy='8' r='2.5'/></svg>");
-  content: "";
-}
-
-/* links */
 .columns.columns1 > div > div:last-child ul li a {
-  color: #8cc63f;
+  color: #a4c639;
   text-decoration: underline;
+  font-weight: 600;
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.5;
   font-family: var(--body-font-family);
   transition: color 0.2s;
 }
 
-.columns.columns1 > div > div:last-child ul li a:hover,
-.columns.columns1 > div > div:last-child ul li a:focus {
-  color: #6fa22b;
-}
-
-/* Ensure perfect top-alignment of the two columns */
-.columns.columns1 > div > div:first-child,
-.columns.columns1 > div > div:last-child {
-  align-self: flex-start;
+/* Icon: middle align for baseline match, shrink for proportional size */
+.columns.columns1 > div > div:last-child ul li::before {
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 16px;
+  min-width: 14px;
+  min-height: 16px;
+  margin-right: 8px;
+  margin-top: 1px; /* Fine-tune: lift icon slightly for baseline alignment */
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%23a4c639' stroke-width='2' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'><path d='M8 19s6-6.228 6-11A6 6 0 0 0 2 8c0 4.772 6 11 6 11Z'/><circle cx='8' cy='8' r='2.5'/></svg>");
 }
 
 @media (width <= 700px) {
-  .columns.columns1 > div {
-    flex-direction: column;
-    gap: 20px;
+  .columns.columns1 {
+    max-width: 100%;
+    padding: 0 8px;
   }
 
   .columns.columns1 > div > div:first-child,
   .columns.columns1 > div > div:last-child {
     max-width: 100%;
-    flex-basis: auto;
+    min-width: 0;
+    font-size: 15px;
   }
 
-  .columns.columns1 > div > div:first-child,
-  .columns.columns1 > div > div:last-child,
-  .columns.columns1 > div > div:first-child p,
-  .columns.columns1 > div > div:first-child strong,
   .columns.columns1 > div > div:last-child ul li,
   .columns.columns1 > div > div:last-child ul li a {
     font-size: 15px;
   }
 
   .columns.columns1 > div > div:last-child ul li::before {
-    width: 13px;
-    height: 16px;
-    min-width: 13px;
-    min-height: 16px;
+    width: 12px;
+    height: 14px;
+    min-width: 12px;
+    min-height: 14px;
     margin-right: 6px;
+    margin-top: 1px;
   }
 }
