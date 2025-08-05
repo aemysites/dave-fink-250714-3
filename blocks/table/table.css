@@ -1,5 +1,6 @@
-/* news-table styles - must come before general table.block styles for proper specificity */
+/* news-table styles - positioned first for proper CSS specificity hierarchy */
 
+/* Base news-table container */
 .news-table {
   width: 1996px;
 
@@ -15,6 +16,7 @@
   /* Add negative margin to the right */
 }
 
+/* news-table table - MUST come before .table.block table for specificity */
 .news-table table {
   width: auto;
 
@@ -29,6 +31,7 @@
   background-color: white;
 }
 
+/* news-table table tr - MUST come before .table.block table thead tr for specificity */
 .news-table table tr {
   margin-bottom: 20px;
 }
@@ -53,6 +56,9 @@
   color: white;
   background-color: #82BC00;
   background-size: auto;
+  
+
+  
   background-origin: padding-box;
   background-repeat: repeat;
   border-image-repeat: stretch;
