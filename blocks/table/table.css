@@ -36,6 +36,25 @@
   margin-bottom: 20px;
 }
 
+/* General table selectors - MUST come before specific news-table selectors for specificity */
+.table.block table th {
+  font-weight: 700;
+}
+
+.table.block table td {
+  padding: 0.5em;
+  text-align: left;
+}
+
+.table table th p,
+.table table td p {
+  margin: 0;
+}
+
+.table table td p + p {
+  margin-top: 0.25em;
+}
+
 .news-table.table.block td {
   background-color: #F5F5F5;
 
@@ -56,9 +75,6 @@
   color: white;
   background-color: #82BC00;
   background-size: auto;
-  
-
-  
   background-origin: padding-box;
   background-repeat: repeat;
   border-image-repeat: stretch;
@@ -133,25 +149,6 @@
 
 .table.block table tbody tr {
   border-bottom: none;
-}
-
-.table.block table th {
-  font-weight: 700;
-}
-
-.table.block table th,
-.table.block table td {
-  padding: 0.5em;
-  text-align: left;
-}
-
-.table table th p,
-.table table td p {
-  margin: 0;
-}
-
-.table table td p + p {
-  margin-top: 0.25em;
 }
 
 /* no header variant */
