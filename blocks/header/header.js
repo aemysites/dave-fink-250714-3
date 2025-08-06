@@ -4,6 +4,17 @@ import { loadFragment } from '../fragment/fragment.js';
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
+function closeOnMouseLeave(e) {
+  // Only work on desktop
+  if (!isDesktop.matches) return;
+  const navDrop = e.currentTarget;
+  const isNavDrop = navDrop.classList.contains('nav-drop');
+  if (isNavDrop) {
+    // Close this dropdown
+    navDrop.setAttribute('aria-expanded', 'false');
+  }
+}
+
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
     const nav = document.getElementById('nav');
@@ -60,6 +71,19 @@ function toggleAllNavSections(sections, expanded = false) {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
+}
+
+function openOnHover(e) {
+  // Only work on desktop
+  if (!isDesktop.matches) return;
+  const navDrop = e.currentTarget;
+  const isNavDrop = navDrop.classList.contains('nav-drop');
+  if (isNavDrop) {
+    // Close all other dropdowns first
+    toggleAllNavSections(navDrop.closest('.nav-sections'));
+    // Open this dropdown
+    navDrop.setAttribute('aria-expanded', 'true');
+  }
 }
 
 /**
@@ -163,4 +187,11 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // add hover event listeners to .nav-drop
+  const navDrops = nav.querySelectorAll('.nav-drop');
+  navDrops.forEach((drop) => {
+    drop.addEventListener('mouseenter', openOnHover);
+    drop.addEventListener('mouseleave', closeOnMouseLeave);
+  });
 }
