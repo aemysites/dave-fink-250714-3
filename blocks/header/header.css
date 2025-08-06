@@ -1,4 +1,3 @@
-/* header and nav layout */
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
@@ -53,8 +52,6 @@ header nav p {
 header nav a:any-link {
   color: currentcolor;
 }
-
-/* hamburger */
 header nav .nav-hamburger {
   grid-area: hamburger;
   height: 22px;
@@ -134,8 +131,6 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
     visibility: hidden;
   }
 }
-
-/* brand */
 header .nav-brand {
   grid-area: brand;
   flex-basis: 128px;
@@ -150,8 +145,6 @@ header nav .nav-brand img {
   max-height: calc(var(--nav-height) - 16px);
   max-width: 128px;
 }
-
-/* sections */
 header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
@@ -263,8 +256,218 @@ header nav .nav-sections ul > li > ul > li {
     padding: 8px 0;
   }
 }
-
-/* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+
+.header-wrapper .nav-wrapper {
+  background: #fff;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 48px;
+}
+
+.header {
+  display: flex;
+}
+
+.header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1264px;
+  min-height: 48px;
+  height: 48px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+header nav .nav-hamburger {
+  display: none;
+  visibility: hidden;
+}
+
+.header nav .nav-brand {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+  min-width: 0;
+  flex-shrink: 0;
+  order: 1;
+}
+.header nav .nav-brand img {
+  height: 24px;
+  max-height: 24px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.header nav .nav-sections {
+  display: flex;
+  align-items: center;
+  flex: none;
+  min-width: 0;
+  order: 2;
+}
+
+.header nav .nav-sections .default-content-wrapper > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 48px;
+  justify-content: flex-start;
+  width: auto;
+}
+
+.header nav .nav-sections .default-content-wrapper > ul > li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  height: 48px;
+  padding: 0 18px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  color: #222;
+  cursor: pointer;
+  justify-content: center;
+  transition: color 0.2s;
+  flex: none;
+  /* Add a subtle divider using border-right, except for last child */
+  border-right: 1px solid #e0e0e0;
+}
+.header nav .nav-sections .default-content-wrapper > ul > li:last-child {
+  border-right: none;
+}
+
+/* Nav item link styling */
+.header nav .nav-sections .default-content-wrapper > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #222;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.05;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  border: none;
+  height: 48px;
+  min-width: 0;
+  transition: color 0.2s;
+  margin: 0;
+}
+
+.header nav .nav-sections .default-content-wrapper > ul > li > a:focus {
+  outline: none;
+}
+
+/* Caret placement under text for dropdowns */
+.header nav .nav-sections .default-content-wrapper > ul > li.nav-drop > a {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header nav .nav-sections .default-content-wrapper > ul > li.nav-drop > a > svg,
+.header nav .nav-sections .default-content-wrapper > ul > li.nav-drop > a > span {
+  display: block;
+  margin-top: 2px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 9px;
+  line-height: 1;
+  align-self: center;
+}
+
+/* Highlight active link (nth-child(3) = "PATIENT SUPPORT RESOURCES") */
+.header nav .nav-sections .default-content-wrapper > ul > li:nth-child(3) > a {
+  color: #8ac40b;
+}
+
+/* If caret is present in HTML/SVG, highlight it on active as well */
+.header nav .nav-sections .default-content-wrapper > ul > li:nth-child(3).nav-drop > a > svg,
+.header nav .nav-sections .default-content-wrapper > ul > li:nth-child(3).nav-drop > a > span {
+  color: #8ac40b;
+}
+
+/* Hover effect for nav links */
+.header nav .nav-sections .default-content-wrapper > ul > li > a:hover {
+  color: #8ac40b;
+}
+
+/* Tool section ordering */
+.header nav .nav-tools {
+  display: flex;
+  align-items: center;
+  order: 3;
+}
+
+@media (max-width: 1024px) {
+  .header-wrapper .nav-wrapper {
+    padding: 0 8px;
+  }
+  .header nav {
+    padding: 0 8px;
+  }
+  .header nav .nav-brand {
+    margin-right: 2px;
+  }
+  .header nav .nav-sections .default-content-wrapper > ul > li {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-wrapper .nav-wrapper {
+    position: static;
+    height: auto;
+  }
+  .header nav {
+    flex-direction: column;
+    height: auto;
+    padding: 0 4px;
+  }
+  .header nav .nav-brand {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .header nav .nav-sections {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .header nav .nav-sections .default-content-wrapper > ul {
+    flex-direction: column;
+    height: auto;
+  }
+  .header nav .nav-sections .default-content-wrapper > ul > li {
+    padding: 12px 0;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    height: auto;
+  }
 }
