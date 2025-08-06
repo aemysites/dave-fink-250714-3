@@ -34,7 +34,6 @@
 
 
 .columns.columns1 {
-  /* Only layout: don't apply flex here - see next rule */
   max-width: 960px;
   margin: 0 auto;
   background: #fff;
@@ -42,19 +41,28 @@
   box-sizing: border-box;
 }
 
+/* Main columns layout */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 48px;
+  gap: 88px;
   width: 100%;
+  box-sizing: border-box;
 }
 
-/* Left column: text */
+@media (width <= 900px) {
+  .columns.columns1 > div {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+/* Left column (text) */
 .columns.columns1 > div > div:first-child {
   flex: 1 1 0;
   max-width: 540px;
-  min-width: 320px;
+  min-width: 300px;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
@@ -79,10 +87,10 @@
   text-align: left;
 }
 
-/* Right column: nav links, left-aligned, top-aligned */
+/* Right column (list) */
 .columns.columns1 > div > div:last-child {
-  flex: 0 0 250px;
-  max-width: 250px;
+  flex: 0 0 230px;
+  max-width: 230px;
   font-size: 15px;
   font-family: var(--body-font-family);
   display: flex;
@@ -93,7 +101,6 @@
   padding: 0;
 }
 
-/* Remove all default margins/paddings from ul for perfect top alignment */
 .columns.columns1 > div > div:last-child ul {
   list-style: none;
   margin: 0;
@@ -104,34 +111,34 @@
   width: 100%;
 }
 
-/* Remove spacing above first link and tighten gap between links */
+/* Increase indent to visually compensate for missing dots */
 .columns.columns1 > div > div:last-child ul li {
+  position: relative;
   display: block;
   font-size: 15px;
-  color: #9c3;
+  color: #B4D330;
   font-family: var(--body-font-family);
   font-weight: 400;
   line-height: 1.5;
-  margin: 0 0 8px;
-  padding: 0;
+  margin: 0 0 2px;
+  padding-left: 2em;
   text-align: left;
+  min-height: 22px;
 }
 
-.columns.columns1 > div > div:last-child ul li:last-child {
-  margin-bottom: 0;
-}
-
+/* Links */
 .columns.columns1 > div > div:last-child ul li a {
-  color: #9c3;
+  color: #B4D330;
   text-decoration: underline;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.5;
   font-family: var(--body-font-family);
   transition: color 0.2s;
+  cursor: pointer;
 }
 
-/* Responsive: Stack columns vertically on small screens */
+/* Responsive stacking for mobile */
 @media (width <= 700px) {
   .columns.columns1 > div {
     flex-direction: column;
