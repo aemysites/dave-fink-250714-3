@@ -1,3 +1,4 @@
+/* Fixed CSS Code */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -32,21 +33,19 @@
   }
 }
 
-
 .columns.columns1 {
+  background: #fff;
+  padding: 2px 0;
   max-width: 960px;
   margin: 0 auto;
-  background: #fff;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* Main columns layout */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 88px;
+  gap: 48px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -60,11 +59,11 @@
 
 /* Left column (text) */
 .columns.columns1 > div > div:first-child {
-  flex: 1 1 0;
-  max-width: 540px;
-  min-width: 300px;
-  font-size: 16px;
+  flex-basis: 360px;
+  flex-shrink: 0;
+  max-width: 360px;
   color: #222;
+  font-size: 16px;
   line-height: 1.5;
   font-family: var(--body-font-family);
   font-weight: 400;
@@ -82,14 +81,17 @@
 }
 
 .columns.columns1 > div > div:first-child p {
-  margin: 0;
+  margin: 0 0 0.7em;
   padding: 0;
   text-align: left;
+  line-height: 1.5;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Right column (list) */
 .columns.columns1 > div > div:last-child {
-  flex: 0 0 230px;
+  flex-basis: 230px;
   max-width: 230px;
   font-size: 15px;
   font-family: var(--body-font-family);
@@ -109,37 +111,43 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  margin-top: 0;
+  padding-top: 0;
 }
 
-/* Increase indent to visually compensate for missing dots */
 .columns.columns1 > div > div:last-child ul li {
-  position: relative;
-  display: block;
   font-size: 15px;
-  color: #B4D330;
+  color: #6ca100;
   font-family: var(--body-font-family);
   font-weight: 400;
-  line-height: 1.5;
-  margin: 0 0 2px;
-  padding-left: 2em;
+  line-height: 1.45;
+  margin: 0 0 1px;
+  padding-left: 0;
   text-align: left;
   min-height: 22px;
 }
 
-/* Links */
+.columns.columns1 > div > div:last-child ul li:last-child {
+  margin-bottom: 0;
+}
+
 .columns.columns1 > div > div:last-child ul li a {
-  color: #B4D330;
+  color: #6ca100;
   text-decoration: underline;
   font-weight: 400;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.45;
   font-family: var(--body-font-family);
   transition: color 0.2s;
   cursor: pointer;
+  padding: 0;
 }
 
-/* Responsive stacking for mobile */
 @media (width <= 700px) {
+  .columns.columns1 {
+    padding: 6px 0;
+  }
+
   .columns.columns1 > div {
     flex-direction: column;
     gap: 24px;
