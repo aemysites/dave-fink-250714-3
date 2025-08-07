@@ -36,70 +36,69 @@
 .columns.columns1 {
   max-width: 960px;
   margin: 0 auto;
+  background: #fff;
   padding: 0;
-  background: transparent;
+  box-sizing: border-box;
 }
 
-/* Main columns row: slightly increased gap for better visual grouping */
+/* Main columns layout */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 20px;
+  gap: 88px;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Responsive: stack columns on small screens */
-@media (width <= 700px) {
+@media (width <= 900px) {
   .columns.columns1 > div {
     flex-direction: column;
-    gap: 20px;
+    gap: 32px;
   }
 }
 
-/* Left text column: slightly wider for less line wrap */
+/* Left column (text) */
 .columns.columns1 > div > div:first-child {
-  flex: 0 1 440px;
-  max-width: 440px;
-  min-width: 320px;
+  flex: 1 1 0;
+  max-width: 540px;
+  min-width: 300px;
   font-size: 16px;
   color: #222;
-  line-height: 1.45;
+  line-height: 1.5;
   font-family: var(--body-font-family);
   font-weight: 400;
-  align-self: flex-start;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
 .columns.columns1 > div > div:first-child strong {
-  color: #8a69cc;
+  color: #222;
   font-weight: 700;
 }
 
 .columns.columns1 > div > div:first-child p {
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 
-/* Right column: vertical nav, align top with left column baseline */
+/* Right column (list) */
 .columns.columns1 > div > div:last-child {
-  flex: 0 1 230px;
-  max-width: 250px;
-  font-size: 16px;
-  align-self: flex-start;
-  margin: 0;
-  padding: 0;
+  flex: 0 0 230px;
+  max-width: 230px;
+  font-size: 15px;
+  font-family: var(--body-font-family);
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
-
-  /* Remove padding-top to bring list up, fine-tune icon alignment instead */
+  margin: 0;
+  padding: 0;
 }
 
 .columns.columns1 > div > div:last-child ul {
@@ -108,58 +107,42 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  align-items: flex-start;
+  width: 100%;
 }
 
+/* Increase indent to visually compensate for missing dots */
 .columns.columns1 > div > div:last-child ul li {
   position: relative;
-  display: flex;
-  align-items: center; /* Center icon and text vertically */
-  font-size: 16px;
-  color: #a4c639;
+  display: block;
+  font-size: 15px;
+  color: #B4D330;
   font-family: var(--body-font-family);
   font-weight: 400;
   line-height: 1.5;
-  padding-left: 0;
-  margin-bottom: 2px; /* Slightly more vertical space for visual match */
+  margin: 0 0 2px;
+  padding-left: 2em;
+  text-align: left;
+  min-height: 22px;
 }
 
-.columns.columns1 > div > div:last-child ul li:last-child {
-  margin-bottom: 0;
-}
-
+/* Links */
 .columns.columns1 > div > div:last-child ul li a {
-  color: #a4c639;
+  color: #B4D330;
   text-decoration: underline;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 15px;
   line-height: 1.5;
   font-family: var(--body-font-family);
   transition: color 0.2s;
+  cursor: pointer;
 }
 
-/* Icon: middle align for baseline match, shrink for proportional size */
-.columns.columns1 > div > div:last-child ul li::before {
-  display: inline-block;
-  vertical-align: middle;
-  width: 14px;
-  height: 16px;
-  min-width: 14px;
-  min-height: 16px;
-  margin-right: 8px;
-  margin-top: 1px; /* Fine-tune: lift icon slightly for baseline alignment */
-  margin-bottom: 0;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  flex-shrink: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%23a4c639' stroke-width='2' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'><path d='M8 19s6-6.228 6-11A6 6 0 0 0 2 8c0 4.772 6 11 6 11Z'/><circle cx='8' cy='8' r='2.5'/></svg>");
-}
-
+/* Responsive stacking for mobile */
 @media (width <= 700px) {
-  .columns.columns1 {
-    max-width: 100%;
-    padding: 0 8px;
+  .columns.columns1 > div {
+    flex-direction: column;
+    gap: 24px;
   }
 
   .columns.columns1 > div > div:first-child,
@@ -172,14 +155,5 @@
   .columns.columns1 > div > div:last-child ul li,
   .columns.columns1 > div > div:last-child ul li a {
     font-size: 15px;
-  }
-
-  .columns.columns1 > div > div:last-child ul li::before {
-    width: 12px;
-    height: 14px;
-    min-width: 12px;
-    min-height: 14px;
-    margin-right: 6px;
-    margin-top: 1px;
   }
 }
