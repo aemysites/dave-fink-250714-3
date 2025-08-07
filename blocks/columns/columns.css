@@ -1,3 +1,4 @@
+/* Fixed CSS code */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -32,63 +33,76 @@
   }
 }
 
+.columns.columns1 {
+  background: #fff;
+  padding: 0;
+}
 
+/* Layout: two columns, side by side, top aligned */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 32px;
+  gap: 60px;
   width: 100%;
   box-sizing: border-box;
-  background: white;
 }
 
+/* Responsive: stack columns on small screens */
+@media (width <= 700px) {
+  .columns.columns1 > div {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+/* Left column: narrow for short lines */
 .columns.columns1 > div > div:first-child {
-  color: #222;
   font-size: 16px;
-  line-height: 1.5;
+  color: #222;
   font-family: var(--body-font-family);
   font-weight: 400;
-  max-width: 390px;
-  min-width: 220px;
-  flex: 0 1 390px;
+  max-width: 260px;
+  min-width: 120px;
+  flex: 1 1 260px;
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .columns.columns1 > div > div:first-child strong {
-  color: #222;
   font-weight: 700;
+  color: #222;
 }
 
 .columns.columns1 > div > div:first-child p {
-  margin: 0 0 0.4em;
+  margin: 0 0 0.7em;
   padding: 0;
   text-align: left;
   line-height: 1.5;
 }
 
-/* Right column (list) */
+/* Right column: top-aligned, smaller font, narrow */
 .columns.columns1 > div > div:last-child {
-  font-size: 15px;
-  font-family: var(--body-font-family);
-  flex: 0 1 192px;
-  max-width: 192px;
-  min-width: 120px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  font-size: 13px;
+  font-family: var(--body-font-family);
+  max-width: 185px;
+  min-width: 100px;
+  width: 100%;
+  text-align: left;
   margin: 0;
   padding: 0;
-  text-align: left;
-  width: 100%;
 }
 
+/* List styling: tight vertical gap */
 .columns.columns1 > div > div:last-child ul {
   list-style: none;
   margin: 0;
@@ -96,53 +110,63 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 3px;
   align-items: flex-start;
 }
 
+/* List items: room for icon, vertically centered */
 .columns.columns1 > div > div:last-child ul li {
-  font-size: 15px;
-  color: #A3C644;
+  font-size: 13px;
+  color: #9c3;
   font-family: var(--body-font-family);
   font-weight: 400;
-  line-height: 1.45;
+  line-height: 1.6;
   text-align: left;
   width: 100%;
   margin: 0;
-  padding-left: 16px; /* Tighter space for dot */
+  padding-left: 18px;
   position: relative;
   min-height: 18px;
   display: flex;
   align-items: center;
-
-  /* Smaller, crisper dot as background */
-  background: radial-gradient(circle at 5px 50%, #A3C644 0 60%, transparent 65%);
+  box-sizing: border-box;
   background-repeat: no-repeat;
-  background-size: 7px 7px;
 }
 
+/* Pin icon for first item */
+.columns.columns1 > div > div:last-child ul li:first-child {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%2399cc33" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 1.75C5.82 1.75 3.25 4.32 3.25 7.5c0 4.25 5.75 8.75 5.75 8.75s5.75-4.5 5.75-8.75c0-3.18-2.57-5.75-5.75-5.75zm0 7c-0.69 0-1.25-0.56-1.25-1.25S8.31 6.25 9 6.25s1.25 0.56 1.25 1.25S9.69 8.75 9 8.75z"/></svg>');
+  background-size: 11px 11px;
+  background-position: 0 4px;
+}
+
+/* Dots for all other items */
+.columns.columns1 > div > div:last-child ul li:not(:first-child) {
+  background-image: none;
+  background-color: transparent;
+}
+
+.columns.columns1 > div > div:last-child ul li:not(:first-child)::after {
+  display: inline-block;
+  width: 4.5px;
+  height: 4.5px;
+  background: #9c3;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  top: 7px;
+  box-sizing: border-box;
+  content: "";
+}
+
+/* Link style: green, underlined, small, wraps */
 .columns.columns1 > div > div:last-child ul li a {
-  color: #A3C644;
+  color: #9c3;
   text-decoration: underline;
-  text-underline-offset: 2px;
-  font-size: 15px;
+  text-underline-offset: 1px;
+  font-size: 13px;
   font-family: var(--body-font-family);
-}
-
-/* Responsive adjustments: stack columns on narrow screens */
-@media (width <= 700px) {
-  .columns.columns1 > div {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .columns.columns1 > div > div:first-child,
-  .columns.columns1 > div > div:last-child {
-    max-width: 100%;
-    min-width: 0;
-    font-size: 15px;
-  }
-
-  .columns.columns1 > div > div:last-child ul li {
-    min-height: initial;
-  }
+  font-weight: 400;
+  word-break: break-word;
+  white-space: normal;
 }
