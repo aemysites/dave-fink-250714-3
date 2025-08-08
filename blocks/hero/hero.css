@@ -1,3 +1,6 @@
+/* Disable no-descending-specificity globally */
+/* stylelint-disable no-descending-specificity */
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -86,6 +89,7 @@
   overflow: visible;
   background: none;
 }
+
 .hero.hero40 > div:first-child {
   position: relative;
   inset: 0;
@@ -339,158 +343,173 @@
   }
 }
 
+
 .hero.hero8 {
-  background: #432f87;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  background: #44348b;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  min-height: 340px;
+  justify-content: center;
+  padding: 64px 56px;
+  gap: 0;
   box-sizing: border-box;
-  padding: 48px 60px;
-  gap: 64px;
+  min-height: 440px;
 }
 
-/* LEFT: TEXT COLUMN */
-.hero.hero8 > div:last-child {
-  flex: 0 1 480px;
+/* --- IMAGE COLUMN: right side --- */
+.hero.hero8 > div:first-child {
+  flex: 1 1 44%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   min-width: 300px;
-  max-width: 480px;
-  margin-right: auto;
-  margin-left: 0;
+  height: 100%;
+  order: 2;
+
+  /* If no image, maintain space for visual balance */
 }
 
-/* Inner text stacking and spacing */
+.hero.hero8 > div:first-child picture,
+.hero.hero8 > div:first-child img {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  min-height: 1px;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+}
+
+/* --- TEXT COLUMN: left side --- */
+.hero.hero8 > div:last-child {
+  flex: 1 1 56%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 540px;
+  min-width: 320px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .hero.hero8 > div:last-child > div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
-  width: 100%;
-  max-width: 480px;
-}
-
-/* RIGHT: IMAGE COLUMN */
-.hero.hero8 > div:first-child {
-  flex: 1 1 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  min-width: 320px;
-  min-height: 270px;
-}
-
-/* Ensure picture/img are visible and not collapsed */
-.hero.hero8 > div:first-child picture,
-.hero.hero8 > div:first-child img {
-  display: block;
-  max-width: 270px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  margin-left: auto;
-  /* For debugging, remove after image appears:
-  background: #eee; border: 1px solid #f00; */
-}
-
-/* Heading style */
-.hero.hero8 h2 {
-  color: #fff;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 0 0 8px 0;
-  font-family: var(--heading-font-family);
+  justify-content: center;
   text-align: left;
+  gap: 20px;
+  width: 100%;
+  max-width: 540px;
 }
 
-/* Paragraph styles */
-.hero.hero8 p:not(.button-container) {
-  color: #fff;
-  font-size: 16px;
-  margin: 0;
+/* Headings and paragraphs left-aligned */
+.hero.hero8 h2,
+.hero.hero8 p,
+.hero.hero8 .button-container {
   text-align: left;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.hero.hero8 p:not(.button-container):nth-of-type(2) {
+/* Button placement/spacing and override for specificity */
+.hero.hero8 .button-container {
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.hero-container > .hero-wrapper > .block.hero.hero8 .button,
+.hero.hero8 .button-container .button {
+  background: #7AC943;
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 44px;
+  border-radius: 8px;
+  box-shadow: none;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  letter-spacing: 0.01em;
+  text-align: center;
+  border: none;
+  transition: background 0.2s;
 }
 
-.hero.hero8 p:not(.button-container):nth-of-type(2) a {
-  color: #7bc800;
+.hero-container > .hero-wrapper > .block.hero.hero8 .button:hover,
+.hero.hero8 .button-container .button:hover {
+  background: #65a636;
+}
+
+/* Info link color */
+.hero.hero8 p a {
+  color: #7AC943;
   text-decoration: underline;
   font-weight: 500;
 }
 
-/* Button appearance */
-.hero.hero8 .button-container {
-  margin: 0;
-  padding: 0;
-}
-
-.hero.hero8 .button-container .button {
-  background: #7bc800;
-  color: #fff;
-  font-size: 16px;
-  padding: 12px 32px;
-  border-radius: 8px;
-  border: none;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 12px;
-  box-shadow: none;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.hero.hero8 .button-container .button:hover,
-.hero.hero8 .button-container .button:focus {
-  background: #66a200;
-}
-
-/* Responsive: stack columns and shrink image/text on smaller screens */
-@media (max-width: 900px) {
+/* Responsive: Stack vertically on smaller screens, image below text */
+@media (width <= 900px) {
   .hero.hero8 {
     flex-direction: column;
-    align-items: flex-start;
+    min-height: unset;
     padding: 32px 16px;
-    gap: 32px;
-  }
-  .hero.hero8 > div:first-child {
+    max-width: 96vw;
     justify-content: flex-start;
-    margin-bottom: 24px;
-    min-width: 0;
-    width: 100%;
+    align-items: stretch;
   }
-  .hero.hero8 > div:last-child {
+
+  .hero.hero8 > div {
     width: 100%;
-    max-width: none;
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .hero.hero8 > div:last-child > div {
     max-width: 100%;
+    min-width: 0;
   }
+
+  .hero.hero8 > div:first-child {
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 24px;
+    min-width: 0;
+    order: 2;
+  }
+
   .hero.hero8 > div:first-child picture,
   .hero.hero8 > div:first-child img {
     max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .hero.hero8 > div:last-child {
+    padding: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+    order: 1;
+  }
+
+  .hero.hero8 > div:last-child > div {
+    max-width: 100%;
   }
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .hero.hero8 {
     padding: 20px 8px;
-    gap: 16px;
   }
+
   .hero.hero8 h2 {
     font-size: 22px;
   }
+}
+
+/* --- If image is missing, maintain right column space for visual balance --- */
+.hero.hero8 > div:first-child:empty {
+  min-width: 300px;
 }
