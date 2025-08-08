@@ -1,5 +1,4 @@
 /* stylelint-disable no-descending-specificity */
-
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -341,100 +340,125 @@
   }
 }
 
-
-.hero.hero8 {
-  background: #433697;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  min-height: 340px;
+.hero.hero8.block {
+  width: 100vw;
+  min-width: 100vw;
+  background: #432995;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  align-items: center; /* Vertically center items */
-  justify-content: space-between;
-  gap: 64px;
-  padding: 56px 40px;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 56px;
+  gap: 48px;
 }
 
-/* IMAGE COLUMN: Ensure column width and image alignment */
-.hero.hero8 > div:first-child {
-  flex: 1 1 46%;
+/* --- IMAGE COLUMN (right side visually, but first in HTML) --- */
+.hero.hero8.block > div:first-child {
+  flex: 1 1 50%;
+  order: 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;   /* Align image to bottom */
+  justify-content: flex-end;
   align-items: flex-end;
-  min-width: 320px;
-  max-width: 420px;
-  order: 2;                    /* Move image column to the right */
+  min-width: 260px;
+  max-width: 400px;
+  min-height: 340px; /* Ensures vertical space for image column */
   height: 100%;
-  position: relative;
 }
 
-.hero.hero8 > div:first-child picture,
-.hero.hero8 > div:first-child img {
+/* Target nested image container and force its visibility and alignment */
+.hero.hero8.block > div:first-child > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 280px;
+  width: 100%;
+}
+
+/* Image itself (picture/img in nested div) */
+.hero.hero8.block > div:first-child > div > picture,
+.hero.hero8.block > div:first-child > div > img {
   display: block;
   width: 100%;
   max-width: 310px;
   height: auto;
   object-fit: cover;
-  margin: 0;
-  margin-bottom: -32px; /* Overlap the block's bottom edge for visual weight */
+  margin-bottom: 0;
+  margin-right: 0;
+
+  /* Uncomment the line below to debug image visibility if needed */
+
+  /* border: 1px solid #7AC943; */
 }
 
-/* TEXT COLUMN: Left-aligned, vertically centered */
-.hero.hero8 > div:last-child {
-  flex: 1 1 54%;
+/* --- TEXT COLUMN (left side visually, but second in HTML) --- */
+.hero.hero8.block > div:last-child {
+  flex: 1 1 50%;
+  order: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  max-width: 520px;
-  min-width: 320px;
-  order: 1;                   /* Text column on the left */
-  height: 100%;
+  min-width: 340px;
+  max-width: 550px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.hero.hero8 h2 {
+.hero.hero8.block > div:last-child > div {
+  width: 100%;
+  max-width: 440px;
+  margin: 0;
+}
+
+/* Heading styles */
+.hero.hero8.block h2 {
   color: #fff;
   font-size: 2.2rem;
   font-weight: 400;
-  margin: 0 0 18px;
+  margin: 0 0 24px;
   line-height: 1.2;
   text-align: left;
 }
 
-.hero.hero8 p {
+/* Paragraph styles */
+.hero.hero8.block p {
   color: #fff;
-  font-size: 1.08rem;
-  margin: 0 0 14px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 18px;
   line-height: 1.5;
   text-align: left;
 }
 
-.hero.hero8 a:not(.button) {
-  color: #7BC043;
+/* Link styles inside hero */
+.hero.hero8.block a:not(.button) {
+  color: #7AC943;
   text-decoration: underline;
   font-weight: 500;
 }
 
-/* Button container and button style */
-.hero.hero8 .button-container {
-  margin-top: 18px;
+/* --- BUTTON --- */
+.hero.hero8.block .button-container {
+  margin-top: 24px;
+  margin-bottom: 0;
   width: 100%;
   display: flex;
   justify-content: flex-start;
 }
 
-.hero.hero8 .button-container .button {
-  background: #7BC043;
+.hero.hero8.block .button-container .button {
+  background: #7AC943;
   color: #fff;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 1rem;
-  font-weight: 600;
-  padding: 14px 36px;
-  min-width: 180px;
+  font-weight: 700;
+  padding: 14px 40px;
+  min-width: 200px;
   max-width: 100%;
   margin: 0;
   text-align: center;
@@ -444,45 +468,48 @@
   align-self: flex-start;
 }
 
-.hero.hero8 .button-container .button:hover,
-.hero.hero8 .button-container .button:focus {
-  background: #6ab033;
+.hero.hero8.block .button-container .button:hover,
+.hero.hero8.block .button-container .button:focus {
+  background: #60a832;
 }
 
-/* Responsive: stack columns, center items on mobile */
+/* --- RESPONSIVE --- */
 @media (width <= 900px) {
-  .hero.hero8 {
+  .hero.hero8.block {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     padding: 32px 12px;
     gap: 32px;
-    min-height: 0;
   }
 
-  .hero.hero8 > div:first-child,
-  .hero.hero8 > div:last-child {
+  .hero.hero8.block > div {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
-    min-width: 0;
-    width: 100%;
-    order: unset;
-    height: auto;
   }
 
-  .hero.hero8 picture,
-  .hero.hero8 img {
+  .hero.hero8.block > div:first-child,
+  .hero.hero8.block > div:first-child > div {
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero.hero8.block > div:first-child > div > picture,
+  .hero.hero8.block > div:first-child > div > img {
     max-width: 220px;
     margin: 0 auto;
-    margin-bottom: 0;
   }
 
-  .hero.hero8 h2,
-  .hero.hero8 p {
+  .hero.hero8.block h2,
+  .hero.hero8.block p {
     text-align: center;
   }
 
-  .hero.hero8 .button-container {
+  .hero.hero8.block .button-container {
     justify-content: center;
   }
 }
