@@ -86,8 +86,6 @@
   overflow: visible;
   background: none;
 }
-
-/* Background image covers the entire hero */
 .hero.hero40 > div:first-child {
   position: relative;
   inset: 0;
@@ -338,5 +336,161 @@
 
   .hero.hero40 > div:nth-child(2) > div {
     width: 43%;
+  }
+}
+
+.hero.hero8 {
+  background: #432f87;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 340px;
+  box-sizing: border-box;
+  padding: 48px 60px;
+  gap: 64px;
+}
+
+/* LEFT: TEXT COLUMN */
+.hero.hero8 > div:last-child {
+  flex: 0 1 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 480px;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Inner text stacking and spacing */
+.hero.hero8 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* RIGHT: IMAGE COLUMN */
+.hero.hero8 > div:first-child {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 320px;
+  min-height: 270px;
+}
+
+/* Ensure picture/img are visible and not collapsed */
+.hero.hero8 > div:first-child picture,
+.hero.hero8 > div:first-child img {
+  display: block;
+  max-width: 270px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-left: auto;
+  /* For debugging, remove after image appears:
+  background: #eee; border: 1px solid #f00; */
+}
+
+/* Heading style */
+.hero.hero8 h2 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  font-family: var(--heading-font-family);
+  text-align: left;
+}
+
+/* Paragraph styles */
+.hero.hero8 p:not(.button-container) {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  text-align: left;
+}
+
+.hero.hero8 p:not(.button-container):nth-of-type(2) {
+  color: #fff;
+  font-size: 14px;
+}
+
+.hero.hero8 p:not(.button-container):nth-of-type(2) a {
+  color: #7bc800;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Button appearance */
+.hero.hero8 .button-container {
+  margin: 0;
+  padding: 0;
+}
+
+.hero.hero8 .button-container .button {
+  background: #7bc800;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero.hero8 .button-container .button:hover,
+.hero.hero8 .button-container .button:focus {
+  background: #66a200;
+}
+
+/* Responsive: stack columns and shrink image/text on smaller screens */
+@media (max-width: 900px) {
+  .hero.hero8 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 16px;
+    gap: 32px;
+  }
+  .hero.hero8 > div:first-child {
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    min-width: 0;
+    width: 100%;
+  }
+  .hero.hero8 > div:last-child {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .hero.hero8 > div:last-child > div {
+    max-width: 100%;
+  }
+  .hero.hero8 > div:first-child picture,
+  .hero.hero8 > div:first-child img {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero.hero8 {
+    padding: 20px 8px;
+    gap: 16px;
+  }
+  .hero.hero8 h2 {
+    font-size: 22px;
   }
 }
