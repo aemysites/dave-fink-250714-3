@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -87,7 +88,6 @@
   background: none;
 }
 
-/* Background image covers the entire hero */
 .hero.hero40 > div:first-child {
   position: relative;
   inset: 0;
@@ -255,7 +255,6 @@
   padding-bottom: 10px;
 }
 
-
 @media (width <= 1024px) {
   .hero picture:nth-child(1) {
     display: none;
@@ -338,5 +337,179 @@
 
   .hero.hero40 > div:nth-child(2) > div {
     width: 43%;
+  }
+}
+
+.hero.hero8.block {
+  width: 100vw;
+  min-width: 100vw;
+  background: #432995;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 56px;
+  gap: 48px;
+}
+
+/* --- IMAGE COLUMN (right side visually, but first in HTML) --- */
+.hero.hero8.block > div:first-child {
+  flex: 1 1 50%;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-width: 260px;
+  max-width: 400px;
+  min-height: 340px; /* Ensures vertical space for image column */
+  height: 100%;
+}
+
+/* Target nested image container and force its visibility and alignment */
+.hero.hero8.block > div:first-child > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 280px;
+  width: 100%;
+}
+
+/* Image itself (picture/img in nested div) */
+.hero.hero8.block > div:first-child > div > picture,
+.hero.hero8.block > div:first-child > div > img {
+  display: block;
+  width: 100%;
+  max-width: 310px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 0;
+  margin-right: 0;
+
+  /* Uncomment the line below to debug image visibility if needed */
+
+  /* border: 1px solid #7AC943; */
+}
+
+/* --- TEXT COLUMN (left side visually, but second in HTML) --- */
+.hero.hero8.block > div:last-child {
+  flex: 1 1 50%;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 340px;
+  max-width: 550px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hero.hero8.block > div:last-child > div {
+  width: 100%;
+  max-width: 440px;
+  margin: 0;
+}
+
+/* Heading styles */
+.hero.hero8.block h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 0 0 24px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* Paragraph styles */
+.hero.hero8.block p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Link styles inside hero */
+.hero.hero8.block a:not(.button) {
+  color: #7AC943;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* --- BUTTON --- */
+.hero.hero8.block .button-container {
+  margin-top: 24px;
+  margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero.hero8.block .button-container .button {
+  background: #7AC943;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 40px;
+  min-width: 200px;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  border: none;
+  box-shadow: none;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.hero.hero8.block .button-container .button:hover,
+.hero.hero8.block .button-container .button:focus {
+  background: #60a832;
+}
+
+/* --- RESPONSIVE --- */
+@media (width <= 900px) {
+  .hero.hero8.block {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 32px 12px;
+    gap: 32px;
+  }
+
+  .hero.hero8.block > div {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero.hero8.block > div:first-child,
+  .hero.hero8.block > div:first-child > div {
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero.hero8.block > div:first-child > div > picture,
+  .hero.hero8.block > div:first-child > div > img {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .hero.hero8.block h2,
+  .hero.hero8.block p {
+    text-align: center;
+  }
+
+  .hero.hero8.block .button-container {
+    justify-content: center;
   }
 }
