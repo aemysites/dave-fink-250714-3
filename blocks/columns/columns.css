@@ -19,7 +19,7 @@
   display: block;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
@@ -32,79 +32,69 @@
   }
 }
 
-.columns.columns1 .columns,
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 110px; /* Slightly increased for a wider separation */
+  gap: 84px;
   width: 100%;
   box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
-  .columns.columns1 .columns,
+/* Stack columns on smaller screens */
+@media (width <= 800px) {
   .columns.columns1 > div {
     flex-direction: column;
     gap: 32px;
   }
 }
 
-/* stylelint-disable no-descending-specificity */
-.columns.columns1 .columns > div,
-.columns.columns1 > div > div {
-  min-width: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
-.columns.columns1 .columns > div:first-child,
+/* LEFT COLUMN (Text) */
 .columns.columns1 > div > div:first-child {
-  flex: 0 0 64%;
-  max-width: 64%;
-  width: 64%;
-  color: #333;
+  flex: 1 1 0;
+  max-width: 460px;
+  color: #23272b;
   font-size: 16px;
-  line-height: 1.45;
   font-family: var(--body-font-family);
+  line-height: 1.5;
   font-weight: 400;
   padding: 0;
   margin: 0;
   justify-content: flex-start;
+  margin-top: 10px;
 }
 
-.columns.columns1 .columns > div:first-child strong,
-.columns.columns1 > div > div:first-child strong {
-  font-weight: 700;
-  color: #333;
-}
-
-.columns.columns1 .columns > div:first-child p,
 .columns.columns1 > div > div:first-child p {
   margin: 0 0 0.7em;
   padding: 0;
   text-align: left;
-  line-height: 1.45;
+  line-height: 1.5;
+  color: #23272b;
 }
 
-.columns.columns1 .columns > div:last-child,
+.columns.columns1 > div > div:first-child strong {
+  color: #8a69cc;
+  font-weight: 700;
+  font-size: 1.05em;
+}
+
+/* RIGHT COLUMN (Navigation/Timeline) */
 .columns.columns1 > div > div:last-child {
-  flex: 0 0 36%;
+  flex: 0 0 270px;
   min-width: 230px;
-  width: 36%;
-  max-width: none;
-  color: #A6CE39;
-  font-size: 16px;
+  max-width: 340px;
   font-family: var(--body-font-family);
+  color: #97be1d;
+  font-size: 16px;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.columns.columns1 .columns > div:last-child ul,
+/* Navigation List Styling */
 .columns.columns1 > div > div:last-child ul {
   list-style: none;
   margin: 0;
@@ -112,40 +102,104 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 18px; /* More gap for vertical breathing room */
+  gap: 7px;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* "Where to Start?" header style (location marker icon) */
+.columns.columns1 > div > div:last-child ul li:first-child {
+  color: #97be1d;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  padding-left: 22px;
+  position: relative;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%2397be1d" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 1.75C5.82 1.75 3.25 4.32 3.25 7.5c0 4.25 5.75 8.75 5.75 8.75s5.75-4.5 5.75-8.75c0-3.18-2.57-5.75-5.75-5.75zm0 7c-0.69 0-1.25-0.56-1.25-1.25S8.31 6.25 9 6.25s1.25 0.56 1.25 1.25S9.69 8.75 9 8.75z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 0 3px;
+}
+
+/* Timeline bullets for nav links (not first li) */
+.columns.columns1 > div > div:last-child ul li:not(:first-child) {
+  color: #97be1d;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 22px;
+  position: relative;
+  min-height: 22px;
+  display: flex;
   align-items: flex-start;
 }
 
-.columns.columns1 .columns > div:last-child ul li,
-.columns.columns1 > div > div:last-child ul li {
-  color: #A6CE39;
-  font-size: 16px;
-  font-family: var(--body-font-family);
-  font-weight: 400;
-  line-height: 1.7;
-  text-align: left;
-  width: 100%;
-  margin: 0;
-  padding-left: 22px;
-  position: relative;
-  min-height: 18px;
-  display: flex;
-  align-items: center;
+/* Hollow circle bullets (matches original) */
+.columns.columns1 > div > div:last-child ul li:not(:first-child)::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #97be1d;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 7px;
   box-sizing: border-box;
-  background-repeat: no-repeat;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23A6CE39" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 1.75C5.82 1.75 3.25 4.32 3.25 7.5c0 4.25 5.75 8.75 5.75 8.75s5.75-4.5 5.75-8.75c0-3.18-2.57-5.75-5.75-5.75zm0 7c-0.69 0-1.25-0.56-1.25-1.25S8.31 6.25 9 6.25s1.25 0.56 1.25 1.25S9.69 8.75 9 8.75z"/></svg>');
-  background-size: 14px 14px;
-  background-position: 0 2px;
+  z-index: 1;
 }
 
-.columns.columns1 .columns > div:last-child ul li a,
+/* Timeline vertical line (matches original) */
+.columns.columns1 > div > div:last-child ul li:not(:first-child, :last-child)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 3.5px;
+  top: 13px;
+  width: 1.5px;
+  height: 17px;
+  background: #97be1d;
+  border-radius: 1px;
+  z-index: 0;
+}
+
+/* Nav link styles */
 .columns.columns1 > div > div:last-child ul li a {
-  color: #A6CE39;
+  color: #97be1d;
   text-decoration: underline;
+  text-underline-offset: 1.5px;
   font-size: 16px;
   font-family: var(--body-font-family);
   font-weight: 400;
   word-wrap: break-word;
   white-space: normal;
-  text-underline-offset: 1.5px;
+  transition: color 0.2s;
+}
+
+.columns.columns1 > div > div:last-child ul li a:hover {
+  color: #7ea715;
+  text-decoration: underline;
+}
+
+/* Remove any extra icons or placeholders accidentally styled */
+.columns.columns1 > div > div:last-child > div:not(:first-child) {
+  display: none;
+}
+
+/* Responsive: stack columns and ensure widths adapt */
+@media (width <= 600px) {
+  .columns.columns1 > div {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .columns.columns1 > div > div:first-child,
+  .columns.columns1 > div > div:last-child {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
 }
