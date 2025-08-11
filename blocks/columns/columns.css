@@ -1,4 +1,3 @@
-/* stylelint-disable no-descending-specificity */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -35,22 +34,21 @@
 
 
 .columns.columns1 {
-  padding: 0;
-  margin: 0;
+  padding: 0 32px;
+  background: #fff;
 }
 
-/* Main columns row: horizontally side by side, baseline-aligned */
+/* Flex row for top-level columns layout, top-aligned columns */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
-  align-items: baseline;        /* Align first lines of text */
+  align-items: flex-start; /* top align both columns */
   justify-content: flex-start;
-  gap: 26px;
+  gap: 56px; /* slightly reduced gap for closer grouping */
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Responsive stacking for small screens */
 @media (width <= 700px) {
   .columns.columns1 > div {
     flex-direction: column;
@@ -59,14 +57,15 @@
   }
 }
 
-/* Left column: compact paragraph block */
+/* Left column: even wider for more natural text wrapping */
 .columns.columns1 > div > div:first-child {
-  max-width: 268px;
-  min-width: 160px;
+  flex: 1 1 520px;
+  min-width: 430px;
+  max-width: 570px;
   color: #222;
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--body-font-family);
-  line-height: 1.38;
+  line-height: 1.5;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -75,39 +74,36 @@
   justify-content: flex-start;
 }
 
-/* Paragraph styling */
+/* Remove extra spacing and ensure crisp text lines */
 .columns.columns1 > div > div:first-child p {
   margin: 0;
   padding: 0;
   text-align: left;
   color: #222;
-  font-size: 14px;
-  line-height: 1.38;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-/* Bold intro text */
 .columns.columns1 > div > div:first-child strong {
   color: #222;
   font-weight: 700;
 }
 
-/* Right column: vertical list, baseline adjustment */
+/* Right column: narrower for tighter list grouping */
 .columns.columns1 > div > div:last-child {
-  max-width: 185px;
+  flex: 0 1 180px;
   min-width: 120px;
+  max-width: 200px;
   font-family: var(--body-font-family);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-start;
+  align-items: flex-start;
   padding: 0;
   margin: 0;
-
-  /* Drop down the nav list to align first link baseline with paragraph baseline */
-  margin-top: 7px;
 }
 
-/* List: no bullets, tight gap */
+/* UL styling for vertical list */
 .columns.columns1 > div > div:last-child ul {
   list-style: none;
   padding: 0;
@@ -115,77 +111,48 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 8px;
   align-items: flex-start;
 }
 
-/* Pin icon for first list item */
-.columns.columns1 > div > div:last-child ul li:first-child {
-  color: #6ca100;
-  font-size: 14px;
-  font-weight: 400;
-  margin-bottom: 0;
-  padding-left: 15px;
-  min-height: 16px;
-  display: flex;
-  align-items: center;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%236ca100" stroke-width="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 1.75C5.82 1.75 3.25 4.32 3.25 7.5c0 4.25 5.75 8.75 5.75 8.75s5.75-4.5 5.75-8.75c0-3.18-2.57-5.75-5.75-5.75zm0 7c-0.69 0-1.25-0.56-1.25-1.25S8.31 6.25 9 6.25s1.25 0.56 1.25 1.25S9.69 8.75 9 8.75z"/></svg>');
-  background-repeat: no-repeat;
-  background-size: 9px 9px;
-  background-position: 0 7px; /* Pin aligns with baseline */
-}
-
-/* List items and links: green, regular, underlined */
+/* Each list item: icon and text aligned center vertically */
 .columns.columns1 > div > div:last-child ul li {
-  color: #6ca100;
-  font-size: 14px;
+  color: #9c3;
+  font-size: 16px;
+  font-family: var(--body-font-family);
   font-weight: 400;
-  padding-left: 15px;
-  min-height: 16px;
+  padding-left: 22px;
+  min-height: 20px;
   display: flex;
   align-items: center;
   position: relative;
+  line-height: 1.5;
+  background-repeat: no-repeat;
+  background-size: 13px 13px;
+  background-position: 0 center;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%2399cc33" stroke-width="1.7" viewBox="0 0 18 18"><path d="M9 1.75C5.82 1.75 3.25 4.32 3.25 7.5c0 4.25 5.75 8.75 5.75 8.75s5.75-4.5 5.75-8.75c0-3.18-2.57-5.75-5.75-5.75zm0 7c-0.69 0-1.25-0.56-1.25-1.25S8.31 6.25 9 6.25s1.25 0.56 1.25 1.25S9.69 8.75 9 8.75z"/></svg>');
 }
 
-/* List links: custom green, always underlined */
+/* Links: color and underline, with hover effect */
 .columns.columns1 > div > div:last-child ul li a {
-  color: #6ca100;
+  color: #9c3;
   text-decoration: underline;
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--body-font-family);
   font-weight: 400;
-  word-wrap: break-word;
-  white-space: normal;
+  line-height: 1.5;
   transition: color 0.2s;
-  line-height: 1.38;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
-.columns.columns1 > div > div:last-child ul li a:hover {
-  color: #568200;
+.columns.columns1 > div > div:last-child ul li a:hover,
+.columns.columns1 > div > div:last-child ul li a:focus {
+  color: #7bb523;
 }
 
-/* Dots for navigation list items (not first) */
-.columns.columns1 > div > div:last-child ul li:not(:first-child)::before {
-  display: block;
-  width: 4px;
-  height: 4px;
-  border: 1px solid #6ca100;
-  border-radius: 50%;
-  background: #fff;
-  position: absolute;
-  left: 0;
-  top: 10px;                   /* Dot aligns with link baseline */
-  box-sizing: border-box;
-}
-
-/* Connector lines for vertical navigation */
-.columns.columns1 > div > div:last-child ul li:not(:first-child, :last-child)::after {
-  display: block;
-  position: absolute;
-  left: 1.5px;
-  top: 13px;
-  width: 1px;
-  height: 6px;
-  background: #6ca100;
-  border-radius: 1px;
+/* Prevent connector/old dot styles from appearing */
+.columns.columns1 > div > div:last-child ul li::before,
+.columns.columns1 > div > div:last-child ul li::after {
+  display: none;
 }
