@@ -169,10 +169,17 @@
 
 /* index page news-table customization */
 
-.default-content-wrapper {
+.news-header .default-content-wrapper{
+  align-items: flex-end;
+  display: inline;
+  flex-direction: row;
+  margin-bottom: 0;
+  margin-left: 100px; 
+}
+
+.section.table-container .default-content-wrapper {
   padding-left: 0;
   margin-left: -24px;  /* Offset the section's 24px left padding */
-
 }
 
 .section.news-header {
@@ -231,14 +238,6 @@ a.button:any-link, button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.news-header .default-content-wrapper{
-  align-items: flex-end;
-  display: inline;
-  flex-direction: row;
-  margin-bottom: 0;
-  margin-left: 100px; 
 }
 
 .news-header .button-container {

@@ -256,7 +256,7 @@
 }
 
 
-@media (width <= 1024px) {
+@media (width < 1024px) {
   .hero picture:nth-child(1) {
     display: none;
 
