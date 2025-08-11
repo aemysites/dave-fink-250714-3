@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -32,174 +33,159 @@
   }
 }
 
+
+.columns.columns1 {
+  padding: 0;
+  margin: 0;
+}
+
+/* Main columns row: horizontally side by side, baseline-aligned */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  gap: 84px;
+  align-items: baseline;        /* Align first lines of text */
+  justify-content: flex-start;
+  gap: 26px;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Stack columns on smaller screens */
-@media (width <= 800px) {
+/* Responsive stacking for small screens */
+@media (width <= 700px) {
   .columns.columns1 > div {
     flex-direction: column;
-    gap: 32px;
+    gap: 18px;
+    align-items: stretch;
   }
 }
 
-/* LEFT COLUMN (Text) */
+/* Left column: compact paragraph block */
 .columns.columns1 > div > div:first-child {
-  flex: 1 1 0;
-  max-width: 460px;
-  color: #23272b;
-  font-size: 16px;
+  max-width: 268px;
+  min-width: 160px;
+  color: #222;
+  font-size: 14px;
   font-family: var(--body-font-family);
-  line-height: 1.5;
+  line-height: 1.38;
   font-weight: 400;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  margin-top: 10px;
 }
 
+/* Paragraph styling */
 .columns.columns1 > div > div:first-child p {
-  margin: 0 0 0.7em;
+  margin: 0;
   padding: 0;
   text-align: left;
-  line-height: 1.5;
-  color: #23272b;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.38;
 }
 
+/* Bold intro text */
 .columns.columns1 > div > div:first-child strong {
-  color: #8a69cc;
+  color: #222;
   font-weight: 700;
-  font-size: 1.05em;
 }
 
-/* RIGHT COLUMN (Navigation/Timeline) */
+/* Right column: vertical list, baseline adjustment */
 .columns.columns1 > div > div:last-child {
-  flex: 0 0 270px;
-  min-width: 230px;
-  max-width: 340px;
+  max-width: 185px;
+  min-width: 120px;
   font-family: var(--body-font-family);
-  color: #97be1d;
-  font-size: 16px;
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+
+  /* Drop down the nav list to align first link baseline with paragraph baseline */
+  margin-top: 7px;
 }
 
-/* Navigation List Styling */
+/* List: no bullets, tight gap */
 .columns.columns1 > div > div:last-child ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 1px;
   align-items: flex-start;
-  position: relative;
 }
 
-/* "Where to Start?" header style (location marker icon) */
+/* Pin icon for first list item */
 .columns.columns1 > div > div:last-child ul li:first-child {
-  color: #97be1d;
-  font-size: 17px;
+  color: #6ca100;
+  font-size: 14px;
   font-weight: 400;
-  margin-bottom: 4px;
-  padding-left: 22px;
-  position: relative;
-  min-height: 22px;
+  margin-bottom: 0;
+  padding-left: 15px;
+  min-height: 16px;
   display: flex;
   align-items: center;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%2397be1d" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 1.75C5.82 1.75 3.25 4.32 3.25 7.5c0 4.25 5.75 8.75 5.75 8.75s5.75-4.5 5.75-8.75c0-3.18-2.57-5.75-5.75-5.75zm0 7c-0.69 0-1.25-0.56-1.25-1.25S8.31 6.25 9 6.25s1.25 0.56 1.25 1.25S9.69 8.75 9 8.75z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%236ca100" stroke-width="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 1.75C5.82 1.75 3.25 4.32 3.25 7.5c0 4.25 5.75 8.75 5.75 8.75s5.75-4.5 5.75-8.75c0-3.18-2.57-5.75-5.75-5.75zm0 7c-0.69 0-1.25-0.56-1.25-1.25S8.31 6.25 9 6.25s1.25 0.56 1.25 1.25S9.69 8.75 9 8.75z"/></svg>');
   background-repeat: no-repeat;
-  background-size: 15px 15px;
-  background-position: 0 3px;
+  background-size: 9px 9px;
+  background-position: 0 7px; /* Pin aligns with baseline */
 }
 
-/* Timeline bullets for nav links (not first li) */
-.columns.columns1 > div > div:last-child ul li:not(:first-child) {
-  color: #97be1d;
-  font-size: 16px;
+/* List items and links: green, regular, underlined */
+.columns.columns1 > div > div:last-child ul li {
+  color: #6ca100;
+  font-size: 14px;
   font-weight: 400;
-  padding-left: 22px;
-  position: relative;
-  min-height: 22px;
+  padding-left: 15px;
+  min-height: 16px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  position: relative;
 }
 
-/* Hollow circle bullets (matches original) */
-.columns.columns1 > div > div:last-child ul li:not(:first-child)::before {
-  content: '';
-  display: block;
-  width: 8px;
-  height: 8px;
-  border: 2px solid #97be1d;
-  border-radius: 50%;
-  background: #fff;
-  position: absolute;
-  left: 0;
-  top: 7px;
-  box-sizing: border-box;
-  z-index: 1;
-}
-
-/* Timeline vertical line (matches original) */
-.columns.columns1 > div > div:last-child ul li:not(:first-child, :last-child)::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 3.5px;
-  top: 13px;
-  width: 1.5px;
-  height: 17px;
-  background: #97be1d;
-  border-radius: 1px;
-  z-index: 0;
-}
-
-/* Nav link styles */
+/* List links: custom green, always underlined */
 .columns.columns1 > div > div:last-child ul li a {
-  color: #97be1d;
+  color: #6ca100;
   text-decoration: underline;
-  text-underline-offset: 1.5px;
-  font-size: 16px;
+  font-size: 14px;
   font-family: var(--body-font-family);
   font-weight: 400;
   word-wrap: break-word;
   white-space: normal;
   transition: color 0.2s;
+  line-height: 1.38;
 }
 
 .columns.columns1 > div > div:last-child ul li a:hover {
-  color: #7ea715;
-  text-decoration: underline;
+  color: #568200;
 }
 
-/* Remove any extra icons or placeholders accidentally styled */
-.columns.columns1 > div > div:last-child > div:not(:first-child) {
-  display: none;
+/* Dots for navigation list items (not first) */
+.columns.columns1 > div > div:last-child ul li:not(:first-child)::before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #6ca100;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 10px;                   /* Dot aligns with link baseline */
+  box-sizing: border-box;
 }
 
-/* Responsive: stack columns and ensure widths adapt */
-@media (width <= 600px) {
-  .columns.columns1 > div {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .columns.columns1 > div > div:first-child,
-  .columns.columns1 > div > div:last-child {
-    max-width: 100%;
-    min-width: 0;
-    width: 100%;
-  }
+/* Connector lines for vertical navigation */
+.columns.columns1 > div > div:last-child ul li:not(:first-child, :last-child)::after {
+  display: block;
+  position: absolute;
+  left: 1.5px;
+  top: 13px;
+  width: 1px;
+  height: 6px;
+  background: #6ca100;
+  border-radius: 1px;
 }
