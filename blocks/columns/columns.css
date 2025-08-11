@@ -34,126 +34,180 @@
 
 
 .columns.columns1 {
-  max-width: 960px;
-  margin: 0 auto;
   background: #fff;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* Main columns layout */
+/* Side-by-side columns using Flexbox, top-aligned */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 88px;
+  gap: 16px;
   width: 100%;
   box-sizing: border-box;
 }
 
-@media (width <= 900px) {
+/* Responsive: stack columns vertically on small screens */
+@media (width <= 700px) {
   .columns.columns1 > div {
     flex-direction: column;
-    gap: 32px;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .columns.columns1 > div > div:first-child {
+    width: 95vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: 0 !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+    max-width: none !important;
+  }
+
+  .columns.columns1 > div > div:first-child p {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+    text-align: justify !important;
+  }
+
+  .columns.columns1 > div > div:first-child p:nth-child(2) {
+    margin-bottom: 20px;
+  }
+
+  .columns.columns1 > div > div:last-child {
+    margin: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    align-items: flex-start;
+    text-align: justify;
   }
 }
 
-/* Left column (text) */
+/* Left column: width and vertical alignment refinements */
 .columns.columns1 > div > div:first-child {
-  flex: 1 1 0;
-  max-width: 540px;
-  min-width: 300px;
-  font-size: 16px;
+  flex: 1 1 0%;
+  max-width: 56%;
   color: #222;
-  line-height: 1.5;
+  font-size: 16px;
   font-family: var(--body-font-family);
+  line-height: 36px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0;
-  margin: 0;
+  margin-top: -3px;
+  text-align: justify;
+  letter-spacing: 0.4px;
 }
 
-.columns.columns1 > div > div:first-child strong {
-  color: #222;
-  font-weight: 700;
+/* Anchor tag styles */
+.columns.columns1 > div > div:first-child a {
+  color: #6ca100;
 }
 
+/* Superscript styles */
+.columns.columns1 > div > div:first-child sup {
+  font-size: 0.6em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+/* Paragraph styles */
 .columns.columns1 > div > div:first-child p {
+  color: #222;
+  font-size: 16px;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
   text-align: left;
 }
 
-/* Right column (list) */
-.columns.columns1 > div > div:last-child {
-  flex: 0 0 230px;
-  max-width: 230px;
-  font-size: 15px;
-  font-family: var(--body-font-family);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
+.columns.columns1 > div > div:first-child p:nth-child(2) {
+  margin-bottom: 20px;
 }
 
+/* Strong color and weight */
+.columns.columns1 > div > div:first-child strong {
+  color: #8a69cc;
+  font-weight: 700;
+}
+
+/* Right column: list */
+.columns.columns1 > div > div:last-child {
+  flex: 0 1 4cqh;
+  min-width: 180px;
+  max-width: 400px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  color: #97bf0d;
+  margin: 0 0 0 10%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+/* List styling: compact gap */
 .columns.columns1 > div > div:last-child ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 4px;
   align-items: flex-start;
-  width: 100%;
 }
 
-/* Increase indent to visually compensate for missing dots */
+/* List item styling: icon alignment and spacing */
 .columns.columns1 > div > div:last-child ul li {
+  color: rgb(130 188 0);
+  font-size: 16px;
+  padding-left: 17px;
+  min-height: 18px;
+  display: flex;
+  align-items: center;
   position: relative;
-  display: block;
-  font-size: 15px;
-  color: #B4D330;
-  font-family: var(--body-font-family);
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0 0 2px;
-  padding-left: 2em;
+  line-height: 1.4;
+  background-repeat: no-repeat;
+  background-size: 13px 13px;
+  background-position: 0 center;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%2397bf0d" stroke-width="1.7" viewBox="0 0 18 18"><path d="M9 1.75C5.82 1.75 3.25 4.32 3.25 7.5c0 4.25 5.75 8.75 5.75 8.75s5.75-4.5 5.75-8.75c0-3.18-2.57-5.75-5.75-5.75zm0 7c-0.69 0-1.25-0.56-1.25-1.25S8.31 6.25 9 6.25s1.25 0.56 1.25 1.25S9.69 8.75 9 8.75z"/></svg>');
+  width: 100%;
   text-align: left;
-  min-height: 22px;
 }
 
-/* Links */
+/* Link styling */
 .columns.columns1 > div > div:last-child ul li a {
-  color: #B4D330;
+  color: rgb(130 188 0);
   text-decoration: underline;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.4;
   font-family: var(--body-font-family);
+  font-weight: 400;
   transition: color 0.2s;
-  cursor: pointer;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
-/* Responsive stacking for mobile */
-@media (width <= 700px) {
-  .columns.columns1 > div {
-    flex-direction: column;
-    gap: 24px;
-  }
+.columns.columns1 > div > div:last-child ul li a:hover,
+.columns.columns1 > div > div:last-child ul li a:focus {
+  color: #7bb523;
+}
 
-  .columns.columns1 > div > div:first-child,
-  .columns.columns1 > div > div:last-child {
-    max-width: 100%;
-    min-width: 0;
-    font-size: 15px;
-  }
-
-  .columns.columns1 > div > div:last-child ul li,
-  .columns.columns1 > div > div:last-child ul li a {
-    font-size: 15px;
-  }
+.columns.columns1 > div > div:last-child ul li::before,
+.columns.columns1 > div > div:last-child ul li::after {
+  display: none;
 }
