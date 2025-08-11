@@ -173,7 +173,7 @@
 
 /* List item styling: icon alignment and spacing */
 .columns.columns1 > div > div:last-child ul li {
-  color: rgb(130, 188, 0);
+  color: rgb(130 188 0);
   font-size: 16px;
   padding-left: 17px;
   min-height: 18px;
@@ -191,7 +191,7 @@
 
 /* Link styling */
 .columns.columns1 > div > div:last-child ul li a {
-  color: rgb(130, 188, 0);
+  color: rgb(130 188 0);
   text-decoration: underline;
   font-size: 16px;
   line-height: 1.4;
