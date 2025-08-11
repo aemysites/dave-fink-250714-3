@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -87,7 +88,6 @@
   background: none;
 }
 
-/* Background image covers the entire hero */
 .hero.hero40 > div:first-child {
   position: relative;
   inset: 0;
@@ -338,5 +338,129 @@
 
   .hero.hero40 > div:nth-child(2) > div {
     width: 43%;
+  }
+}
+
+.hero.hero5 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100vw;
+  min-height: 330px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* LEFT: TEXT AREA */
+.hero.hero5 > div:last-child {
+  order: 1;
+  flex: 0 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  height: 100%;
+  background: #cfb9e3;
+  z-index: 2;
+  min-width: 0;
+  min-height: 330px;
+
+  /* Remove overflow to allow the pseudo-element overlay to extend */
+  overflow: visible;
+}
+
+.hero.hero5 > div:last-child > div {
+  width: 100%;
+  padding-left: 48px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.hero.hero5 h3 {
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.18;
+  letter-spacing: 0;
+  text-align: left;
+  width: 100%;
+}
+
+/* Gradient overlay placed at the edge and made narrower for a tighter blend */
+.hero.hero5 > div:last-child::after {
+  display: block;
+  position: absolute;
+  top: 0; right: -24px; bottom: 0; width: 48px;
+  background: linear-gradient(to right, #cfb9e3 0%, rgb(207 185 227 / 0%) 100%);
+  content: "";
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* RIGHT: IMAGE AREA */
+.hero.hero5 > div:first-child {
+  order: 2;
+  flex: 0 1 60%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  position: relative;
+  min-width: 0;
+  min-height: 330px;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero.hero5 picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero.hero5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive layout: stack vertically on small screens */
+@media (width <= 900px) {
+  .hero.hero5 {
+    flex-direction: column;
+    min-height: unset;
+    width: 100vw;
+    align-items: stretch;
+  }
+
+  .hero.hero5 > div:first-child,
+  .hero.hero5 > div:last-child {
+    width: 100%;
+    min-width: 0;
+    min-height: 200px;
+    height: 200px;
+    flex: none;
+  }
+
+  .hero.hero5 > div:last-child > div {
+    padding-left: 24px;
+    padding-right: 12px;
+  }
+
+  .hero.hero5 h3 {
+    font-size: 1.4rem;
+  }
+
+  .hero.hero5 > div:last-child::after {
+    right: -12px;
+    width: 24px;
   }
 }
