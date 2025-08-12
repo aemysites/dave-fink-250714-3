@@ -392,25 +392,16 @@
   z-index: 2;
 }
 
-.hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
-.hero.hero5 #patient-support-resources {
+.hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5 {
   color: #fff;
   font-weight: 400;
   margin: 0;
   text-align: left;
-  line-height: 1.18;
+  line-height: 40px;
   letter-spacing: 0;
   align-self: center;
   z-index: 2;
   position: relative;
-}
-
-.hero.hero5 #patient-support-resources {
-  position: relative;
-  z-index: 2;
-  font-family: inherit;
-  font-weight: 400;
-  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -428,15 +419,12 @@
   .hero.hero5 > div:last-child > div {
     width: 906px;
     justify-self: center;
+    padding: 0 15px;
   }
 
-  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
-  .hero.hero5 #patient-support-resources {
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5 {
     font-size: 30px;
     width: 40%;
-  }
-
-  .hero.hero5 #patient-support-resources {
     left: 15px;
     line-height: 40px;
   }
@@ -459,16 +447,12 @@
     justify-self: center;
   }
 
-  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
-  .hero.hero5 #patient-support-resources {
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5 {
     font-size: 30px;
     width: 40%;
-    left: 20px;
-  }
-
-  .hero.hero5 #patient-support-resources {
     left: 15px;
     line-height: 40px;
+    margin-bottom: 20px;
   }
 }
 

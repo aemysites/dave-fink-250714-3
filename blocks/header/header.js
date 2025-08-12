@@ -277,6 +277,16 @@ export default async function decorate(block) {
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
 
+  // Mark active link
+  const currentPath = window.location.pathname;
+  const links = nav.querySelectorAll('a');
+  links.forEach((link) => {
+    const linkPath = new URL(link.href).pathname;
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+    }
+  });
+
   // Handle breakpoint changes without unwanted animations
   isDesktop.addEventListener('change', () => {
     const navSectionsElement = nav.querySelector('.nav-sections');
