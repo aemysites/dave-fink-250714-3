@@ -2,7 +2,6 @@
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
-
   vertical-align: top;
   object-fit: cover;
 }
@@ -339,277 +338,165 @@
   }
 }
 
+.hero.hero5 {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.hero5 > div:first-child {
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.hero.hero5 > div:first-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background-color: #430098;
+  z-index: 2;
+  transform: skew(-40deg);
+  opacity: 0.32;
+}
+
+.hero.hero5 picture,
+.hero.hero5 img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  position: relative;
+}
+
+.hero.hero5 > div:last-child {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: block;
+  color: #fff;
+  z-index: 2;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.hero.hero5 > div:last-child > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  background: none;
+  position: relative;
+  z-index: 2;
+}
+
+.hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
+.hero.hero5 #patient-support-resources {
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+  line-height: 1.18;
+  letter-spacing: 0;
+  align-self: center;
+  z-index: 2;
+  position: relative;
+}
+
+.hero.hero5 #patient-support-resources {
+  position: relative;
+  z-index: 2;
+  font-family: inherit;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
 @media (width > 1320px) {
-  .hero.hero5 {
-    display: block;
-    /* width: 100%; */
-    /* height: 100%; */
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Left side: Image, fills full height */
-  .hero.hero5 > div:first-child {
-    height: 100%;
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
-
   .hero.hero5 > div:first-child::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: block;
-    background-color: #430098;
     left: -15%;
     width: 65%;
-    z-index: 2;
-    transform: skew(-40deg);
-    opacity: 0.32;
   }
 
   .hero.hero5 picture,
   .hero.hero5 img {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
   }
 
-  /* Right side: Overlay & text, fills full height */
-  .hero.hero5 > div:last-child {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    display: block;
-    color: #fff;
-    z-index: 2;
-    box-sizing: border-box;
-    position: absolute;
-  }
-
-  /* Text vertical & horizontal alignment */
   .hero.hero5 > div:last-child > div {
     width: 906px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0;
-    background: none;
-    position: relative;
-    z-index: 2;
     justify-self: center;
   }
 
-  .hero.hero5 h3,
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
   .hero.hero5 #patient-support-resources {
-    color: #fff;
-    font-size: 2.3rem;
-    font-weight: 400;
-    margin: 0;
-    text-align: left;
-    line-height: 1.18;
-    letter-spacing: 0;
+    font-size: 30px;
     width: 40%;
-    align-self: center;
-    z-index: 2;
   }
 
   .hero.hero5 #patient-support-resources {
-    position: relative;
-    z-index: 2;
-    width: 40%;
     left: 15px;
-    font-size: 30px;
-    font-family: inherit;
     line-height: 40px;
-    font-weight: 400;
-    color: #fff;
-    margin-bottom: 20px;
   }
 }
 
 @media (width > 1024px) and (width < 1320px) {
-  .hero.hero5 {
-    display: block;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Left side: Image, fills full height */
-  .hero.hero5 > div:first-child {
-    height: 100%;
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
-
   .hero.hero5 > div:first-child::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: block;
-    background-color: #430098;
     left: -15%;
     width: 65%;
-    z-index: 2;
-    transform: skew(-40deg);
-    opacity: 0.32;
   }
 
   .hero.hero5 picture,
   .hero.hero5 img {
-    width: 100%;
     height: 320px;
-    right: -4%;
-    position: relative;
-    object-fit: cover;
     object-position: right;
-    display: block;
   }
 
-  /* Right side: Overlay & text, fills full height */
-  .hero.hero5 > div:last-child {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    display: block;
-    color: #fff;
-    z-index: 2;
-    box-sizing: border-box;
-    position: absolute;
-  }
-
-  /* Text vertical & horizontal alignment */
   .hero.hero5 > div:last-child > div {
     width: 906px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0;
-    background: none;
-    position: relative;
-    z-index: 2;
     justify-self: center;
   }
 
-  .hero.hero5 h3,
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
   .hero.hero5 #patient-support-resources {
-    color: #fff;
-    font-size: 2.3rem;
-    font-weight: 400;
-    margin: 0;
-    text-align: left;
-    line-height: 1.18;
-    letter-spacing: 0;
+    font-size: 30px;
     width: 40%;
-    align-self: center;
-    z-index: 2;
+    left: 20px;
   }
 
   .hero.hero5 #patient-support-resources {
-    position: relative;
-    z-index: 2;
-    width: 40%;
     left: 15px;
-    font-size: 30px;
-    font-family: inherit;
     line-height: 40px;
-    font-weight: 400;
-    color: #fff;
-    margin-bottom: 20px;
   }
 }
-/* Responsive: stack on small screens */
+
 @media (width <= 1024px) {
-  .hero.hero5 {
-    display: block;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Left side: Image, fills full height */
-  .hero.hero5 > div:first-child {
-    height: 100%;
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
-
   .hero.hero5 > div:first-child::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: block;
-    background-color: #430098;
     left: -16%;
     width: 70%;
-    z-index: 2;
-    transform: skew(-40deg);
-    opacity: 0.32;
   }
 
   .hero.hero5 picture,
   .hero.hero5 img {
-    width: 100%;
     height: 220px;
-    position: relative;
-    object-fit: cover;
     object-position: right;
-    display: block;
   }
 
-  /* Right side: Overlay & text, fills full height */
-  .hero.hero5 > div:last-child {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    display: block;
-    color: #fff;
-    z-index: 2;
-    box-sizing: border-box;
-    position: absolute;
-  }
-
-  /* Text vertical & horizontal alignment */
   .hero.hero5 > div:last-child > div {
     max-width: 906px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0;
-    background: none;
-    position: relative;
-    z-index: 2;
   }
 
-  .hero.hero5 h3,
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
   .hero.hero5 #patient-support-resources {
-    color: #fff;
-    font-size: 2.3rem;
-    font-weight: 400;
-    margin: 0;
-    text-align: left;
-    line-height: 1.18;
-    letter-spacing: 0;
-    width: 40%;
-    align-self: center;
-    z-index: 2;
-  }
-
-  .hero.hero5 #patient-support-resources {
-    position: relative;
-    z-index: 2;
+    font-size: 26px;
     width: 40%;
     left: 20px;
-    font-size: 26px;
+  }
+
+  .hero.hero5 #patient-support-resources {
+    left: 20px;
     line-height: 32px;
-    font-weight: 400;
-    color: #fff;
-    margin-bottom: 20px;
   }
 }
