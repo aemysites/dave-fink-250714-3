@@ -209,77 +209,78 @@
   padding: 0;
 }
 
-/* Main horizontal flex container for columns */
+/* Flex row layout, top alignment for perfect match */
 .columns.columns23 > div {
   display: flex;
   flex-direction: row;
-  align-items: flex-start; /* Top-align headline and paragraph */
-  gap: 24px;
+  align-items: flex-start;   /* Top aligns heading and paragraph */
+  gap: 1rem;                /* Tighter gap for visual association */
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* Responsive: stack columns vertically on small screens */
+/* Responsive stacking for mobile */
 @media (width <= 700px) {
   .columns.columns23 > div {
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
   }
 }
 
-/* Headline column */
+/* Heading column: only as wide as needed */
 .columns.columns23 > div > div:first-child {
-  display: block;
-  max-width: 220px;
-  min-width: 120px;
+  flex: 0 0 auto;
   margin: 0;
   padding: 0;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
 }
 
-/* Headline text - nudge up for improved alignment */
+/* Heading text appearance */
 .columns.columns23 > div > div:first-child p {
   font-family: var(--heading-font-family);
   font-size: 32px;
   line-height: 42px;
-  font-weight: 600;
-  color: #505050;
+  font-weight: 700;
+  color: #222;
   margin: 0;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  display: block;
   padding: 0;
-  position: relative;
-  top: -3px; /* visually aligns headline with paragraph's first line */
+  white-space: nowrap; /* Prevent wrapping, matches original visual */
+  letter-spacing: 0;
 }
 
-/* Paragraph column */
+/* Body column fills remaining space */
 .columns.columns23 > div > div:last-child {
-  display: block;
+  flex: 1 1 0;
+  min-width: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
-  flex: 1 1 0;
+  display: flex;
+  align-items: flex-start;
 }
 
-/* Paragraph text */
+/* Body text styling */
 .columns.columns23 > div > div:last-child p {
   font-family: var(--body-font-family);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   color: #444;
-  line-height: 1.4;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
   text-align: left;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-/* Superscript references */
+/* Superscript styling for references */
 .columns.columns23 > div > div:last-child p sup {
   font-size: 10px;
   position: relative;
   top: -0.5em;
   color: #888;
   font-weight: 400;
+  line-height: 1;
 }
