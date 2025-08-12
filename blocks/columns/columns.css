@@ -209,18 +209,18 @@
   padding: 0;
 }
 
-/* Use Flexbox for row layout and tighten gap to match original */
+/* Main horizontal flex container for columns */
 .columns.columns23 > div {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: flex-start; /* Top-align headline and paragraph */
+  gap: 24px;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* Responsive: stack vertically on small screens */
+/* Responsive: stack columns vertically on small screens */
 @media (width <= 700px) {
   .columns.columns23 > div {
     flex-direction: column;
@@ -228,43 +228,44 @@
   }
 }
 
-/* Label column: keep as narrow as possible, top aligned */
+/* Headline column */
 .columns.columns23 > div > div:first-child {
-  display: flex;
-  align-items: flex-start;
+  display: block;
+  max-width: 220px;
+  min-width: 120px;
   margin: 0;
   padding: 0;
-  min-width: 0;
-  max-width: 160px; /* restrict label width, adjust as needed */
-  flex: 0 0 auto;
 }
 
-/* Label text styling */
+/* Headline text - nudge up for improved alignment */
 .columns.columns23 > div > div:first-child p {
   font-family: var(--heading-font-family);
-  font-size: 24px;
+  font-size: 32px;
+  line-height: 42px;
   font-weight: 600;
   color: #505050;
   margin: 0;
-  line-height: 1.1;
   letter-spacing: 0.01em;
   white-space: nowrap;
+  display: block;
+  padding: 0;
+  position: relative;
+  top: -3px; /* visually aligns headline with paragraph's first line */
 }
 
-/* Description column: fill remaining space, top aligned */
+/* Paragraph column */
 .columns.columns23 > div > div:last-child {
-  display: flex;
-  align-items: flex-start;
+  display: block;
   margin: 0;
   padding: 0;
   min-width: 0;
   flex: 1 1 0;
 }
 
-/* Description text styling for 16px, #444 */
+/* Paragraph text */
 .columns.columns23 > div > div:last-child p {
   font-family: var(--body-font-family);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: #444;
   line-height: 1.4;
@@ -274,9 +275,11 @@
   overflow-wrap: break-word;
 }
 
-/* Superscript styling in description */
+/* Superscript references */
 .columns.columns23 > div > div:last-child p sup {
   font-size: 10px;
   position: relative;
   top: -0.5em;
+  color: #888;
+  font-weight: 400;
 }
