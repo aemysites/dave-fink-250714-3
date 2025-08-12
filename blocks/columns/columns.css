@@ -205,76 +205,76 @@
 
 .columns.columns23 {
   background: #fff;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-/* Use flex for horizontal layout and proper top alignment */
+/* Use Flexbox for row layout and tighten gap to match original */
 .columns.columns23 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-/* Responsive: stack columns vertically on smaller screens */
+/* Responsive: stack vertically on small screens */
 @media (width <= 700px) {
   .columns.columns23 > div {
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
   }
 }
 
-/* Left column: only as wide as its content, top aligned */
+/* Label column: keep as narrow as possible, top aligned */
 .columns.columns23 > div > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  max-width: 160px; /* restrict label width, adjust as needed */
   flex: 0 0 auto;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: flex-start;
 }
 
-/* HR+/HER2- text: optimize vertical alignment and spacing */
+/* Label text styling */
 .columns.columns23 > div > div:first-child p {
-  font-size: 28px;
   font-family: var(--heading-font-family);
-  font-weight: bold;
-  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  color: #505050;
   margin: 0;
+  line-height: 1.1;
   letter-spacing: 0.01em;
-  line-height: 1.13;
   white-space: nowrap;
-  position: relative;
-  top: 0;
 }
 
-/* Right column: fills remaining space, top aligned */
+/* Description column: fill remaining space, top aligned */
 .columns.columns23 > div > div:last-child {
-  flex: 1 1 0;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  flex: 1 1 0;
 }
 
-/* Paragraph styling */
+/* Description text styling for 16px, #444 */
 .columns.columns23 > div > div:last-child p {
-  font-size: 14px;
   font-family: var(--body-font-family);
+  font-size: 16px;
   font-weight: 400;
   color: #444;
   line-height: 1.4;
   margin: 0;
   padding: 0;
   text-align: left;
+  overflow-wrap: break-word;
 }
 
-/* Superscript styling */
+/* Superscript styling in description */
 .columns.columns23 > div > div:last-child p sup {
   font-size: 10px;
   position: relative;
