@@ -1,42 +1,23 @@
-/* news-table styles - positioned first for proper CSS specificity hierarchy */
-
-/* Base news-table container */
+/* stylelint-disable no-descending-specificity */
 .news-table {
   width: 1996px;
-
-  /* max-width: 996px; */
   overflow-x: auto;
-
-  /* Prevent horizontal overflow issues */
   margin-left: -10px;
-
-  /* Add negative margin to the left */
   margin-right: -10px;
-
-  /* Add negative margin to the right */
 }
 
-/* news-table table - MUST come before .table.block table for specificity */
 .news-table table {
   width: auto;
-
-  /* max-width: 996px;  */
   border: none;
   border-collapse: separate;
-
-  /* Use 'separate' to enable border-spacing */
   border-spacing: 12px;
-
-  /* Adds 10px of white space between cells */
   background-color: white;
 }
 
-/* news-table table tr - MUST come before .table.block table thead tr for specificity */
 .news-table table tr {
   margin-bottom: 20px;
 }
 
-/* General table selectors - MUST come before specific news-table selectors for specificity */
 .table.block table th {
   font-weight: 700;
 }
@@ -57,20 +38,11 @@
 
 .news-table.table.block td {
   background-color: #F5F5F5;
-
-  /* Light gray background for table cells */
   border: none;
-
-  /* Remove borders from table cells */
   margin-top: 15px;
-
-  /* padding-bottom: 18px; */
   padding: 15px;
-
-  /* Add padding to the cells */
 }
 
-/* Target the first <p> tag in news table cell */
 .news-table td p:nth-child(1) {
   color: white;
   background-color: #82BC00;
@@ -89,7 +61,6 @@
   text-align: center;
 }
 
-/* Target the second <p> tag in news table cell */
 .news-table td p:nth-child(2) {
   color: #82BC00;
   font-size: 12px;
@@ -97,7 +68,6 @@
   line-height: 26px;
 }
 
-/* Target the third <p> tag in news table cell */
 .news-table td p:nth-child(3) {
   color: rgb(67 0 152);
   line-height: 26px;
@@ -105,12 +75,10 @@
   font-size: 20px;
 }
 
-/* Target the fourth <p> tag in news table cell */
 .news-table td p:nth-child(4) {
   color: rgb(51 51 51);
 }
 
-/* Target the fifth <p> tag in news table cell */
 .news-table td p:nth-child(5) {
   .button {
     color: rgb(51 51 51);
@@ -151,23 +119,14 @@
   border-bottom: none;
 }
 
-/* no header variant */
-.table.block.no-header table tbody tr {
-  border-top: none;
-}
-
-/* striped variant */
 .table.block.striped tbody tr:nth-child(odd) {
   background-color: var(--overlay-background-color);
 }
 
-/* bordered variant */
 .table.block.bordered table th,
 .table.block.bordered table td {
   border: 1px solid;
 }
-
-/* index page news-table customization */
 
 .news-header .default-content-wrapper{
   align-items: flex-end;
@@ -179,7 +138,7 @@
 
 .section.table-container .default-content-wrapper {
   padding-left: 0;
-  margin-left: -24px;  /* Offset the section's 24px left padding */
+  margin-left: -24px;
 }
 
 .section.news-header {
@@ -215,7 +174,6 @@ a.button:any-link, button {
   border-radius: 0;
 }
 
-/* News header selectors ordered by specificity (least to most specific) */
 .news-header a {
   box-sizing: border-box;
   display: inline-block;
@@ -259,4 +217,109 @@ a.button:any-link, button {
 
 div.section.table-container {
   margin-top:0;
+}
+
+
+.table.no-header.tablenoheader26 {
+  background: #f6f3fb;
+  border-radius: 16px;
+  max-width: 880px;
+  margin: 24px auto;
+  padding: 30px 40px 28px;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Flex-based row layout for perfect horizontal alignment */
+.table.no-header.tablenoheader26 table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: none;
+  margin: 0 auto;
+}
+
+.table.no-header.tablenoheader26 tbody tr {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Table cells as columns */
+.table.no-header.tablenoheader26 td {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 440px;
+  padding: 0 26px 0 0;
+  margin: 0;
+  border: none;
+  background: none;
+  vertical-align: top;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+/* Last cell in row has no right padding */
+.table.no-header.tablenoheader26 td:last-child {
+  padding-right: 0;
+}
+
+/* List styling inside cells */
+.table.no-header.tablenoheader26 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+/* List items: text color, spacing, no bullets */
+.table.no-header.tablenoheader26 li {
+  font-family: var(--body-font-family, "Avenir LT W05_55 Roman", Arial, sans-serif);
+  color: #7266B2;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.01em;
+  width: 100%;
+  display: block;
+}
+
+/* Divider line under each cell except last row */
+.table.no-header.tablenoheader26 tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #b0a6d6;
+}
+
+/* Remove divider for last row */
+.table.no-header.tablenoheader26 tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Remove icon/image in the center if present */
+.table.no-header.tablenoheader26 td img,
+.table.no-header.tablenoheader26 td .icon,
+.table.no-header.tablenoheader26 td [aria-label="info"] {
+  display: none;
+}
+
+/* Responsive: stack items vertically on small screens */
+@media (width <= 700px) {
+  .table.no-header.tablenoheader26 {
+    border-radius: 10px;
+    padding: 12px 2vw 10px;
+    max-width: 99vw;
+  }
+
+  .table.no-header.tablenoheader26 tbody tr {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table.no-header.tablenoheader26 td {
+    padding: 0;
+    max-width: 100%;
+  }
 }
