@@ -223,19 +223,16 @@ div.section.table-container {
   margin-top:0;
 }
 
-
 .table.tablenoheader26 {
   background: #f4f1fb;
-  padding: 32px 0 16px;
   box-sizing: border-box;
   width: 100%;
-  margin: 0 auto;
-  max-width: 900px;
+  margin-bottom: 44px;
+  max-width: 906px;
 }
 
 .table.tablenoheader26 table {
-  width: 96%;
-  margin: 0 auto;
+  width: 100%;
   border-collapse: collapse;
   background: transparent;
   table-layout: fixed;
@@ -243,16 +240,15 @@ div.section.table-container {
 }
 
 .table.tablenoheader26 thead tr th {
-  font-size: 12px;
+  margin-bottom: 0;
+  line-height: 30px;
+  letter-spacing: 0.4px;
+  border-bottom: #3e3092 2px solid;
+  font-size: 16px;
+  color: #8b61ca;
   text-transform: uppercase;
-  color: #7867b1;
-  font-weight: 600;
+  padding: 2px 0 2px 30px;
   text-align: left;
-  padding: 0 0 12px;
-  border: none;
-  letter-spacing: 0.04em;
-  background: transparent;
-  border-bottom: 1.5px solid #7867b1;
 }
 
 /* Pair columns side by side using td widths */
@@ -266,7 +262,7 @@ div.section.table-container {
 
 .table.tablenoheader26 tbody td {
   width: 50%;
-  padding: 0 24px 0 0;
+  padding: 0 8px 0 0;
   vertical-align: middle;
   background: transparent;
   border: none;
@@ -280,6 +276,7 @@ div.section.table-container {
 
 .table.tablenoheader26 tbody td:last-child {
   padding-right: 0;
+  padding-left: 8px;
 }
 
 /* Remove bullets and normalize spacing */
@@ -291,19 +288,12 @@ div.section.table-container {
 }
 
 .table.tablenoheader26 td li {
-  font-size: 13px;
-  color: #7867b1;
-  font-family: inherit;
-  padding: 6px 0;
-  border-bottom: 1px solid #dbd2f7;
-  font-weight: 400;
-  line-height: 1.6;
-  text-align: left;
-  width: 100%;
-  margin: 0;
-
-  /* Limit underline to text width */
-  display: inline-block;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 2px 0;
+  letter-spacing: 0.4px;
+  padding-left: 30px;
+  border-bottom: #8b61ca 1px solid;
 }
 
 /* Remove underline from last row's items */
@@ -318,13 +308,9 @@ div.section.table-container {
 }
 
 /* Responsive stacking: stack columns vertically on small screens */
-@media (width <= 700px) {
+@media (width <= 1024px) {
   .table.tablenoheader26 table {
     width: 100%;
-  }
-
-  .table.tablenoheader26 tbody tr {
-    flex-direction: column;
   }
 
   .table.tablenoheader26 tbody td {
@@ -333,12 +319,37 @@ div.section.table-container {
     padding-left: 0;
     display: block;
   }
+
+  .table.tablenoheader26 td li {
+    font-size: 14px;
+    padding-left: 20px;
+  }
 }
 
-/* Constrain table for wide screens for centered look */
-@media (width >= 900px) {
-  .table.tablenoheader26 {
-    max-width: 900px;
-    margin: 0 auto;
+@media (width <= 768px) {
+  .table.tablenoheader26 tbody tr {
+    flex-direction: column;
+  }
+
+  .table.tablenoheader26 tbody td:last-child {
+    padding-left: 0;
+  }
+
+  .table.tablenoheader26 td li {
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 20px;
+  }
+
+  .table.tablenoheader26 tbody tr:last-child td li {
+    border-bottom: #8b61ca 1px solid;
+  }
+
+  .table.tablenoheader26 thead tr th {
+    padding: 8px 0 2px 0;
+    display: block;
+    margin: 0 20px;
+    font-size: 18px;
   }
 }
