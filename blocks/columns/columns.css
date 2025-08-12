@@ -209,52 +209,58 @@
   padding: 0;
 }
 
-/* Layout: two columns side by side, visually balanced and responsive */
+/* Main row: flex, top-aligned, refined gap for precise visual spacing */
 .columns.columns23 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 1.2rem; /* Slightly increased gap for visual breathing room */
+  gap: 2.5rem; /* Increased gap for more open layout, matching original */
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* Responsive: stack vertically on small screens */
+/* Responsive: stack columns vertically, maintain clear gap on small screens */
 @media (width <= 700px) {
   .columns.columns23 > div {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.7rem;
   }
 }
 
-/* Left column: compact and right-aligned */
+/* Heading column: wider for balanced whitespace and best alignment */
 .columns.columns23 > div > div:first-child {
-  flex: 0 0 134px;    /* Tweak width for optimal alignment */
-  max-width: 134px;
-  min-width: 0;
+  flex: 0 0 190px;
+  min-width: 170px;
+  max-width: 220px;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
-/* Large label, right aligned, single line */
+/* Heading text: font, size, weight, and alignment for visual fidelity */
 .columns.columns23 > div > div:first-child p {
   font-family: var(--heading-font-family);
-  font-size: 24px;
-  line-height: 1.1;
-  font-weight: normal;
+  font-size: 28px;
+  font-weight: 700;
   color: #444;
   margin: 0;
   padding: 0;
+  line-height: 1.1;
   letter-spacing: 0.01em;
   white-space: nowrap;
-  text-align: right;
+  text-align: left;
 }
 
-/* Right column: fills remaining space */
+/* If markup/JS allows, style HER2- in a span */
+.columns.columns23 > div > div:first-child p span {
+  font-weight: 400;
+  color: #d3d3d3;
+}
+
+/* Body column: fill space, top-aligned for text */
 .columns.columns23 > div > div:last-child {
   flex: 1 1 0;
   min-width: 0;
@@ -264,7 +270,7 @@
   align-items: flex-start;
 }
 
-/* Body copy styling */
+/* Paragraph: font, color, line-height, wrapping */
 .columns.columns23 > div > div:last-child p {
   font-family: var(--body-font-family);
   font-size: 16px;
@@ -278,11 +284,11 @@
   overflow-wrap: break-word;
 }
 
-/* Superscript styling */
-.columns.columns23 sup {
+/* Superscript: size, color, vertical alignment */
+.columns.columns23 > div > div:last-child sup {
   font-size: 10px;
   vertical-align: super;
-  color: #bbb;
+  color: #444;
   font-weight: 400;
   line-height: 1;
 }
