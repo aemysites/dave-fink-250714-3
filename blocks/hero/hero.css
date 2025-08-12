@@ -412,7 +412,7 @@
     text-align: left;
     line-height: 1.18;
     letter-spacing: 0;
-    width: 100%;
+    width: 40%;
     align-self: center;
     z-index: 2;
   }
@@ -434,8 +434,6 @@
 @media (width > 1024px) and (width < 1320px) {
   .hero.hero5 {
     display: block;
-    /* width: 100%; */
-    /* height: 100%; */
     position: relative;
     overflow: hidden;
   }
@@ -507,7 +505,7 @@
     text-align: left;
     line-height: 1.18;
     letter-spacing: 0;
-    width: 100%;
+    width: 40%;
     align-self: center;
     z-index: 2;
   }
@@ -529,8 +527,6 @@
 @media (width <= 1024px) {
   .hero.hero5 {
     display: block;
-    /* width: 100%; */
-    /* height: 100%; */
     position: relative;
     overflow: hidden;
   }
@@ -600,7 +596,7 @@
     text-align: left;
     line-height: 1.18;
     letter-spacing: 0;
-    width: 100%;
+    width: 40%;
     align-self: center;
     z-index: 2;
   }
