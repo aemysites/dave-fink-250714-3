@@ -1,16 +1,14 @@
+/* stylelint-disable no-descending-specificity */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
-  width: 100%;
-  height: auto;
   vertical-align: top;
   object-fit: cover;
 }
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: 0;
 }
 
 .hero h1,
@@ -66,7 +64,7 @@
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding: 0;
   }
 }
 
@@ -87,7 +85,6 @@
   background: none;
 }
 
-/* Background image covers the entire hero */
 .hero.hero40 > div:first-child {
   position: relative;
   inset: 0;
@@ -312,11 +309,11 @@
 }
 
 @media (width <= 768px) {
-  .hero picture:nth-child(2) {
+  .hero.hero40 picture:nth-child(2) {
     display: none;
   }
 
-  .hero picture:nth-child(3) {
+  .hero.hero40 picture:nth-child(3) {
     display: block;
   }
 
@@ -338,5 +335,168 @@
 
   .hero.hero40 > div:nth-child(2) > div {
     width: 43%;
+  }
+}
+
+.hero.hero5 {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.hero5 > div:first-child {
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.hero.hero5 > div:first-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background-color: #430098;
+  z-index: 2;
+  transform: skew(-40deg);
+  opacity: 0.32;
+}
+
+.hero.hero5 picture,
+.hero.hero5 img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  position: relative;
+}
+
+.hero.hero5 > div:last-child {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: block;
+  color: #fff;
+  z-index: 2;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.hero.hero5 > div:last-child > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  background: none;
+  position: relative;
+  z-index: 2;
+}
+
+.hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
+.hero.hero5 #patient-support-resources {
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+  line-height: 1.18;
+  letter-spacing: 0;
+  align-self: center;
+  z-index: 2;
+  position: relative;
+}
+
+.hero.hero5 #patient-support-resources {
+  position: relative;
+  z-index: 2;
+  font-family: inherit;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+@media (width > 1320px) {
+  .hero.hero5 > div:first-child::before {
+    left: -15%;
+    width: 65%;
+  }
+
+  .hero.hero5 picture,
+  .hero.hero5 img {
+    height: 100%;
+  }
+
+  .hero.hero5 > div:last-child > div {
+    width: 906px;
+    justify-self: center;
+  }
+
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
+  .hero.hero5 #patient-support-resources {
+    font-size: 30px;
+    width: 40%;
+  }
+
+  .hero.hero5 #patient-support-resources {
+    left: 15px;
+    line-height: 40px;
+  }
+}
+
+@media (width > 1024px) and (width < 1320px) {
+  .hero.hero5 > div:first-child::before {
+    left: -15%;
+    width: 65%;
+  }
+
+  .hero.hero5 picture,
+  .hero.hero5 img {
+    height: 320px;
+    object-position: right;
+  }
+
+  .hero.hero5 > div:last-child > div {
+    width: 906px;
+    justify-self: center;
+  }
+
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
+  .hero.hero5 #patient-support-resources {
+    font-size: 30px;
+    width: 40%;
+    left: 20px;
+  }
+
+  .hero.hero5 #patient-support-resources {
+    left: 15px;
+    line-height: 40px;
+  }
+}
+
+@media (width <= 1024px) {
+  .hero.hero5 > div:first-child::before {
+    left: -16%;
+    width: 70%;
+  }
+
+  .hero.hero5 picture,
+  .hero.hero5 img {
+    height: 220px;
+    object-position: right;
+  }
+
+  .hero.hero5 > div:last-child > div {
+    max-width: 906px;
+  }
+
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5,
+  .hero.hero5 #patient-support-resources {
+    font-size: 26px;
+    width: 40%;
+    left: 20px;
+  }
+
+  .hero.hero5 #patient-support-resources {
+    left: 20px;
+    line-height: 32px;
   }
 }
