@@ -286,71 +286,77 @@
 }
 
 
+.columns.columns43 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex row layout, baseline alignment for first-line match */
 .columns.columns43 > div {
   display: flex;
   flex-direction: row;
-  align-items: flex-start; /* Top aligns both columns */
-  gap: 12px;
+  align-items: baseline;
+  gap: 20px;
   width: 100%;
 }
 
-/* Responsive stacking for small screens */
-@media (width <= 900px) {
+/* Responsive: stack columns vertically on small screens */
+@media (width <= 700px) {
   .columns.columns43 > div {
     flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
+    gap: 10px;
+    align-items: stretch;
   }
 }
 
-.columns.columns43 > div > div:first-child {
-  flex: 0 0 auto;
+/* Remove extra flex from inner columns, ensure they don't affect baseline alignment */
+.columns.columns43 > div > div:first-child,
+.columns.columns43 > div > div:last-child {
+  display: block;
   min-width: 0;
-  display: flex;
-  align-items: flex-start;
+  margin: 0;
+  padding: 0;
 }
 
-/* Right column: take up remaining space */
+/* Let right column take up remaining horizontal space */
 .columns.columns43 > div > div:last-child {
   flex: 1 1 0%;
-  min-width: 0;
-  display: flex;
-  align-items: flex-start;
 }
 
-/* Left label styling: large, light, single line, top aligned */
+/* Left column label */
 .columns.columns43 > div > div:first-child p {
-  font-size: 32px;
-  line-height: 42px;
-  color: #bbb;
+  font-size: 28px;
+  line-height: 1.1;
+  color: #D3D3D3;
+  font-weight: 600;
   font-family: var(--body-font-family);
-  font-weight: 400;
   margin: 0;
   padding: 0;
   white-space: nowrap;
-  display: block;
+  letter-spacing: 0.01em;
 }
 
-/* Paragraph styling: small, dark, top aligned, no extra margin */
+/* Right column paragraph: nudged up for visual baseline alignment */
 .columns.columns43 > div > div:last-child p {
-  font-size: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  top: -3px; /* Nudge upward for better baseline match */
+  font-size: 16px;
   line-height: 1.4;
   color: #444;
   font-family: var(--body-font-family);
   font-weight: 400;
   margin: 0;
   padding: 0;
-
-  /* Fine-tune: nudge down for pixel-perfect top alignment with label */
-  position: relative;
-  top: 1px;
 }
 
-/* Superscript styling inside paragraph */
+/* Superscript styling */
 .columns.columns43 > div > div:last-child p sup {
-  font-size: 10px;
+  font-size: 0.8em;
   vertical-align: super;
-  position: relative;
-  top: -0.3em;
+  color: #444;
   line-height: 1;
+  margin-left: 2px;
 }
