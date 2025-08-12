@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -38,7 +39,6 @@
   padding: 0;
 }
 
-/* Side-by-side columns using Flexbox, top-aligned */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
@@ -48,7 +48,6 @@
   box-sizing: border-box;
 }
 
-/* Responsive: stack columns vertically on small screens */
 @media (width <= 700px) {
   .columns.columns1 > div {
     flex-direction: column;
@@ -90,7 +89,6 @@
   }
 }
 
-/* Left column: width and vertical alignment refinements */
 .columns.columns1 > div > div:first-child {
   flex: 1 1 0%;
   max-width: 56%;
@@ -109,19 +107,16 @@
   letter-spacing: 0.4px;
 }
 
-/* Anchor tag styles */
 .columns.columns1 > div > div:first-child a {
   color: #6ca100;
 }
 
-/* Superscript styles */
 .columns.columns1 > div > div:first-child sup {
   font-size: 0.6em;
   line-height: 0;
   vertical-align: super;
 }
 
-/* Paragraph styles */
 .columns.columns1 > div > div:first-child p {
   color: #222;
   font-size: 16px;
@@ -135,13 +130,11 @@
   margin-bottom: 20px;
 }
 
-/* Strong color and weight */
 .columns.columns1 > div > div:first-child strong {
   color: #8a69cc;
   font-weight: 700;
 }
 
-/* Right column: list */
 .columns.columns1 > div > div:last-child {
   flex: 0 1 4cqh;
   min-width: 180px;
@@ -159,7 +152,6 @@
   letter-spacing: 0.4px;
 }
 
-/* List styling: compact gap */
 .columns.columns1 > div > div:last-child ul {
   list-style: none;
   margin: 0;
@@ -171,7 +163,6 @@
   align-items: flex-start;
 }
 
-/* List item styling: icon alignment and spacing */
 .columns.columns1 > div > div:last-child ul li {
   color: rgb(130 188 0);
   font-size: 16px;
@@ -189,7 +180,6 @@
   text-align: left;
 }
 
-/* Link styling */
 .columns.columns1 > div > div:last-child ul li a {
   color: rgb(130 188 0);
   text-decoration: underline;
@@ -210,4 +200,95 @@
 .columns.columns1 > div > div:last-child ul li::before,
 .columns.columns1 > div > div:last-child ul li::after {
   display: none;
+}
+
+
+.columns.columns23 {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main row: flex, top-aligned, refined gap for precise visual spacing */
+.columns.columns23 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.5rem; /* Increased gap for more open layout, matching original */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive: stack columns vertically, maintain clear gap on small screens */
+@media (width <= 700px) {
+  .columns.columns23 > div {
+    flex-direction: column;
+    gap: 1.7rem;
+  }
+}
+
+/* Heading column: wider for balanced whitespace and best alignment */
+.columns.columns23 > div > div:first-child {
+  flex: 0 0 190px;
+  min-width: 170px;
+  max-width: 220px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Heading text: font, size, weight, and alignment for visual fidelity */
+.columns.columns23 > div > div:first-child p {
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 700;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* If markup/JS allows, style HER2- in a span */
+.columns.columns23 > div > div:first-child p span {
+  font-weight: 400;
+  color: #d3d3d3;
+}
+
+/* Body column: fill space, top-aligned for text */
+.columns.columns23 > div > div:last-child {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Paragraph: font, color, line-height, wrapping */
+.columns.columns23 > div > div:last-child p {
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Superscript: size, color, vertical alignment */
+.columns.columns23 > div > div:last-child sup {
+  font-size: 10px;
+  vertical-align: super;
+  color: #444;
+  font-weight: 400;
+  line-height: 1;
 }
