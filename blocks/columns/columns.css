@@ -209,18 +209,16 @@
   padding: 0;
 }
 
-/* Main row: flex, top-aligned, refined gap for precise visual spacing */
 .columns.columns23 > div {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 2.5rem; /* Increased gap for more open layout, matching original */
+  gap: 2.5rem;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* Responsive: stack columns vertically, maintain clear gap on small screens */
 @media (width <= 700px) {
   .columns.columns23 > div {
     flex-direction: column;
@@ -228,7 +226,6 @@
   }
 }
 
-/* Heading column: wider for balanced whitespace and best alignment */
 .columns.columns23 > div > div:first-child {
   flex: 0 0 190px;
   min-width: 170px;
@@ -240,7 +237,6 @@
   justify-content: flex-start;
 }
 
-/* Heading text: font, size, weight, and alignment for visual fidelity */
 .columns.columns23 > div > div:first-child p {
   font-family: var(--heading-font-family);
   font-size: 28px;
@@ -254,13 +250,11 @@
   text-align: left;
 }
 
-/* If markup/JS allows, style HER2- in a span */
 .columns.columns23 > div > div:first-child p span {
   font-weight: 400;
   color: #d3d3d3;
 }
 
-/* Body column: fill space, top-aligned for text */
 .columns.columns23 > div > div:last-child {
   flex: 1 1 0;
   min-width: 0;
@@ -270,7 +264,6 @@
   align-items: flex-start;
 }
 
-/* Paragraph: font, color, line-height, wrapping */
 .columns.columns23 > div > div:last-child p {
   font-family: var(--body-font-family);
   font-size: 16px;
@@ -284,11 +277,63 @@
   overflow-wrap: break-word;
 }
 
-/* Superscript: size, color, vertical alignment */
 .columns.columns23 > div > div:last-child sup {
   font-size: 10px;
   vertical-align: super;
   color: #444;
   font-weight: 400;
   line-height: 1;
+}
+
+
+.columns.columns43 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Top align for visual edge match */
+  gap: 16px;
+  width: 100%;
+}
+
+@media (width <= 700px) {
+  .columns.columns43 > div {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+}
+
+.columns.columns43 > div > div:first-child p {
+  font-size: 28px;
+  line-height: 1.1;
+  color: #d8d8d8;
+  font-weight: 400;
+  font-family: var(--body-font-family, Arial, sans-serif);
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+
+  /* Adjust position to better align with paragraph top visually */
+  position: relative;
+  top: 2px;
+}
+
+.columns.columns43 > div > div:last-child p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #545454;
+  font-family: var(--body-font-family, Arial, sans-serif);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.columns.columns43 > div > div:last-child p sup {
+  font-size: 10px;
+  vertical-align: super;
+  color: #444;
+  line-height: 1;
+  margin-left: 2px;
 }
