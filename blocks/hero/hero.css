@@ -341,49 +341,41 @@
 }
 
 .hero.hero8.block {
-  width: 100vw;
-  min-width: 100vw;
+  width: 100%;
   background: #432995;
-  margin-left: 50%;
-  transform: translateX(-50%);
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 64px 56px;
-  gap: 48px;
+  display: block;
+  padding: 0;
+  min-height: 314px;
 }
 
 /* --- IMAGE COLUMN (right side visually, but first in HTML) --- */
 .hero.hero8.block > div:first-child {
-  flex: 1 1 50%;
-  order: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  min-width: 260px;
-  max-width: 400px;
-  min-height: 340px; /* Ensures vertical space for image column */
-  height: 100%;
+  display: block;
+
+   /* Ensures vertical space for image column */
+  position: absolute;
+  width: 906px;
+  height: 314px;
+  justify-self: center;
+  bottom: 0;
+  z-index: 1;
 }
 
 /* Target nested image container and force its visibility and alignment */
 .hero.hero8.block > div:first-child > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  min-height: 280px;
-  width: 100%;
+  display: block;
+  width: auto;
+  position: absolute;
+  right: 18%;
+  bottom: 0;
 }
 
 /* Image itself (picture/img in nested div) */
 .hero.hero8.block > div:first-child > div > picture,
 .hero.hero8.block > div:first-child > div > img {
   display: block;
-  width: 100%;
+  width: 186px;
   max-width: 310px;
   height: auto;
   object-fit: cover;
@@ -397,16 +389,12 @@
 
 /* --- TEXT COLUMN (left side visually, but second in HTML) --- */
 .hero.hero8.block > div:last-child {
-  flex: 1 1 50%;
-  order: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  min-width: 340px;
-  max-width: 550px;
-  padding-left: 0;
-  padding-right: 0;
+  display: block;
+  width: 906px;
+  justify-self: center;
+  position: relative;
+  padding: 34px 15px 18px;
+  box-sizing: border-box;
 }
 
 .hero.hero8.block > div:last-child > div {
@@ -415,31 +403,46 @@
   margin: 0;
 }
 
+.hero.hero8.block > div:last-child > div p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.hero.hero8.block > div:last-child > div p:nth-child(4) {
+  display: none;
+}
+
 /* Heading styles */
 .hero.hero8.block h2 {
-  color: #fff;
-  font-size: 2.2rem;
-  font-weight: 400;
-  margin: 0 0 24px;
-  line-height: 1.2;
+  margin: 0 0 20px;
   text-align: left;
+  max-width: 428px;
+  font-size: 30px;
+  line-height: 40px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
 /* Paragraph styles */
 .hero.hero8.block p {
   color: #fff;
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0 0 18px;
-  line-height: 1.5;
   text-align: left;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
 /* Link styles inside hero */
 .hero.hero8.block a:not(.button) {
-  color: #7AC943;
+  color: #6ca100;
   text-decoration: underline;
-  font-weight: 500;
+  font-weight: normal;
 }
 
 /* --- BUTTON --- */
@@ -452,34 +455,48 @@
 }
 
 .hero.hero8.block .button-container .button {
-  background: #7AC943;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 14px 40px;
-  min-width: 200px;
-  max-width: 100%;
-  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+  height: 45px;
+  line-height: 45px;
   text-align: center;
+  background: #6ca100;
+  border-radius: 4px;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none;
   border: none;
-  box-shadow: none;
-  transition: background 0.2s;
-  align-self: flex-start;
-}
-
-.hero.hero8.block .button-container .button:hover,
-.hero.hero8.block .button-container .button:focus {
-  background: #60a832;
+  padding: 0 25px;
+  user-select: none;
+  text-transform: uppercase;
+  transition: all ease 0.5s;
 }
 
 /* --- RESPONSIVE --- */
-@media (width <= 900px) {
+@media (width <= 1024px) {
+  .hero.hero8.block > div:last-child {
+    width: 100%;
+  }
+
+  .hero.hero8.block > div:last-child > div p:nth-child(3) {
+    display: none;
+  }
+
+  .hero.hero8.block > div:last-child > div p:nth-child(4) {
+  display: block;
+  }
+
   .hero.hero8.block {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 32px 12px;
     gap: 32px;
   }
 
@@ -506,10 +523,137 @@
 
   .hero.hero8.block h2,
   .hero.hero8.block p {
-    text-align: center;
+    text-align: left;
   }
 
   .hero.hero8.block .button-container {
-    justify-content: center;
+    justify-content: start;
+  }
+
+  .hero.hero8.block .button-container .button {
+    padding: 0;
+  }
+}
+
+@media (width <= 768px) {
+  .hero.hero8.block {
+    /* Updated to match mobile: light purple background */
+    background: #ded2ed; /* Light purple from site's mobile view */
+
+    /* padding: 32px 12px; */
+
+ /* Existing mobile padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto; /* Allow natural height */
+    color: #121113; /* Exact dark text color from reference site */
+    gap: 0;
+  }
+
+  /* Reverse order: Text first, then image */
+  .hero.hero8.block > div:last-child {
+    order: 1; /* Text on top */
+    position: relative; /* Static positioning */
+    width: 100%;
+    padding: 0; /* Remove extra padding */
+  }
+
+  .hero.hero8.block > div:first-child {
+    order: 2; /* Image below text */
+    position: relative; /* Change from absolute to relative for stacking */
+    width: 100%;
+    height: auto;
+
+     /* Space above image */
+    max-width: unset;
+  }
+
+  .hero.hero8.block > div:first-child > div {
+    position: static;
+
+     /* Remove right positioning */
+
+     /* Center image */
+    width: 100%;
+    max-width: unset;
+    padding: 0;
+  }
+
+  .hero.hero8.block > div:first-child > div > picture,
+  .hero.hero8.block > div:first-child > div > img {
+     /* Existing, but ensure centered */
+     display: block;
+     max-width: unset;
+     margin: unset;
+     position: relative;
+     right: 0;
+     padding: 10px 0 0 30px;
+     width: 85%;
+  }
+
+  /* Text column: Full-width, left-aligned text */
+  .hero.hero8.block > div:last-child > div {
+    max-width: 100%; /* Full width on mobile */
+    text-align: left; /* Left align like site */
+    padding: 32px 20px 0;
+  }
+
+  /* Headings: Match font size, dark color */
+  .hero.hero8.block h2 {
+     /* Smaller for mobile, like site's responsive */
+     color: #430098; /* Exact dark text */
+     margin-bottom: 20px;
+     font-size: 24px;
+     line-height: 36px;
+  }
+
+  /* Paragraphs: Dark text, standard sizing */
+  .hero.hero8.block p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #430098; /* Exact dark text */
+    margin-bottom: 15px;
+  }
+
+  /* Buttons: Green buttons like site's "LEARN MORE" */
+  .hero.hero8.block .button-container .button {
+    background: #6ca100; /* Green from your project/site */
+    color: #fff;
+    border-radius: 4px;
+    padding: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  .hero.hero8.block .button-container .button:hover {
+    background: #60a832; /* Darker green hover */
+  }
+
+  /* To mimic tabs/accordion behavior: Simple CSS toggle (expand/collapse details)
+     Assuming content has details/summary or similar; adjust as needed */
+  .hero.hero8.block details {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(0 0 0 / 10%); /* Lighter border for light background */
+  }
+
+  .hero.hero8.block summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #121113; /* Exact dark text */
+    padding: 10px;
+    background: rgb(255 255 255 / 50%); /* Light overlay for tabs on mobile */
+  }
+
+  .hero.hero8.block details[open] summary {
+    background: rgb(255 255 255 / 80%);
+  }
+
+  /* Image in tabs: Right-aligned like site, but stack on mobile */
+  .hero.hero8.block .dosing-image { /* Add class if needed to images in content */
+    float: right;
+    max-width: 40%;
+    margin-left: 10px;
   }
 }
