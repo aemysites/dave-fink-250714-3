@@ -321,6 +321,7 @@ main .section.light, main .section.highlight {
 .section.about1 a:hover {
   color: #3e3092;
 }
+
 .section.about1 sup {
   font-size: 10px;
   top: -.8em;
