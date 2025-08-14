@@ -103,106 +103,114 @@
 .cards.cards38 > ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .cards.cards38 > ul > li {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  min-width: 700px;
-  max-width: 1100px;
-  width: 100%;
+  align-items: center;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: none;
   border: none;
-  padding: 28px 0;
+  padding: 44px 0;
   margin: 0;
-  gap: 28px; /* reduce to bring image/content closer */
+  gap: 56px;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 1100px;
+  min-width: 700px;
 }
 
-/* Image column */
+/* Image area */
 .cards.cards38 .cards-card-image {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 180px;
-  min-width: 180px;
-  height: 140px; /* taller than previous for better vertical match */
+  align-items: center;
+  justify-content: center;
+  width: 231px;
+  min-width: 231px;
+  height: 201px;
   margin: 0;
   padding: 0;
-  flex-shrink: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: transparent;
 }
 
 .cards.cards38 .cards-card-image picture,
 .cards.cards38 .cards-card-image img {
-  width: 180px;
-  height: 140px;
+  width: 231px;
+  height: 201px;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 18px;
   display: block;
+  background: #fff;
 }
 
-/* Content column */
+/* Show only heading, first paragraph, and button in body */
+.cards.cards38 .cards-card-body > p:not(:first-of-type, .button-container) {
+  display: none;
+}
+
 .cards.cards38 .cards-card-body {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
+  flex: 1;
   min-width: 0;
   width: 100%;
-  max-width: 740px;
-  height: auto;
+  max-width: 700px;
   padding: 0;
-  margin-top: 0;
+  margin: 0;
+  height: auto;
 }
 
 .cards.cards38 .cards-card-body > h2,
 .cards.cards38 .cards-card-body > h3 {
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 700;
   color: #6f2da8;
-  margin: 0 0 2px; /* slightly less space below heading */
+  margin: 0 0 13px;
   text-transform: uppercase;
   line-height: 1.2;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing: 0.01em;
 }
 
-.cards.cards38 .cards-card-body > p {
-  font-size: 15px;
-  color: #333;
+.cards.cards38 .cards-card-body > p:first-of-type {
+  font-size: 16px;
+  color: #555;
   font-weight: 400;
-  margin: 0 0 8px; /* more compact between description and button */
+  margin: 0 0 36px;
   line-height: 1.5;
   padding: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  max-width: 480px;
+  max-width: 540px;
   white-space: normal;
   overflow-wrap: break-word;
 }
 
-/* Button should be closer to description */
 .cards.cards38 .cards-card-body .button-container {
-  margin: 12px 0 0;
+  margin-top: 28px;
+  margin-bottom: 32px;
   width: auto;
   height: auto;
   display: block;
 }
 
-/* Button styling */
 .cards.cards38 .cards-card-body .button-container > a.button,
 .cards.cards38 .cards-card-body .button-container > a {
   display: inline-block;
-  min-width: 170px;
-  padding: 10px 32px;
-  background-color: #7ac143;
+  min-width: 190px;
+  padding: 18px 46px;
+  background-color: #67b800;
   color: #fff;
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 6px;
+  border-radius: 10px;
   border: none;
   margin: 0;
   line-height: 1.2;
@@ -219,40 +227,31 @@
 .cards.cards38 .cards-card-body .button-container > a.button:hover,
 .cards.cards38 .cards-card-body .button-container > a:hover,
 .cards.cards38 .cards-card-body .button-container > a:focus {
-  background-color: #5fa529;
+  background-color: #4a7a0e;
   color: #fff;
   text-decoration: none;
 }
 
-/* Hide extraneous lines of text except the first descriptive paragraph and button */
-.cards.cards38 .cards-card-body > p:not(:first-of-type, .button-container) {
-  display: none;
-}
-
-/* Responsive: stack vertically on small screens */
-@media (width <= 700px) {
+@media (width <= 900px) {
   .cards.cards38 > ul > li {
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
     max-width: 100%;
-    gap: 14px;
-    padding: 16px 0;
+    gap: 24px;
+    padding: 18px 0;
     height: auto;
   }
 
-  .cards.cards38 .cards-card-image {
-    width: 100%;
-    min-width: 0;
-    height: 100px;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
+  .cards.cards38 .cards-card-image,
   .cards.cards38 .cards-card-image picture,
   .cards.cards38 .cards-card-image img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    max-width: 231px;
+    max-height: 201px;
+    margin-bottom: 12px;
   }
 
   .cards.cards38 .cards-card-body {
