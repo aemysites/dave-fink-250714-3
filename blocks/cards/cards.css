@@ -101,56 +101,55 @@
 
 
 .cards.cards38 > ul {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 44px 0;
   list-style: none;
+  background: #fff;
+  box-sizing: border-box;
 }
 
 .cards.cards38 > ul > li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: none;
-  border: none;
-  padding: 44px 0;
-  margin: 0;
-  gap: 56px;
-  box-sizing: border-box;
   width: 100%;
-  max-width: 1100px;
-  min-width: 700px;
+  padding: 0;
+  background: inherit;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-/* Image area */
 .cards.cards38 .cards-card-image {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 231px;
-  min-width: 231px;
-  height: 201px;
+  width: 112px;
+  min-width: 112px;
+  height: 112px;
+  border-radius: 8px;
+  overflow: hidden;
   margin: 0;
   padding: 0;
-  border-radius: 18px;
-  overflow: hidden;
   background: transparent;
+  box-shadow: none;
+  flex-shrink: 0;
 }
 
 .cards.cards38 .cards-card-image picture,
 .cards.cards38 .cards-card-image img {
-  width: 231px;
-  height: 201px;
+  width: 112px;
+  height: 112px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 8px;
   display: block;
   background: #fff;
-}
-
-/* Show only heading, first paragraph, and button in body */
-.cards.cards38 .cards-card-body > p:not(:first-of-type, .button-container) {
-  display: none;
 }
 
 .cards.cards38 .cards-card-body {
@@ -158,43 +157,50 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex: 1;
   min-width: 0;
   width: 100%;
-  max-width: 700px;
+  max-width: 480px;
   padding: 0;
   margin: 0;
-  height: auto;
+
+  /* Vertically center the content stack relative to the image */
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .cards.cards38 .cards-card-body > h2,
 .cards.cards38 .cards-card-body > h3 {
   font-size: 19px;
-  font-weight: 700;
-  color: #6f2da8;
-  margin: 0 0 13px;
+  font-weight: bold;
+  color: #6D3FA9;
+  margin: 0 0 6px;
   text-transform: uppercase;
   line-height: 1.2;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: var(--heading-font-family, Arial, "Helvetica Neue", Helvetica, sans-serif);
   letter-spacing: 0.01em;
 }
 
 .cards.cards38 .cards-card-body > p:first-of-type {
-  font-size: 16px;
-  color: #555;
+  font-size: 1rem;
+  color: #444;
   font-weight: 400;
-  margin: 0 0 36px;
+  margin: 0 0 8px;
   line-height: 1.5;
   padding: 0;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  max-width: 540px;
-  white-space: normal;
-  overflow-wrap: break-word;
+  font-family: var(--body-font-family, Arial, "Helvetica Neue", Helvetica, sans-serif);
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cards.cards38 .cards-card-body > p:not(:first-of-type, .button-container) {
+  display: none;
 }
 
 .cards.cards38 .cards-card-body .button-container {
-  margin-top: 28px;
-  margin-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 0;
   width: auto;
   height: auto;
   display: block;
@@ -204,43 +210,41 @@
 .cards.cards38 .cards-card-body .button-container > a {
   display: inline-block;
   min-width: 190px;
-  padding: 18px 46px;
-  background-color: #67b800;
+  padding: 13.5px 32px;
+  background-color: #76BC21;
   color: #fff;
-  font-size: 19px;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: bold;
   text-transform: uppercase;
-  border-radius: 10px;
+  border-radius: 4px;
   border: none;
   margin: 0;
   line-height: 1.2;
   text-align: center;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: var(--heading-font-family, Arial, "Helvetica Neue", Helvetica, sans-serif);
   letter-spacing: 0.01em;
   box-shadow: none;
   cursor: pointer;
   transition: background 0.2s;
   vertical-align: middle;
   text-decoration: none;
-}
-
-.cards.cards38 .cards-card-body .button-container > a.button:hover,
-.cards.cards38 .cards-card-body .button-container > a:hover,
-.cards.cards38 .cards-card-body .button-container > a:focus {
-  background-color: #4a7a0e;
-  color: #fff;
-  text-decoration: none;
+  align-self: flex-start;
 }
 
 @media (width <= 900px) {
+  .cards.cards38 > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 0;
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .cards.cards38 > ul > li {
     flex-direction: column;
     align-items: flex-start;
-    min-width: 0;
-    max-width: 100%;
-    gap: 24px;
-    padding: 18px 0;
-    height: auto;
+    width: 100%;
   }
 
   .cards.cards38 .cards-card-image,
@@ -249,16 +253,17 @@
     width: 100%;
     min-width: 0;
     height: auto;
-    max-width: 231px;
-    max-height: 201px;
+    max-width: 112px;
+    max-height: 112px;
     margin-bottom: 12px;
+    border-radius: 8px;
   }
 
   .cards.cards38 .cards-card-body {
     max-width: 100%;
     width: 100%;
-    height: auto;
     padding: 0;
     margin-top: 0;
+    margin-bottom: 0;
   }
 }
