@@ -2,16 +2,13 @@
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
-  width: 100%;
-  height: auto;
   vertical-align: top;
   object-fit: cover;
 }
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: 0;
 }
 
 .hero h1,
@@ -21,7 +18,6 @@
 .hero h5,
 .hero h6,
 .hero p {
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   color: var(--background-color);
@@ -67,7 +63,7 @@
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding: 0;
   }
 }
 
@@ -311,11 +307,11 @@
 }
 
 @media (width <= 768px) {
-  .hero picture:nth-child(2) {
+  .hero.hero40 picture:nth-child(2) {
     display: none;
   }
 
-  .hero picture:nth-child(3) {
+  .hero.hero40 picture:nth-child(3) {
     display: block;
   }
 
@@ -535,6 +531,171 @@
   }
 }
 
+.hero.hero5 {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.hero5 > div:first-child {
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.hero.hero5 > div:first-child::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  left: -36%;
+  display: block;
+  background-color: #430098;
+  z-index: 2;
+  transform: skew(-40deg);
+  opacity: 0.32;
+}
+
+.hero.hero5 picture,
+.hero.hero5 img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  position: relative;
+}
+
+.hero.hero5 > div:last-child {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: block;
+  color: #fff;
+  z-index: 2;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.hero.hero5 > div:last-child > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  background: none;
+  position: relative;
+  z-index: 2;
+}
+
+.hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5 {
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+  line-height: 40px;
+  letter-spacing: 0;
+  align-self: center;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 20px
+}
+
+.hero.hero5 sup {
+  font-size: 10px;
+  top: 0.2em;
+  position: relative;
+  line-height: 0;
+}
+
+@media (width > 1320px) {
+  .hero.hero5 > div:first-child > div > p:nth-child(2) {
+    display: none;
+  }
+
+  .hero.hero5 > div:first-child::before {
+    left: -15%;
+    width: 65%;
+  }
+
+  .hero.hero5 picture,
+  .hero.hero5 img {
+    height: 100%;
+  }
+
+  .hero.hero5 > div:last-child > div {
+    width: 906px;
+    justify-self: center;
+    padding: 0 15px;
+  }
+
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5 {
+    font-size: 30px;
+    width: 40%;
+    left: 15px;
+    line-height: 40px;
+    padding-left: unset;
+  }
+}
+
+@media (width > 1024px) and (width < 1320px) {
+  .hero.hero5 > div:first-child > div > p:nth-child(2) {
+    display: none;
+  }
+
+  .hero.hero5 > div:first-child::before {
+    left: -15%;
+    width: 65%;
+  }
+
+  .hero.hero5 picture,
+  .hero.hero5 img {
+    height: 320px;
+    object-position: right;
+  }
+
+  .hero.hero5 > div:last-child > div {
+    width: 906px;
+    justify-self: center;
+  }
+
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5 {
+    font-size: 30px;
+    width: 40%;
+    left: 15px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (width <= 1024px) and (width > 768px) {
+  .hero.hero5 > div:first-child > div > p:nth-child(2) {
+    display: none;
+  }
+
+  .hero.hero5 > div:first-child::before {
+    left: -16%;
+    width: 70%;
+  }
+
+  .hero.hero5 picture,
+  .hero.hero5 img {
+    height: 220px;
+    object-position: right;
+  }
+
+  .hero.hero5 > div:last-child > div {
+    max-width: 906px;
+  }
+
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5{
+    font-size: 26px;
+    width: 40%;
+    left: 20px;
+    line-height: 32px;
+  }
+}
+
 @media (width <= 768px) {
   .hero.hero8.block {
     /* Updated to match mobile: light purple background */
@@ -656,4 +817,25 @@
     max-width: 40%;
     margin-left: 10px;
   }
+
+  .hero.hero5 > div:first-child > div > p:nth-child(1) {
+    display: none;
+  }
+
+  .hero.hero5 picture,
+  .hero.hero5 img {
+    height: 100%;
+    object-position: right;
+  }
+
+  .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5{
+    font-size: 20px;
+    width: 64%;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+}
+
+#the-treatment-of-hr-her2-advanced-breast-cancer9 {
+  margin-bottom: 0;
 }
