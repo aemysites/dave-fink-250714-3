@@ -1,37 +1,34 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Always create a single-cell header row
+  // Header row matches example exactly
   const headerRow = ['Columns (columns18)'];
 
-  // Extract all top-level list items
-  const lis = Array.from(element.querySelectorAll(':scope > li'));
-
-  // Edge case: no list items, place element as is in a single column
-  if (lis.length === 0) {
-    const block = WebImporter.DOMUtils.createTable([
-      headerRow,
-      [element],
-    ], document);
-    element.replaceWith(block);
-    return;
+  // Get direct <li> children from the provided <ul>
+  const items = Array.from(element.querySelectorAll(':scope > li'));
+  // Edge case: if no <li> found, just output empty columns
+  let col1Items = [], col2Items = [];
+  if (items.length) {
+    // Split into two columns as evenly as possible
+    const mid = Math.ceil(items.length / 2);
+    col1Items = items.slice(0, mid);
+    col2Items = items.slice(mid);
   }
 
-  // For columns block: split list items into two columns as evenly as possible
-  const numCols = 2;
-  const itemsPerCol = Math.ceil(lis.length / numCols);
-  const columns = [];
-  for (let i = 0; i < numCols; i++) {
-    const ul = document.createElement('ul');
-    lis.slice(i * itemsPerCol, (i + 1) * itemsPerCol).forEach(li => ul.appendChild(li));
-    columns.push(ul);
-  }
+  // Create new <ul> for each column, referencing original <li>
+  const ul1 = document.createElement('ul');
+  col1Items.forEach(li => ul1.appendChild(li));
+  const ul2 = document.createElement('ul');
+  col2Items.forEach(li => ul2.appendChild(li));
 
-  // Proper two-dimensional array: header is single cell, next row contains columns
-  const cells = [
-    headerRow, // Header row: one cell
-    columns    // Second row: N columns (as per columns block spec)
+  // Build table structure
+  const rows = [
+    headerRow,
+    [ul1, ul2]
   ];
 
-  const block = WebImporter.DOMUtils.createTable(cells, document);
+  // Create block table
+  const block = WebImporter.DOMUtils.createTable(rows, document);
+
+  // Replace the original element
   element.replaceWith(block);
 }

@@ -1,40 +1,63 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Make sure we have the main container for the card
+  // Build table header
+  const headerRow = ['Cards (cards38)'];
+
+  // Find card wrapper
   const container = element.querySelector('.container-wrap');
-  if (!container) return;
+  // Defensive: fallback to element if container not found
+  const card = container || element;
 
-  // Get the image (first column)
-  let imageCell = '';
-  const imageWrap = container.querySelector('.image-wrap');
-  if (imageWrap) {
-    const img = imageWrap.querySelector('img');
-    if (img) imageCell = img;
+  // Get the immediate children (image-wrap, callout-wrap)
+  const children = card.querySelectorAll(':scope > div');
+
+  // First column: image (from .image-wrap > img)
+  let imageEl = null;
+  for (const child of children) {
+    if (child.classList.contains('image-wrap')) {
+      imageEl = child.querySelector('img');
+      break;
+    }
+  }
+  // Defensive: fallback if not found
+  if (!imageEl) {
+    imageEl = document.createElement('span');
+    imageEl.textContent = '[Image missing]';
   }
 
-  // Get the text content (second column)
-  let textCellContent = [];
-  const calloutWrap = container.querySelector('.callout-wrap');
+  // Second column: text (from .callout-wrap)
+  let textParts = [];
+  let calloutWrap = null;
+  for (const child of children) {
+    if (child.classList.contains('callout-wrap')) {
+      calloutWrap = child;
+      break;
+    }
+  }
   if (calloutWrap) {
-    // Include the heading if present
+    // Heading (h3, keep as h3 and strong if present)
     const heading = calloutWrap.querySelector('h3');
-    if (heading) textCellContent.push(heading);
-    // Include the description if present
+    if (heading) textParts.push(heading);
+    // Description (p)
     const desc = calloutWrap.querySelector('p');
-    if (desc) textCellContent.push(desc);
-    // Include the CTA/link if present
-    const cta = calloutWrap.querySelector('a.button');
-    if (cta) textCellContent.push(cta);
+    if (desc) textParts.push(desc);
+    // CTA (a.button)
+    const cta = calloutWrap.querySelector('a');
+    if (cta) textParts.push(cta);
+  } else {
+    // Defensive: fallback for missing text
+    const missingText = document.createElement('span');
+    missingText.textContent = '[Text content missing]';
+    textParts = [missingText];
   }
-  const textCell = textCellContent.length === 1 ? textCellContent[0] : textCellContent;
 
-  // Compose the table according to block requirements
+  // Compose rows: header, card row
   const rows = [
-    ['Cards (cards38)'],
-    [imageCell, textCell],
+    headerRow,
+    [imageEl, textParts]
   ];
 
-  // Create the table and replace the element
+  // Create and replace block table
   const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

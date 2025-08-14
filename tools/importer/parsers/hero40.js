@@ -1,46 +1,52 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Table header row as in the example
+  // Table header
   const headerRow = ['Hero (hero40)'];
 
-  // Get the banner root element
-  const banner = element.querySelector('#banner');
-
-  // --- Background Image ---
-  // Look for the first .swiper-slide img
-  let bgImgEl = null;
-  if (banner) {
-    const img = banner.querySelector('.swiper-slide img');
-    if (img) bgImgEl = img;
+  // 2nd row: Background image (optional)
+  let imageEl = null;
+  const swiperContainer = element.querySelector('.swiper-container');
+  if (swiperContainer) {
+    // Find the first image inside the swiper slide
+    const img = swiperContainer.querySelector('img');
+    if (img) {
+      imageEl = img;
+    }
   }
 
-  // --- Content (headline, subheads, paragraphs, CTA) ---
-  // Get .header-content and .indication-copy .container
-  let contentEls = [];
-  if (banner) {
-    const headerContent = banner.querySelector('.header-content');
+  // 3rd row: Headline, subheading, call-to-action, and body text
+  // Compose this from the banner-content and indication-copy
+  const contentBlocks = [];
+  // .banner-content > .container > .header-content
+  const bannerContent = element.querySelector('.banner-content');
+  if (bannerContent) {
+    const headerContent = bannerContent.querySelector('.header-content');
     if (headerContent) {
-      // Get all its children (h1, p, etc.) in order
-      contentEls = contentEls.concat(Array.from(headerContent.children));
-    }
-    // Add the .indication-copy .container's children (paragraphs)
-    const indicationCopy = banner.querySelector('.indication-copy .container');
-    if (indicationCopy) {
-      contentEls = contentEls.concat(Array.from(indicationCopy.children));
+      // Reference all direct children (h1, p's)
+      Array.from(headerContent.children).forEach(child => {
+        contentBlocks.push(child);
+      });
     }
   }
 
-  // Fallback if no content found
-  if (contentEls.length === 0) contentEls = [''];
+  // .indication-copy > .container
+  const indicationCopy = element.querySelector('.indication-copy');
+  if (indicationCopy) {
+    const indicationContainer = indicationCopy.querySelector('.container');
+    if (indicationContainer) {
+      Array.from(indicationContainer.children).forEach(child => {
+        contentBlocks.push(child);
+      });
+    }
+  }
 
-  // Create the block table rows
-  const cells = [
-    headerRow, // Header (row 1)
-    [bgImgEl ? bgImgEl : ''], // Background image (row 2)
-    [contentEls] // Content (row 3)
+  // Table rows
+  const rows = [
+    headerRow,
+    [imageEl ? imageEl : ''],
+    [contentBlocks.length > 0 ? contentBlocks : '']
   ];
 
-  // Create and replace
-  const table = WebImporter.DOMUtils.createTable(cells, document);
+  const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

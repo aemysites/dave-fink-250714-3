@@ -1,52 +1,33 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Prepare the table rows
-  const rows = [];
-  // Header row
-  rows.push(['Cards']);
+  // Prepare table rows: first row is header
+  const rows = [['Cards']];
 
-  // Select all .list-item direct children
-  const cardEls = element.querySelectorAll(':scope > .list-item');
-  cardEls.forEach(card => {
-    // Find stage title
-    const hd = card.querySelector('.hd');
-    let stageTitle = null;
-    if (hd && hd.textContent.trim()) {
-      stageTitle = hd.textContent.trim();
+  // Get all direct children with class list-item
+  const items = element.querySelectorAll(':scope > .list-item');
+  items.forEach((item) => {
+    const card = [];
+    // Title from .hd span
+    const hd = item.querySelector('.hd span');
+    if (hd) {
+      // Use <strong> for the heading, as in the visual style
+      const strong = document.createElement('strong');
+      strong.textContent = hd.textContent.trim();
+      card.push(strong);
     }
-    // Find description area and paragraph nodes
-    const desc = card.querySelector('.desc');
-    let firstPara = null;
-    let secondPara = null;
-    if (desc) {
-      const ps = desc.querySelectorAll('p');
-      if (ps.length > 0) firstPara = ps[0];
-      if (ps.length > 1) secondPara = ps[1];
+    // Content from .desc
+    const desc = item.querySelector('.desc');
+    if (desc && desc.children.length > 0) {
+      // We want to preserve each paragraph as-is inside the cell
+      Array.from(desc.children).forEach((child) => {
+        card.push(child);
+      });
     }
-    // Compose the card content
-    const cardContent = document.createElement('div');
-
-    // Heading as bold (in the screenshots, heading is styled as bold in the card)
-    if (stageTitle) {
-      const heading = document.createElement('strong');
-      heading.textContent = stageTitle;
-      cardContent.appendChild(heading);
-      cardContent.appendChild(document.createElement('br'));
-    }
-
-    // First paragraph (subtitle/lead)
-    if (firstPara) {
-      cardContent.appendChild(firstPara);
-      cardContent.appendChild(document.createElement('br'));
-    }
-    // Second paragraph (description)
-    if (secondPara) {
-      cardContent.appendChild(secondPara);
-    }
-
-    rows.push([cardContent]);
+    // Defensive: if no hd or desc, the card only
+    rows.push([card]);
   });
-  // Create table and replace original element
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(block);
+
+  // Create block table and replace element
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(table);
 }

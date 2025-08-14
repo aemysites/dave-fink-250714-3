@@ -1,38 +1,47 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row as in the example
-  const headerRow = ['Cards (cards32)'];
-  const rows = [headerRow];
+  // Header row matches example exactly
+  const rows = [['Cards (cards32)']];
 
-  // Find all card nodes (video-item)
-  // Be robust: search for all .paragraph--type--video-item elements in the subtree
-  const cardNodes = Array.from(element.querySelectorAll('.paragraph--type--video-item'));
-  if (!cardNodes.length) return;
+  // Each card: .paragraph--type--video-item
+  const cards = Array.from(element.querySelectorAll('.paragraph--type--video-item'));
 
-  cardNodes.forEach((card) => {
-    // Find the first <img> inside a .list-video-preview (the poster/preview image)
-    let img = null;
-    const previewImgs = Array.from(card.querySelectorAll('.list-video-preview img'));
-    if (previewImgs.length > 0) {
-      img = previewImgs[0];
+  cards.forEach(card => {
+    // Get the image
+    let image = card.querySelector('img');
+
+    // Collect all required text content
+    let textCell = [];
+    // Title (strong)
+    const title = card.querySelector('.field--name-field-video-title');
+    if (title && title.textContent.trim()) {
+      const strong = document.createElement('strong');
+      strong.textContent = title.textContent.trim();
+      textCell.push(strong);
     }
-
-    // Gather text content: title and description blocks, in order, as elements
-    // Only include those not inside image/preview or video player
-    const textBlocks = [];
-    const allFieldItems = Array.from(card.querySelectorAll('.field__item'));
-    allFieldItems.forEach((item) => {
-      // Exclude if inside .list-video-preview or .moa-video-wrap
-      if (item.closest('.list-video-preview') || item.closest('.moa-video-wrap')) return;
-      // Retain semantic structure by referencing the original element
-      textBlocks.push(item);
-    });
-
-    if (img && textBlocks.length > 0) {
-      rows.push([img, textBlocks]);
+    // Description (preserve paragraphs/markup)
+    const desc = card.querySelector('.field--name-field-video-description');
+    if (desc) {
+      // Take all block-level children, or fallback to text
+      if (desc.children.length > 0) {
+        // If multiple paragraphs, add all
+        for (const child of desc.children) {
+          textCell.push(child);
+        }
+      } else if (desc.textContent.trim()) {
+        // Fallback to textContent
+        const p = document.createElement('p');
+        p.textContent = desc.textContent.trim();
+        textCell.push(p);
+      }
+    }
+    // Only add if image and some text content
+    if (image && textCell.length > 0) {
+      rows.push([image, textCell]);
     }
   });
 
+  // Only replace if we have at least one card row
   if (rows.length > 1) {
     const table = WebImporter.DOMUtils.createTable(rows, document);
     element.replaceWith(table);

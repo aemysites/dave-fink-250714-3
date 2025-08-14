@@ -1,26 +1,38 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the main wrapper containing the card content
-  const wrapper = element.querySelector('.ibrance-tablets-cta-wrapper');
-  if (!wrapper) return;
-  // Find the card content block
-  const card = wrapper.querySelector('.ibrance-tablets-cta');
-  if (!card) return;
-  // Remove any close button so it is not included
-  const close = card.querySelector('.close');
-  if (close) close.remove();
-  // Find the actual text content (span.text), which may contain <br> and <a>
-  let textCell = '';
-  const textWrap = card.querySelector('.cta-text-wrap');
-  if (textWrap) {
-    const text = textWrap.querySelector('.text');
-    if (text) textCell = text;
+  // Block header row: must be a single cell (one column)
+  const headerRow = ['Cards (cards16)'];
+
+  // Find the main card content
+  const body = element.querySelector('.field__item');
+  if (!body) return;
+  const ctaWrapper = body.querySelector('.ibrance-tablets-cta-wrapper');
+  if (!ctaWrapper) return;
+  const ctaContainer = ctaWrapper.querySelector('.ibrance-tablets-cta');
+  if (!ctaContainer) return;
+
+  // Find the text content for the right cell
+  const ctaTextWrap = ctaContainer.querySelector('.cta-text-wrap');
+  if (!ctaTextWrap) return;
+  const textSpan = ctaTextWrap.querySelector('.text');
+  if (!textSpan) return;
+
+  // Find the left cell icon/image (should be empty if not present)
+  let leftCell = '';
+  const possibleIcon = ctaContainer.querySelector('img, svg');
+  if (possibleIcon) {
+    leftCell = possibleIcon;
+  } else {
+    leftCell = document.createElement('span'); // empty element for correct col count
   }
-  // Build table: header row (SINGLE COLUMN!), then one card row with two columns
-  const cells = [
-    ['Cards (cards16)'],  // header row: single cell only
-    ['', textCell]        // data row: image/icon cell (empty), text cell
+
+  // Compose rows: header is always a SINGLE cell (not two), then card rows with two cells
+  const rows = [
+    [headerRow[0]], // header row: one column only
+    [leftCell, textSpan] // card row: two columns
   ];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(table);
+
+  // Create the table and replace the original element
+  const blockTable = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(blockTable);
 }

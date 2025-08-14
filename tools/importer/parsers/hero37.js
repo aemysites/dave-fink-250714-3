@@ -1,42 +1,63 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row as required
+  // Header row - matches exactly
   const headerRow = ['Hero (hero37)'];
 
-  // ----- Background Image Row -----
-  // Find the .full-width-banner (contains images and text)
-  const banner = element.querySelector('.full-width-banner');
+  // Find the banner element
+  const bannerEl = element.querySelector('.full-width-banner');
 
-  // Collect all <img> under .full-width-banner (desktop & mobile)
-  let bgImgs = [];
-  if (banner) {
-    bgImgs = Array.from(banner.querySelectorAll('img'));
+  // Collect all images (desktop and mobile)
+  let images = [];
+  if (bannerEl) {
+    images = Array.from(bannerEl.querySelectorAll('img'));
   }
-  const bgRow = [bgImgs.length ? bgImgs : ''];
-
-  // ----- Content Row -----
-  // Prefer the desktop content block if present
-  let contentBlocks = [];
-  if (banner) {
-    const desktop = banner.querySelector('.full-width-banner-des');
-    if (desktop) contentBlocks.push(desktop);
-  }
-  // Also include the mobile version (may have different structure/text)
-  const mobile = element.querySelector('.mobile.breast-cancer-content');
-  if (mobile) contentBlocks.push(mobile);
-
-  // If no content blocks were found, fallback to grabbing all p/h* inside main element
-  let contentCell;
-  if (contentBlocks.length) {
-    contentCell = contentBlocks;
+  // Prefer desktop (class 'pc'), but fallback to first available image
+  let imageCell;
+  if (images.length > 0) {
+    // If both desktop and mobile present, use only desktop image for desktop rendering
+    const desktopImg = images.find(img => img.classList.contains('pc'));
+    imageCell = desktopImg || images[0];
   } else {
-    const fallback = Array.from(element.querySelectorAll('h1,h2,h3,h4,h5,h6,p'));
-    contentCell = fallback.length ? fallback : '';
+    imageCell = '';
   }
-  const contentRow = [contentCell];
 
-  // Build the table with structure that matches the block definition
-  const cells = [headerRow, bgRow, contentRow];
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(block);
+  // Find text content. Desktop usually in .full-width-banner-des, mobile in .breast-cancer-content.
+  // Sometimes both exist, sometimes only one. Always include all unique text blocks.
+  const textCells = [];
+  if (bannerEl) {
+    const desktopText = bannerEl.querySelector('.full-width-banner-des');
+    if (desktopText) textCells.push(desktopText);
+  }
+  const mobileText = element.querySelector('.breast-cancer-content');
+  if (mobileText) {
+    // Avoid duplicate if mobileText is a direct child of desktopText
+    if (!textCells.includes(mobileText)) {
+      textCells.push(mobileText);
+    }
+  }
+  // If neither found, fallback to all paragraphs and headings inside .full-width-banner
+  if (textCells.length === 0 && bannerEl) {
+    const candidates = Array.from(bannerEl.querySelectorAll('h1,h2,h3,h4,h5,h6,p'));
+    if (candidates.length) {
+      textCells.push(...candidates);
+    }
+  }
+  // If still nothing, fallback to all paragraphs/headings in element
+  if (textCells.length === 0) {
+    const candidates = Array.from(element.querySelectorAll('h1,h2,h3,h4,h5,h6,p'));
+    if (candidates.length) {
+      textCells.push(...candidates);
+    }
+  }
+
+  // Compose rows for the table
+  const cells = [
+    headerRow,
+    [imageCell],
+    [textCells.length > 1 ? textCells : (textCells[0] || '')],
+  ];
+
+  // Create table and replace original element
+  const table = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(table);
 }

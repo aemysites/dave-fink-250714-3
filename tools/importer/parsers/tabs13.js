@@ -1,36 +1,37 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Extract tab labels from the navigation bar
-  const navTabs = element.querySelector('ul.nav-tabs');
-  const tabLabelEls = navTabs ? Array.from(navTabs.querySelectorAll('li > span')) : [];
+  // Header row for Tabs block
+  const headerRow = ['Tabs'];
 
-  // Extract tab titles and panes from the tab-content area
-  const tabContent = element.querySelector('.tab-content');
-  const tabTitles = tabContent ? Array.from(tabContent.querySelectorAll('.tab-title')) : [];
-  const tabPanes = tabContent ? Array.from(tabContent.querySelectorAll('.tab-pane')) : [];
+  // Get all tab labels from the <ul> nav structure
+  const tabLabels = Array.from(
+    element.querySelectorAll('ul.nav-tabs > li > span')
+  ).map((el) => el.textContent.trim());
 
-  // Determine the number of tabs based on the max of labels, titles, and panes
-  const tabCount = Math.max(tabLabelEls.length, tabTitles.length, tabPanes.length);
+  // Get tab content panes and their titles
+  const tabTitles = Array.from(element.querySelectorAll('div.tab-title'));
+  const tabPanes = Array.from(element.querySelectorAll('div.tab-pane'));
 
-  // Construct the header row as per block requirements (single column)
-  const rows = [['Tabs']];
+  // Prepare the rows for the table
+  const rows = [headerRow];
 
-  // For each tab, add a row: [Tab Label, Tab Content] (always 2 columns from second row onward)
+  // For each tab, combine label and its pane content
+  const tabCount = Math.min(tabLabels.length, tabTitles.length, tabPanes.length);
   for (let i = 0; i < tabCount; i++) {
-    // Prefer the .tab-title text, fall back to nav label, else empty string
-    let label = '';
-    if (tabTitles[i] && tabTitles[i].textContent) {
-      label = tabTitles[i].textContent.trim();
-    } else if (tabLabelEls[i] && tabLabelEls[i].textContent) {
-      label = tabLabelEls[i].textContent.trim();
+    const label = tabLabels[i] || (tabTitles[i] && tabTitles[i].textContent.trim()) || '';
+    const content = tabPanes[i];
+    if (label && content) {
+      rows.push([label, content]);
     }
-    // Content is the corresponding .tab-pane element, if exists
-    const content = tabPanes[i] || '';
-    // Each tab row must be an array of two items: [label, content]
-    rows.push([label, content]);
   }
 
-  // Create the table and replace the source element
+  // Edge case: fallback if tabTitles is missing or shorter than tabLabels
+  if (rows.length === 1 && tabLabels.length && tabPanes.length && tabLabels.length === tabPanes.length) {
+    for (let i = 0; i < tabLabels.length; i++) {
+      rows.push([tabLabels[i], tabPanes[i]]);
+    }
+  }
+
   const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

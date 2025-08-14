@@ -1,47 +1,49 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Create header row (block name)
-  const cells = [
-    ['Cards (cards11)'],
-  ];
+  // Header row exactly as required
+  const headerRow = ['Cards (cards11)'];
 
-  // Extract the card image (first column)
-  const img = element.querySelector('.img-wrap img');
+  // Defensive image extraction
+  const imgWrap = element.querySelector('.img-wrap');
+  const img = imgWrap ? imgWrap.querySelector('img') : null;
 
-  // Extract title (h3 in text-wrap)
-  const heading = element.querySelector('.text-wrap h3');
-
-  // Short description, prefer desktop, fallback to mobile
-  let shortDesc = element.querySelector('.text-wrap .hide-on-mobile') || element.querySelector('.read-more-wrap .hide-on-desktop');
-
-  // Compose content for text cell
-  const textCellContent = [];
-  if (heading) textCellContent.push(heading);
-  if (shortDesc) textCellContent.push(shortDesc);
-
-  // Check for read-more section (for expanded body/cta)
-  const readMoreWrap = element.querySelector('.read-more-wrap');
-  if (readMoreWrap) {
-    // CTA (Read More)
-    const readMoreTitle = readMoreWrap.querySelector('.read-more-title');
-    if (readMoreTitle) {
-      // Use the span child if present, else the node itself
-      textCellContent.push(readMoreTitle);
-    }
-    // Extended description
-    const readMoreCon = readMoreWrap.querySelector('.read-more-text');
-    if (readMoreCon) {
-      Array.from(readMoreCon.children).forEach(child => textCellContent.push(child));
+  // Defensive text extraction for title and desktop description
+  const textWrap = element.querySelector('.text-wrap');
+  let heading = null;
+  let excerpt = null;
+  if (textWrap) {
+    const textWrapper = textWrap.querySelector('.text-wrapper');
+    if (textWrapper) {
+      heading = textWrapper.querySelector('h3');
+      excerpt = textWrapper.querySelector('p.hide-on-mobile');
     }
   }
 
-  // Add the card row: [ image , text cell ]
-  cells.push([
-    img,
-    textCellContent,
-  ]);
+  // Expanded content (Read More area)
+  let expandedContent = [];
+  const readMoreText = element.querySelector('.read-more-con .read-more-text');
+  if (readMoreText) {
+    // Only include non-empty paragraphs
+    expandedContent = Array.from(readMoreText.children).filter(
+      child => child.textContent && child.textContent.trim()
+    );
+  }
 
-  // Create block table and replace original element
+  // Compose right cell content, respecting order from source HTML
+  const textCellContent = [];
+  if (heading) textCellContent.push(heading);
+  if (excerpt) textCellContent.push(excerpt);
+  if (expandedContent.length) textCellContent.push(...expandedContent);
+
+  // Ensure at least some content is present
+  if (!img && textCellContent.length === 0) return;
+
+  // Build table
+  const cells = [
+    headerRow,
+    [img, textCellContent]
+  ];
+
   const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

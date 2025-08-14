@@ -1,57 +1,47 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Assumes the structure is two columns, each with p.purple (term) followed by p (description)
+  // Get left and right columns
   const columns = element.querySelectorAll(':scope > div');
   if (columns.length !== 2) return;
-  const left = columns[0];
-  const right = columns[1];
+  const leftCol = columns[0];
+  const rightCol = columns[1];
 
-  // Helper to collect term/definition pairs
-  function extractPairs(col) {
-    const ps = Array.from(col.querySelectorAll(':scope > p'));
-    const pairs = [];
-    for (let i = 0; i < ps.length;) {
-      const current = ps[i];
-      if (current.classList.contains('purple')) {
-        // Next p (if exists and not purple) is the definition
-        let next = ps[i+1];
-        if (next && !next.classList.contains('purple')) {
-          pairs.push([current, next]);
-          i += 2;
-        } else {
-          // Only a term, no definition
-          pairs.push([current, document.createElement('span')]);
-          i++;
-        }
-      } else {
-        // Orphan definition (shouldn't occur in this HTML, but just in case)
-        pairs.push([document.createElement('span'), current]);
-        i++;
+  // Helper to build array of term/definition pairs for a column
+  function extractRows(col) {
+    const out = [];
+    const children = Array.from(col.children);
+    for (let i = 0; i < children.length - 1; i++) {
+      const term = children[i];
+      const def = children[i + 1];
+      if (
+        term.tagName === 'P' && term.classList.contains('purple') &&
+        def.tagName === 'P' && !def.classList.contains('purple')
+      ) {
+        // Both <p> elements appear in DOM, reference them directly
+        out.push([term, def]);
+        i++; // move to the next pair
       }
     }
-    return pairs;
+    return out;
   }
 
-  const leftPairs = extractPairs(left);
-  const rightPairs = extractPairs(right);
-
-  // Table header exactly as in example
-  const headerRow = ['Table (no header, tableNoHeader28)', ''];
-  // Build table rows: one per pair, preserve order
+  const leftPairs = extractRows(leftCol);
+  const rightPairs = extractRows(rightCol);
   const maxRows = Math.max(leftPairs.length, rightPairs.length);
-  const rows = [headerRow];
+
+  // Table header row from requirements
+  const cells = [['Table (no header, tableNoHeader28)']];
+  // Build rows: one row per pair, two columns per row
   for (let i = 0; i < maxRows; i++) {
-    const [leftTerm, leftDef] = leftPairs[i] || [document.createElement('span'), document.createElement('span')];
-    const [rightTerm, rightDef] = rightPairs[i] || [document.createElement('span'), document.createElement('span')];
-    // For each cell, combine term and definition in order
-    const leftCell = document.createElement('div');
-    leftCell.append(leftTerm, leftDef);
-    const rightCell = document.createElement('div');
-    rightCell.append(rightTerm, rightDef);
-    rows.push([leftCell, rightCell]);
+    const leftCell = leftPairs[i] ? leftPairs[i] : ['', ''];
+    const rightCell = rightPairs[i] ? rightPairs[i] : ['', ''];
+    // Each cell: both term and def in one cell (as in the semantic meaning in HTML)
+    cells.push([
+      leftCell[0] && leftCell[1] ? [leftCell[0], leftCell[1]] : '',
+      rightCell[0] && rightCell[1] ? [rightCell[0], rightCell[1]] : ''
+    ]);
   }
 
-  // Create and replace
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

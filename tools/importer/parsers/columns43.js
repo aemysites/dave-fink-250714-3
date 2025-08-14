@@ -1,21 +1,22 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Extract the column divs
+  // The header row must be exactly one cell, and the body row must have two cells as per the example
+  // Header row: single column
+  const headerRow = ['Columns (columns43)'];
+
+  // Get immediate child divs of the block for the two columns
   const columns = element.querySelectorAll(':scope > div');
-  // Defensive: always provide two columns for this block
-  const col1 = columns[0] || document.createElement('div');
-  const col2 = columns[1] || document.createElement('div');
+  // Defensive: always provide two cells, even if one is missing
+  const leftCol = columns[0] || document.createElement('div');
+  const rightCol = columns[1] || document.createElement('div');
+  const bodyRow = [leftCol, rightCol];
 
-  // The header row must contain exactly one cell (the block name), per spec
-  // The second row must contain as many columns as the block (here: 2)
-  const cells = [
-    ['Columns (columns43)'],
-    [col1, col2]
-  ];
+  // Build the table
+  const table = WebImporter.DOMUtils.createTable([
+    headerRow,
+    bodyRow
+  ], document);
 
-  // Create the table
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Replace the original element
+  // Replace the original block
   element.replaceWith(table);
 }

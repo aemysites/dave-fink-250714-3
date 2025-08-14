@@ -30,6 +30,15 @@ function cleanUpAttributes(e) {
 }
 
 export default function transform(hookName, element) {
+  if (hookName === TransformHook.beforeTransform) {
+    // remove span within spans to avoid losing content
+    // getting them simply removed by helix-importer
+    const spans = element.querySelectorAll('span > span:only-child');
+    for (const sp of spans) {
+      sp.replaceWith(sp.textContent);
+    }
+  }
+
   if (hookName === TransformHook.beforeParse) {
     // remove non-content elements
     WebImporter.DOMUtils.remove(element, [

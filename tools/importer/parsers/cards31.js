@@ -1,61 +1,59 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Ensure we reference existing elements, not clones or strings
+  // Table header exactly as in the example
   const headerRow = ['Cards (cards31)'];
+  // Get all card items (each .patient-item)
+  const cardItems = Array.from(element.querySelectorAll('.patient-item'));
   const rows = [headerRow];
 
-  // Get all top-level patient item wrappers (cards)
-  const cardNodes = element.querySelectorAll(':scope > .paragraph--type--pfib-paragraph-patient-items > .field__item.patient-item, :scope > .field__item.patient-item');
-  // Fallback: handle alternative markup (for robustness)
-  const fallbackNodes = element.querySelectorAll(':scope > .paragraph--type--pfib-paragraph-patient-items > .paragraph--type--pfib-paragraph-patient-item, :scope > .paragraph--type--pfib-paragraph-patient-item');
-  const allCards = cardNodes.length ? cardNodes : fallbackNodes;
-  
-  allCards.forEach(card => {
-    // Compose image cell: banner image, then icon (both are required by design)
+  cardItems.forEach((card) => {
+    // Get the main banner image (the big background image for the card)
     const bannerImg = card.querySelector('.talking-block-banner img');
+    // Get the icon (the purple overlay)
     const iconImg = card.querySelector('.icon img');
-    const imgCellContent = [];
-    if (bannerImg) imgCellContent.push(bannerImg);
-    if (iconImg) imgCellContent.push(iconImg);
-    let imgCell = '';
-    if (imgCellContent.length === 2) {
-      // Both images: stack in a div
-      const wrap = document.createElement('div');
-      imgCellContent.forEach(el => { wrap.appendChild(el); wrap.appendChild(document.createElement('br')); });
-      imgCell = wrap;
-    } else if (imgCellContent.length === 1) {
-      imgCell = imgCellContent[0];
+
+    // Compose the image cell; use both if present, icon above banner
+    let imageCellContent;
+    if (iconImg && bannerImg) {
+      const div = document.createElement('div');
+      div.appendChild(iconImg);
+      div.appendChild(bannerImg);
+      imageCellContent = div;
+    } else if (bannerImg) {
+      imageCellContent = bannerImg;
+    } else if (iconImg) {
+      imageCellContent = iconImg;
+    } else {
+      imageCellContent = '';
     }
-    // Compose text cell: heading, description, CTA
+
+    // Assemble the text cell
     const blockContent = card.querySelector('.block-content');
-    const textCellContent = [];
+    const contentParts = [];
     if (blockContent) {
-      // Title: purple p
+      // Title in <p class="purple">
       const title = blockContent.querySelector('p.purple');
       if (title) {
         const strong = document.createElement('strong');
         strong.textContent = title.textContent.trim();
-        textCellContent.push(strong);
-        textCellContent.push(document.createElement('br'));
+        contentParts.push(strong);
       }
-      // Description: first p NOT .purple
+      // Description is usually the next p after the purple title
       const desc = Array.from(blockContent.querySelectorAll('p')).find(p => !p.classList.contains('purple'));
       if (desc) {
-        textCellContent.push(document.createTextNode(desc.textContent.trim()));
-        textCellContent.push(document.createElement('br'));
+        contentParts.push(document.createElement('br'));
+        contentParts.push(desc);
       }
-      // CTA: a.button
+      // CTA is the button link
       const cta = blockContent.querySelector('a.button');
       if (cta) {
-        textCellContent.push(cta);
+        contentParts.push(document.createElement('br'));
+        contentParts.push(cta);
       }
     }
-    rows.push([
-      imgCell || '',
-      textCellContent.length === 1 ? textCellContent[0] : textCellContent
-    ]);
-  });
 
+    rows.push([imageCellContent, contentParts]);
+  });
   const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }
