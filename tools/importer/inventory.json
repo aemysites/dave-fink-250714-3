@@ -1244,7 +1244,7 @@
       "cluster": 19,
       "source": "Tabs",
       "target": "Tabs (dosing)",
-      "key": "columns19",
+      "key": "tabsDosing",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
