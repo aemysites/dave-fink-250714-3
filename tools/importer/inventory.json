@@ -1240,7 +1240,7 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Tabs",
       "cluster": 19,
       "source": "Columns",
       "target": "Columns (columns19)",
