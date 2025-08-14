@@ -198,44 +198,44 @@
         {
           "url": "https://www.ibrance.co.nz/patient-support/download-resources",
           "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
-          "uuid": "15ea179a-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
+          "uuid": "15ea179a-09-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/download-resources",
           "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
-          "uuid": "15ea179a-07-36e14ab7aa896877b993a6b630d6047557460e94",
+          "uuid": "15ea179a-10-36e14ab7aa896877b993a6b630d6047557460e94",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/download-resources",
           "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
-          "uuid": "15ea179a-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
-          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-28-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "uuid": "15ea179a-11-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
           "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-27-36e14ab7aa896877b993a6b630d6047557460e94",
+          "uuid": "25cacc76-30-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+          "uuid": "25cacc76-31-36e14ab7aa896877b993a6b630d6047557460e94",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]"
         },
         {
           "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
           "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-26-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+          "uuid": "25cacc76-32-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/home",
           "urlHash": "29f4a960ed914e31dfdb16a5b96707f4962e051f",
-          "uuid": "29f4a960-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
+          "uuid": "29f4a960-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/home",
@@ -246,32 +246,32 @@
         {
           "url": "https://www.ibrance.co.nz/home",
           "urlHash": "29f4a960ed914e31dfdb16a5b96707f4962e051f",
-          "uuid": "29f4a960-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/about-ibrance",
-          "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-17-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "uuid": "29f4a960-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/about-ibrance",
           "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-16-36e14ab7aa896877b993a6b630d6047557460e94",
+          "uuid": "2efcd8b3-17-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance",
+          "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
+          "uuid": "2efcd8b3-18-36e14ab7aa896877b993a6b630d6047557460e94",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]"
         },
         {
           "url": "https://www.ibrance.co.nz/about-ibrance",
           "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-15-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+          "uuid": "2efcd8b3-19-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
           "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
-          "uuid": "3b855fb5-09-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
+          "uuid": "3b855fb5-07-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
@@ -282,14 +282,14 @@
         {
           "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
           "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
-          "uuid": "3b855fb5-07-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+          "uuid": "3b855fb5-09-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support",
           "urlHash": "74a8a170b3b7d1087514219f73255d3fce284e26",
-          "uuid": "74a8a170-07-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
+          "uuid": "74a8a170-05-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support",
@@ -300,50 +300,50 @@
         {
           "url": "https://www.ibrance.co.nz/patient-support",
           "urlHash": "74a8a170b3b7d1087514219f73255d3fce284e26",
-          "uuid": "74a8a170-05-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
-          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-26-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "uuid": "74a8a170-07-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
           "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-25-36e14ab7aa896877b993a6b630d6047557460e94",
+          "uuid": "8c0c869b-25-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
+          "uuid": "8c0c869b-26-36e14ab7aa896877b993a6b630d6047557460e94",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]"
         },
         {
           "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
           "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-24-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
-          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-          "uuid": "9fd89019-14-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "uuid": "8c0c869b-27-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
           "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-          "uuid": "9fd89019-13-36e14ab7aa896877b993a6b630d6047557460e94",
+          "uuid": "9fd89019-13-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
+          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
+          "uuid": "9fd89019-14-36e14ab7aa896877b993a6b630d6047557460e94",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
           "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-          "uuid": "9fd89019-12-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+          "uuid": "9fd89019-15-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/page-not-found",
           "urlHash": "b8d9ed45cf109b52cdf0b69206dae0c7938e3ad8",
-          "uuid": "b8d9ed45-05-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
+          "uuid": "b8d9ed45-03-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/page-not-found",
@@ -354,14 +354,14 @@
         {
           "url": "https://www.ibrance.co.nz/page-not-found",
           "urlHash": "b8d9ed45cf109b52cdf0b69206dae0c7938e3ad8",
-          "uuid": "b8d9ed45-03-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+          "uuid": "b8d9ed45-05-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/",
           "urlHash": "cc83580b3df37ec256492e1c23a2a81d4c1f0ef3",
-          "uuid": "cc83580b-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
+          "uuid": "cc83580b-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/",
@@ -372,50 +372,50 @@
         {
           "url": "https://www.ibrance.co.nz/",
           "urlHash": "cc83580b3df37ec256492e1c23a2a81d4c1f0ef3",
-          "uuid": "cc83580b-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
-          "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
-          "uuid": "d0bc7c70-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "uuid": "cc83580b-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
           "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
-          "uuid": "d0bc7c70-07-36e14ab7aa896877b993a6b630d6047557460e94",
+          "uuid": "d0bc7c70-07-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
+          "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
+          "uuid": "d0bc7c70-08-36e14ab7aa896877b993a6b630d6047557460e94",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
           "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
-          "uuid": "d0bc7c70-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/family-and-friends-support",
-          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-15-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "uuid": "d0bc7c70-09-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/family-and-friends-support",
           "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-14-36e14ab7aa896877b993a6b630d6047557460e94",
+          "uuid": "d23620c7-14-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+          "uuid": "d23620c7-15-36e14ab7aa896877b993a6b630d6047557460e94",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]"
         },
         {
           "url": "https://www.ibrance.co.nz/family-and-friends-support",
           "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-13-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+          "uuid": "d23620c7-16-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
           "urlHash": "d87d7ca4a50d5dfd06d2e8d0096d878b5c9c193a",
-          "uuid": "d87d7ca4-06-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
+          "uuid": "d87d7ca4-04-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
@@ -426,14 +426,14 @@
         {
           "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
           "urlHash": "d87d7ca4a50d5dfd06d2e8d0096d878b5c9c193a",
-          "uuid": "d87d7ca4-04-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+          "uuid": "d87d7ca4-06-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/sitemap",
           "urlHash": "eb586c1d50235bd2173365f96359fd99dfaed097",
-          "uuid": "eb586c1d-05-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
+          "uuid": "eb586c1d-03-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/sitemap",
@@ -444,14 +444,14 @@
         {
           "url": "https://www.ibrance.co.nz/sitemap",
           "urlHash": "eb586c1d50235bd2173365f96359fd99dfaed097",
-          "uuid": "eb586c1d-03-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+          "uuid": "eb586c1d-05-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
           "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
-          "uuid": "ef969107-13-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
+          "uuid": "ef969107-11-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
@@ -462,8 +462,8 @@
         {
           "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
           "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
-          "uuid": "ef969107-11-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+          "uuid": "ef969107-13-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]"
         }
       ],
       "styles": {}
@@ -510,32 +510,32 @@
       ]
     },
     {
-      "name": "Accordion",
+      "name": "Columns",
       "cluster": 2,
-      "source": "Accordion",
-      "target": "Accordion (accordion2)",
-      "key": "accordion2",
+      "source": "Columns",
+      "target": "Columns (columns2)",
+      "key": "columns2",
       "instances": [
         {
-          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
-          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-23-2286d7a62c0bb802891a2c1d45a94b3f1b16ca72",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]"
+          "url": "https://www.ibrance.co.nz/about-ibrance",
+          "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
+          "uuid": "2efcd8b3-09-47d5bb2fc1146096c308f9ca4b21dcfcb7add2ec",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]"
         },
         {
-          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
-          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-25-3f1a109bfbc258c913ed229f19da1970210c8aee",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]"
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+          "uuid": "d23620c7-07-47d5bb2fc1146096c308f9ca4b21dcfcb7add2ec",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]"
         }
       ]
     },
     {
-      "name": "Cards",
+      "name": "Accordion",
       "cluster": 3,
-      "source": "Cards",
-      "target": "Cards (cards3)",
-      "key": "cards3",
+      "source": "Accordion",
+      "target": "Accordion (accordion3)",
+      "key": "accordion3",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
@@ -561,32 +561,107 @@
       ]
     },
     {
-      "name": "Cards",
+      "name": "Accordion",
       "cluster": 4,
-      "source": "Cards",
-      "target": "Cards (cards4)",
-      "key": "cards4",
+      "source": "Accordion",
+      "target": "Accordion (accordion4)",
+      "key": "accordion4",
       "instances": [
         {
-          "url": "https://www.ibrance.co.nz/about-ibrance",
-          "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-08-47d5bb2fc1146096c308f9ca4b21dcfcb7add2ec",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]"
+          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+          "uuid": "25cacc76-27-2286d7a62c0bb802891a2c1d45a94b3f1b16ca72",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+          "uuid": "25cacc76-29-3f1a109bfbc258c913ed229f19da1970210c8aee",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 5,
+      "source": "Cards",
+      "target": "Cards (cards5)",
+      "key": "cards5",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+          "uuid": "d23620c7-08-65eef81b9212f70851b7140b0c3ca8e9d893c71e",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]"
         },
         {
           "url": "https://www.ibrance.co.nz/family-and-friends-support",
           "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-06-47d5bb2fc1146096c308f9ca4b21dcfcb7add2ec",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]"
+          "uuid": "d23620c7-09-827ee17b5623177149894187d722c359fc12eabe",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+          "uuid": "d23620c7-10-01bcdd961625a7f5cf80ad4e6a7445b8503ab116",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[7]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+          "uuid": "d23620c7-11-33146db7be840bf9578546e321b982fda5e4e5c6",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]"
+        }
+      ]
+    },
+    {
+      "name": "Tabs",
+      "cluster": 6,
+      "source": "Tabs",
+      "target": "Tabs",
+      "key": "tabs6",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
+          "uuid": "8c0c869b-20-7aa4f3e62452e3191ef5ef45109db6885961f064",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[10]/div[1]/div[1]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
+          "uuid": "8c0c869b-21-af5c2640afa34fe35f1803a4d7dfdbbe23bc0a14",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 7,
+      "source": "Cards",
+      "target": "Cards (cards7)",
+      "key": "cards7",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/download-resources",
+          "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
+          "uuid": "15ea179a-05-62c42071c8c9557d648d06cff7180065accda666",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/download-resources",
+          "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
+          "uuid": "15ea179a-07-619096b76cb1954a275db039d79ea4705691b733",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
         }
       ]
     },
     {
       "name": "Hero",
-      "cluster": 5,
+      "cluster": 8,
       "source": "Hero",
-      "target": "Hero (hero5)",
-      "key": "hero5",
+      "target": "Hero (hero8)",
+      "key": "hero8",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/patient-support/download-resources",
@@ -657,11 +732,32 @@
       ]
     },
     {
+      "name": "Cards",
+      "cluster": 9,
+      "source": "Cards",
+      "target": "Cards (cards9)",
+      "key": "cards9",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/home",
+          "urlHash": "29f4a960ed914e31dfdb16a5b96707f4962e051f",
+          "uuid": "29f4a960-04-508cf17d42e9f5962a963dab4853263abb3bbf7b",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/",
+          "urlHash": "cc83580b3df37ec256492e1c23a2a81d4c1f0ef3",
+          "uuid": "cc83580b-04-508cf17d42e9f5962a963dab4853263abb3bbf7b",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]"
+        }
+      ]
+    },
+    {
       "name": "header",
-      "cluster": 6,
+      "cluster": 10,
       "source": "Header",
-      "target": "Header (header6)",
-      "key": "header6",
+      "target": "Header (header10)",
+      "key": "header10",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/patient-support/download-resources",
@@ -757,124 +853,201 @@
     },
     {
       "name": "Columns",
-      "cluster": 7,
+      "cluster": 11,
       "source": "Columns",
-      "target": "Columns (columns7)",
-      "key": "columns7",
+      "target": "Columns (columns11)",
+      "key": "columns11",
       "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/download-resources",
-          "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
-          "uuid": "15ea179a-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
-          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-28-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/home",
-          "urlHash": "29f4a960ed914e31dfdb16a5b96707f4962e051f",
-          "uuid": "29f4a960-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
-        },
         {
           "url": "https://www.ibrance.co.nz/about-ibrance",
           "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-17-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
-        },
+          "uuid": "2efcd8b3-06-052462fd0ec9e6596b8363307fae8b94af645ac5",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 12,
+      "source": "Columns",
+      "target": "Columns (columns12)",
+      "key": "columns12",
+      "instances": [
         {
-          "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
-          "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
-          "uuid": "3b855fb5-09-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
-        },
+          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+          "uuid": "25cacc76-11-e9061bc69b0cd224b307958759c912d3e8356325",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 13,
+      "source": "Columns",
+      "target": "Columns (columns13)",
+      "key": "columns13",
+      "instances": [
         {
-          "url": "https://www.ibrance.co.nz/patient-support",
-          "urlHash": "74a8a170b3b7d1087514219f73255d3fce284e26",
-          "uuid": "74a8a170-07-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
-          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-26-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
+          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+          "uuid": "25cacc76-14-09e0813945766b408bd0af4fc482c29f6b83184c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/ul[1]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
           "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-          "uuid": "9fd89019-14-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
+          "uuid": "9fd89019-07-19e07104909cc5ec795288e79d1be3a145e93cdd",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]",
+          "section": "section-5"
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 14,
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/download-resources",
+          "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
+          "uuid": "15ea179a-09-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+          "uuid": "25cacc76-30-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/home",
+          "urlHash": "29f4a960ed914e31dfdb16a5b96707f4962e051f",
+          "uuid": "29f4a960-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance",
+          "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
+          "uuid": "2efcd8b3-17-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
+          "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
+          "uuid": "3b855fb5-07-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support",
+          "urlHash": "74a8a170b3b7d1087514219f73255d3fce284e26",
+          "uuid": "74a8a170-05-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
+          "uuid": "8c0c869b-25-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
+          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
+          "uuid": "9fd89019-13-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/page-not-found",
           "urlHash": "b8d9ed45cf109b52cdf0b69206dae0c7938e3ad8",
-          "uuid": "b8d9ed45-05-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
+          "uuid": "b8d9ed45-03-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/",
           "urlHash": "cc83580b3df37ec256492e1c23a2a81d4c1f0ef3",
-          "uuid": "cc83580b-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
+          "uuid": "cc83580b-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
           "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
-          "uuid": "d0bc7c70-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
+          "uuid": "d0bc7c70-07-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/family-and-friends-support",
           "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-15-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
+          "uuid": "d23620c7-14-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
           "urlHash": "d87d7ca4a50d5dfd06d2e8d0096d878b5c9c193a",
-          "uuid": "d87d7ca4-06-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
+          "uuid": "d87d7ca4-04-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/sitemap",
           "urlHash": "eb586c1d50235bd2173365f96359fd99dfaed097",
-          "uuid": "eb586c1d-05-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
+          "uuid": "eb586c1d-03-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
         },
         {
           "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
           "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
-          "uuid": "ef969107-13-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
-          "section": "section-1"
+          "uuid": "ef969107-11-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 15,
+      "source": "Columns",
+      "target": "Columns (columns15)",
+      "key": "columns15",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
+          "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
+          "uuid": "ef969107-05-c4aa4c198b0b173ae114c3d65718bac2cc3ae802",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
+          "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
+          "uuid": "ef969107-07-1959a1633e8352a9fefe7c937e99ac265e73d762",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
+          "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
+          "uuid": "ef969107-09-402db49f9ebe73a88ab305cc5840e5b6eb77cc11",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 16,
+      "source": "Cards",
+      "target": "Cards (cards16)",
+      "key": "cards16",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
+          "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
+          "uuid": "3b855fb5-06-3bd58fcb6368ce1567c2fc5f7fe9189421404dda",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]"
         }
       ]
     },
     {
       "name": "Hero",
-      "cluster": 8,
+      "cluster": 17,
       "source": "Hero",
-      "target": "Hero (hero8)",
-      "key": "hero8",
+      "target": "Hero (hero17)",
+      "key": "hero17",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
@@ -886,31 +1059,40 @@
     },
     {
       "name": "Cards",
-      "cluster": 9,
+      "cluster": 18,
       "source": "Cards",
-      "target": "Cards (cards9)",
-      "key": "cards9",
+      "target": "Cards (cards18)",
+      "key": "cards18",
       "instances": [
         {
-          "url": "https://www.ibrance.co.nz/home",
-          "urlHash": "29f4a960ed914e31dfdb16a5b96707f4962e051f",
-          "uuid": "29f4a960-04-508cf17d42e9f5962a963dab4853263abb3bbf7b",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/",
-          "urlHash": "cc83580b3df37ec256492e1c23a2a81d4c1f0ef3",
-          "uuid": "cc83580b-04-508cf17d42e9f5962a963dab4853263abb3bbf7b",
+          "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
+          "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
+          "uuid": "3b855fb5-04-508cf17d42e9f5962a963dab4853263abb3bbf7b",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]"
         }
       ]
     },
     {
+      "name": "Hero",
+      "cluster": 19,
+      "source": "Hero",
+      "target": "Hero (hero19)",
+      "key": "hero19",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+          "uuid": "25cacc76-05-47d5bb2fc1146096c308f9ca4b21dcfcb7add2ec",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
       "name": "header",
-      "cluster": 10,
+      "cluster": 20,
       "source": "Header",
-      "target": "Header (header10)",
-      "key": "header10",
+      "target": "Header (header20)",
+      "key": "header20",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/patient-support/download-resources",
@@ -1005,283 +1187,17 @@
       ]
     },
     {
-      "name": "Cards",
-      "cluster": 11,
-      "source": "Cards",
-      "target": "Cards (cards11)",
-      "key": "cards11",
+      "name": "Video",
+      "cluster": 21,
+      "source": "Video",
+      "target": "Video",
+      "key": "video21",
       "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/family-and-friends-support",
-          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-07-65eef81b9212f70851b7140b0c3ca8e9d893c71e",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/family-and-friends-support",
-          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-08-827ee17b5623177149894187d722c359fc12eabe",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/family-and-friends-support",
-          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-09-01bcdd961625a7f5cf80ad4e6a7445b8503ab116",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[7]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/family-and-friends-support",
-          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-10-33146db7be840bf9578546e321b982fda5e4e5c6",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]"
-        }
-      ]
-    },
-    {
-      "name": "Cards",
-      "cluster": 12,
-      "source": "Cards",
-      "target": "Cards (cards12)",
-      "key": "cards12",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
-          "urlHash": "d87d7ca4a50d5dfd06d2e8d0096d878b5c9c193a",
-          "uuid": "d87d7ca4-03-89daafe2ad1593714118d4a00fe986c3053e8bd2",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[2]"
-        }
-      ]
-    },
-    {
-      "name": "Tabs",
-      "cluster": 13,
-      "source": "Tabs",
-      "target": "Tabs",
-      "key": "tabs13",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
-          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-19-7aa4f3e62452e3191ef5ef45109db6885961f064",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[10]/div[1]/div[1]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
-          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-20-af5c2640afa34fe35f1803a4d7dfdbbe23bc0a14",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[1]"
-        }
-      ]
-    },
-    {
-      "name": "Embed (video)",
-      "cluster": 14,
-      "source": "Embed",
-      "target": "Embed (embedVideo14)",
-      "key": "embedVideo14",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
-          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-          "uuid": "9fd89019-04-2e07e78cf4c3cda6ab0785c611a7238fff7bcb38",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/ul[1]"
-        }
-      ]
-    },
-    {
-      "name": "Columns",
-      "cluster": 15,
-      "source": "Columns",
-      "target": "Columns (columns15)",
-      "key": "columns15",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
-          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-          "uuid": "9fd89019-09-3bd58fcb6368ce1567c2fc5f7fe9189421404dda",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]"
-        }
-      ]
-    },
-    {
-      "name": "Cards",
-      "cluster": 16,
-      "source": "Cards",
-      "target": "Cards (cards16)",
-      "key": "cards16",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/download-resources",
-          "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
-          "uuid": "15ea179a-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
-          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-26-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/home",
-          "urlHash": "29f4a960ed914e31dfdb16a5b96707f4962e051f",
-          "uuid": "29f4a960-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
         {
           "url": "https://www.ibrance.co.nz/about-ibrance",
           "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-15-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
-          "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
-          "uuid": "3b855fb5-07-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/patient-support",
-          "urlHash": "74a8a170b3b7d1087514219f73255d3fce284e26",
-          "uuid": "74a8a170-05-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
-          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-24-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
-          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-          "uuid": "9fd89019-12-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/page-not-found",
-          "urlHash": "b8d9ed45cf109b52cdf0b69206dae0c7938e3ad8",
-          "uuid": "b8d9ed45-03-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/",
-          "urlHash": "cc83580b3df37ec256492e1c23a2a81d4c1f0ef3",
-          "uuid": "cc83580b-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
-          "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
-          "uuid": "d0bc7c70-06-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/family-and-friends-support",
-          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-13-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
-          "urlHash": "d87d7ca4a50d5dfd06d2e8d0096d878b5c9c193a",
-          "uuid": "d87d7ca4-04-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/sitemap",
-          "urlHash": "eb586c1d50235bd2173365f96359fd99dfaed097",
-          "uuid": "eb586c1d-03-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
-          "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
-          "uuid": "ef969107-11-14eb5938f6521a533fbb9246d6d0aaa87bae388f",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]"
-        }
-      ]
-    },
-    {
-      "name": "Cards",
-      "cluster": 17,
-      "source": "Cards",
-      "target": "Cards (cards17)",
-      "key": "cards17",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/download-resources",
-          "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
-          "uuid": "15ea179a-04-508cf17d42e9f5962a963dab4853263abb3bbf7b",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]"
-        }
-      ]
-    },
-    {
-      "name": "Columns",
-      "cluster": 18,
-      "source": "Columns",
-      "target": "Columns (columns18)",
-      "key": "columns18",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
-          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-11-09e0813945766b408bd0af4fc482c29f6b83184c",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/ul[1]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
-          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-          "uuid": "9fd89019-06-19e07104909cc5ec795288e79d1be3a145e93cdd",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]",
-          "section": "section-5"
-        }
-      ]
-    },
-    {
-      "name": "Tabs",
-      "cluster": 19,
-      "source": "Tabs",
-      "target": "Tabs (dosing)",
-      "key": "tabsDosing",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
-          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-05-837491152e9df7cfcf8a3615cc3eccae07427222",
-          "xpath": "/html/body/div[1]/div[1]/main/div[2]/div/div/div[1]/article/div/div/div[4]/div/div"
-        }
-      ]
-    },
-    {
-      "name": "Carousel",
-      "cluster": 20,
-      "source": "Carousel",
-      "target": "Carousel (carousel20)",
-      "key": "carousel20",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
-          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-          "uuid": "9fd89019-11-b6db7cee0a3b671917f99dd30857ba13359ba6dd",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[2]/article[1]/div[1]/div[3]/div[1]/div[1]",
-          "section": "section-5"
-        }
-      ]
-    },
-    {
-      "name": "Accordion",
-      "cluster": 21,
-      "source": "Accordion",
-      "target": "Accordion (accordion21)",
-      "key": "accordion21",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
-          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-22-f14af8beb417dd58b6355470c9fc75ebd0e3ea94",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[12]/div[1]/div[2]"
+          "uuid": "2efcd8b3-13-827ee17b5623177149894187d722c359fc12eabe",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]"
         }
       ]
     },
@@ -1295,23 +1211,23 @@
         {
           "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
           "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-14-e70474a781d37d7143aa3916932d37276a0c1175",
+          "uuid": "25cacc76-18-e70474a781d37d7143aa3916932d37276a0c1175",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/ul[1]"
         }
       ]
     },
     {
-      "name": "Columns",
+      "name": "Cards",
       "cluster": 23,
-      "source": "Columns",
-      "target": "Columns (columns23)",
-      "key": "columns23",
+      "source": "Cards",
+      "target": "Cards (cards23)",
+      "key": "cards23",
       "instances": [
         {
-          "url": "https://www.ibrance.co.nz/about-ibrance",
-          "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-05-052462fd0ec9e6596b8363307fae8b94af645ac5",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]"
+          "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
+          "urlHash": "d87d7ca4a50d5dfd06d2e8d0096d878b5c9c193a",
+          "uuid": "d87d7ca4-03-89daafe2ad1593714118d4a00fe986c3053e8bd2",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[2]"
         }
       ]
     },
@@ -1323,11 +1239,11 @@
       "key": "columns24",
       "instances": [
         {
-          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
-          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-09-e9061bc69b0cd224b307958759c912d3e8356325",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]",
-          "section": "section-2"
+          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
+          "uuid": "8c0c869b-15-33f903e09b663b5077dc3d59a224b199f324d6d1",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]",
+          "section": "section-4"
         }
       ]
     },
@@ -1335,7 +1251,7 @@
       "name": "Carousel",
       "cluster": 25,
       "source": "Carousel",
-      "target": "Carousel (carousel25)",
+      "target": "Carousel",
       "key": "carousel25",
       "instances": [
         {
@@ -1347,18 +1263,116 @@
       ]
     },
     {
-      "name": "Table",
+      "name": "Columns",
       "cluster": 26,
-      "source": "Table",
-      "target": "Table (tableNoHeader26)",
-      "key": "tableNoHeader26",
+      "source": "Columns",
+      "target": "Columns (columns26)",
+      "key": "columns26",
       "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/download-resources",
+          "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
+          "uuid": "15ea179a-11-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+          "uuid": "25cacc76-32-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/home",
+          "urlHash": "29f4a960ed914e31dfdb16a5b96707f4962e051f",
+          "uuid": "29f4a960-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance",
+          "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
+          "uuid": "2efcd8b3-19-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
+          "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
+          "uuid": "3b855fb5-09-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support",
+          "urlHash": "74a8a170b3b7d1087514219f73255d3fce284e26",
+          "uuid": "74a8a170-07-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
+          "uuid": "8c0c869b-27-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
+          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
+          "uuid": "9fd89019-15-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/page-not-found",
+          "urlHash": "b8d9ed45cf109b52cdf0b69206dae0c7938e3ad8",
+          "uuid": "b8d9ed45-05-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/",
+          "urlHash": "cc83580b3df37ec256492e1c23a2a81d4c1f0ef3",
+          "uuid": "cc83580b-08-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
+          "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
+          "uuid": "d0bc7c70-09-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
         {
           "url": "https://www.ibrance.co.nz/family-and-friends-support",
           "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-04-128ae1640ed1e8b999fe15326dc2d12218fbb105",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
-          "section": "section-6"
+          "uuid": "d23620c7-16-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
+          "urlHash": "d87d7ca4a50d5dfd06d2e8d0096d878b5c9c193a",
+          "uuid": "d87d7ca4-06-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/sitemap",
+          "urlHash": "eb586c1d50235bd2173365f96359fd99dfaed097",
+          "uuid": "eb586c1d-05-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
+          "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
+          "uuid": "ef969107-13-46cad32dfc40f469a94ff14b2c90c6aaa738490c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[2]",
+          "section": "section-1"
         }
       ]
     },
@@ -1370,11 +1384,10 @@
       "key": "columns27",
       "instances": [
         {
-          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
-          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-          "uuid": "8c0c869b-14-33f903e09b663b5077dc3d59a224b199f324d6d1",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]",
-          "section": "section-4"
+          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
+          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
+          "uuid": "9fd89019-10-3bd58fcb6368ce1567c2fc5f7fe9189421404dda",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]"
         }
       ]
     },
@@ -1386,10 +1399,11 @@
       "key": "tableNoHeader28",
       "instances": [
         {
-          "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
-          "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
-          "uuid": "d0bc7c70-04-3d3c9d295aaecdddadf056bf20be68ea1c36b918",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]"
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+          "uuid": "d23620c7-05-e2674bce8c64bf5d0cbed7212a126a6d66528e94",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/ul[1]",
+          "section": "section-6"
         }
       ]
     },
@@ -1399,6 +1413,36 @@
       "source": "Columns",
       "target": "Columns (columns29)",
       "key": "columns29",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
+          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
+          "uuid": "9fd89019-04-2e07e78cf4c3cda6ab0785c611a7238fff7bcb38",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/ul[1]"
+        }
+      ]
+    },
+    {
+      "name": "Table (no header)",
+      "cluster": 30,
+      "source": "Table (no header)",
+      "target": "Table (no header, tableNoHeader30)",
+      "key": "tableNoHeader30",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
+          "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
+          "uuid": "d0bc7c70-05-3d3c9d295aaecdddadf056bf20be68ea1c36b918",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 31,
+      "source": "Columns",
+      "target": "Columns (columns31)",
+      "key": "columns31",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
@@ -1411,25 +1455,25 @@
     },
     {
       "name": "Cards (no images)",
-      "cluster": 30,
+      "cluster": 32,
       "source": "Cards",
       "target": "Cards",
-      "key": "cardsNoImages30",
+      "key": "cardsNoImages32",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
           "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-07-fa5b1af5db3b3076dd5f271c44e4fb0b458370a6",
+          "uuid": "25cacc76-08-fa5b1af5db3b3076dd5f271c44e4fb0b458370a6",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]"
         }
       ]
     },
     {
-      "name": "Cards",
-      "cluster": 31,
-      "source": "Cards",
-      "target": "Cards (cards31)",
-      "key": "cards31",
+      "name": "Columns",
+      "cluster": 33,
+      "source": "Columns",
+      "target": "Columns (columns33)",
+      "key": "columns33",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/patient-support",
@@ -1440,48 +1484,15 @@
       ]
     },
     {
-      "name": "Cards",
-      "cluster": 32,
-      "source": "Cards",
-      "target": "Cards (cards32)",
-      "key": "cards32",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
-          "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
-          "uuid": "3b855fb5-04-508cf17d42e9f5962a963dab4853263abb3bbf7b",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]"
-        }
-      ]
-    },
-    {
-      "name": "Hero",
-      "cluster": 33,
-      "source": "Hero",
-      "target": "Hero (hero33)",
-      "key": "hero33",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/about-ibrance",
-          "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-10-cd482c56719ef05a2071a447653137f45e44dec7",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[2]",
-          "section": "section-4"
-        }
-      ]
-    },
-    {
-      "name": "Columns",
+      "name": "unknown",
       "cluster": 34,
-      "source": "Columns",
-      "target": "Columns (columns34)",
-      "key": "columns34",
       "instances": [
         {
-          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
-          "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-18-deec6a62bce7c510e48722b75fb4ac17cf9756c8",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[9]"
+          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
+          "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
+          "uuid": "9fd89019-12-b6db7cee0a3b671917f99dd30857ba13359ba6dd",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[2]/article[1]/div[1]/div[3]/div[1]/div[1]",
+          "section": "section-5"
         }
       ]
     },
@@ -1493,40 +1504,41 @@
       "key": "columns35",
       "instances": [
         {
-          "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
-          "urlHash": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2",
-          "uuid": "3b855fb5-06-3bd58fcb6368ce1567c2fc5f7fe9189421404dda",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]"
-        }
-      ]
-    },
-    {
-      "name": "Embed (video)",
-      "cluster": 36,
-      "source": "Embed",
-      "target": "Embed (embedVideo36)",
-      "key": "embedVideo36",
-      "instances": [
-        {
           "url": "https://www.ibrance.co.nz/about-ibrance",
           "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-12-827ee17b5623177149894187d722c359fc12eabe",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]"
+          "uuid": "2efcd8b3-11-cd482c56719ef05a2071a447653137f45e44dec7",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[2]",
+          "section": "section-4"
         }
       ]
     },
     {
-      "name": "Hero",
+      "name": "Accordion",
+      "cluster": 36,
+      "source": "Accordion",
+      "target": "Accordion (accordion36)",
+      "key": "accordion36",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
+          "uuid": "8c0c869b-23-f14af8beb417dd58b6355470c9fc75ebd0e3ea94",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[12]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
       "cluster": 37,
-      "source": "Hero",
-      "target": "Hero (hero37)",
-      "key": "hero37",
+      "source": "Columns",
+      "target": "Columns (columns37)",
+      "key": "columns37",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
           "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-05-47d5bb2fc1146096c308f9ca4b21dcfcb7add2ec",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]"
+          "uuid": "25cacc76-22-deec6a62bce7c510e48722b75fb4ac17cf9756c8",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[9]"
         }
       ]
     },
@@ -1540,7 +1552,7 @@
         {
           "url": "https://www.ibrance.co.nz/about-ibrance",
           "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-09-1959a1633e8352a9fefe7c937e99ac265e73d762",
+          "uuid": "2efcd8b3-10-1959a1633e8352a9fefe7c937e99ac265e73d762",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]"
         }
       ]
@@ -1555,17 +1567,53 @@
         {
           "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
           "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
+          "uuid": "8c0c869b-05-837491152e9df7cfcf8a3615cc3eccae07427222",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]/div[1]/div[1]/ul[1]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 40,
+      "source": "Columns",
+      "target": "Columns (columns40)",
+      "key": "columns40",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+          "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
           "uuid": "8c0c869b-03-89daafe2ad1593714118d4a00fe986c3053e8bd2",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[2]"
         }
       ]
     },
     {
+      "name": "Cards",
+      "cluster": 41,
+      "source": "Cards",
+      "target": "Cards (cards41)",
+      "key": "cards41",
+      "instances": [
+        {
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+          "uuid": "d23620c7-12-deec6a62bce7c510e48722b75fb4ac17cf9756c8",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[9]"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+          "uuid": "d23620c7-13-22f81b1be5d182597b1be3fdcfb24939c8122acc",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[10]"
+        }
+      ]
+    },
+    {
       "name": "Hero",
-      "cluster": 40,
+      "cluster": 42,
       "source": "Hero",
-      "target": "Hero (hero40)",
-      "key": "hero40",
+      "target": "Hero (hero42)",
+      "key": "hero42",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/",
@@ -1577,10 +1625,10 @@
     },
     {
       "name": "Hero",
-      "cluster": 41,
+      "cluster": 43,
       "source": "Hero",
-      "target": "Hero (hero41)",
-      "key": "hero41",
+      "target": "Hero (hero43)",
+      "key": "hero43",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/home",
@@ -1591,62 +1639,41 @@
       ]
     },
     {
-      "name": "Cards",
-      "cluster": 42,
-      "source": "Cards",
-      "target": "Cards (cards42)",
-      "key": "cards42",
-      "instances": [
-        {
-          "url": "https://www.ibrance.co.nz/family-and-friends-support",
-          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-11-deec6a62bce7c510e48722b75fb4ac17cf9756c8",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[9]"
-        },
-        {
-          "url": "https://www.ibrance.co.nz/family-and-friends-support",
-          "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-          "uuid": "d23620c7-12-22f81b1be5d182597b1be3fdcfb24939c8122acc",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[10]"
-        }
-      ]
-    },
-    {
       "name": "Columns",
-      "cluster": 43,
+      "cluster": 44,
       "source": "Columns",
-      "target": "Columns (columns43)",
-      "key": "columns43",
+      "target": "Columns (columns44)",
+      "key": "columns44",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/about-ibrance",
           "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-06-25a5fd074f6bb76d246bfd3e6c35f7de235af158",
+          "uuid": "2efcd8b3-07-25a5fd074f6bb76d246bfd3e6c35f7de235af158",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]"
         }
       ]
     },
     {
       "name": "Cards",
-      "cluster": 44,
+      "cluster": 45,
       "source": "Cards",
-      "target": "Cards (cards44)",
-      "key": "cards44",
+      "target": "Cards (cards45)",
+      "key": "cards45",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/about-ibrance",
           "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-          "uuid": "2efcd8b3-14-33146db7be840bf9578546e321b982fda5e4e5c6",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]"
+          "uuid": "2efcd8b3-16-7490fa31e3706a714a74c5f6029a0f72e1814f7d",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]"
         }
       ]
     },
     {
       "name": "Columns",
-      "cluster": 45,
+      "cluster": 46,
       "source": "Columns",
-      "target": "Columns (columns45)",
-      "key": "columns45",
+      "target": "Columns (columns46)",
+      "key": "columns46",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
@@ -1658,30 +1685,30 @@
     },
     {
       "name": "Accordion",
-      "cluster": 46,
+      "cluster": 47,
       "source": "Accordion",
-      "target": "Accordion (accordion46)",
-      "key": "accordion46",
+      "target": "Accordion (accordion47)",
+      "key": "accordion47",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
           "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-          "uuid": "25cacc76-21-2d77ff4079ea9695baacbfc6433d81814b2b384d",
+          "uuid": "25cacc76-25-2d77ff4079ea9695baacbfc6433d81814b2b384d",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[2]/div[1]/div[1]"
         }
       ]
     },
     {
       "name": "Hero",
-      "cluster": 47,
+      "cluster": 48,
       "source": "Hero",
-      "target": "Hero (hero47)",
-      "key": "hero47",
+      "target": "Hero (hero48)",
+      "key": "hero48",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/patient-support/download-resources",
           "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
-          "uuid": "15ea179a-05-47d5bb2fc1146096c308f9ca4b21dcfcb7add2ec",
+          "uuid": "15ea179a-08-47d5bb2fc1146096c308f9ca4b21dcfcb7add2ec",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]"
         }
       ]
@@ -1697,88 +1724,125 @@
     {
       "url": "https://www.ibrance.co.nz/patient-support/download-resources",
       "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
-      "uuid": "15ea179a-07-36e14ab7aa896877b993a6b630d6047557460e94",
+      "uuid": "15ea179a-04-6ca9ed21339bc2f9d1b1662253ff9a3854ba9c69",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/h3[1]"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/download-resources",
+      "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
+      "uuid": "15ea179a-06-6bb340d7607a7f29d2d91af78e358c463be287cf",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/h3[2]"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/download-resources",
+      "urlHash": "15ea179ad494aa565c9390255cae952db39bed1d",
+      "uuid": "15ea179a-10-36e14ab7aa896877b993a6b630d6047557460e94",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]",
       "section": "section-1"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-06-887c9ce91e7c7aa5648d0f2f5d0645ba78aa017f",
+      "uuid": "25cacc76-06-b9a10b4142b55c8ea4e5eb330fec17af92d21345",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/h3[1]"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+      "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+      "uuid": "25cacc76-07-887c9ce91e7c7aa5648d0f2f5d0645ba78aa017f",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/p[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-08-470bb623da912559f9ad22cbc3940337e832c3f6",
+      "uuid": "25cacc76-09-57bf9f0032c736b444d301ecd5031a84ee513c13",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/h3[1]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+      "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+      "uuid": "25cacc76-10-470bb623da912559f9ad22cbc3940337e832c3f6",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/p[1]",
       "section": "section-2"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-10-3d42b87904a589e51a38431f670aa3e53bcbf43c",
+      "uuid": "25cacc76-12-4f8c3dfe72e508b25f5c1fd4d04eaf7dd3fdbb0b",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/h3[1]"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+      "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+      "uuid": "25cacc76-13-3d42b87904a589e51a38431f670aa3e53bcbf43c",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/p[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-12-53277c95ea3a8232f97b05692bc073dc30ce5d70",
+      "uuid": "25cacc76-15-6d37963e050e504fa9cefbdb0053a1c18b5e4887",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/h2[1]"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+      "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
+      "uuid": "25cacc76-16-53277c95ea3a8232f97b05692bc073dc30ce5d70",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/p[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-13-33ee0572b4cd7d1ce7b4bd89fe60a55b1a58fb62",
+      "uuid": "25cacc76-17-33ee0572b4cd7d1ce7b4bd89fe60a55b1a58fb62",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/p[2]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-15-2d2bf2db9d1443de5f31b1816246cf9bf2699ebc",
+      "uuid": "25cacc76-19-2d2bf2db9d1443de5f31b1816246cf9bf2699ebc",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/p[3]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-16-8fdfc06cf4b84ddf874a144d016124a18ff28bec",
+      "uuid": "25cacc76-20-8fdfc06cf4b84ddf874a144d016124a18ff28bec",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/p[4]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-17-9c1354a6e54b6ad5b1cdd2150afda3b9d261aa82",
+      "uuid": "25cacc76-21-9c1354a6e54b6ad5b1cdd2150afda3b9d261aa82",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/p[5]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-19-22f81b1be5d182597b1be3fdcfb24939c8122acc",
+      "uuid": "25cacc76-23-22f81b1be5d182597b1be3fdcfb24939c8122acc",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[10]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-20-af5c2640afa34fe35f1803a4d7dfdbbe23bc0a14",
+      "uuid": "25cacc76-24-af5c2640afa34fe35f1803a4d7dfdbbe23bc0a14",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[1]",
       "section": "section-3"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-22-1f1857483e0480f24eaea42e0c8bbf4b26062504",
+      "uuid": "25cacc76-26-1f1857483e0480f24eaea42e0c8bbf4b26062504",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-24-5d735b878782a0510182a7a4b87ca69745634b84",
+      "uuid": "25cacc76-28-5d735b878782a0510182a7a4b87ca69745634b84",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[11]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
       "urlHash": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154",
-      "uuid": "25cacc76-27-36e14ab7aa896877b993a6b630d6047557460e94",
+      "uuid": "25cacc76-31-36e14ab7aa896877b993a6b630d6047557460e94",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]",
       "section": "section-1"
     },
@@ -1804,31 +1868,43 @@
     {
       "url": "https://www.ibrance.co.nz/about-ibrance",
       "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-      "uuid": "2efcd8b3-04-3f8f85daf5d50c5be59334023c0cf8078ecaa790",
+      "uuid": "2efcd8b3-04-ab133bb2b076da6429412659b2d9300c06624661",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/h1[1]"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/about-ibrance",
+      "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
+      "uuid": "2efcd8b3-05-3f8f85daf5d50c5be59334023c0cf8078ecaa790",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/p[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance",
       "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-      "uuid": "2efcd8b3-07-040e36e5ca2ba591e2bd06566e601588d3a43795",
+      "uuid": "2efcd8b3-08-040e36e5ca2ba591e2bd06566e601588d3a43795",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/p[2]"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance",
       "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-      "uuid": "2efcd8b3-11-74f9672159232bf08ee2ef8ed15165a1f96ac90f",
+      "uuid": "2efcd8b3-12-74f9672159232bf08ee2ef8ed15165a1f96ac90f",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[3]"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance",
       "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-      "uuid": "2efcd8b3-13-01bcdd961625a7f5cf80ad4e6a7445b8503ab116",
+      "uuid": "2efcd8b3-14-01bcdd961625a7f5cf80ad4e6a7445b8503ab116",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[7]"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance",
       "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
-      "uuid": "2efcd8b3-16-36e14ab7aa896877b993a6b630d6047557460e94",
+      "uuid": "2efcd8b3-15-ac839a3ad0bf724762e6ffa53ca219eb15113b7e",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/h2[1]"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/about-ibrance",
+      "urlHash": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e",
+      "uuid": "2efcd8b3-18-36e14ab7aa896877b993a6b630d6047557460e94",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]",
       "section": "section-1"
     },
@@ -1900,87 +1976,101 @@
     {
       "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
       "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-      "uuid": "8c0c869b-13-53277c95ea3a8232f97b05692bc073dc30ce5d70",
+      "uuid": "8c0c869b-13-6d37963e050e504fa9cefbdb0053a1c18b5e4887",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/h2[1]",
+      "section": "section-4"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+      "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
+      "uuid": "8c0c869b-14-53277c95ea3a8232f97b05692bc073dc30ce5d70",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/p[1]",
       "section": "section-4"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
       "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-      "uuid": "8c0c869b-15-33ee0572b4cd7d1ce7b4bd89fe60a55b1a58fb62",
+      "uuid": "8c0c869b-16-33ee0572b4cd7d1ce7b4bd89fe60a55b1a58fb62",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/p[2]",
       "section": "section-4"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
       "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-      "uuid": "8c0c869b-16-2d2bf2db9d1443de5f31b1816246cf9bf2699ebc",
+      "uuid": "8c0c869b-17-2d2bf2db9d1443de5f31b1816246cf9bf2699ebc",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/p[3]",
       "section": "section-4"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
       "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-      "uuid": "8c0c869b-17-8fdfc06cf4b84ddf874a144d016124a18ff28bec",
+      "uuid": "8c0c869b-18-8fdfc06cf4b84ddf874a144d016124a18ff28bec",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/p[4]",
       "section": "section-4"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
       "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-      "uuid": "8c0c869b-18-deec6a62bce7c510e48722b75fb4ac17cf9756c8",
+      "uuid": "8c0c869b-19-deec6a62bce7c510e48722b75fb4ac17cf9756c8",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[9]"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
       "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-      "uuid": "8c0c869b-21-9ef52bfbc2ebc75a9d7971892b0727c1896c8dd6",
+      "uuid": "8c0c869b-22-9ef52bfbc2ebc75a9d7971892b0727c1896c8dd6",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[12]/div[1]/div[1]",
       "section": "section-3"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
       "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-      "uuid": "8c0c869b-23-e238c31fea7dbd2db7d09a14ee4130210c4cc2b0",
+      "uuid": "8c0c869b-24-e238c31fea7dbd2db7d09a14ee4130210c4cc2b0",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[13]"
     },
     {
       "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
       "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
-      "uuid": "8c0c869b-25-36e14ab7aa896877b993a6b630d6047557460e94",
+      "uuid": "8c0c869b-26-36e14ab7aa896877b993a6b630d6047557460e94",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]",
       "section": "section-1"
     },
     {
       "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
       "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-      "uuid": "9fd89019-05-45439b341538a1656ddcdc1da6227ab66050fc19",
+      "uuid": "9fd89019-05-3085e625f939a5b47407d9083c7a0bfa978afee3",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
+      "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
+      "uuid": "9fd89019-06-45439b341538a1656ddcdc1da6227ab66050fc19",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/p[1]",
       "section": "section-5"
     },
     {
       "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
       "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-      "uuid": "9fd89019-07-3e4031585e526073b4b20e90c9ac8b23f195b7d3",
+      "uuid": "9fd89019-08-3e4031585e526073b4b20e90c9ac8b23f195b7d3",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/p[2]",
       "section": "section-5"
     },
     {
       "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
       "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-      "uuid": "9fd89019-08-c4aa4c198b0b173ae114c3d65718bac2cc3ae802",
+      "uuid": "9fd89019-09-c4aa4c198b0b173ae114c3d65718bac2cc3ae802",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
       "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-      "uuid": "9fd89019-10-3479f6a02696450f731f859eef9bc08406d056bf",
-      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/h2[1]/div[1]"
+      "uuid": "9fd89019-11-da835c318b9113237bd748d1b8659058cbdc149e",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/h2[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
       "urlHash": "9fd89019706b806518bbe8164befb8f54a59f2f5",
-      "uuid": "9fd89019-13-36e14ab7aa896877b993a6b630d6047557460e94",
+      "uuid": "9fd89019-14-36e14ab7aa896877b993a6b630d6047557460e94",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]",
       "section": "section-1"
     },
@@ -2019,32 +2109,45 @@
     {
       "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
       "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
-      "uuid": "d0bc7c70-03-39d7d216eb5d73c6be8f1361440eee784833a0f8",
+      "uuid": "d0bc7c70-03-47544d661fd68e81be4fad57519a705a6e1848e6",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
+      "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
+      "uuid": "d0bc7c70-04-39d7d216eb5d73c6be8f1361440eee784833a0f8",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/p[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
       "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
-      "uuid": "d0bc7c70-05-508cf17d42e9f5962a963dab4853263abb3bbf7b",
+      "uuid": "d0bc7c70-06-508cf17d42e9f5962a963dab4853263abb3bbf7b",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]"
     },
     {
       "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
       "urlHash": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c",
-      "uuid": "d0bc7c70-07-36e14ab7aa896877b993a6b630d6047557460e94",
+      "uuid": "d0bc7c70-08-36e14ab7aa896877b993a6b630d6047557460e94",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]",
       "section": "section-1"
     },
     {
       "url": "https://www.ibrance.co.nz/family-and-friends-support",
       "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-      "uuid": "d23620c7-05-380847a266c64ed34d9788ce105667ca8539769f",
+      "uuid": "d23620c7-04-ad1add578bf86c4cf2e978a231b70aae3d71208d",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/h3[1]",
+      "section": "section-6"
+    },
+    {
+      "url": "https://www.ibrance.co.nz/family-and-friends-support",
+      "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
+      "uuid": "d23620c7-06-380847a266c64ed34d9788ce105667ca8539769f",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[3]/div[1]/div[1]/p[1]"
     },
     {
       "url": "https://www.ibrance.co.nz/family-and-friends-support",
       "urlHash": "d23620c7cb99a1493149d3bc758de47b1245d398",
-      "uuid": "d23620c7-14-36e14ab7aa896877b993a6b630d6047557460e94",
+      "uuid": "d23620c7-15-36e14ab7aa896877b993a6b630d6047557460e94",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]",
       "section": "section-1"
     },
@@ -2077,24 +2180,6 @@
     {
       "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
       "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
-      "uuid": "ef969107-05-c4aa4c198b0b173ae114c3d65718bac2cc3ae802",
-      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]"
-    },
-    {
-      "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
-      "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
-      "uuid": "ef969107-07-1959a1633e8352a9fefe7c937e99ac265e73d762",
-      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]"
-    },
-    {
-      "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
-      "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
-      "uuid": "ef969107-09-402db49f9ebe73a88ab305cc5840e5b6eb77cc11",
-      "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]"
-    },
-    {
-      "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
-      "urlHash": "ef969107518db08dfd1a6be6a76048b78342f2d5",
       "uuid": "ef969107-12-36e14ab7aa896877b993a6b630d6047557460e94",
       "xpath": "/html[1]/body[1]/div[1]/div[1]/footer[1]/div[1]/div[1]",
       "section": "section-1"
@@ -2109,7 +2194,7 @@
     {
       "name": "section-2",
       "background": "rgb(222, 209, 238) none repeat scroll 0% 0% / auto padding-box border-box",
-      "count": 2
+      "count": 3
     },
     {
       "name": "section-3",
@@ -2119,17 +2204,17 @@
     {
       "name": "section-4",
       "background": "rgb(245, 242, 250) none repeat scroll 0% 0% / auto padding-box border-box",
-      "count": 6
+      "count": 7
     },
     {
       "name": "section-5",
       "background": "rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box",
-      "count": 11
+      "count": 12
     },
     {
       "name": "section-6",
       "background": "rgb(245, 242, 251) none repeat scroll 0% 0% / auto padding-box border-box",
-      "count": 1
+      "count": 2
     }
   ]
 }

@@ -1,0 +1,118 @@
+{
+  "templates": [
+    {
+      "name": "E-commerce Template",
+      "cluster": 1,
+      "pages": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/download-resources",
+          "uuid": "15ea179ad494aa565c9390255cae952db39bed1d"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/latest-articles",
+          "uuid": "d87d7ca4a50d5dfd06d2e8d0096d878b5c9c193a"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/mbc-advice",
+          "uuid": "ef969107518db08dfd1a6be6a76048b78342f2d5"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/talk-doctor",
+          "uuid": "9fd89019706b806518bbe8164befb8f54a59f2f5"
+        }
+      ]
+    },
+    {
+      "name": "'Chat Interface Page'",
+      "cluster": 2,
+      "pages": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/helpful-terminology",
+          "uuid": "d0bc7c708f47f5f59cc1167355890c738cdc5f5c"
+        }
+      ]
+    },
+    {
+      "name": "'Business Overview'",
+      "cluster": 3,
+      "pages": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support",
+          "uuid": "74a8a170b3b7d1087514219f73255d3fce284e26"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/page-not-found",
+          "uuid": "b8d9ed45cf109b52cdf0b69206dae0c7938e3ad8"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard Template",
+      "cluster": 4,
+      "pages": [
+        {
+          "url": "https://www.ibrance.co.nz/patient-support/connecting-others",
+          "uuid": "3b855fb5efaab7a8bbb1e764b738b637143ca2c2"
+        }
+      ]
+    },
+    {
+      "name": "'Dashboard Page'",
+      "cluster": 5,
+      "pages": [
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
+          "uuid": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386"
+        }
+      ]
+    },
+    {
+      "name": "\"FAQ Page\"",
+      "cluster": 6,
+      "pages": [
+        {
+          "url": "https://www.ibrance.co.nz/sitemap",
+          "uuid": "eb586c1d50235bd2173365f96359fd99dfaed097"
+        }
+      ]
+    },
+    {
+      "name": "'E-commerce product listing and details'",
+      "cluster": 7,
+      "pages": [
+        {
+          "url": "https://www.ibrance.co.nz/metastatic-breast-cancer-diagnosis",
+          "uuid": "25cacc760f6bfcd5d24745c3a6d73f0a2eabd154"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/family-and-friends-support",
+          "uuid": "d23620c7cb99a1493149d3bc758de47b1245d398"
+        },
+        {
+          "url": "https://www.ibrance.co.nz/about-ibrance",
+          "uuid": "2efcd8b348b7d2d8504cccefe4b3fd3909dbc28e"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard Template",
+      "cluster": 8,
+      "pages": [
+        {
+          "url": "https://www.ibrance.co.nz/",
+          "uuid": "cc83580b3df37ec256492e1c23a2a81d4c1f0ef3"
+        }
+      ]
+    },
+    {
+      "name": "'Dashboard Overview'",
+      "cluster": 9,
+      "pages": [
+        {
+          "url": "https://www.ibrance.co.nz/home",
+          "uuid": "29f4a960ed914e31dfdb16a5b96707f4962e051f"
+        }
+      ]
+    }
+  ]
+}
