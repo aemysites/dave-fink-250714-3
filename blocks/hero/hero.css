@@ -27,7 +27,7 @@
   color: var(--text-color);
 }
 
-.hero picture:nth-child(1) {
+.hero.hero40 picture:nth-child(1) {
   display: block;
   position: relative;
   z-index: -1;
@@ -36,7 +36,7 @@
   box-sizing: border-box;
 }
 
-.hero picture:nth-child(2) {
+.hero.hero40 picture:nth-child(2) {
   display: none;
   position: relative;
   z-index: -1;
@@ -45,7 +45,7 @@
   box-sizing: border-box;
 }
 
-.hero picture:nth-child(3) {
+.hero.hero40 picture:nth-child(3) {
   display: none;
   position: relative;
   z-index: -1;
@@ -59,12 +59,6 @@
   object-fit: cover;
   display: block;
   height: auto;
-}
-
-@media (width >= 900px) {
-  .hero {
-    padding: 0;
-  }
 }
 
 .hero.hero40 {
@@ -251,89 +245,8 @@
   padding-bottom: 10px;
 }
 
-@media (width <= 1024px) {
-  .hero picture:nth-child(1) {
-    display: none;
-
-  }
-  
-  .hero picture:nth-child(2) {
-    display: block;
-
-  }
-
-  .hero.hero40 > div:last-child p:nth-child(1){
-    line-height: 22px;
-    font-size: 14px;
-  }
-
-  .hero.hero40 > div:last-child p:nth-child(2){
-    line-height: 22px;
-    font-size: 14px;
-  }
-
-  .hero.hero40 {
-    max-height: unset;
-  }
-
-  .hero.hero40 > div:first-child::before {
-    left: -26%;
-    width: 80%;
-  }
-
-  .hero.hero40 > div:nth-child(2) {
-    padding-left: 20px;
-  }
-
-  .hero.hero40 > div:nth-child(2) h1 {
-    font-size: 26px;
-    line-height: 32px;
-  }
-
-  .hero.hero40 > div:nth-child(2) p:last-child {
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: bold;
-  }
-
-  .hero.hero40 > div:last-child > div {
-    padding-left: 20px;
-  }
-
-  .hero.hero40 > div:nth-child(2) > div {
-    width: 45%;
-  }
-  
-}
-
-@media (width <= 768px) {
-  .hero.hero40 picture:nth-child(2) {
-    display: none;
-  }
-
-  .hero.hero40 picture:nth-child(3) {
-    display: block;
-  }
-
-  .hero.hero40 > div:first-child::before {
-    left: -40%;
-    width: 102%;
-  }
-
-  .hero.hero40 > div:nth-child(2) h1 {
-    font-size: 26px;
-    line-height: 32px;
-  }
-
-  .hero.hero40 > div:nth-child(2) p:last-child {
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: bold;
-  }
-
-  .hero.hero40 > div:nth-child(2) > div {
-    width: 43%;
-  }
+#the-treatment-of-hr-her2-advanced-breast-cancer9 {
+  margin-bottom: 0;
 }
 
 .hero.hero8.block {
@@ -474,63 +387,6 @@
   transition: all ease 0.5s;
 }
 
-/* --- RESPONSIVE --- */
-@media (width <= 1024px) {
-  .hero.hero8.block > div:last-child {
-    width: 100%;
-  }
-
-  .hero.hero8.block > div:last-child > div p:nth-child(3) {
-    display: none;
-  }
-
-  .hero.hero8.block > div:last-child > div p:nth-child(4) {
-  display: block;
-  }
-
-  .hero.hero8.block {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .hero.hero8.block > div {
-    width: 100%;
-    max-width: none;
-    min-width: 0;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero.hero8.block > div:first-child,
-  .hero.hero8.block > div:first-child > div {
-    min-height: 0;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero.hero8.block > div:first-child > div > picture,
-  .hero.hero8.block > div:first-child > div > img {
-    max-width: 220px;
-    margin: 0 auto;
-  }
-
-  .hero.hero8.block h2,
-  .hero.hero8.block p {
-    text-align: left;
-  }
-
-  .hero.hero8.block .button-container {
-    justify-content: start;
-  }
-
-  .hero.hero8.block .button-container .button {
-    padding: 0;
-  }
-}
-
 .hero.hero5 {
   display: block;
   position: relative;
@@ -668,7 +524,111 @@
   }
 }
 
-@media (width <= 1024px) and (width > 768px) {
+@media (width <= 1024px) {
+  .hero.hero40 picture:nth-child(1) {
+    display: none;
+  }
+  
+  .hero.hero40 picture:nth-child(2) {
+    display: block;
+  }
+
+  .hero.hero40 > div:last-child p:nth-child(1){
+    line-height: 22px;
+    font-size: 14px;
+  }
+
+  .hero.hero40 > div:last-child p:nth-child(2){
+    line-height: 22px;
+    font-size: 14px;
+  }
+
+  .hero.hero40 {
+    max-height: unset;
+  }
+
+  .hero.hero40 > div:first-child::before {
+    left: -26%;
+    width: 80%;
+  }
+
+  .hero.hero40 > div:nth-child(2) {
+    padding-left: 20px;
+  }
+
+  .hero.hero40 > div:nth-child(2) h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .hero.hero40 > div:nth-child(2) p:last-child {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+  }
+
+  .hero.hero40 > div:last-child > div {
+    padding-left: 20px;
+  }
+
+  .hero.hero40 > div:nth-child(2) > div {
+    width: 45%;
+  }
+
+  .hero.hero8.block > div:last-child {
+    width: 100%;
+  }
+
+  .hero.hero8.block > div:last-child > div p:nth-child(3) {
+    display: none;
+  }
+
+  .hero.hero8.block > div:last-child > div p:nth-child(4) {
+    display: block;
+  }
+
+  .hero.hero8.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .hero.hero8.block > div {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero.hero8.block > div:first-child,
+  .hero.hero8.block > div:first-child > div {
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero.hero8.block > div:first-child > div > picture,
+  .hero.hero8.block > div:first-child > div > img {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .hero.hero8.block h2,
+  .hero.hero8.block p {
+    text-align: left;
+  }
+
+  .hero.hero8.block .button-container {
+    justify-content: start;
+  }
+
+  .hero.hero8.block .button-container .button {
+    padding: 0;
+  }
+
   .hero.hero5 > div:first-child > div > p:nth-child(2) {
     display: none;
   }
@@ -697,6 +657,34 @@
 }
 
 @media (width <= 768px) {
+  .hero.hero40 picture:nth-child(2) {
+    display: none;
+  }
+
+  .hero.hero40 picture:nth-child(3) {
+    display: block;
+  }
+
+  .hero.hero40 > div:first-child::before {
+    left: -40%;
+    width: 102%;
+  }
+
+  .hero.hero40 > div:nth-child(2) h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .hero.hero40 > div:nth-child(2) p:last-child {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+  }
+
+  .hero.hero40 > div:nth-child(2) > div {
+    width: 43%;
+  }
+  
   .hero.hero8.block {
     /* Updated to match mobile: light purple background */
     background: #ded2ed; /* Light purple from site's mobile view */
@@ -822,6 +810,10 @@
     display: none;
   }
 
+  .hero.hero5 > div:first-child > div > p:nth-child(2) {
+    display: block;
+  }
+
   .hero.hero5 picture,
   .hero.hero5 img {
     height: 100%;
@@ -829,13 +821,21 @@
   }
 
   .hero.hero5 h3, .hero.hero5 h2, .hero.hero5 h1, .hero.hero5 h4, .hero.hero5 h5{
-    font-size: 20px;
+    font-size: 26px;
+    line-height: 32px;
     width: 64%;
-    line-height: 28px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+
+  .hero.hero5 > div:first-child::before {
+    left: -36%;
+    width: 100%;
   }
 }
 
-#the-treatment-of-hr-her2-advanced-breast-cancer9 {
-  margin-bottom: 0;
+@media (width >= 900px) {
+  .hero {
+    padding: 0;
+  }
 }
