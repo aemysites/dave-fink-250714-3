@@ -1,24 +1,19 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the left and right column containers
+  // Get left and right columns
   const left = element.querySelector('.l');
   const right = element.querySelector('.r');
 
-  // Defensive: if left/right not found, substitute an empty div
-  const leftCell = left || document.createElement('div');
-  const rightCell = right || document.createElement('div');
+  // Defensive: Only proceed if both columns are present
+  if (!left || !right) return;
 
-  // Build the table structure:
-  // Header row: one column with the block name
-  // Data row: two columns with left and right content
-  const cells = [
-    ['Columns (columns24)'], // header row: one cell only
-    [leftCell, rightCell]    // content row: two cells
+  // Build the table rows as required by the Columns (columns24) block
+  const rows = [
+    ['Columns (columns24)'],
+    [left, right]
   ];
 
-  // Create the columns block table
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Replace the original element with the new block table
-  element.replaceWith(table);
+  // Create the block table and replace the original element
+  const block = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(block);
 }

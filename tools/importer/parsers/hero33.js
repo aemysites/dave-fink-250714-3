@@ -1,35 +1,46 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Get .left-wrap and .right-wrap blocks
-  const leftWrap = element.querySelector('.left-wrap');
+  // Block header (must match exactly)
+  const headerRow = ['Hero (hero33)'];
+
+  // --- IMAGE CELL (Row 2) ---
+  let imageCell = '';
   const rightWrap = element.querySelector('.right-wrap');
-
-  // Prepare image: use the first .pc image if present, else the first image in rightWrap
-  let image = null;
   if (rightWrap) {
-    image = rightWrap.querySelector('img.pc') || rightWrap.querySelector('img');
+    // Prefer desktop image if present, otherwise mobile
+    const imgPc = rightWrap.querySelector('img.pc');
+    const imgMobile = rightWrap.querySelector('img.mobile');
+    // Use whichever exists (should always be one)
+    imageCell = imgPc ? imgPc : (imgMobile ? imgMobile : '');
   }
 
-  // Compose a div containing the inner content (headings and paragraphs)
-  const textContainer = document.createElement('div');
+  // --- CONTENT CELL (Row 3) ---
+  const leftWrap = element.querySelector('.left-wrap');
+  const contentCell = [];
   if (leftWrap) {
-    // Title (likely h2)
-    const title = leftWrap.querySelector('h1, h2, h3, h4, h5, h6');
-    if (title) textContainer.appendChild(title);
-    // Subheading (subtitle)
-    const sub = leftWrap.querySelector('.sub-title');
-    if (sub) textContainer.appendChild(sub);
-    // Section text (paragraph)
-    const body = leftWrap.querySelector('.section-text');
-    if (body) textContainer.appendChild(body);
+    // Title (h2)
+    const h2 = leftWrap.querySelector('h2');
+    if (h2) contentCell.push(h2);
+    // Subheading (p.sub-title)
+    const subTitle = leftWrap.querySelector('p.sub-title');
+    if (subTitle) contentCell.push(subTitle);
+    // Paragraph (p.section-text)
+    const sectionText = leftWrap.querySelector('p.section-text');
+    if (sectionText) contentCell.push(sectionText);
   }
+  // Ensure the content cell is not empty
+  const finalContentCell = contentCell.length ? contentCell : [''];
 
-  // Construct block table structure
+  // --- TABLE CONSTRUCTION ---
   const cells = [
-    ['Hero (hero33)'], // block header
-    [image ? image : ''], // background image row, or empty
-    [textContainer], // content row
+    headerRow,              // Row 1: Block Name (Single cell)
+    [imageCell],            // Row 2: Image (Single cell)
+    [finalContentCell],     // Row 3: Content (Single cell)
   ];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(table);
+
+  // Create the block table
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+
+  // Replace the original element with the table
+  element.replaceWith(block);
 }

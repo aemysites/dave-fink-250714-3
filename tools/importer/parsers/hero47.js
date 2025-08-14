@@ -1,60 +1,38 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper: get direct child by class
-  function getChildByClass(parent, className) {
-    const children = parent.children;
-    for (let i = 0; i < children.length; i += 1) {
-      if (children[i].classList.contains(className)) {
-        return children[i];
-      }
-    }
-    return null;
-  }
-
-  // Find the main content area of the hero block
-  // Path: .full-width-text-banner > .container
+  // 1. Safely get the relevant wrapper for the hero block
   const banner = element.querySelector('.full-width-text-banner');
   if (!banner) return;
-  const bannerContainer = getChildByClass(banner, 'container');
-  if (!bannerContainer) return;
 
-  // The left column (text, heading, CTAs)
-  const left = getChildByClass(bannerContainer, 'left');
-  // The right column (background image)
-  const pictureBg = getChildByClass(bannerContainer, 'picture-bg');
+  // 2. Find the .container inside the banner
+  const container = banner.querySelector('.container');
+  if (!container) return;
 
-  // ----- Extract background image (row 2) -----
-  let bgImg = '';
+  // 3. Find left side (text/buttons) and right side (image)
+  const left = container.querySelector('.left');
+  const pictureBg = container.querySelector('.picture-bg');
+
+  // 4. Table header: Must match exactly
+  const headerRow = ['Hero (hero47)'];
+
+  // 5. Background image row: must be the image element if present, otherwise empty string
+  let bgImgRow = [''];
   if (pictureBg) {
-    const bgImgEl = pictureBg.querySelector('img');
-    if (bgImgEl) {
-      bgImg = bgImgEl;
-    }
+    const img = pictureBg.querySelector('img');
+    if (img) bgImgRow = [img];
   }
 
-  // ----- Extract content (row 3) -----
-  // Gather all left-side content in order:
-  // h1, p, p, .btn-picture (in the example HTML)
-  let contentCellNodes = [];
+  // 6. Content row: should preserve heading, subheading, CTAs, and buttons
+  //    Reference the existing left div if present, otherwise empty string
+  let contentRow = [''];
   if (left) {
-    // Get all direct children in order
-    Array.from(left.childNodes).forEach((node) => {
-      // Only include elements (skip text nodes with whitespace)
-      if (node.nodeType === 1) {
-        contentCellNodes.push(node);
-      }
-    });
+    contentRow = [left];
   }
 
-  // Edge case: If nothing found, ensure at least an empty string in the cell
-  if (contentCellNodes.length === 0) contentCellNodes = [''];
+  // 7. Compose the table as per the example (1 col, 3 rows)
+  const cells = [headerRow, bgImgRow, contentRow];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
 
-  // ----- Compose and replace -----
-  const rows = [
-    ['Hero (hero47)'],
-    [bgImg || ''],
-    [contentCellNodes]
-  ];
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  // 8. Replace the original element with the block table
   element.replaceWith(table);
 }

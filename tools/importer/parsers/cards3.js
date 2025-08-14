@@ -1,35 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row: exactly one column
-  const rows = [['Cards (cards3)']];
+  // Table header must be exactly 'Cards (cards3)'
+  const headerRow = ['Cards (cards3)'];
 
-  // Build the card row (two columns)
-  const textCell = document.createElement('div');
+  // The summary paragraph is optional and comes first
+  const summaryPara = element.querySelector('p.hide-on-desktop');
 
-  // Lead-in paragraph
-  const lead = element.querySelector('p.hide-on-desktop');
-  if (lead) textCell.appendChild(lead);
-
-  // Title as <h3>
+  // The main title ("Read More") from .read-more-title span, rendered bold as in the example
   const titleSpan = element.querySelector('.read-more-title span');
+  let titleEl = null;
   if (titleSpan) {
-    const h3 = document.createElement('h3');
-    h3.textContent = titleSpan.textContent;
-    textCell.appendChild(h3);
+    titleEl = document.createElement('strong');
+    titleEl.textContent = titleSpan.textContent.trim();
   }
 
-  // All content under .read-more-text
-  const moreText = element.querySelector('.read-more-text');
-  if (moreText) {
-    Array.from(moreText.childNodes).forEach(node => {
-      textCell.appendChild(node);
+  // All content inside .read-more-text (paragraphs and lists)
+  const readMoreText = element.querySelector('.read-more-text');
+  // Defensive: may be undefined
+  const mainContent = [];
+  if (titleEl) mainContent.push(titleEl);
+  if (readMoreText) {
+    // Only direct children: allow for paragraphs and lists
+    Array.from(readMoreText.childNodes).forEach((node) => {
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        mainContent.push(node);
+      }
     });
   }
 
-  // Add the card row: two columns (image cell, text cell)
-  rows.push(['', textCell]);
+  // Compose final card cell: summary (if present), then title, then main content
+  const cellContent = [];
+  if (summaryPara) cellContent.push(summaryPara);
+  cellContent.push(...mainContent);
 
-  // Create table and replace
+  // Table: header row, then card row
+  const rows = [
+    headerRow,
+    [cellContent]
+  ];
+
   const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

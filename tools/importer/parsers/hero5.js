@@ -1,49 +1,43 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper: Get immediate child by selector
-  function getDirectChild(el, sel) {
-    return Array.from(el.children).find(child => child.matches(sel));
-  }
-
-  // 1. Header row
+  // 1. Table header (exact match, single cell)
   const headerRow = ['Hero (hero5)'];
 
-  // 2. Image row: Find background image inside swiper
-  let imageEl = '';
-  const swiper = element.querySelector('.swiper-container');
-  if (swiper) {
-    const img = swiper.querySelector('img');
-    if (img) imageEl = img;
+  // 2. Background image row
+  let bgImg = '';
+  const swiperSlide = element.querySelector('.swiper-slide');
+  if (swiperSlide) {
+    const img = swiperSlide.querySelector('img');
+    if (img) {
+      bgImg = img;
+    }
   }
-  
-  const imageRow = [imageEl];
 
-  // 3. Content row: Get heading
-  let content = '';
+  // 3. Headline row (extract heading inside header-content)
+  let headline = '';
   const bannerContent = element.querySelector('.banner-content');
   if (bannerContent) {
-    const container = bannerContent.querySelector('.container');
-    if (container) {
-      const headerContent = container.querySelector('.header-content');
-      if (headerContent && headerContent.children.length > 0) {
-        // If there are multiple heading/subheading items, include all
-        if (headerContent.children.length === 1) {
-          content = headerContent.firstElementChild;
-        } else {
-          // Fragment for multiple elements
-          const frag = document.createDocumentFragment();
-          Array.from(headerContent.children).forEach(child => frag.appendChild(child));
-          content = frag;
-        }
+    const headerContent = bannerContent.querySelector('.header-content');
+    if (headerContent) {
+      // Prefer h1, else h2/h3, else all text inside headerContent
+      const heading = headerContent.querySelector('h1, h2, h3, h4, h5, h6');
+      if (heading) {
+        headline = heading;
+      } else if (headerContent.textContent.trim()) {
+        // If there's only text, create a paragraph element
+        const p = document.createElement('p');
+        p.textContent = headerContent.textContent.trim();
+        headline = p;
       }
     }
   }
-  const contentRow = [content];
 
-  // Compose table
-  const rows = [headerRow, imageRow, contentRow];
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-
-  // Replace the element
-  element.replaceWith(table);
+  // Compose block table
+  const cells = [
+    headerRow,
+    [bgImg],
+    [headline]
+  ];
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }

@@ -1,51 +1,58 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Block header row
+  // Table header - must match example exactly
   const headerRow = ['Cards (cards4)'];
 
-  // Attempt to find the card root for content extraction
-  const cardRoot = element.querySelector('article.node');
-  if (!cardRoot) return;
+  // Identify the card source structure
+  const article = element.querySelector('article.node');
+  if (!article) return;
 
-  // FIRST COLUMN: Get the card image or media block
-  let imageCell = null;
-  const leftImage = cardRoot.querySelector('.left-image');
-  if (leftImage) {
-    imageCell = leftImage;
+  // --- Image Cell (first column) ---
+  // Use the entire .left-image div to ensure robustness and reference to original node
+  let imageCell = article.querySelector('.left-image');
+  if (!imageCell) {
+    // Fallback: use first image in article if .left-image unavailable
+    imageCell = article.querySelector('img');
   }
 
-  // SECOND COLUMN: Gather all relevant text content, keeping all order/structure
-  const textCellContent = [];
-
-  // 1. .right-text: Contains heading and description
-  const rightText = cardRoot.querySelector('.right-text');
+  // --- Text Cell (second column) ---
+  // Gather all text-associated nodes and CTA from right-text and resource-bottom
+  const textCellNodes = [];
+  // Reference entire .right-text block for semantic meaning and completeness
+  const rightText = article.querySelector('.right-text');
   if (rightText) {
-    // Use all child nodes to ensure text nodes are not lost
-    rightText.childNodes.forEach(node => {
-      if (node.nodeType === Node.ELEMENT_NODE) {
-        textCellContent.push(node);
-      } else if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+    textCellNodes.push(rightText);
+  }
+  // Find CTA (download button) inside resource-bottom
+  const resourceBottom = article.querySelector('.resource-bottom');
+  if (resourceBottom) {
+    const downloadBtn = resourceBottom.querySelector('a.btn.resource-file');
+    if (downloadBtn) {
+      textCellNodes.push(document.createElement('br'));
+      textCellNodes.push(downloadBtn);
+    }
+  }
+  // If no .right-text, fallback to any paragraph or description inside article
+  if (textCellNodes.length === 0) {
+    const desc = article.querySelector('.desc');
+    if (desc) textCellNodes.push(desc);
+    // As a final fallback, grab all direct child text nodes
+    Array.from(article.childNodes).forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
         const span = document.createElement('span');
         span.textContent = node.textContent.trim();
-        textCellContent.push(span);
+        textCellNodes.push(span);
       }
     });
   }
 
-  // 2. Add download button if present (as CTA)
-  const download = cardRoot.querySelector('.download-wrapper a');
-  if (download) {
-    textCellContent.push(download);
-  }
+  // Compose table rows
+  const cells = [
+    [headerRow[0]],
+    [imageCell, textCellNodes]
+  ];
 
-  // 3. Add language dropdown if present (just in case)
-  const langSwitch = cardRoot.querySelector('.resource-lang-switch.form-select');
-  if (langSwitch) {
-    textCellContent.push(langSwitch);
-  }
-
-  // Create table rows: header, then card content
-  const rows = [headerRow, [imageCell, textCellContent]];
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(table);
+  // Create block and replace element
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }

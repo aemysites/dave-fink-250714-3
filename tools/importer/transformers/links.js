@@ -21,6 +21,7 @@ export default function transform(
     // adjust links
     [...document.querySelectorAll('a')].forEach((a) => {
       const href = a.getAttribute('href');
+      const textContent = a.textContent.replaceAll(/[\n\t]/gm, '').trim();
       if (href) {
         try {
           const sourceUrl = new URL(href, inventory.originUrl);
@@ -33,11 +34,37 @@ export default function transform(
               : inventory.targetUrl;
             // update href with targetPath and targetUrl
             a.href = new URL(siteUrl.targetPath, targetUrl).href;
+          } else {
+            // if not part of the inventory, use the source URL
+            a.href = sourceUrl.href;
+          }
+          if (
+            textContent.length === 0
+            && (
+              a.children.length === 0
+              || !a.querySelector('img, picture, svg')
+            )
+          ) {
+            console.warn('forcing text content to href (because it is empty)', href);
+            a.textContent = href;
+          } else if (
+            a.children.length === 1
+            && a.querySelector(':scope > img, :scope > picture, :scope > svg')
+          ) {
+            // image inside a link => make it a linked picture
+            const img = a.firstElementChild;
+            if (img) {
+              a.before(img);
+              a.before(document.createElement('br'));
+            }
           }
         } catch (e) {
           // eslint-disable-next-line no-console
           console.warn(`Unable to adjust link ${href}`);
         }
+      } else if (textContent.length === 0) {
+        console.warn('removing empty link', a.outerHTML);
+        a.remove();
       }
     });
   }

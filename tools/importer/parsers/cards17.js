@@ -1,64 +1,55 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to get all cards in a resource-wrapper
-  function getCards(wrapper) {
-    return Array.from(wrapper.querySelectorAll(':scope > .download-pdf.views-row'));
-  }
+  // Table header must match example exactly
+  const headerRow = ['Cards (cards17)'];
+  const cells = [headerRow];
 
-  // Find all resource-wrapper containers in order
+  // Find all resource wrappers (each contains a group of cards)
   const wrappers = element.querySelectorAll('.resource-wrapper');
-
-  // Collect all card rows
-  let cardRows = [];
   wrappers.forEach(wrapper => {
-    const cards = getCards(wrapper);
+    const cards = wrapper.querySelectorAll('.download-pdf.views-row');
     cards.forEach(card => {
-      // Left: image
+      // ----- First column: Image -----
       let imageEl = null;
-      const picture = card.querySelector('.left-image picture');
-      if (picture) {
-        imageEl = picture.querySelector('img');
+      const leftImgDiv = card.querySelector('.left-image');
+      if (leftImgDiv) {
+        const img = leftImgDiv.querySelector('img');
+        if (img) imageEl = img;
       }
 
-      // Right: collect text content: title, desc, language select, CTA(s)
-      const textEls = [];
-      const right = card.querySelector('.right-text');
-      // Title
-      if (right) {
-        const title = right.querySelector('h3.title');
-        if (title) {
-          // Create a new h3 for proper semantic structure, but reference text
-          const h3 = document.createElement('h3');
-          h3.textContent = title.textContent.trim();
-          textEls.push(h3);
-        }
-        // Description
-        const desc = right.querySelector('.desc');
-        if (desc) {
-          textEls.push(desc);
+      // ----- Second column: Text & CTA -----
+      const cardContent = [];
+      const rightText = card.querySelector('.right-text');
+      if (rightText) {
+        // Use heading and description as-is, reference existing elements
+        const title = rightText.querySelector('h3.title');
+        if (title) cardContent.push(title);
+        const desc = rightText.querySelector('.desc');
+        if (desc) cardContent.push(desc);
+      }
+      // If there's a language select (for multi-language docs), include it
+      const langField = card.querySelector('.views-field-field-resource-file');
+      if (langField) {
+        const select = langField.querySelector('select.resource-lang-switch');
+        if (select && select.options.length > 1) {
+          cardContent.push(select);
         }
       }
-      // Language select (insert before CTAs)
-      const langSel = card.querySelector('select.resource-lang-switch');
-      if (langSel && langSel.options.length > 1) {
-        textEls.push(langSel);
+      // Add the DOWNLOAD CTA button if present
+      const ctaWrapper = card.querySelector('.download-wrapper');
+      if (ctaWrapper) {
+        const dlLink = ctaWrapper.querySelector('a.resource-file');
+        if (dlLink) cardContent.push(dlLink);
       }
-      // CTAs: all download links
-      const ctas = Array.from(card.querySelectorAll('.download-wrapper a.btn.resource-file'));
-      ctas.forEach(cta => textEls.push(cta));
-      
-      cardRows.push([
-        imageEl,
-        textEls
+      // Add this row: always 2 columns, image and text/cta
+      cells.push([
+        imageEl ?? '',
+        cardContent.length > 0 ? cardContent : ''
       ]);
     });
   });
 
-  // Build the table
-  const cells = [
-    ['Cards (cards17)'],
-    ...cardRows
-  ];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(table);
+  // Create block table and replace original element
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }

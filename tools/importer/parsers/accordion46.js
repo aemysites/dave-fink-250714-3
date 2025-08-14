@@ -1,36 +1,30 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row exactly as requested
+  // Define block table header row
   const headerRow = ['Accordion (accordion46)'];
+
+  // Find the accordion items container
+  const itemsContainer = element.querySelector('.field--name-field-qa-sub-items');
   const rows = [];
 
-  // Find the QA block root
-  let qaRoot = element;
-  if (!element.classList.contains('pfib-paragraph-qa-items')) {
-    qaRoot = element.querySelector('.pfib-paragraph-qa-items') || element;
-  }
-
-  // Find all sub-items (accordion entries)
-  const itemsWrapper = qaRoot.querySelector('.field--name-field-qa-sub-items');
-  if (itemsWrapper) {
-    const itemDivs = itemsWrapper.querySelectorAll(':scope > .field__item');
-    itemDivs.forEach((itemDiv) => {
-      // Each itemDiv contains a .pfib-paragraph-qa-sub-items
-      const qaSubItem = itemDiv.querySelector('.pfib-paragraph-qa-sub-items') || itemDiv;
-      const questionElem = qaSubItem.querySelector('.field--name-field-qa-question');
-      const answerElem = qaSubItem.querySelector('.field--name-field-qa-answer');
-
-      // Only add rows if both question and answer exist
-      if (questionElem && answerElem) {
-        rows.push([
-          questionElem,
-          answerElem
-        ]);
+  if (itemsContainer) {
+    // Each direct .field__item > .paragraph is an accordion item
+    const items = itemsContainer.querySelectorAll(':scope > .field__item > .paragraph');
+    items.forEach((item) => {
+      // Title cell - the question
+      const question = item.querySelector('.field--name-field-qa-question');
+      // Content cell - the answer
+      const answer = item.querySelector('.field--name-field-qa-answer');
+      // Only add non-empty rows
+      if (question && answer) {
+        rows.push([question, answer]);
       }
     });
   }
 
-  const tableCells = [headerRow, ...rows];
-  const table = WebImporter.DOMUtils.createTable(tableCells, document);
+  const cells = [headerRow, ...rows];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
+
+  // Replace the original element with the accordion block table
   element.replaceWith(table);
 }

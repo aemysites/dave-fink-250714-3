@@ -55,9 +55,23 @@ function adjustImageUrls(main, url, current) {
   });
 }
 
+function transformSvgsToPng(main) {
+  const svgs = main.querySelectorAll('svg');
+  svgs.forEach((svg) => {
+    const serializer = new XMLSerializer();
+    const svgString = serializer.serializeToString(svg);
+    const svgDataUrl = `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(svgString)))}`;
+    const img = svg.ownerDocument.createElement('img');
+    img.src = svgDataUrl;
+    svg.replaceWith(img);
+  });
+}
+
 export default function transform(hookName, element, { url, originalURL }) {
   if (hookName === TransformHook.beforeTransform) {
     // adjust image urls
     adjustImageUrls(element, url, originalURL);
+    // transform svgs to png
+    transformSvgsToPng(element);
   }
 }

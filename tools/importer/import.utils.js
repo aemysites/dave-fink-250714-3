@@ -112,59 +112,17 @@ export function generateDocumentPath({ params: { originalURL } }, inventory) {
   return WebImporter.FileUtils.sanitizePath(p);
 }
 
-export const TableBuilder = (originalFunc) => {
-  const original = originalFunc;
-
-  return {
-    build: (parserName) => (cells, document) => {
-      if (cells.length > 0 && Array.isArray(cells[0])) {
-        const current = cells[0][0];
-        // Handle Section Metadata specially
-        if (current?.toLowerCase().includes('section metadata')) {
-          const styleRow = cells.find((row) => row[0]?.toLowerCase() === 'style');
-          if (styleRow) {
-            if (styleRow.length > 1) {
-              const existingStyles = styleRow[1].split(',').map((s) => s.trim());
-              if (!existingStyles.includes(parserName)) {
-                existingStyles.push(parserName);
-                styleRow[1] = existingStyles.join(', ');
-              }
-            } else {
-              styleRow[1] = parserName;
-            }
-          } else {
-            cells.push(['style', parserName]);
-          }
-          return original(cells, document); // skip the rest
-        } else if (current?.toLowerCase().includes('metadata')) {
-          return original(cells, document); // skip the rest
-        }
-
-        const variantMatch = current.match(/\(([^)]+)\)/);
-        if (variantMatch) {
-          const existingVariants = variantMatch[1].split(',').map((v) => v.trim());
-          if (!existingVariants.includes(parserName)) {
-            existingVariants.push(parserName);
-          }
-          const baseName = current.replace(/\s*\([^)]+\)/, '').trim();
-          cells[0][0] = `${baseName} (${existingVariants.join(', ')})`;
-        } else {
-          cells[0][0] = `${current} (${parserName})`;
-        }
-      }
-
-      return original(cells, document);
-    },
-
-    restore: () => original,
-  };
-};
-
 function reduceInstances(instances = []) {
-  return instances.map(({ urlHash, xpath, uuid }) => ({
+  return instances.map(({
     urlHash,
     xpath,
     uuid,
+    section,
+  }) => ({
+    urlHash,
+    xpath,
+    uuid,
+    section,
   }));
 }
 
@@ -208,6 +166,7 @@ export function mergeInventory(siteUrls, inventory, publishUrl) {
     targetUrl: targetUrl || publishUrl,
     urls,
     fragments,
+    sections: inventory.sections,
     blocks,
     outliers,
   };

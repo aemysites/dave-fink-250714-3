@@ -1,36 +1,34 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row for columns block - must be a single cell
+  // The header row must exactly match: 'Columns (columns15)'
   const headerRow = ['Columns (columns15)'];
 
-  // Find the two columns: left-image and right-text (immediate children divs)
-  const children = element.querySelectorAll(':scope > div');
-  let leftCol = null;
-  let rightCol = null;
+  // The block is two columns: left (image), right (text/button)
+  // Get immediate children: left-image, right-text
+  const children = Array.from(element.querySelectorAll(':scope > div'));
+
+  let leftCell = null;
+  let rightCell = null;
+
+  // Defensive: assign the correct cells if classes are swapped or absent
   children.forEach((child) => {
     if (child.classList.contains('left-image')) {
-      leftCol = child;
+      leftCell = child;
     } else if (child.classList.contains('right-text')) {
-      rightCol = child;
+      rightCell = child;
     }
   });
 
-  // Defensive: if either column is missing, fill in with empty div to maintain table structure
-  if (!leftCol) leftCol = document.createElement('div');
-  if (!rightCol) rightCol = document.createElement('div');
+  // Fallback if classes missing: just assign by position
+  if (!leftCell && children[0]) leftCell = children[0];
+  if (!rightCell && children[1]) rightCell = children[1];
 
-  // Remove the columns from the original to avoid duplication
-  if (leftCol.parentElement === element) element.removeChild(leftCol);
-  if (rightCol.parentElement === element) element.removeChild(rightCol);
+  // Edge case: If one column missing, still return a row with empty cell
+  const row = [leftCell || '', rightCell || ''];
 
-  // Second row: each column as a separate cell
-  const secondRow = [leftCol, rightCol];
+  const cells = [headerRow, row];
 
-  // Build block table: header row (1 cell), then row with 2 columns
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    secondRow
-  ], document);
+  const block = WebImporter.DOMUtils.createTable(cells, document);
 
-  element.replaceWith(table);
+  element.replaceWith(block);
 }

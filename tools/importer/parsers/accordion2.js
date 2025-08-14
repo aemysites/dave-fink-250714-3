@@ -1,27 +1,27 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Build the header row exactly as required
-  const rows = [['Accordion (accordion2)']];
+  // Table header: as per requirements, must match exactly
+  const headerRow = ['Accordion (accordion2)'];
 
-  // Select all direct QA item wrappers
-  const items = element.querySelectorAll(':scope > .field__item');
+  // Get all direct accordion items (each .field__item contains one Q/A pair)
+  const items = Array.from(element.querySelectorAll(':scope > .field__item'));
 
-  items.forEach(item => {
-    // Question element (title cell)
-    let question = item.querySelector('.field--name-field-qa-question');
-    if (!question) {
-      question = document.createElement('div');
-    }
-    // Answer element (content cell)
-    let answer = item.querySelector('.field--name-field-qa-answer');
-    if (!answer) {
-      answer = document.createElement('div');
-    }
-    // Each row is [question, answer], referencing the actual DOM nodes
-    rows.push([question, answer]);
+  // For each item, extract the question and answer elements
+  const rows = items.map(item => {
+    // Get the question (title cell)
+    const titleEl = item.querySelector('.field--name-field-qa-question');
+    // Get the answer (content cell)
+    const contentEl = item.querySelector('.field--name-field-qa-answer');
+    // Defensive: fallbacks in case of missing data
+    return [titleEl || document.createTextNode(''), contentEl || document.createTextNode('')];
   });
 
-  // Create and replace with the new table block
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(table);
+  // Compose the final table data
+  const cells = [headerRow, ...rows];
+
+  // Create the block table
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+
+  // Replace the original element with the block table
+  element.replaceWith(block);
 }

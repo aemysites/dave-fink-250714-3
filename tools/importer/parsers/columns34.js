@@ -1,19 +1,23 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the main tips-support block, which should have two columns
+  // Find the main content columns: left-text and right-resource
   const tipsSupport = element.querySelector('.tips-support');
   if (!tipsSupport) return;
-  const leftCol = tipsSupport.querySelector('.left-text');
-  const rightCol = tipsSupport.querySelector('.right-resource');
-  if (!leftCol || !rightCol) return;
+  
+  // Get the left and right column content
+  const left = tipsSupport.querySelector('.left-text');
+  const right = tipsSupport.querySelector('.right-resource');
+  
+  // Defensive: ensure columns exist, use empty div if missing
+  const leftCell = left || document.createElement('div');
+  const rightCell = right || document.createElement('div');
+  
+  // Table structure: header and a single row with two columns
+  const cells = [
+    ['Columns (columns34)'],
+    [leftCell, rightCell],
+  ];
 
-  // Table header, as specified by block name in requirements
-  const headerRow = ['Columns (columns34)'];
-  // Table content row: two columns, referencing existing column content elements
-  const row = [leftCol, rightCol];
-  const cells = [headerRow, row];
-
-  // Create block table and replace
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(table);
+  const blockTable = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(blockTable);
 }

@@ -1,23 +1,30 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the two-columns-nav container
-  const twoCols = element.querySelector('.two-columns-nav');
-  if (!twoCols) return;
-
-  // Get the left and right column content
-  const left = twoCols.querySelector('.left-text') || document.createTextNode('');
-  const right = twoCols.querySelector('.anchor-links') || document.createTextNode('');
-
-  // The header row must have exactly one column (one cell)
+  // Header row for the block
   const headerRow = ['Columns (columns1)'];
-  const colsRow = [left, right];
 
-  // Create the block table
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    colsRow
-  ], document);
+  // Find the columns container
+  const columnsContainer = element.querySelector('.two-columns-nav');
+  if (!columnsContainer) {
+    // fallback: use the whole element as a single column
+    const cells = [headerRow, [element]];
+    const block = WebImporter.DOMUtils.createTable(cells, document);
+    element.replaceWith(block);
+    return;
+  }
 
-  // Replace the original element
-  element.replaceWith(table);
+  // Get all direct children (the columns)
+  const columns = Array.from(columnsContainer.children);
+
+  // Defensive: If columns are missing, fill with empty divs
+  while (columns.length < 2) {
+    columns.push(document.createElement('div'));
+  }
+
+  // Structure: [leftColumn, rightColumn]
+  const row = [columns[0], columns[1]];
+
+  const cells = [headerRow, row];
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }

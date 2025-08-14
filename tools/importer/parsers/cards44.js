@@ -1,50 +1,39 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row as per example
+  // Table header must match exactly
   const headerRow = ['Cards (cards44)'];
-  const rows = [headerRow];
+  const cards = [];
 
-  // Select all card elements
-  const cardItems = element.querySelectorAll('.field--name-field-resource > .field__item');
+  // Find all card containers
+  const cardArticles = element.querySelectorAll('article.node--type-resource');
 
-  cardItems.forEach(cardItem => {
-    // IMAGE CELL: use <a> wrapping <img> if present, else just <img>
-    let imgCell = null;
-    const picLink = cardItem.querySelector('picture a');
-    if (picLink) {
-      imgCell = picLink;
-    } else {
-      const picImg = cardItem.querySelector('picture img');
-      if (picImg) {
-        imgCell = picImg;
-      }
-    }
+  cardArticles.forEach((article) => {
+    // IMAGE CELL: Find the first <img> inside the article
+    let imageCell = '';
+    const img = article.querySelector('img');
+    if (img) imageCell = img;
 
-    // TEXT CELL: gather all actual content, referencing existing elements
-    const textCell = document.createElement('div');
-
-    // Title (h2) in .right-text
-    const rightText = cardItem.querySelector('.right-text');
+    // TEXT CELL: Combine all elements that represent the text content, include button if present
+    const textParts = [];
+    // The right-text area typically has title (h2) and desc
+    const rightText = article.querySelector('.right-text');
     if (rightText) {
-      // Heading
-      const heading = rightText.querySelector('h2');
-      if (heading) textCell.appendChild(heading);
-      // Description
-      const desc = rightText.querySelector('.desc');
-      if (desc) textCell.appendChild(desc);
+      // Push all direct children of rightText (to preserve formatting, semantics)
+      Array.from(rightText.children).forEach((el) => textParts.push(el));
     }
-    // CTA (button/link) in .resource-bottom .download-wrapper a
-    const cta = cardItem.querySelector('.resource-bottom .download-wrapper a');
-    if (cta) textCell.appendChild(cta);
-
-    // If for some reason textCell is empty, fallback to all text content
-    if (!textCell.hasChildNodes()) {
-      textCell.textContent = cardItem.textContent.trim();
+    // Download button is outside right-text in source HTML
+    const downloadBtn = article.querySelector('.download-wrapper a.resource-file');
+    if (downloadBtn) textParts.push(downloadBtn);
+    // If textParts is still empty (edge case), use all text content as fallback
+    if (textParts.length === 0) {
+      textParts.push(document.createTextNode(article.textContent.trim()));
     }
 
-    rows.push([imgCell, textCell]);
+    cards.push([imageCell, textParts]);
   });
 
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(table);
+  // Compose table data: header row first, then all cards
+  const tableData = [headerRow, ...cards];
+  const blockTable = WebImporter.DOMUtils.createTable(tableData, document);
+  element.replaceWith(blockTable);
 }

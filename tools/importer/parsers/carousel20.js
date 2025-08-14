@@ -1,35 +1,28 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // This block represents a carousel language switcher, with each option as a slide
-  const select = element.querySelector('select');
-  if (!select) return;
-
-  // Prepare the header row exactly matching the spec
+  // Header row must have exactly one column with the header text
   const headerRow = ['Carousel (carousel20)'];
-  const rows = [headerRow];
 
-  // Each <option> corresponds to a language resource
-  Array.from(select.options).forEach(option => {
-    const url = option.value;
-    const lang = option.textContent.trim();
-    // Compose the cell with all text (language name) and the link
-    // Use elements (not just strings)
-    const container = document.createElement('div');
-    if (lang) {
-      const heading = document.createElement('h2');
-      heading.textContent = lang;
-      container.appendChild(heading);
-    }
-    if (url) {
+  // Find the <select> element containing language options
+  const select = element.querySelector('select');
+  const slideRows = [];
+
+  if (select) {
+    Array.from(select.options).forEach(opt => {
+      // First cell: no image in HTML, so empty string
+      // Second cell: Language name as heading, and link to PDF
+      const langHeading = document.createElement('h2');
+      langHeading.textContent = opt.textContent.trim();
       const link = document.createElement('a');
-      link.href = url;
-      link.textContent = url;
-      container.appendChild(link);
-    }
-    // Each row is [image, text]. No image, so blank string in first cell
-    rows.push(['', container]);
-  });
+      link.href = opt.value;
+      link.textContent = opt.textContent.trim();
+      slideRows.push(['', [langHeading, document.createElement('br'), link]]);
+    });
+  }
 
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  // Compose the table: header row (1 col), each slide (2 cols)
+  // This is allowed by the WebImporter convention and matches the example
+  const cells = [headerRow, ...slideRows];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

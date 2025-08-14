@@ -1,65 +1,33 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the container with main content
-  let banner = element.querySelector('.full-width-text-banner');
-  if (!banner) {
-    // Fallback: maybe just container
-    banner = element.querySelector('.container');
-  }
-  if (!banner) {
-    // fallback to element itself
-    banner = element;
+  // Helper to get the innermost .full-width-text-banner > .container
+  let contentContainer = null;
+  const fullBanner = element.querySelector('.full-width-text-banner');
+  if (fullBanner) {
+    contentContainer = fullBanner.querySelector('.container');
   }
 
-  // The inner .container inside the full-width-text-banner
-  let contentContainer = banner.querySelector('.container') || banner;
-
-  // 1. Extract the background/image (optional)
+  // Try to find the image for the hero
   let img = null;
-  const pictureBg = contentContainer.querySelector('.picture-bg img');
-  if (pictureBg) {
-    img = pictureBg;
+  if (fullBanner) {
+    const pictureBg = fullBanner.querySelector('.picture-bg');
+    if (pictureBg) {
+      img = pictureBg.querySelector('img');
+    }
+  }
+  // Fallback: look for any image in the element if not found in picture-bg
+  if (!img) {
+    img = element.querySelector('img');
   }
 
-  // 2. Extract text elements: headings, paragraphs, buttons, and links
-  const textNodes = [];
-
-  // Headline (h2)
-  const headline = contentContainer.querySelector('h1, h2, h3, h4, h5, h6');
-  if (headline) textNodes.push(headline);
-
-  // All paragraphs, but avoid button parents, and avoid duplication
-  const pElems = Array.from(contentContainer.querySelectorAll('p'));
-  pElems.forEach(p => textNodes.push(p));
-
-  // Buttons (inside .btn-picture)
-  const btnPicture = contentContainer.querySelector('.btn-picture');
-  if (btnPicture) {
-    // Add all links inside btnPicture
-    const btnLinks = Array.from(btnPicture.querySelectorAll('a'));
-    btnLinks.forEach(link => {
-      // Only add if not already present
-      if (!textNodes.includes(link)) textNodes.push(link);
-    });
-  }
-
-  // Remove duplicate nodes (in case of mis-nesting)
-  const uniqueNodes = [];
-  textNodes.forEach(node => {
-    if (node && !uniqueNodes.includes(node)) uniqueNodes.push(node);
-  });
-
-  // Build the table as per the spec
+  // Table rows: [header], [image], [content]
   const headerRow = ['Hero (hero8)'];
-  const imageRow = [img ? img : ''];
-  const contentRow = [uniqueNodes];
+  const imageRow = [img ? img : '']; // If no image, cell is empty
 
-  const cells = [
-    headerRow,
-    imageRow,
-    contentRow
-  ];
+  // The content row: all text/buttons block, direct reference if possible
+  const contentRow = [contentContainer ? contentContainer : ''];
 
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(table);
+  const cells = [headerRow, imageRow, contentRow];
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }

@@ -1,33 +1,36 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the rich text wrapper for flexibility
-  const formatted = element.querySelector('.text-formatted') || element;
+  // Find the main two-column block
+  const twoCol = element.querySelector('.two-columns-images-right');
+  if (!twoCol) return;
 
-  // Find the two-column structure
-  const twoCol = formatted.querySelector('.two-columns-images-right') || formatted;
+  // Find left and right column content
+  const left = twoCol.querySelector('.left-text');
+  const right = twoCol.querySelector('.right-image');
 
-  // Get direct children of the two-column wrapper
-  let colDivs = twoCol.querySelectorAll(':scope > div');
-
-  // If classes are present, assign columns by class
-  let leftCol = null;
-  let rightCol = null;
-  for (const div of colDivs) {
-    if (div.classList.contains('left-text')) leftCol = div;
-    else if (div.classList.contains('right-image')) rightCol = div;
+  // Defensive: If content is missing, ensure we still provide a cell (empty div)
+  const leftContent = left || document.createElement('div');
+  let rightContent = document.createElement('div');
+  if (right) {
+    // Prefer the image inside right-image
+    const img = right.querySelector('img');
+    if (img) {
+      rightContent = img;
+    } else {
+      // If no image, provide the whole right column
+      rightContent = right;
+    }
   }
-  // If not found by class, fallback to first and second
-  if (!leftCol) leftCol = colDivs[0];
-  if (!rightCol) rightCol = colDivs[1];
 
-  // Defensive: If not both columns present, don't proceed
-  if (!leftCol || !rightCol) return;
+  // Table header matches example exactly
+  const headerRow = ['Columns (columns45)'];
+  // Second row contains both columns side by side
+  const secondRow = [leftContent, rightContent];
+  const table = WebImporter.DOMUtils.createTable([
+    headerRow,
+    secondRow
+  ], document);
 
-  // Build the table: header is one cell, second row has both columns
-  const cells = [
-    ['Columns (columns45)'],
-    [leftCol, rightCol],
-  ];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
+  // Replace the original element with the block table
   element.replaceWith(table);
 }
