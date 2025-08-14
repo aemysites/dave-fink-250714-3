@@ -1243,7 +1243,7 @@
       "name": "Tabs",
       "cluster": 19,
       "source": "Columns",
-      "target": "Columns (columns19)",
+      "target": "Tabs (dosing)",
       "key": "columns19",
       "instances": [
         {
