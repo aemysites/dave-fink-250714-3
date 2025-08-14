@@ -1250,7 +1250,7 @@
           "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
           "urlHash": "8c0c869b68bc4c02b7937ce9664be2c5f1ef4386",
           "uuid": "8c0c869b-05-837491152e9df7cfcf8a3615cc3eccae07427222",
-          "xpath": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[4]/div[1]/div[1]/ul[1]"
+          "xpath": "/html/body/div[1]/div[1]/main/div[2]/div/div/div[1]/article/div/div/div[4]/div/div"
         }
       ]
     },
