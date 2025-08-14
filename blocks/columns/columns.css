@@ -56,12 +56,12 @@
   }
 
   .columns.columns1 > div > div:first-child {
-    width: 95vw !important;
-    margin-left: calc(-50vw + 50%) !important;
+    width: 94vw !important;
+    margin-left: calc(-49vw + 50%) !important;
     margin-right: 0 !important;
     padding: 0 10px !important;
     box-sizing: border-box !important;
-    max-width: none !important;
+    max-width: 49% !important;
   }
 
   .columns.columns1 > div > div:first-child p {
@@ -215,7 +215,7 @@
   align-items: flex-start;
   gap: 2.5rem;
   width: 100%;
-  margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 }
 
@@ -239,7 +239,7 @@
 
 .columns.columns23 > div > div:first-child p {
   font-family: var(--heading-font-family);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: #444;
   margin: 0;
@@ -285,55 +285,18 @@
   line-height: 1;
 }
 
-
-.columns.columns43 > div {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start; /* Top align for visual edge match */
-  gap: 16px;
-  width: 100%;
+.columns.columns23-variant1 > div > div:first-child p {
+  color: rgb(225 225 225);
 }
 
-@media (width <= 700px) {
-  .columns.columns43 > div {
-    flex-direction: column;
-    gap: 10px;
-    align-items: stretch;
-  }
+.columns.columns23-variant1 > div > div > p > strong{
+  color: #333;
 }
 
-.columns.columns43 > div > div:first-child p {
-  font-size: 28px;
-  line-height: 1.1;
-  color: #d8d8d8;
-  font-weight: 400;
-  font-family: var(--body-font-family, Arial, sans-serif);
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  letter-spacing: 0.01em;
-
-  /* Adjust position to better align with paragraph top visually */
-  position: relative;
-  top: 2px;
+.columns.columns23-variant2 > div > div:first-child p {
+  color: rgb(225 225 225);
 }
 
-.columns.columns43 > div > div:last-child p {
-  font-size: 14px;
-  line-height: 1.4;
-  color: #545454;
-  font-family: var(--body-font-family, Arial, sans-serif);
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.columns.columns43 > div > div:last-child p sup {
-  font-size: 10px;
-  vertical-align: super;
-  color: #444;
-  line-height: 1;
-  margin-left: 2px;
+.columns.columns23-variant2 > div > div > p > strong{
+  color: #333;
 }

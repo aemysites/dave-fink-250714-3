@@ -301,3 +301,28 @@ main .section.light, main .section.highlight {
   background: rgb(245 242 251) none repeat scroll 0% 0%/auto padding-box border-box;
 }
 
+.section.about1 {
+  margin-bottom:20px;
+}
+
+.section.about1 h1 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #3e3092;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.section.about1 a {
+  color: #6ca100; 
+  text-decoration: underline; 
+}
+
+.section.about1 a:hover {
+  color: #3e3092;
+}
+
+.section.about1 sup {
+  font-size: 10px;
+  top: -.8em;
+}
