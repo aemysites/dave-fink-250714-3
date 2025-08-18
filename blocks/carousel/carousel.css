@@ -153,127 +153,107 @@
 }
 
 
-/* Restore multi-card layout: 3 slides side-by-side */
-.carousel.carousel25 .carousel-slides {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  max-width: 990px;
-  margin: 0 auto;
-  padding: 0 10px;
-  box-sizing: border-box;
-  min-height: 298px;
-  background: none;
-  overflow-x: auto;
-  gap: 0;
-}
-
-/* Card appearance: white background, subtle rounded corners, and padding */
 .carousel.carousel25 .carousel-slide {
-  flex: 0 0 31.5%;
-  max-width: 31.5%;
-  min-width: 0;
   background: #fff;
-  margin: 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px 0 rgb(85 85 85 / 11%);
+  border-right: none;
   padding: 28px 18px 18px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  min-width: 0;
+  max-width: 31.5%;
+  flex: 0 0 31.5%;
   height: 298px;
   min-height: 298px;
   max-height: 298px;
-  border-radius: 10px;
-  box-shadow: none;
-  position: relative;
-  border-right: 1.5px solid #dedede;
   box-sizing: border-box;
-  overflow: hidden;
-  transition: box-shadow 0.2s;
+  position: relative;
+  z-index: 1;
 }
 
-/* Remove border from last visible card */
-.carousel.carousel25 .carousel-slide:nth-child(3n),
-.carousel.carousel25 .carousel-slide:last-child {
-  border-right: none;
+/* Improved vertical divider, full height, more visible and purple-tinted */
+.carousel.carousel25 .carousel-slide:not(:last-child)::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #e3d8f8 0%, #c3b4e3 100%);
+  opacity: 0.7;
+  border-radius: 2px;
+  z-index: 2;
+  pointer-events: none;
+  content: "";
 }
 
-/* Divider lines for desktop only, between cards */
-@media (width >= 901px) {
-  .carousel.carousel25 .carousel-slide:not(:nth-child(3n), :last-child)::after {
-    position: absolute;
-    top: 24px;
-    right: 0;
-    bottom: 24px;
-    width: 1px;
-    background: #e0e0e0;
-    z-index: 3;
-  }
-}
-
-/* Icon: small and centered at top */
+/* Icon container - purple border, NO filter for icon itself */
 .carousel.carousel25 .carousel-slide-image {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 14px;
-  padding: 0;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid #8c6cc7;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
 }
 
-.carousel.carousel25 .carousel-slide-image picture,
-.carousel.carousel25 .carousel-slide-image img {
-  width: 48px;
-  height: 48px;
+.carousel.carousel25 .carousel-slide-image img,
+.carousel.carousel25 .carousel-slide-image picture {
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   display: block;
-  margin: 0 auto;
+  margin: 0;
+  filter: none;
+  opacity: 1;
 }
 
-/* Text: centered below icon, dark color, no overlay */
+/* Slide text styling */
 .carousel.carousel25 .carousel-slide-content {
-  background: none;
-  color: #505050;
-  width: 100%;
   margin: 0;
-  padding: 0 0 6px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.6;
+  padding: 0;
+  color: #3e3092;
+  font-size: 17px;
+  line-height: 1.7;
   font-family: var(--body-font-family);
   font-weight: 400;
-  min-height: 58px;
+  min-height: 64px;
+  text-align: center;
+  background: none;
   box-shadow: none;
-  word-break: normal;
-  white-space: normal;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: column;
 }
 
 .carousel.carousel25 .carousel-slide-content p {
   margin: 0;
   padding: 0;
   text-align: center;
-  color: #505050;
+  color: #3e3092;
   background: none;
 }
 
-/* Navigation arrows: small, green, outlined, outside the card group */
+/* Navigation buttons: keep close to cards */
 .carousel.carousel25 .carousel-navigation-buttons {
-  position: absolute;
+  left: -12px;
+  right: -12px;
+  width: calc(100% + 24px);
   top: 50%;
-  left: -32px;
-  right: -32px;
-  width: calc(100% + 64px);
   transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 15;
+  z-index: 21;
   pointer-events: none;
 }
 
@@ -284,15 +264,15 @@
   border-radius: 50%;
   width: 32px;
   height: 32px;
+  min-width: 32px;
+  min-height: 32px;
   margin: 0;
-  box-shadow: 0 2px 10px 0 rgb(85 85 85 / 10%);
+  box-shadow: 0 2px 8px 0 rgb(85 85 85 / 10%);
+  outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  outline: none;
   transition: border-color 0.2s, background 0.2s;
-  z-index: 16;
 }
 
 .carousel.carousel25 .carousel-navigation-buttons button:hover,
@@ -327,69 +307,73 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/* Page indicators (dots): centered below cards, show all dots, highlight active */
+/* Page indicators - visible dots, spaced, green for active, purple-tinted for inactive */
 .carousel.carousel25 .carousel-slide-indicators {
+  opacity: 1;
+  visibility: visible;
   position: absolute;
   left: 50%;
-  bottom: -24px;
+  bottom: 10px;
   transform: translateX(-50%);
   background: none;
   box-shadow: none;
   border: none;
-  height: 24px;
-  gap: 10px;
+  height: 26px;
+  gap: 16px;
   padding: 0;
-  z-index: 12;
+  z-index: 18;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.carousel.carousel25 .carousel-slide-indicator {
-  display: inline-block;
-}
-
 .carousel.carousel25 .carousel-slide-indicator button {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: #c3c3c3;
+  background: #cec4e6;
   border: none;
-  box-shadow: none;
+  box-shadow: 0 0 0 1.5px #e8f4d5;
   outline: none;
-  margin: 0 2px;
-  transition: background 0.22s, box-shadow 0.22s;
+  margin: 0 4px;
+  transition: background 0.2s, box-shadow 0.2s;
   display: inline-block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .carousel.carousel25 .carousel-slide-indicator button.active,
 .carousel.carousel25 .carousel-slide-indicator button[aria-current="true"],
 .carousel.carousel25 .carousel-slide-indicator button:disabled {
   background: #97c93e;
-  box-shadow: 0 0 0 2px #e8f4d5;
+  box-shadow: 0 0 0 2.5px #e8f4d5;
 }
 
-/* Responsive adjustments for mobile */
+/* Responsive: Show only one card on mobile */
 @media (width <= 900px) {
   .carousel.carousel25 .carousel-slides {
     flex-direction: column;
-    min-height: unset;
-    padding: 0 2px;
     max-width: 98vw;
+    padding: 0 2px;
   }
 
   .carousel.carousel25 .carousel-slide {
     max-width: 100%;
     flex: 0 0 100%;
     padding: 18px 6px 12px;
-    border-right: none;
-    height: 298px;
     min-height: 298px;
     max-height: 298px;
+    height: 298px;
+    border-right: none;
+    box-shadow: 0 2px 8px 0 rgb(85 85 85 / 10%);
+  }
+
+  .carousel.carousel25 .carousel-slide:not(:last-child)::after {
+    display: none;
   }
 
   .carousel.carousel25 .carousel-slide-indicators {
-    bottom: -16px;
-    gap: 8px;
+    bottom: 2px;
+    gap: 10px;
   }
 }
