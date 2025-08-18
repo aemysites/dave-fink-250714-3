@@ -805,131 +805,108 @@
   }
 }
 
+
 .hero.hero33 {
+  background: #F3F2F8;
+  width: 876px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
-  background: #F9F8FC;
-  min-height: 700px;
-  padding: 120px 0 0 140px;
+  align-items: center; /* Vertically center text and image as a group */
+  gap: 3rem;
+  padding: 6.5rem 2rem; /* Increased and balanced vertical padding for centering */
   box-sizing: border-box;
-  width: 100%;
-  gap: 0;
-  position: relative;
 }
 
-/* Left (text) column */
-.hero.hero33 > div:last-child {
-  flex: 1 1 0;
-  order: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-width: 0;
-  max-width: 540px;
-  margin-top: 60px;
-  padding-bottom: 0;
-}
-
-.hero.hero33 > div:last-child > div {
-  width: 100%;
-  max-width: 400px;
-}
-
-.hero.hero33 h2 {
-  color: #4E3CA3;
-  font-size: 28px;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 18px;
-  font-family: var(--heading-font-family);
-}
-
-.hero.hero33 h2 + p {
-  color: #6A3FC6;
-  font-size: 18px;
-  font-style: italic;
-  margin-bottom: 20px;
-  text-decoration: underline;
-  font-family: var(--body-font-family);
-}
-
-.hero.hero33 p:not(:first-of-type) {
-  color: #57576A;
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 0;
-  font-family: var(--body-font-family);
-}
-
-.hero.hero33 a {
-  color: #67C23A;
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.hero.hero33 sup {
-  font-size: 10px;
-  top: -.4em;
-  position: relative;
-}
-
-/* Right (image) column */
 .hero.hero33 > div:first-child {
-  flex: 0 0 740px;
   order: 2;
+  flex: 0 0 280px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
   min-width: 0;
-  height: 100%;
-  margin-right: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .hero.hero33 > div:first-child picture,
 .hero.hero33 > div:first-child img {
-  display: block;
-  width: 670px;
+  width: 280px;
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  display: block;
   margin: 0;
-  align-self: flex-end;
 }
 
-/* Responsive: Stack on mobile/tablet */
-@media (width <= 1400px) {
-  .hero.hero33 {
-    padding: 90px 0 0 40px;
-    min-height: 500px;
-  }
+.hero.hero33 > div:last-child {
+  order: 1;
+  flex: 1 1 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+  max-width: 550px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .hero.hero33 > div:first-child {
-    flex-basis: 400px;
-  }
+.hero.hero33 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 550px;
+}
 
-  .hero.hero33 > div:first-child picture,
-  .hero.hero33 > div:first-child img {
-    width: 350px;
-  }
+.hero.hero33 h2 {
+  color: #5A4DA6;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: inherit;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
 
-  .hero.hero33 > div:last-child > div {
-    max-width: 100%;
-  }
+.hero.hero33 h2 + p {
+  color: #8A7FD4;
+  font-size: 1rem;
+  font-style: normal;
+  text-decoration: underline;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
 
-  .hero.hero33 > div:last-child {
-    margin-top: 18px;
-  }
+.hero.hero33 h2 + p + p {
+  color: #6E6E71;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hero.hero33 h2 + p + p a {
+  color: #C3E165;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.hero.hero33 sup {
+  font-size: 10px;
+  top: -0.4em;
+  position: relative;
 }
 
 @media (width <= 900px) {
   .hero.hero33 {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 32px 0 20px 12px;
-    min-height: unset;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    gap: 2rem;
   }
 
   .hero.hero33 > div:first-child,
@@ -937,17 +914,19 @@
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    margin: 0;
     justify-content: center;
     align-items: center;
+    margin: 0;
     padding: 0;
   }
 
   .hero.hero33 > div:first-child picture,
   .hero.hero33 > div:first-child img {
     width: 180px;
-    margin-top: 24px;
-    margin-bottom: 0;
-    align-self: center;
+    margin-top: 1.5rem;
+  }
+
+  .hero.hero33 > div:last-child > div {
+    max-width: 100%;
   }
 }
