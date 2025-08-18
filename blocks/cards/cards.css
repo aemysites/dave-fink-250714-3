@@ -111,7 +111,7 @@
 /* Variant 1 duplicates of cards38 */
 
 .cards.cards38-variant1 {
-  background: rgb(245, 245, 245);
+  background: rgb(245 245 245);
   margin: 0;
   padding: 22px 14px 20px 22px;
   height: 140px;
@@ -124,6 +124,7 @@
   padding: 0;
   list-style: none;
   width: 100%;
+
   /* background: (245, 245, 245); */
 }
 
@@ -146,7 +147,7 @@
   align-items: flex-start;
   width: 100%;
   min-height: 130px;
-  background: rgb(245, 245, 245);
+  background: rgb(245 245 245);
   border: none;
   box-shadow: none;
   margin: 0;
@@ -219,7 +220,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   min-height: 201px;
-  padding: 54px 0 0 0;
+  padding: 54px 0 0;
   margin: 0;
   width: 100%;
   max-width: 380px;
