@@ -153,38 +153,42 @@
 }
 
 
-/* Restore multi-card layout: 3 slides side-by-side */
+.carousel.carousel25 {
+  position: relative;
+  max-width: 990px;
+  margin: 0 auto 60px;
+  padding-top: 48px;
+}
+
 .carousel.carousel25 .carousel-slides {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: stretch;
   max-width: 990px;
-  margin: 0 auto;
-  padding: 0 10px;
-  box-sizing: border-box;
   min-height: 298px;
-  background: none;
-  overflow-x: auto;
   gap: 0;
+  overflow-x: auto;
+  background: none;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Card appearance: white background, subtle rounded corners, and padding */
 .carousel.carousel25 .carousel-slide {
   flex: 0 0 31.5%;
   max-width: 31.5%;
   min-width: 0;
   background: #fff;
   margin: 0;
-  padding: 28px 18px 18px;
+  padding: 32px 18px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 298px;
-  min-height: 298px;
-  max-height: 298px;
-  border-radius: 10px;
+  height: 312px;
+  min-height: 312px;
+  max-height: 312px;
+  border-radius: 14px;
   box-shadow: none;
   position: relative;
   border-right: 1.5px solid #dedede;
@@ -193,46 +197,34 @@
   transition: box-shadow 0.2s;
 }
 
-/* Remove border from last visible card */
 .carousel.carousel25 .carousel-slide:nth-child(3n),
 .carousel.carousel25 .carousel-slide:last-child {
   border-right: none;
 }
 
-/* Divider lines for desktop only, between cards */
-@media (width >= 901px) {
-  .carousel.carousel25 .carousel-slide:not(:nth-child(3n), :last-child)::after {
-    position: absolute;
-    top: 24px;
-    right: 0;
-    bottom: 24px;
-    width: 1px;
-    background: #e0e0e0;
-    z-index: 3;
-  }
-}
-
-/* Icon: small and centered at top */
+/* ICON/IMAGE STYLING */
 .carousel.carousel25 .carousel-slide-image {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 14px;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 22px;
   padding: 0;
 }
 
 .carousel.carousel25 .carousel-slide-image picture,
 .carousel.carousel25 .carousel-slide-image img {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
+  filter: grayscale(0) brightness(1) sepia(0.18) hue-rotate(230deg) saturate(4); /* gives icons a purple hue */
+  opacity: 0.85;
 }
 
-/* Text: centered below icon, dark color, no overlay */
+/* TEXT STYLING */
 .carousel.carousel25 .carousel-slide-content {
   background: none;
   color: #505050;
@@ -240,7 +232,7 @@
   margin: 0;
   padding: 0 0 6px;
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   font-family: var(--body-font-family);
   font-weight: 400;
@@ -249,7 +241,7 @@
   word-break: normal;
   white-space: normal;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
 }
@@ -262,30 +254,42 @@
   background: none;
 }
 
-/* Navigation arrows: small, green, outlined, outside the card group */
+/* LINKS PURPLE INSIDE CARDS */
+.carousel.carousel25 .carousel-slide-content a {
+  color: #6d297f;
+  text-decoration: underline;
+}
+
+.carousel.carousel25 .carousel-slide-content a:hover,
+.carousel.carousel25 .carousel-slide-content a:focus {
+  color: #97c93e;
+  text-decoration: underline;
+}
+
+/* NAV BUTTONS restored and spaced */
 .carousel.carousel25 .carousel-navigation-buttons {
   position: absolute;
   top: 50%;
-  left: -32px;
-  right: -32px;
-  width: calc(100% + 64px);
-  transform: translateY(-50%);
+  left: -48px;
+  right: -48px;
+  width: calc(100% + 96px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transform: translateY(-50%);
   z-index: 15;
   pointer-events: none;
 }
 
 .carousel.carousel25 .carousel-navigation-buttons button {
   pointer-events: auto;
+  width: 36px;
+  height: 36px;
   background: #fff;
   border: 2.5px solid #97c93e;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  box-shadow: 0 2px 10px 0 rgb(85 85 85 / 7%);
   margin: 0;
-  box-shadow: 0 2px 10px 0 rgb(85 85 85 / 10%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,19 +299,14 @@
   z-index: 16;
 }
 
-.carousel.carousel25 .carousel-navigation-buttons button:hover,
-.carousel.carousel25 .carousel-navigation-buttons button:focus {
-  border-color: #6d297f;
-  background: #f6f6ff;
-}
-
 .carousel.carousel25 .carousel-navigation-buttons button.slide-prev::after,
 .carousel.carousel25 .carousel-navigation-buttons button.slide-next::after {
-  width: 14px;
-  height: 14px;
-  left: 50%;
-  top: 50%;
+  display: block;
   position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
   box-sizing: border-box;
 }
 
@@ -327,38 +326,40 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/* Page indicators (dots): centered below cards, show all dots, highlight active */
+.carousel.carousel25 .carousel-navigation-buttons button:hover,
+.carousel.carousel25 .carousel-navigation-buttons button:focus {
+  border-color: #6d297f;
+  background: #f6f6ff;
+}
+
+/* PAGE INDICATORS restored and positioned */
 .carousel.carousel25 .carousel-slide-indicators {
   position: absolute;
   left: 50%;
-  bottom: -24px;
+  top: 8px;
   transform: translateX(-50%);
-  background: none;
-  box-shadow: none;
-  border: none;
-  height: 24px;
-  gap: 10px;
-  padding: 0;
-  z-index: 12;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
-}
-
-.carousel.carousel25 .carousel-slide-indicator {
-  display: inline-block;
+  gap: 16px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  height: 22px;
+  padding: 0;
+  z-index: 12;
 }
 
 .carousel.carousel25 .carousel-slide-indicator button {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: #c3c3c3;
   border: none;
   box-shadow: none;
   outline: none;
-  margin: 0 2px;
   transition: background 0.22s, box-shadow 0.22s;
+  margin: 0 2px;
   display: inline-block;
 }
 
@@ -367,14 +368,19 @@
 .carousel.carousel25 .carousel-slide-indicator button:disabled {
   background: #97c93e;
   box-shadow: 0 0 0 2px #e8f4d5;
+  width: 11px;
+  height: 11px;
 }
 
-/* Responsive adjustments for mobile */
+/* MOBILE: stack vertically, adjust padding/gaps, indicators higher */
 @media (width <= 900px) {
+  .carousel.carousel25 {
+    padding-top: 36px;
+  }
+
   .carousel.carousel25 .carousel-slides {
     flex-direction: column;
     min-height: unset;
-    padding: 0 2px;
     max-width: 98vw;
   }
 
@@ -389,7 +395,7 @@
   }
 
   .carousel.carousel25 .carousel-slide-indicators {
-    bottom: -16px;
-    gap: 8px;
+    top: -14px;
+    gap: 10px;
   }
 }
