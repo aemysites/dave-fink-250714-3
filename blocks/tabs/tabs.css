@@ -1,10 +1,15 @@
+/* stylelint-disable no-descending-specificity */
 .tabs .tabs-list {
   display: flex;
-  gap: 0.5ch;
+  gap: 0;
   width: auto;
   max-width: 100%;
   font-size: var(--body-font-size-xs);
   overflow-x: auto;
+  border-bottom: 2px solid #e5e5e5;
+  background: #fff;
+  padding: 0;
+  margin: 0;
 }
 
 .tabs .tabs-list button {
@@ -40,10 +45,19 @@
 }
 
 .tabs .tabs-panel {
-  margin-top: -1px;
-  padding: 24px;
-  overflow: auto;
-  background-color: #f5f5f5;
+  margin-top: 0;
+  padding: 28px 40px;
+  overflow: visible;
+  background: #f7f7f7;
+  color: #333;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  border-radius: 0 0 8px 8px;
+  box-shadow: none;
+  min-height: 180px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tabs .tabs-panel[aria-hidden='true'] {
@@ -178,3 +192,185 @@
   }
 }
 
+
+
+/* --- Tabs (Top Bar) --- */
+
+.tabs .tabs-tab {
+  border-bottom: 3px solid #e5e5e5;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  background: #f7f7f7;
+  color: #333;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 22px 0 18px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s, color 0.2s, border-bottom 0.2s;
+  box-sizing: border-box;
+}
+
+.tabs .tabs-tab:not(:last-child) {
+  border-right: 1px solid #ededed;
+}
+
+.tabs .tabs-tab[aria-selected="true"] {
+  background: #fff;
+  color: #512B7A;
+  font-weight: 600;
+  border-bottom: 3px solid #512B7A;
+  z-index: 2;
+}
+
+.tabs .tabs-tab[aria-selected="false"] {
+  background: #f7f7f7;
+  color: #333;
+  font-weight: 400;
+  border-bottom: 3px solid #e5e5e5;
+}
+
+.tabs .tabs-tab p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* --- Panel Layout and Spacing --- */
+
+/* Vertical stack for all panel content */
+.tabs .tabs-panel > div {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make first image/chart block left-aligned and full width */
+.tabs .tabs-panel > div > p:first-child {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+.tabs .tabs-panel > div > p:first-child img,
+.tabs .tabs-panel > div > p:first-child picture {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Center and constrain the "ONCE DAILY DOSE" image block only */
+.tabs .tabs-panel > div > p:nth-child(4) {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.tabs .tabs-panel > div > p:nth-child(4) img,
+.tabs .tabs-panel > div > p:nth-child(4) picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
+  width: 100%;
+}
+
+/* All other blocks full width and left-aligned */
+.tabs .tabs-panel > div > p:not(:first-child, :nth-child(4)) {
+  max-width: 100%;
+  width: 100%;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+}
+
+/* Superscripts for references */
+.tabs .tabs-panel sup {
+  font-size: 0.83em;
+  vertical-align: super;
+  line-height: 1;
+  font-weight: 400;
+  color: inherit;
+}
+
+/* Responsive: reduce padding and gap on small screens */
+@media (width <= 900px) {
+  .tabs .tabs-panel {
+    padding: 18px 5vw;
+    min-height: 80px;
+  }
+
+  .tabs .tabs-tab,
+  .tabs .tabs-tab p {
+    font-size: 15px;
+    padding: 14px 0 12px;
+  }
+
+  .tabs .tabs-list {
+    font-size: 15px;
+  }
+
+  .tabs .tabs-panel > div {
+    gap: 12px;
+  }
+
+  .tabs .tabs-panel > div > p:nth-child(4) {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .tabs .tabs-panel > div > p:first-child,
+  .tabs .tabs-panel > div > p:first-child img,
+  .tabs .tabs-panel > div > p:first-child picture {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (width <= 600px) {
+  .tabs .tabs-panel {
+    padding: 14px 0;
+  }
+
+  .tabs .tabs-panel > div {
+    gap: 8px;
+  }
+
+  .tabs .tabs-tab {
+    font-size: 14px;
+    min-width: 140px;
+    padding: 12px 0 10px;
+  }
+
+  .tabs .tabs-tab p {
+    font-size: 14px;
+  }
+}
+
+/* Accessibility focus */
+.tabs .tabs-tab:focus {
+  outline: 2px solid #512B7A;
+  outline-offset: -2px;
+  z-index: 3;
+}
+
+@media (hover: none) {
+  .tabs .tabs-tab {
+    min-height: 48px;
+  }
+}
