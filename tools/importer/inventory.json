@@ -1243,8 +1243,8 @@
       "name": "Tabs",
       "cluster": 19,
       "source": "Tabs",
-      "target": "Tabs (dosing)",
-      "key": "tabsDosing",
+      "target": "Tabs (tab14)",
+      "key": "tab14",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
