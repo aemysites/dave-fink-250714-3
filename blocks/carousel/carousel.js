@@ -4,9 +4,47 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
-  block.dataset.activeSlide = slideIndex;
-
+  const isVariant25 = block.classList.contains('carousel25');
   const slides = block.querySelectorAll('.carousel-slide');
+
+  if (isVariant25) {
+    const smallMedia = window.matchMedia('(width <= 768px)');
+    const pageSize = smallMedia.matches ? 1 : 3;
+    const groupStart = Math.floor(slideIndex / pageSize) * pageSize;
+    block.dataset.activeSlide = groupStart;
+
+    slides.forEach((aSlide, idx) => {
+      const isInGroup = idx >= groupStart && idx < groupStart + pageSize;
+      aSlide.setAttribute('aria-hidden', isInGroup ? 'false' : 'true');
+      aSlide.querySelectorAll('a').forEach((link) => {
+        if (!isInGroup) {
+          link.setAttribute('tabindex', '-1');
+        } else {
+          link.removeAttribute('tabindex');
+        }
+      });
+    });
+
+    const indicators = block.querySelectorAll('.carousel-slide-indicator');
+    indicators.forEach((indicator, idx) => {
+      const indicatorButton = indicator.querySelector('button');
+      // Desktop: only every 3rd indicator is visible via CSS; Mobile: all are visible
+      const isCurrent = pageSize === 1
+        ? idx === slideIndex
+        : (
+          Math.floor(idx / pageSize) === Math.floor(groupStart / pageSize)
+          && (idx % pageSize === pageSize - 1)
+        );
+      if (isCurrent) {
+        indicatorButton.setAttribute('disabled', 'true');
+      } else {
+        indicatorButton.removeAttribute('disabled');
+      }
+    });
+    return;
+  }
+
+  block.dataset.activeSlide = slideIndex;
 
   slides.forEach((aSlide, idx) => {
     aSlide.setAttribute('aria-hidden', idx !== slideIndex);
@@ -31,6 +69,28 @@ function updateActiveSlide(slide) {
 
 export function showSlide(block, slideIndex = 0) {
   const slides = block.querySelectorAll('.carousel-slide');
+  const isVariant25 = block.classList.contains('carousel25');
+
+  if (isVariant25) {
+    const smallMedia = window.matchMedia('(width <= 768px)');
+    const pageSize = smallMedia.matches ? 1 : 3;
+    // Interpret slideIndex as a slide index; snap to the beginning of its page
+    let groupStart = slideIndex < 0 ? slides.length - pageSize : slideIndex;
+    if (slideIndex >= slides.length) groupStart = 0;
+    groupStart = Math.floor(groupStart / pageSize) * pageSize;
+    const targetSlide = slides[groupStart];
+    if (targetSlide) {
+      // Ensure links are tabbable for the 3 visible cards
+      updateActiveSlide(targetSlide);
+      block.querySelector('.carousel-slides').scrollTo({
+        top: 0,
+        left: targetSlide.offsetLeft,
+        behavior: 'smooth',
+      });
+    }
+    return;
+  }
+
   let realSlideIndex = slideIndex < 0 ? slides.length - 1 : slideIndex;
   if (slideIndex >= slides.length) realSlideIndex = 0;
   const activeSlide = slides[realSlideIndex];
@@ -47,19 +107,86 @@ function bindEvents(block) {
   const slideIndicators = block.querySelector('.carousel-slide-indicators');
   if (!slideIndicators) return;
 
-  slideIndicators.querySelectorAll('button').forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const slideIndicator = e.currentTarget.parentElement;
-      showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
-    });
-  });
+  const isVariant25 = block.classList.contains('carousel25');
+  const slides = block.querySelectorAll('.carousel-slide');
+  const slidesWrapper = block.querySelector('.carousel-slides');
 
-  block.querySelector('.slide-prev').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
-  });
-  block.querySelector('.slide-next').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
-  });
+  if (isVariant25) {
+    const smallMedia = window.matchMedia('(width <= 768px)');
+
+    // Initialize active state to the first slide/page
+    if (slides[0]) updateActiveSlide(slides[0]);
+
+    const getPageSize = () => (smallMedia.matches ? 1 : 3);
+    const getTotalPages = () => Math.max(1, Math.ceil(slides.length / getPageSize()));
+
+    const goToPage = (page) => {
+      const pageSize = getPageSize();
+      const totalPages = getTotalPages();
+      const normalizedPage = (page + totalPages) % totalPages;
+      const targetIndex = normalizedPage * pageSize;
+      const targetSlide = slides[targetIndex];
+      if (targetSlide) {
+        updateActiveSlide(targetSlide);
+        slidesWrapper.scrollTo({
+          top: 0,
+          left: targetSlide.offsetLeft,
+          behavior: 'smooth',
+        });
+      }
+    };
+
+    // Indicators click (map any indicator to its page)
+    slideIndicators.querySelectorAll('button').forEach((button) => {
+      button.addEventListener('click', (e) => {
+        const slideIndicator = e.currentTarget.parentElement;
+        const rawTarget = parseInt(slideIndicator.dataset.targetSlide, 10);
+        const pageSize = getPageSize();
+        if (pageSize === 1) {
+          // On mobile, indicators represent individual slides
+          showSlide(block, rawTarget);
+        } else {
+          const targetPage = Math.floor(rawTarget / pageSize);
+          goToPage(targetPage);
+        }
+      });
+    });
+
+    block.querySelector('.slide-prev').addEventListener('click', () => {
+      const pageSize = getPageSize();
+      const activeStart = parseInt(block.dataset.activeSlide || '0', 10);
+      if (pageSize === 1) {
+        showSlide(block, activeStart - 1);
+      } else {
+        const currentPage = Math.floor(activeStart / pageSize);
+        goToPage(currentPage - 1);
+      }
+    });
+    block.querySelector('.slide-next').addEventListener('click', () => {
+      const pageSize = getPageSize();
+      const activeStart = parseInt(block.dataset.activeSlide || '0', 10);
+      if (pageSize === 1) {
+        showSlide(block, activeStart + 1);
+      } else {
+        const currentPage = Math.floor(activeStart / pageSize);
+        goToPage(currentPage + 1);
+      }
+    });
+  } else {
+    slideIndicators.querySelectorAll('button').forEach((button) => {
+      button.addEventListener('click', (e) => {
+        const slideIndicator = e.currentTarget.parentElement;
+        showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
+      });
+    });
+
+    block.querySelector('.slide-prev').addEventListener('click', () => {
+      showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
+    });
+    block.querySelector('.slide-next').addEventListener('click', () => {
+      showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
+    });
+  }
 
   const slideObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
