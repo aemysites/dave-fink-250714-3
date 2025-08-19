@@ -1056,8 +1056,8 @@
       "name": "Tabs",
       "cluster": 13,
       "source": "Tabs",
-      "target": "Tabs",
-      "key": "tabs13",
+      "target": "Tabs (tab13)",
+      "key": "tab13",
       "instances": [
         {
           "url": "https://www.ibrance.co.nz/about-ibrance/taking-ibrance",
