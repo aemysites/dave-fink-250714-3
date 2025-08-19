@@ -1,8 +1,8 @@
+/* stylelint-disable no-descending-specificity */
 .accordion details {
   border: 1px solid #dadada;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .accordion details + details {
   margin-top: 24px;
 }
@@ -58,4 +58,103 @@
 .accordion details[open] .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
+}
+
+
+.accordion.accordion21 {
+  background: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion.accordion21 details {
+  background: #fff;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion.accordion21 details:last-child {
+  border-bottom: none;
+}
+
+.accordion.accordion21 summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 56px;
+  padding: 18px 36px 18px 20px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 400;
+  cursor: pointer;
+  background: #fff;
+  outline: none;
+  border: none;
+  list-style: none;
+  box-sizing: border-box;
+  gap: 16px;
+}
+
+.accordion.accordion21 summary::-webkit-details-marker,
+.accordion.accordion21 summary::marker {
+  display: none;
+}
+
+.accordion.accordion21 summary p {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+  font-weight: 400;
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding: 0;
+}
+
+.accordion.accordion21 details .accordion-item-body {
+  padding: 0 36px 18px 20px;
+  font-size: 15px;
+  color: #222;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+}
+
+.accordion.accordion21 details[open] summary,
+.accordion.accordion21 summary:focus,
+.accordion.accordion21 summary:hover {
+  background: #fff;
+}
+
+@media (width <= 600px) {
+  .accordion.accordion21 {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .accordion.accordion21 summary {
+    font-size: 15px;
+    padding: 14px 14px 14px 8px;
+    min-height: 44px;
+  }
+
+  .accordion.accordion21 summary p {
+    font-size: 15px;
+  }
+
+  .accordion.accordion21 details .accordion-item-body {
+    font-size: 14px;
+    padding: 0 14px 14px 8px;
+  }
 }
