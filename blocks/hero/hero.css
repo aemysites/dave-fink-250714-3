@@ -814,12 +814,12 @@
   width: 876px;
   min-width: 876px;
   max-width: 876px;
-  height: 236px;
-  min-height: 236px;
-  max-height: 236px;
+  height: 379px;
+  min-height: 379px;
+  max-height: 379px;
   margin: 0 auto;
-  padding-left: 4px;    /* Tighter left padding, closer to original */
-  padding-right: 0;
+  margin-bottom: 48px;
+  padding: 63px 296px 60px 72px;
   box-sizing: border-box;
   overflow: hidden;
   gap: 0;               /* We'll manage spacing with column paddings for finer control */
@@ -841,9 +841,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  max-width: 540px;
+  width: 508px;
+  max-width: 508px;
+  height: 130px;
   gap: 0.5rem;
+  margin-left: 72px; /* align text away from left edge per spec */
 }
 
 /* Image Column - on the right, maximize image size and flush right */
@@ -851,49 +853,56 @@
   order: 2;
   flex: 0 0 336px;      /* Wider image column for more immersion */
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* bottom align inside the image column */
   justify-content: flex-end;
   height: 100%;
-  padding: 0;            /* No right padding */
+  padding: 0;            /* base */
+  padding-right: 78px;   /* nudge image further left by +10px */
   margin: 0;
   box-sizing: border-box;
 }
 
 .hero.hero33 > div:first-child picture,
 .hero.hero33 > div:first-child img {
-  width: 100%;
-  max-width: 336px;      /* Use all of the image column */
-  max-height: 220px;
-  height: auto;
+  width: 295px;
+  height: 293.531px;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
+  object-position: right bottom; /* keep visual content anchored bottom-right */
   display: block;
-  align-self: center;    /* Ensures image is centered vertically */
+  align-self: flex-end;  /* stick to the bottom within the column */
+  transform: translateX(-5px); /* undo last (0), then net +10px right from -20px */
 }
 
 /* Typography */
 .hero.hero33 h2 {
-  color: #5c50a2;
-  font-size: 1.6rem;
-  font-weight: 600;
+  color: #3e3092;
+  font-weight: 400;
+  line-height: 40px;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  font-size: 30px;
   margin: 0 0 0.4rem;
-  line-height: 1.15;
 }
 
 .hero.hero33 h2 + p {
-  color: #8b7fc9;
+  color: rgb(64 0 166);
   font-size: 1.05rem;
+  font-family: "Avenir LT W05_55 Roman", "Avenir LT W05_55 Roman Fallback", sans-serif;
   text-decoration: none;
   margin: 0 0 1rem;
 }
 
 .hero.hero33 h2 + p + p {
   color: #494949;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
   margin: 0;
 }
 
-.hero.hero33 h2 + p + p a {
+
+a {
   color: #7ec246;
   text-decoration: underline;
   font-weight: 400;
@@ -935,9 +944,14 @@
     width: 140px;
     max-width: 140px;
     max-height: 110px;
+    margin-right: 0; /* reset spacing on mobile */
+    transform: none; /* reset nudge on mobile */
   }
 
   .hero.hero33 > div:last-child > div {
     max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-left: 0; /* reset on small screens */
   }
 }
