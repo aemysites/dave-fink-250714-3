@@ -888,7 +888,7 @@
 .hero.hero33 h2 + p {
   color: rgb(64 0 166);
   font-size: 1.05rem;
-  font-family: "Avenir LT W05_55 Roman", "Avenir LT W05_55 Roman Fallback";
+  font-family: "Avenir LT W05_55 Roman", "Avenir LT W05_55 Roman Fallback", sans-serif;
   text-decoration: none;
   margin: 0 0 1rem;
 }
