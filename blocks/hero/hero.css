@@ -819,8 +819,6 @@
   max-height: 379px;
   margin: 0 auto;
   margin-bottom: 48px;
-  /* padding-left: 4px;    /* Tighter left padding, closer to original */
-  /* padding-right: 0; */ */
   padding: 63px 296px 60px 72px;
   box-sizing: border-box;
   overflow: hidden;
