@@ -111,8 +111,6 @@
   width: 100%;
 }
 
-/* Variant 1 duplicates of cards38 */
-
 .cards.cards38-variant1 {
   background: rgb(245 245 245);
   margin: 0;
@@ -127,8 +125,6 @@
   padding: 0;
   list-style: none;
   width: 100%;
-
-  /* background: (245, 245, 245); */
 }
 
 .cards.cards38 > ul > li {
@@ -158,7 +154,6 @@
   
 }
 
-/* IMAGE COLUMN */
 .cards.cards38 .cards-card-image {
   width: 231px;
   min-width: 231px;
@@ -216,7 +211,6 @@
   background: none;
 }
 
-/* CONTENT COLUMN */
 .cards.cards38 .cards-card-body {
   display: flex;
   flex-direction: column;
@@ -372,7 +366,6 @@
   display: inline-block;
 }
 
-/* RESPONSIVE */
 @media (width <= 700px) {
   .cards.cards38 > ul > li {
     flex-direction: column;
@@ -420,5 +413,160 @@
     max-width: 100%;
     width: 100%;
     padding: 18px 0 0;
+  }
+}
+
+
+.cards.cards44 {
+  background: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 1px;
+}
+
+.cards.cards44 > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.cards.cards44 > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: none;
+  border: none;
+  width: 430px;
+  min-width: 340px;
+  max-width: 440px;
+  min-height: 160px;
+  padding: 28px 32px 32px 28px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Left column: image */
+.cards.cards44 .cards-card-image {
+  width: 90px;
+  min-width: 90px;
+  max-width: 90px;
+  height: 128px;
+  margin-right: 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.cards.cards44 .cards-card-image img {
+  width: 90px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Right column: text and button */
+.cards.cards44 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  padding-left: 0;
+  box-sizing: border-box;
+}
+
+.cards.cards44 .cards-card-body h2 {
+  color: #6c2eb1;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  font-family: var(--heading-font-family, Arial, "Helvetica Neue", Helvetica, sans-serif);
+}
+
+.cards.cards44 .cards-card-body p:not(.button-container) {
+  color: #333;
+  font-size: 15px;
+  margin: 0 0 20px;
+  line-height: 1.4;
+  font-family: var(--body-font-family, Arial, "Helvetica Neue", Helvetica, sans-serif);
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Center the button in the card */
+.cards.cards44 .cards-card-body .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  padding: 0;
+}
+
+.cards.cards44 .cards-card-body .button-container > a.button,
+.cards.cards44 .cards-card-body .button-container > a {
+  background: #8dc63f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 36px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin: 0;
+  box-shadow: none;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 180px;
+  max-width: 100%;
+  align-self: center;
+  white-space: nowrap;
+  font-family: var(--heading-font-family, Arial, "Helvetica Neue", Helvetica, sans-serif);
+  transition: background 0.2s;
+}
+
+.cards.cards44 .cards-card-body .button-container > a.button:hover,
+.cards.cards44 .cards-card-body .button-container > a:hover {
+  background: #76b82a;
+}
+
+/* Responsive: Stack cards vertically on small screens */
+@media (width <= 900px) {
+  .cards.cards44 > ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .cards.cards44 > ul > li {
+    max-width: 96vw;
+    width: 100%;
   }
 }
