@@ -8,7 +8,7 @@
 }
 
 .accordion details p {
-  margin-bottom: 0.8em;
+  margin-bottom: 20px;
 }
 
 .accordion details summary {
@@ -23,6 +23,7 @@
 
 .accordion details[open] summary {
   background-color: var(--light-color);
+  color: #6ca100;
 }
 
 .accordion details summary:focus,
@@ -35,40 +36,39 @@
 }
 
 .accordion details summary::after {
-  content: '';
+  content: '+';
+  display: inline-block;
   position: absolute;
+  right: 1px;
+  font-size: 24px;
   top: 50%;
-  right: 18px;
-  transform: translateY(-50%) rotate(135deg);
-  width: 6px;
-  height: 6px;
-  border: 2px solid;
-  border-width: 2px 2px 0 0;
-  transition: transform 0.2s;
+  transform: translateY(-50%);
 }
 
 .accordion details[open] summary::after {
-  transform: translateY(-50%) rotate(-45deg);
+  content: '--';
+  letter-spacing: -0.21rem;
+  right: 4px;
 }
 
 .accordion details .accordion-item-body {
   padding: 0 16px;
-}
+} 
 
 .accordion details[open] .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
 }
 
-
 .accordion.accordion21 {
   background: #fff;
   font-family: var(--body-font-family);
   font-size: 16px;
   width: 100%;
-  max-width: 900px;
+  max-width: 906px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -91px;
 }
 
 .accordion.accordion21 details {
@@ -77,7 +77,6 @@
   border: none;
   margin: 0;
   position: relative;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .accordion.accordion21 details:last-child {
@@ -89,19 +88,21 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  min-height: 56px;
-  padding: 18px 36px 18px 20px;
-  font-size: 16px;
   color: #222;
   font-weight: 400;
-  cursor: pointer;
   background: #fff;
   outline: none;
   border: none;
   list-style: none;
   box-sizing: border-box;
   gap: 16px;
+  margin: 0 60px;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 12px 28px 12px 0;
+  border-bottom: 0.5px solid #c1c1c1;
+  cursor: pointer;
+  position: relative;
 }
 
 .accordion.accordion21 summary::-webkit-details-marker,
@@ -112,7 +113,7 @@
 .accordion.accordion21 summary p {
   margin: 0;
   font-size: 16px;
-  color: #222;
+  color: inherit;
   font-weight: 400;
   flex: 1 1 auto;
   white-space: nowrap;
@@ -120,15 +121,24 @@
   text-overflow: ellipsis;
   text-align: left;
   padding: 0;
+  line-height: 26px;
 }
 
 .accordion.accordion21 details .accordion-item-body {
-  padding: 0 36px 18px 20px;
-  font-size: 15px;
   color: #222;
   background: #fff;
   border: none;
   box-shadow: none;
+  padding: 17px 60px;
+  background-color: #f5f2fa;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+}
+
+.accordion.accordion21 details .accordion-item-body a {
+  color: #6ca100;
+  text-decoration: underline;
 }
 
 .accordion.accordion21 details[open] summary,
@@ -137,7 +147,69 @@
   background: #fff;
 }
 
-@media (width <= 600px) {
+.accordion-wrapper:has(div.accordion.accordion21) {
+  max-width: 906px;
+  padding: 0;
+}
+
+
+main>.section>div:has(h2#frequently-asked-questions) {
+  max-width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 203px;
+  background-color: #3e3092;
+  padding: 54px 0 109px;
+  box-sizing: border-box;
+}
+
+#frequently-asked-questions {
+  max-width: 946px;
+  flex: 1 1 auto;
+  line-height: 40px;
+  color: #fff;
+  font-weight: normal;
+  position: relative;
+  left: 37px;
+  font-size: 30px;
+  margin: 0;
+  top: -8px;
+}
+
+#frequently-asked-questions::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  left: -17px;
+  top: 17px;
+  background-image: url("/icons/faq-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 43px;
+  height: 48px;
+}
+
+.accordion.accordion21 .accordion-item-body p {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.accordion.accordion21 .accordion-item-body ul li {
+  margin: 0 0 1.4% 4.5%; 
+}
+
+.accordion.accordion21 .accordion-item-body ul li:last-child {
+  margin-bottom: 0;
+}
+
+@media (width <= 1024px) {
+  .accordion.accordion21 summary {
+    margin: 0 40px;
+  }
+}
+
+@media (width <= 768px) {
   .accordion.accordion21 {
     font-size: 15px;
     max-width: 100%;
@@ -147,6 +219,7 @@
     font-size: 15px;
     padding: 14px 14px 14px 8px;
     min-height: 44px;
+    margin: 0 20px;
   }
 
   .accordion.accordion21 summary p {
