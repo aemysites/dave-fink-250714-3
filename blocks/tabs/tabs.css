@@ -77,9 +77,9 @@
   font-weight: normal;
   margin: 0;
   padding: 0;
-  border: 0;
   margin-bottom: 20px;
-  color: #333; 
+  color: #333;
+  border: 0;
 }
 
 .tabs.tab14.block > .tabs-list button[aria-selected='false'] p {
