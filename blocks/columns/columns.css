@@ -141,7 +141,7 @@
   max-width: 400px;
   font-family: var(--body-font-family);
   font-size: 16px;
-  color: #97bf0d;
+  color: #82bc00;
   margin: 0 0 0 10%;
   padding: 0;
   display: flex;
@@ -159,23 +159,20 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0;
   align-items: flex-start;
+  position: relative;
 }
 
 .columns.columns1 > div > div:last-child ul li {
   color: rgb(130 188 0);
   font-size: 16px;
-  padding-left: 17px;
+  padding: 3px 0 3px 24px;
   min-height: 18px;
   display: flex;
   align-items: center;
   position: relative;
   line-height: 1.4;
-  background-repeat: no-repeat;
-  background-size: 13px 13px;
-  background-position: 0 center;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%2397bf0d" stroke-width="1.7" viewBox="0 0 18 18"><path d="M9 1.75C5.82 1.75 3.25 4.32 3.25 7.5c0 4.25 5.75 8.75 5.75 8.75s5.75-4.5 5.75-8.75c0-3.18-2.57-5.75-5.75-5.75zm0 7c-0.69 0-1.25-0.56-1.25-1.25S8.31 6.25 9 6.25s1.25 0.56 1.25 1.25S9.69 8.75 9 8.75z"/></svg>');
   width: 100%;
   text-align: left;
 }
@@ -197,10 +194,72 @@
   color: #7bb523;
 }
 
-.columns.columns1 > div > div:last-child ul li::before,
+/* vertical connector line */
+.columns.columns1 > div > div:last-child ul li::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: -3px; /* extend into the gap above */
+  bottom: -3px; /* extend into the gap below */
+  width: 1px;
+  background: rgba(130, 188, 0, 0.4);
+}
+
+/* circular marker */
 .columns.columns1 > div > div:last-child ul li::after {
+  content: "";
+  position: absolute;
+  left: 4px; /* centers the circle over the 8px line */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #82bc00;
+}
+
+/* hide circle on first bullet */
+.columns.columns1 > div > div:last-child ul > li:first-child::after {
   display: none;
 }
+
+/* trim the connector above the first bullet and below the last bullet */
+.columns.columns1 > div > div:last-child ul > li:first-child::before { display: none; }
+.columns.columns1 > div > div:last-child ul > li:last-child::before { bottom: 50%; }
+
+/* if the first item is a label (like .first-li), hide its markers and start the line from the next item */
+.columns.columns1 > div > div:last-child ul > li.first-li {
+  padding-left: 0;
+  color: #444;
+  font-weight: 700;
+}
+.columns.columns1 > div > div:last-child ul > li.first-li::before,
+.columns.columns1 > div > div:last-child ul > li.first-li::after {
+  display: none;
+}
+.columns.columns1 > div > div:last-child ul > li.first-li + li::before { top: 50%; }
+
+/* if the first bullet is a normal item (not .first-li), avoid connecting line to the second */
+.columns.columns1 > div > div:last-child ul > li:nth-child(2)::before { top: 50%; }
+
+/* Add anchor-links icon at top of the list */
+.columns.columns1 > div > div:last-child ul::after {
+  font-family: "iconfont";
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  content: "\e60b";
+  position: absolute;
+  left: -5px;
+  top: -2px;
+  font-size: 26px;
+  color: #82bc00;
+}
+
+/* Decorative top and bottom rules to mirror IBRANCE anchor links */
+/* remove extra decoration on UL itself */
 
 
 .columns.columns23 {
