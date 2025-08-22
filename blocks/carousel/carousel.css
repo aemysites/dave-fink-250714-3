@@ -50,6 +50,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  margin-top: 5px;
 }
 
 .carousel .carousel-slide .carousel-slide-content {
@@ -152,12 +153,30 @@
   }
 }
 
+#tips-for-taking-ibrance17 {
+  color: rgb(67 0 152);
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+#tips-for-taking-ibrance17 > sup {
+  font-size: 10px;
+  top: -0.8em;
+  vertical-align: baseline;
+  position: relative;
+}
 
 .carousel.carousel25 {
   position: relative;
   max-width: 990px;
-  margin: 0 auto 60px;
-  padding-top: 48px;
+  margin: 0 auto 51px;
+  padding-top: 23px;
+}
+
+.carousel.carousel25 .carousel-slides-container {
+  margin-top: 29px;
 }
 
 .carousel.carousel25 .carousel-slides-container::before {
@@ -168,7 +187,7 @@
   background: #c8c8c8;
   position: absolute;
   z-index: 1;
-  top: -29px;
+  top: -48px;
 }
 
 .carousel.carousel25 .carousel-slides {
@@ -201,7 +220,7 @@
   max-height: 312px;
   box-shadow: none;
   position: relative;
-  border-right: 1.5px solid #dedede;
+  border-right: 1px solid #979797;
   box-sizing: border-box;
   overflow: hidden;
   transition: box-shadow 0.2s;
@@ -298,6 +317,7 @@
   background: #fff;
   border-radius: 50%;
   margin: 0;
+  margin-right: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,12 +358,12 @@
 .carousel.carousel25 .carousel-slide-indicators {
   position: absolute;
   left: 50%;
-  top: 8px;
+  top: -5px;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   background: #fff;
   border: none;
   box-shadow: none;

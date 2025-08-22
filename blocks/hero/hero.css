@@ -350,7 +350,7 @@
 }
 
 .hero.hero8.block .button-container .button {
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: bold;
   height: 45px;
   line-height: 45px;
@@ -361,7 +361,7 @@
   position: relative;
   cursor: pointer;
   display: inline-block;
-  margin: 0;
+  margin: 5px 0 0;
   white-space: nowrap;
   vertical-align: middle;
   touch-action: manipulation;
