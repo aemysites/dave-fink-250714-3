@@ -308,7 +308,6 @@
   margin-bottom: 60px;
 }
 
-/* Top-level row: side-by-side, almost no gap */
 .columns.columns45 > div {
   display: flex;
   flex-direction: row;
@@ -316,7 +315,6 @@
   gap: 68px;
 }
 
-/* Left column content area */
 .columns.columns45 > div > div:first-child {
   min-width: 0;
   display: flex;
@@ -324,7 +322,6 @@
   justify-content: flex-start;
 }
 
-/* Headings */
 .columns.columns45 h2 {
   font-weight: 400;
   margin-top: 0;
@@ -352,7 +349,6 @@
   line-height: 0;
 }
 
-/* Paragraphs */
 .columns.columns45 p {
   color: #333;
   margin-top: 0;
@@ -362,7 +358,6 @@
   line-height: 26px;
 }
 
-/* Numbered list: use columns for natural text flow, minimal margin/gap */
 .columns.columns45 ol {
   column-count: 2;
   column-gap: 15px;
@@ -386,7 +381,6 @@
   height: 80px;
 }
 
-/* Bold, colored numbers in list */
 .columns.columns45 ol li::marker {
   font-weight: 400;
   font-size: 24px;
@@ -395,7 +389,6 @@
   line-height: 26px;
 }
 
-/* Right image column styling: minimal padding, image fills box */
 .columns.columns45 .columns-img-col {
   flex: 0 0 368px;
   display: flex;
@@ -422,24 +415,21 @@
     padding: 0 5px;
     margin-bottom: 10px;
   }
-  
-  /* Top-level row: side-by-side, almost no gap */
+
   .columns.columns45 > div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 26px;
   }
-  
-  /* Left column content area */
+
   .columns.columns45 > div > div:first-child {
     min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
-  
-  /* Headings */
+
   .columns.columns45 h2 {
     font-weight: 400;
     margin-top: 0;
@@ -466,8 +456,7 @@
     position: relative;
     line-height: 0;
   }
-  
-  /* Paragraphs */
+
   .columns.columns45 p {
     color: #333;
     margin-top: 0;
@@ -476,8 +465,7 @@
     font-size: 16px;
     line-height: 26px;
   }
-  
-  /* Numbered list: use columns for natural text flow, minimal margin/gap */
+
   .columns.columns45 ol {
     column-count: 1;
     column-gap: 15px;
@@ -500,8 +488,7 @@
     padding-left: 0;
     height: auto;
   }
-  
-  /* Bold, colored numbers in list */
+
   .columns.columns45 ol li::marker {
     font-weight: 400;
     font-size: 20px;
@@ -509,8 +496,7 @@
     font-family: "Avenir LT W05_85 Heavy", sans-serif;
     line-height: 26px;
   }
-  
-  /* Right image column styling: minimal padding, image fills box */
+
   .columns.columns45 .columns-img-col {
     flex: 0 0 368px;
     display: flex;
@@ -531,4 +517,170 @@
   }
 }
 
-/* Ensure top alignment */
+
+.columns.columns24 {
+  background: #e6d9f5;
+  border-radius: 30px;
+  padding: 56px 70px 44px;
+  box-sizing: border-box;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Columns side by side, left a tad wider, minimal gap */
+.columns.columns24 > div {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.columns.columns24 > div > div:first-child {
+  flex: 1.18 1 0;
+  min-width: 0;
+}
+
+.columns.columns24 > div > div:last-child {
+  flex: 0.95 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Responsive stacking */
+@media (width <= 900px) {
+  .columns.columns24 {
+    padding: 18px 10px 16px;
+    max-width: 100%;
+  }
+
+  .columns.columns24 > div {
+    flex-direction: column;
+    gap: 28px;
+  }
+}
+
+/* LEFT COLUMN TYPOGRAPHY & SPACING */
+.columns.columns24 > div > div:first-child p {
+  color: #434343;
+  font-size: 15.5px;
+  line-height: 1.61;
+  margin-top: 0;
+  margin-bottom: 1.09em;
+}
+
+.columns.columns24 > div > div:first-child p strong {
+  font-weight: 800;
+  font-size: 16.2px;
+  display: inline;
+  letter-spacing: 0.01em;
+  color: #2936a3;
+}
+
+.columns.columns24 > div > div:first-child p strong sup {
+  font-size: 10px;
+  position: relative;
+  top: -0.7em;
+  margin-left: 1px;
+}
+
+.columns.columns24 > div > div:first-child p:nth-of-type(3) strong {
+  color: #914bc9;
+  font-weight: 700;
+}
+
+.columns.columns24 > div > div:first-child p:nth-of-type(3) {
+  margin-top: 1.33em;
+  margin-bottom: 0.85em;
+}
+
+.columns.columns24 > div > div:first-child p:nth-of-type(2),
+.columns.columns24 > div > div:first-child p:nth-of-type(4) {
+  color: #434343;
+  font-weight: 400;
+}
+
+/* RIGHT COLUMN: LABEL, PILLS, BOTTOM NOTE */
+.columns.columns24 > div > div:last-child p:first-child {
+  color: #434343;
+  font-size: 15.5px;
+  margin-bottom: 1.4em;
+  margin-top: 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Pills: centered, not full width, rounded, less vertical padding */
+.columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(-n+5) {
+  background: #3d3ca2;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-align: center;
+  border-radius: 999px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 7px 0;
+  min-width: 220px;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto 13px;
+  box-shadow: 0 2px 8px rgb(62 48 146 / 1.8%);
+  line-height: 1.18;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Last pill: taller, looser line-height for multiline */
+.columns.columns24 > div > div:last-child p:nth-child(5) {
+  min-height: 51px;
+  padding: 13px 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 36px;
+}
+
+/* Remove previous styling for last pill's callout */
+.columns.columns24 > div > div:last-child p:nth-child(5) br + * {
+  background: none;
+  color: inherit;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  font-size: inherit;
+  font-weight: 600;
+  display: inline;
+}
+
+/* Final note */
+.columns.columns24 > div > div:last-child p:last-child {
+  color: #434343;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: 400;
+}
+
+/* Pill text wrapping on small screens */
+@media (width <= 600px) {
+  .columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(-n+5) {
+    font-size: 16px;
+    padding: 7px 2px;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .columns.columns24 > div > div:last-child p:nth-child(5) {
+    padding: 10px 2px;
+    min-height: 40px;
+  }
+}
