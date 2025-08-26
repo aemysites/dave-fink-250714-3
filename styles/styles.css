@@ -302,6 +302,7 @@ main .section.light, main .section.highlight {
 }
 
 .section.about1 {
+  margin-top: 62.5px;
   margin-bottom:20px;
 }
 
@@ -325,4 +326,23 @@ main .section.light, main .section.highlight {
 .section.about1 sup {
   font-size: 10px;
   top: -.8em;
+}
+
+.section.about-text-section1 {
+  margin-top: 47.5px;
+  margin-bottom: 20px;
+}
+
+.section.about-text-section1 h2 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #3e3092;
+}
+
+.section.about-text-section1 p {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(51, 51, 51);
+  margin-top: 22px;
+  margin-bottom: 20px;
 }

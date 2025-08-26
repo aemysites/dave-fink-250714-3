@@ -845,7 +845,8 @@
   max-width: 508px;
   height: 130px;
   gap: 0.5rem;
-  margin-left: 72px; /* align text away from left edge per spec */
+  margin-left: -3px; /* nudged left another 25px from 22px */
+  margin-top: -15px; /* nudged up 15px */
 }
 
 /* Image Column - on the right, maximize image size and flush right */
@@ -853,11 +854,10 @@
   order: 2;
   flex: 0 0 336px;      /* Wider image column for more immersion */
   display: flex;
-  align-items: flex-end; /* bottom align inside the image column */
+  align-items: flex-start; /* allow image to move from top */
   justify-content: flex-end;
   height: 100%;
-  padding: 0;            /* base */
-  padding-right: 78px;   /* nudge image further left by +10px */
+  padding: 0 20px 0 0;  /* add some right padding to prevent flush positioning */
   margin: 0;
   box-sizing: border-box;
 }
@@ -871,8 +871,9 @@
   object-fit: contain;
   object-position: right bottom; /* keep visual content anchored bottom-right */
   display: block;
-  align-self: flex-end;  /* stick to the bottom within the column */
-  transform: translateX(-5px); /* undo last (0), then net +10px right from -20px */
+  align-self: flex-start;  /* allow positioning from top */
+  margin-top: 20px; /* nudge image down 20px total */
+  margin-left: -30px; /* nudge image left 30px */
 }
 
 /* Typography */
