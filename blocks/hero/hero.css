@@ -901,13 +901,14 @@
   .hero.hero37.block > div:last-child {
     position: absolute;
     top: 0;
-    width: 876px;
+    width: auto;
     justify-self: center;
     align-self: anchor-center; /* stylelint-disable-line declaration-property-value-no-unknown, declaration-block-no-redundant-longhand-properties */
   }
 
   .hero.hero37.block > div:last-child > div {
     justify-items: left;
+    width: auto;
   }
 
   .hero.hero37.block > div:last-child > div > h3 {

@@ -246,6 +246,7 @@ main>.section>div {
   max-width: 876px;
   margin: auto;
   padding: 0 15px;
+  overflow: hidden;
 }
 
 main>.section:first-of-type {

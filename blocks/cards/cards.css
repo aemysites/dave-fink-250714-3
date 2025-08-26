@@ -569,92 +569,111 @@
 
 
 .cards.cardsnoimages30 {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
-  gap: 12px 20px; /* slightly tighter vertical and horizontal gaps */
+  max-width: 889px;
+  display: block;
+  
+   /* slightly tighter vertical and horizontal gaps */
+  margin-left: -7px;
+  margin-right: -6px;
 }
 
 .cards.cardsnoimages30 > ul {
-  display: contents;
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
+  gap: 0;
 }
 
 .cards.cardsnoimages30 ul > li {
-  width: 100%;
-  min-width: 0;
-  height: 100%;
   background: #fff;
-  border: 1.5px solid #C1B5E7;
-  border-radius: 8px;
-  box-sizing: border-box;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 0;
   overflow: hidden;
+  box-sizing: border-box;
+  border: none;
+  width: calc(50% - 13px);
+  flex: 1 1 auto;
+  margin: 0 7px 13px 6px;
+}
+
+.cards.cardsnoimages30 ul > li:last-child > div {
+  flex: 1 1 auto;
 }
 
 .cards.cardsnoimages30 .cards-card-body {
   display: flex;
   flex-direction: column;
+  flex: 0;
   padding: 0;
   height: 100%;
+  border: #3e3092 2px solid;
+  border-radius: 10px;
 }
 
 /* Header strip */
 .cards.cardsnoimages30 .cards-card-body p:first-child {
-  position: relative;
-  background: #42389D;
-  color: #fff;
   font-weight: bold;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   margin: 0;
-  padding: 2.5px 10px; /* even shorter header strip for more compactness */
+
+   /* even shorter header strip for more compactness */
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  line-height: 1.17;
   z-index: 1;
+  position: relative;
+  line-height: 52px;
+  padding: 0 22px;
+  font-size: 24px;
+  color: #ded2ed;
+  background-color: #ded1ee;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
 .cards.cardsnoimages30 .cards-card-body p:first-child::before {
-  display: block;
+   /* slightly wider triangle */
+
+   /* compact triangle height */
   position: absolute;
+  left: -21px;
   top: 0;
-  right: 0;
-  width: 22px;   /* slightly wider triangle */
-  height: 10px;  /* compact triangle height */
-  background: #C1B5E7;
-  clip-path: polygon(100% 0, 0 100%, 100% 100%);
-  border-top-right-radius: 8px;
-  z-index: 2;
-  content: "";
+  height: 52px;
+  content: '';
+  width: 233px;
+  display: block;
+  background-color: #3e3092;
+  z-index: -1;
+  transform: skew(-40deg);
 }
 
 /* Card content area */
 .cards.cardsnoimages30 .cards-card-body p:nth-child(2) {
-  color: #42389D;
-  font-weight: 600;
-  font-size: 15px;
-  margin: 8px 14px 0; /* even tighter, almost flush with body */
-  line-height: 1.19;
-  padding: 0;
+  margin: 0; /* even tighter, almost flush with body */
+  margin-bottom: 13px;
+  padding: 20px 10px 0 22px;
+  color: #3e3092;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
 }
 
 .cards.cardsnoimages30 .cards-card-body p:nth-child(3) {
   color: #4A4A4A;
-  font-size: 13px;
+  
+  
+   /* subtitle-body nearly flush, tight card bottom */
+  margin: 0;
+  padding: 0 10px 20px 22px;
+  letter-spacing: 0.4px;
+  font-size: 16px;
+  line-height: 1.625;
   font-weight: normal;
-  margin: 1px 14px 7px; /* subtitle-body nearly flush, tight card bottom */
-  line-height: 1.36;
-  padding: 0;
 }
 
 /* Remove unwanted default inner spacing on the <p>s */
@@ -665,40 +684,119 @@
 }
 
 /* Responsive: stack cards on small screens */
-@media (width <= 700px) {
+@media (width <= 768px) {
   .cards.cardsnoimages30 {
-    grid-template-columns: 1fr;
-    max-width: 380px;
-    gap: 8px;
+    max-width: 889px;
+    display: block;
+    
+     /* slightly tighter vertical and horizontal gaps */
+    margin: 0;
+    padding: 0 5px;
   }
-}
-
-@media (width <= 430px) {
+  
+  .cards.cardsnoimages30 > ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 0;
+    flex-direction: column;
+  }
+  
   .cards.cardsnoimages30 ul > li {
-    border-radius: 6px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    flex: 1 1 auto;
+    margin: 0 0 20px;
   }
-
+  
+  .cards.cardsnoimages30 ul > li:last-child > div {
+    flex: 1 1 auto;
+  }
+  
+  .cards.cardsnoimages30 .cards-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    padding: 0;
+    height: 100%;
+    border: #3e3092 2px solid;
+    border-radius: 10px;
+  }
+  
+  /* Header strip */
   .cards.cardsnoimages30 .cards-card-body p:first-child {
-    font-size: 15px;
-    padding: 2px 6px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-  }
+    font-weight: bold;
+    margin: 0;
 
+     /* even shorter header strip for more compactness */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: 1;
+    position: relative;
+    line-height: 48px;
+    padding: 0 22px;
+    font-size: 24px;
+    color: #ded2ed;
+    background-color: #ded1ee;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  
+  .cards.cardsnoimages30 .cards-card-body p:first-child::before {
+     /* slightly wider triangle */
+
+     /* compact triangle height */
+    position: absolute;
+    left: -21px;
+    top: 0;
+    height: 48px;
+    content: '';
+    width: 174px;
+    display: block;
+    background-color: #3e3092;
+    z-index: -1;
+    transform: skew(-40deg);
+  }
+  
+  /* Card content area */
   .cards.cardsnoimages30 .cards-card-body p:nth-child(2) {
-    font-size: 13px;
-    margin: 6px 6px 0;
+    margin: 0; /* even tighter, almost flush with body */
+    margin-bottom: 13px;
+    padding: 20px 10px 0 22px;
+    color: #3e3092;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    letter-spacing: 0.4px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
   }
-
+  
   .cards.cardsnoimages30 .cards-card-body p:nth-child(3) {
-    font-size: 11px;
-    margin: 1px 6px 5px;
+    color: #4A4A4A;
+    
+    
+     /* subtitle-body nearly flush, tight card bottom */
+    margin: 0;
+    padding: 0 10px 20px 22px;
+    letter-spacing: 0.4px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
   }
-}
-
-/* Optional: Add a subtle hover/focus elevation */
-.cards.cardsnoimages30 ul > li:focus-within,
-.cards.cardsnoimages30 ul > li:hover {
-  box-shadow: 0 1px 10px 0 rgb(66 56 157 / 9%);
-  border-color: #9a89ce;
+  
+  /* Remove unwanted default inner spacing on the <p>s */
+  .cards.cardsnoimages30 .cards-card-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  
 }
