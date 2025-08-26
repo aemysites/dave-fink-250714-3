@@ -300,3 +300,131 @@
 .columns.columns23-variant2 > div > div > p > strong{
   color: #333;
 }
+
+.columns.columns45 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Top-level row: side-by-side, almost no gap */
+.columns.columns45 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (width <= 900px) {
+  .columns.columns45 > div {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .columns.columns45 .columns-img-col {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2px;
+    border-radius: 6px;
+  }
+
+  .columns.columns45 .columns-img-col img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+/* Left column content area */
+.columns.columns45 > div > div:first-child {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Headings */
+.columns.columns45 h2 {
+  font-size: 2rem;
+  color: #5337c9;
+  font-weight: 700;
+  margin-bottom: 0.32em;
+  margin-top: 0;
+  font-family: var(--heading-font-family);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.columns.columns45 h3 {
+  font-size: 1.125rem;
+  color: #3785dd;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+  margin-top: 0.08em;
+  font-family: var(--heading-font-family);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+/* Paragraphs */
+.columns.columns45 p {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 1em;
+  margin-top: 0.1em;
+  font-family: var(--body-font-family);
+  line-height: 1.55;
+}
+
+/* Numbered list: use columns for natural text flow, minimal margin/gap */
+.columns.columns45 ol {
+  column-count: 2;
+  column-gap: 40px;
+  margin: 0.8em 0 0 0.5em;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.columns.columns45 ol li {
+  margin-bottom: 0.05em;
+  color: #222;
+  font-size: 1rem;
+  font-family: var(--body-font-family);
+  line-height: 1.34;
+  break-inside: avoid;
+  text-indent: 0;
+}
+
+/* Bold, colored numbers in list */
+.columns.columns45 ol li::marker {
+  font-weight: 700;
+  color: #5337c9;
+  font-size: 1.15em;
+}
+
+/* Right image column styling: minimal padding, image fills box */
+.columns.columns45 .columns-img-col {
+  flex: 0 0 400px;
+  max-width: 400px;
+  background: #f8ecea;
+  padding: 2px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.columns.columns45 .columns-img-col picture,
+.columns.columns45 .columns-img-col img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+/* Ensure top alignment */
