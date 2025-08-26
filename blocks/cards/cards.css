@@ -462,7 +462,6 @@
   box-sizing: border-box;
 }
 
-/* Left column: image */
 .cards.cards44 .cards-card-image {
   width: 90px;
   min-width: 90px;
@@ -484,7 +483,6 @@
   display: block;
 }
 
-/* Right column: text and button */
 .cards.cards44 .cards-card-body {
   display: flex;
   flex-direction: column;
@@ -518,7 +516,6 @@
   overflow-wrap: break-word;
 }
 
-/* Center the button in the card */
 .cards.cards44 .cards-card-body .button-container {
   width: 100%;
   display: flex;
@@ -557,7 +554,6 @@
   background: #76b82a;
 }
 
-/* Responsive: Stack cards vertically on small screens */
 @media (width <= 900px) {
   .cards.cards44 > ul {
     flex-direction: column;
@@ -569,4 +565,238 @@
     max-width: 96vw;
     width: 100%;
   }
+}
+
+
+.cards.cardsnoimages30 {
+  max-width: 889px;
+  display: block;
+  
+   /* slightly tighter vertical and horizontal gaps */
+  margin-left: -7px;
+  margin-right: -6px;
+}
+
+.cards.cardsnoimages30 > ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.cards.cardsnoimages30 ul > li {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: none;
+  width: calc(50% - 13px);
+  flex: 1 1 auto;
+  margin: 0 7px 13px 6px;
+}
+
+.cards.cardsnoimages30 ul > li:last-child > div {
+  flex: 1 1 auto;
+}
+
+.cards.cardsnoimages30 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 0;
+  padding: 0;
+  height: 100%;
+  border: #3e3092 2px solid;
+  border-radius: 10px;
+}
+
+/* Header strip */
+.cards.cardsnoimages30 .cards-card-body p:first-child {
+  font-weight: bold;
+  margin: 0;
+
+   /* even shorter header strip for more compactness */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 1;
+  position: relative;
+  line-height: 52px;
+  padding: 0 22px;
+  font-size: 24px;
+  color: #ded2ed;
+  background-color: #ded1ee;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.cards.cardsnoimages30 .cards-card-body p:first-child::before {
+   /* slightly wider triangle */
+
+   /* compact triangle height */
+  position: absolute;
+  left: -21px;
+  top: 0;
+  height: 52px;
+  content: '';
+  width: 233px;
+  display: block;
+  background-color: #3e3092;
+  z-index: -1;
+  transform: skew(-40deg);
+}
+
+/* Card content area */
+.cards.cardsnoimages30 .cards-card-body p:nth-child(2) {
+  margin: 0; /* even tighter, almost flush with body */
+  margin-bottom: 13px;
+  padding: 20px 10px 0 22px;
+  color: #3e3092;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+}
+
+.cards.cardsnoimages30 .cards-card-body p:nth-child(3) {
+  color: #4A4A4A;
+  
+  
+   /* subtitle-body nearly flush, tight card bottom */
+  margin: 0;
+  padding: 0 10px 20px 22px;
+  letter-spacing: 0.4px;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+}
+
+/* Remove unwanted default inner spacing on the <p>s */
+.cards.cardsnoimages30 .cards-card-body p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* Responsive: stack cards on small screens */
+@media (width <= 768px) {
+  .cards.cardsnoimages30 {
+    max-width: 889px;
+    display: block;
+    
+     /* slightly tighter vertical and horizontal gaps */
+    margin: 0;
+    padding: 0 5px;
+  }
+  
+  .cards.cardsnoimages30 > ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 0;
+    flex-direction: column;
+  }
+  
+  .cards.cardsnoimages30 ul > li {
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    flex: 1 1 auto;
+    margin: 0 0 20px;
+  }
+  
+  .cards.cardsnoimages30 ul > li:last-child > div {
+    flex: 1 1 auto;
+  }
+  
+  .cards.cardsnoimages30 .cards-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    padding: 0;
+    height: 100%;
+    border: #3e3092 2px solid;
+    border-radius: 10px;
+  }
+  
+  /* Header strip */
+  .cards.cardsnoimages30 .cards-card-body p:first-child {
+    font-weight: bold;
+    margin: 0;
+
+     /* even shorter header strip for more compactness */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: 1;
+    position: relative;
+    line-height: 48px;
+    padding: 0 22px;
+    font-size: 24px;
+    color: #ded2ed;
+    background-color: #ded1ee;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  
+  .cards.cardsnoimages30 .cards-card-body p:first-child::before {
+     /* slightly wider triangle */
+
+     /* compact triangle height */
+    position: absolute;
+    left: -21px;
+    top: 0;
+    height: 48px;
+    content: '';
+    width: 174px;
+    display: block;
+    background-color: #3e3092;
+    z-index: -1;
+    transform: skew(-40deg);
+  }
+  
+  /* Card content area */
+  .cards.cardsnoimages30 .cards-card-body p:nth-child(2) {
+    margin: 0; /* even tighter, almost flush with body */
+    margin-bottom: 13px;
+    padding: 20px 10px 0 22px;
+    color: #3e3092;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    letter-spacing: 0.4px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+  }
+  
+  .cards.cardsnoimages30 .cards-card-body p:nth-child(3) {
+    color: #4A4A4A;
+    
+    
+     /* subtitle-body nearly flush, tight card bottom */
+    margin: 0;
+    padding: 0 10px 20px 22px;
+    letter-spacing: 0.4px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+  }
+  
+  /* Remove unwanted default inner spacing on the <p>s */
+  .cards.cardsnoimages30 .cards-card-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  
 }
