@@ -346,3 +346,49 @@ main .section.light, main .section.highlight {
   margin-top: 22px;
   margin-bottom: 20px;
 }
+
+.section.about-side-effects-section1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.section.about-side-effects-section1 h1,
+.section.about-side-effects-section1 h2 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #3e3092;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.section.about-side-effects-section1 p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.section.about-side-effects-section1 p.purple {
+  color: #8e66c1;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.section.about-side-effects-section1 a {
+  color: #6ca100;
+  text-decoration: underline;
+}
+
+.section.about-side-effects-section1 a:hover {
+  color: #3e3092;
+}
+
+.section.about-side-effects-section1 sup {
+  font-size: 10px;
+  top: -0.8em;
+  vertical-align: super;
+}
