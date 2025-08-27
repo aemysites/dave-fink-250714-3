@@ -517,13 +517,49 @@
   }
 }
 
+.default-content-wrapper:has(#what-is-my-subtype) {
+  background-color: #ded1ee; /* Styles */
+  min-width: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.default-content-wrapper:has(#what-is-my-subtype) > h3 {
+  margin: 0 auto;
+  max-width: 906px;
+  padding-top: 53px;
+  color: #4018ac;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.default-content-wrapper:has(#what-is-my-subtype) > p {
+  margin: 0 auto;
+  max-width: 906px;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.default-content-wrapper:has(#what-is-my-subtype) > p > sup {
+  font-size: 10px;
+  top: -.8em;
+}
+
+.columns-wrapper:has(.columns.columns24) {
+  max-width: unset;
+  background: #ded1ee;
+}
+
 
 .columns.columns24 {
-  background: #e6d9f5;
+  background: #ded1ee;
   border-radius: 30px;
-  padding: 56px 70px 44px;
+  padding: 0;
   box-sizing: border-box;
-  max-width: 960px;
+  max-width: 906px;
   margin: 0 auto;
 }
 
@@ -531,109 +567,105 @@
 .columns.columns24 > div {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 112px;
   align-items: flex-start;
 }
 
 .columns.columns24 > div > div:first-child {
-  flex: 1.18 1 0;
   min-width: 0;
+  width: 6.4%;
+  flex: 1 1 auto;
 }
 
 .columns.columns24 > div > div:last-child {
-  flex: 0.95 1 0;
-  min-width: 0;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 0;
+  padding-top: 20px;
 }
 
-/* Responsive stacking */
-@media (width <= 900px) {
-  .columns.columns24 {
-    padding: 18px 10px 16px;
-    max-width: 100%;
-  }
-
-  .columns.columns24 > div {
-    flex-direction: column;
-    gap: 28px;
-  }
-}
-
-/* LEFT COLUMN TYPOGRAPHY & SPACING */
 .columns.columns24 > div > div:first-child p {
-  color: #434343;
-  font-size: 15.5px;
-  line-height: 1.61;
   margin-top: 0;
-  margin-bottom: 1.09em;
+  font-weight: 500;
+  color: #3e3092;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.625;
 }
 
 .columns.columns24 > div > div:first-child p strong {
-  font-weight: 800;
-  font-size: 16.2px;
-  display: inline;
-  letter-spacing: 0.01em;
-  color: #2936a3;
+  font-weight: bold;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
 }
 
 .columns.columns24 > div > div:first-child p strong sup {
-  font-size: 10px;
   position: relative;
-  top: -0.7em;
-  margin-left: 1px;
+  font-size: 10px;
+  top: -.8em;
+  vertical-align: baseline;
+  line-height: 0;
 }
 
 .columns.columns24 > div > div:first-child p:nth-of-type(3) strong {
-  color: #914bc9;
-  font-weight: 700;
+  font-weight: 500;
+  color: #3e3092;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .columns.columns24 > div > div:first-child p:nth-of-type(3) {
-  margin-top: 1.33em;
-  margin-bottom: 0.85em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .columns.columns24 > div > div:first-child p:nth-of-type(2),
 .columns.columns24 > div > div:first-child p:nth-of-type(4) {
   color: #434343;
   font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.columns.columns24 > div > div:first-child p:last-child {
+  margin-bottom: 56px;
 }
 
 /* RIGHT COLUMN: LABEL, PILLS, BOTTOM NOTE */
 .columns.columns24 > div > div:last-child p:first-child {
-  color: #434343;
-  font-size: 15.5px;
-  margin-bottom: 1.4em;
   margin-top: 0;
-  line-height: 1.5;
-  font-weight: 400;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 5px;
 }
 
 /* Pills: centered, not full width, rounded, less vertical padding */
 .columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(-n+5) {
-  background: #3d3ca2;
+    padding: 11px 0 10px;
+    background-color: #3e3092;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 26px;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    border-radius: 23.5px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(5) {
+  padding: 11px 0 3px;
+  background-color: #3e3092;
+  font-size: 12px;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
   color: #fff;
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
   text-align: center;
-  border-radius: 999px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 36px;
-  padding: 7px 0;
-  min-width: 220px;
-  max-width: 350px;
   width: 100%;
-  margin: 0 auto 13px;
-  box-shadow: 0 2px 8px rgb(62 48 146 / 1.8%);
-  line-height: 1.18;
-  white-space: normal;
-  overflow-wrap: break-word;
+  border-radius: 36px;
+  margin-bottom: 15px;
+  line-height: 14px;
 }
 
 /* Last pill: taller, looser line-height for multiline */
@@ -652,35 +684,213 @@
   color: inherit;
   border-radius: 0;
   padding: 0;
-  margin: 0;
   box-shadow: none;
-  font-size: inherit;
   font-weight: 600;
-  display: inline;
+  display: block;
+  line-height: 15px;
+  font-size: 12px;
+  width: 206px;
+  margin: 0 auto;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
 }
 
 /* Final note */
 .columns.columns24 > div > div:last-child p:last-child {
-  color: #434343;
-  font-size: 15px;
-  margin-top: 10px;
-  margin-bottom: 0;
-  line-height: 1.5;
   text-align: left;
   font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
 }
 
-/* Pill text wrapping on small screens */
-@media (width <= 600px) {
-  .columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(-n+5) {
-    font-size: 16px;
-    padding: 7px 2px;
-    min-width: 0;
-    max-width: 100%;
+@media (width <= 768px) {
+  .default-content-wrapper:has(#what-is-my-subtype) {
+    background-color: #ded1ee; /* Styles */
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
   }
 
+  .default-content-wrapper:has(#what-is-my-subtype) > h3 {
+    margin: 0 auto;
+    max-width: 906px;
+    padding: 36px 20px 0;
+    color: #4018ac;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .default-content-wrapper:has(#what-is-my-subtype) > p {
+    margin: 0 auto;
+    max-width: 906px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+    color: #333;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .default-content-wrapper:has(#what-is-my-subtype) > p > sup {
+    font-size: 10px;
+    top: -.8em;
+  }
+
+  .columns-wrapper:has(.columns.columns24) {
+    max-width: unset;
+    background: #ded1ee;
+    padding: 0 20px 36px;
+  }
+
+  .columns.columns24 {
+    background: #ded1ee;
+    border-radius: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 906px;
+    margin: 0 auto;
+  }
+
+  /* Columns side by side, left a tad wider, minimal gap */
+  .columns.columns24 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .columns.columns24 > div > div:first-child {
+    min-width: 0;
+    width: auto;
+    flex: 1 1 auto;
+  }
+
+  .columns.columns24 > div > div:last-child {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .columns.columns24 > div > div:first-child p {
+    margin-top: 0;
+    font-weight: 500;
+    color: #3e3092;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.625;
+  }
+
+  .columns.columns24 > div > div:first-child p strong {
+    font-weight: bold;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  }
+
+  .columns.columns24 > div > div:first-child p strong sup {
+    position: relative;
+    font-size: 10px;
+    top: -.8em;
+    vertical-align: baseline;
+    line-height: 0;
+  }
+
+  .columns.columns24 > div > div:first-child p:nth-of-type(3) strong {
+    font-weight: 500;
+    color: #3e3092;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .columns.columns24 > div > div:first-child p:nth-of-type(3) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .columns.columns24 > div > div:first-child p:nth-of-type(2),
+  .columns.columns24 > div > div:first-child p:nth-of-type(4) {
+    color: #434343;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .columns.columns24 > div > div:first-child p:last-child {
+    margin-bottom: 20px;
+  }
+
+  /* RIGHT COLUMN: LABEL, PILLS, BOTTOM NOTE */
+  .columns.columns24 > div > div:last-child p:first-child {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 5px;
+  }
+
+  /* Pills: centered, not full width, rounded, less vertical padding */
+  .columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(-n+5) {
+      padding: 11px 0 10px;
+      background-color: #3e3092;
+      margin-bottom: 0;
+      font-size: 12px;
+      line-height: 26px;
+      font-family: "Avenir LT W05_85 Heavy", sans-serif;
+      border-radius: 23.5px;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      margin-top: 5px;
+  }
+
+  .columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(5) {
+    padding: 11px 0 3px;
+    background-color: #3e3092;
+    font-size: 12px;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    border-radius: 36px;
+    margin-bottom: 15px;
+    line-height: 14px;
+  }
+
+  /* Last pill: taller, looser line-height for multiline */
   .columns.columns24 > div > div:last-child p:nth-child(5) {
-    padding: 10px 2px;
-    min-height: 40px;
+    min-height: 51px;
+    padding: 13px 12px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 36px;
+  }
+
+  /* Remove previous styling for last pill's callout */
+  .columns.columns24 > div > div:last-child p:nth-child(5) br + * {
+    background: none;
+    color: inherit;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    font-weight: 600;
+    display: block;
+    line-height: 15px;
+    font-size: 12px;
+    width: 206px;
+    margin: 0 auto;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+  }
+
+  /* Final note */
+  .columns.columns24 > div > div:last-child p:last-child {
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+    margin-bottom: 10px;
   }
 }
