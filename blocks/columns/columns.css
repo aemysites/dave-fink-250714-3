@@ -518,7 +518,7 @@
 }
 
 .default-content-wrapper:has(#what-is-my-subtype) {
-  background-color: #ded1ee; /* Styles */
+  background-color: #ded1ee;
   min-width: 100%;
   width: 100%;
   padding: 0;
@@ -563,7 +563,6 @@
   margin: 0 auto;
 }
 
-/* Columns side by side, left a tad wider, minimal gap */
 .columns.columns24 > div {
   display: flex;
   flex-direction: row;
@@ -631,7 +630,6 @@
   margin-bottom: 56px;
 }
 
-/* RIGHT COLUMN: LABEL, PILLS, BOTTOM NOTE */
 .columns.columns24 > div > div:last-child p:first-child {
   margin-top: 0;
   font-weight: normal;
@@ -640,7 +638,6 @@
   margin-bottom: 5px;
 }
 
-/* Pills: centered, not full width, rounded, less vertical padding */
 .columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(-n+5) {
     padding: 11px 0 10px;
     background-color: #3e3092;
@@ -668,7 +665,6 @@
   line-height: 14px;
 }
 
-/* Last pill: taller, looser line-height for multiline */
 .columns.columns24 > div > div:last-child p:nth-child(5) {
   min-height: 51px;
   padding: 13px 12px;
@@ -678,7 +674,6 @@
   margin-bottom: 36px;
 }
 
-/* Remove previous styling for last pill's callout */
 .columns.columns24 > div > div:last-child p:nth-child(5) br + * {
   background: none;
   color: inherit;
@@ -694,7 +689,6 @@
   font-family: "Avenir LT W05_55 Roman", sans-serif;
 }
 
-/* Final note */
 .columns.columns24 > div > div:last-child p:last-child {
   text-align: left;
   font-weight: 400;
@@ -705,7 +699,7 @@
 
 @media (width <= 768px) {
   .default-content-wrapper:has(#what-is-my-subtype) {
-    background-color: #ded1ee; /* Styles */
+    background-color: #ded1ee;
     min-width: 100%;
     width: 100%;
     padding: 0;
@@ -753,7 +747,6 @@
     margin: 0 auto;
   }
 
-  /* Columns side by side, left a tad wider, minimal gap */
   .columns.columns24 > div {
     display: flex;
     flex-direction: column;
@@ -821,7 +814,6 @@
     margin-bottom: 20px;
   }
 
-  /* RIGHT COLUMN: LABEL, PILLS, BOTTOM NOTE */
   .columns.columns24 > div > div:last-child p:first-child {
     margin-top: 0;
     font-weight: normal;
@@ -830,7 +822,6 @@
     margin-bottom: 5px;
   }
 
-  /* Pills: centered, not full width, rounded, less vertical padding */
   .columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(-n+5) {
       padding: 11px 0 10px;
       background-color: #3e3092;
@@ -858,7 +849,6 @@
     line-height: 14px;
   }
 
-  /* Last pill: taller, looser line-height for multiline */
   .columns.columns24 > div > div:last-child p:nth-child(5) {
     min-height: 51px;
     padding: 13px 12px;
@@ -868,7 +858,6 @@
     margin-bottom: 36px;
   }
 
-  /* Remove previous styling for last pill's callout */
   .columns.columns24 > div > div:last-child p:nth-child(5) br + * {
     background: none;
     color: inherit;
@@ -884,7 +873,6 @@
     font-family: "Avenir LT W05_55 Roman", sans-serif;
   }
 
-  /* Final note */
   .columns.columns24 > div > div:last-child p:last-child {
     text-align: left;
     font-weight: 400;
@@ -892,5 +880,95 @@
     line-height: 15px;
     margin: 0;
     margin-bottom: 10px;
+  }
+}
+
+.columns.columns18 > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 36px;
+  margin-top: 32px;
+  max-width: 900px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Make li elements direct grid children for proper alignment */
+.columns.columns18 .columns-img-col {
+  display: contents;
+}
+
+/* Remove default bullets and spacing */
+.columns.columns18 .columns-img-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* All li as grid items, with tight row height and icon alignment */
+.columns.columns18 .columns-img-col ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: #857D91;
+  font-size: 14px;
+  font-family: var(--body-font-family, Avenir LT W05_55 Roman, Arial, sans-serif);
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* Assign li to grid cells for row pairing */
+.columns.columns18 > div:nth-child(2) .columns-img-col ul li:nth-child(1) {
+  grid-row: 2;
+}
+
+.columns.columns18 > div:nth-child(2) .columns-img-col ul li:nth-child(2) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.columns.columns18 > div:nth-child(2) .columns-img-col ~ .columns-img-col ul li:nth-child(1) { grid-column: 2; grid-row: 1; }
+.columns.columns18 > div:nth-child(2) .columns-img-col ~ .columns-img-col ul li:nth-child(2) { grid-column: 2; grid-row: 2; }
+
+/* Icon styles -- keep icons aligned with first text line even when wrapping */
+.columns.columns18 .columns-img-col picture {
+  display: flex;
+  align-items: baseline;
+  margin-right: 12px;
+  flex-shrink: 0;
+  height: 20px;
+}
+
+.columns.columns18 .columns-img-col img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: invert(84%) sepia(7%) saturate(1300%) hue-rotate(213deg) brightness(103%) contrast(104%);
+  display: block;
+}
+
+/* Superscript styling for references */
+.columns.columns18 .columns-img-col li sup {
+  font-size: 10px;
+  vertical-align: super;
+  margin-left: 2px;
+  position: relative;
+  top: -0.4em;
+}
+
+/* Responsive: stack items on small screens */
+@media (width <= 900px) {
+  .columns.columns18 > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .columns.columns18 .columns-img-col {
+    display: flex;
+    flex-direction: column;
   }
 }
