@@ -363,11 +363,14 @@ main .section.light, main .section.highlight {
 
 .section.about-side-effects-section1 p {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   color: #333333;
   margin: 0 0 16px 0;
   font-weight: 400;
   font-family: "Avenir LT W05_55 Roman";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .section.about-side-effects-section1 p.purple {
