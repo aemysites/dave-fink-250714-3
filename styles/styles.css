@@ -364,8 +364,10 @@ main .section.light, main .section.highlight {
 .section.about-side-effects-section1 p {
   font-size: 16px;
   line-height: 24px;
-  color: #333;
-  margin-bottom: 12px;
+  color: #333333;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+  font-family: "Avenir LT W05_55 Roman";
 }
 
 .section.about-side-effects-section1 p.purple {
