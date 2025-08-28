@@ -921,19 +921,16 @@
   align-items: start;
 }
 
-/* Make li elements direct grid children for proper alignment */
 .columns.columns18 .columns-img-col {
   display: contents;
 }
 
-/* Remove default bullets and spacing */
 .columns.columns18 .columns-img-col ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* All li as grid items, with tight row height and icon alignment */
 .columns.columns18 .columns-img-col ul li {
   display: flex;
   flex-direction: row;
@@ -947,7 +944,6 @@
   padding: 0;
 }
 
-/* Assign li to grid cells for row pairing */
 .columns.columns18 > div:nth-child(2) .columns-img-col ul li:nth-child(1) {
   grid-row: 2;
   position: relative;
@@ -976,7 +972,6 @@
   grid-column: 2; grid-row: 2; 
 }
 
-/* Icon styles -- keep icons aligned with first text line even when wrapping */
 .columns.columns18 .columns-img-col picture {
   display: flex;
   align-items: baseline;
@@ -992,7 +987,6 @@
   display: block;
 }
 
-/* Superscript styling for references */
 .columns.columns18 .columns-img-col li sup {
   font-size: 10px;
   vertical-align: super;
@@ -1047,19 +1041,16 @@
     align-items: start;
   }
 
-  /* Make li elements direct grid children for proper alignment */
   .columns.columns18 .columns-img-col {
     display: contents;
   }
 
-  /* Remove default bullets and spacing */
   .columns.columns18 .columns-img-col ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  /* All li as grid items, with tight row height and icon alignment */
   .columns.columns18 .columns-img-col ul li {
     display: flex;
     flex-direction: row;
@@ -1073,7 +1064,6 @@
     padding: 0;
   }
 
-  /* Assign li to grid cells for row pairing */
   .columns.columns18 > div:nth-child(2) .columns-img-col ul li:nth-child(1) {
     grid-row: 2;
     position: relative;
@@ -1102,7 +1092,6 @@
     grid-column: 2; grid-row: 2; 
   }
 
-  /* Icon styles -- keep icons aligned with first text line even when wrapping */
   .columns.columns18 .columns-img-col picture {
     display: flex;
     align-items: baseline;
@@ -1118,12 +1107,192 @@
     display: block;
   }
 
-  /* Superscript styling for references */
   .columns.columns18 .columns-img-col li sup {
     font-size: 10px;
     vertical-align: super;
     margin-left: 2px;
     position: relative;
     top: -0.4em;
+  }
+}
+
+/* Main columns grid: compact width and gap */
+.columns.columns34 > div {
+  display: grid;
+  grid-template-columns: 1fr 290px;
+  gap: 20px;
+  align-items: start;
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 36px;
+}
+
+/* Left column: headline and paragraph */
+.columns.columns34 > div > div:first-child h2 {
+  color: #4F2DAF;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  line-height: 1.18;
+}
+
+.columns.columns34 > div > div:first-child p {
+  color: #222;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Card styling */
+.columns.columns34 > div > div:last-child {
+  background: #fff;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 3%);
+  padding: 16px 18px 18px;
+  width: 290px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Layout fix: place image and headline side by side */
+
+/* Use flex on a wrapper div: target the first two children (p:first-child and h2) */
+.columns.columns34 > div > div:last-child > p:first-child,
+.columns.columns34 > div > div:last-child > h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.columns.columns34 > div > div:last-child .card-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.columns.columns34 > div > div:last-child .card-row picture {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.columns.columns34 > div > div:last-child .card-row picture img {
+  width: 44px;
+  height: auto;
+  border-radius: 2px;
+  margin: 0;
+}
+
+/* Move headline into card-row flex */
+.columns.columns34 > div > div:last-child .card-row h2 {
+  color: #4F2DAF;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.22;
+  text-align: left;
+  margin: 0;
+  white-space: normal;
+}
+
+/* Simulate card-row using only existing HTML structure */
+.columns.columns34 > div > div:last-child > p:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.columns.columns34 > div > div:last-child > p:first-child picture {
+  margin: 0;
+}
+
+.columns.columns34 > div > div:last-child > p:first-child picture img {
+  width: 44px;
+  height: auto;
+  border-radius: 2px;
+  margin: 0;
+}
+
+.columns.columns34 > div > div:last-child > h2 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #4F2DAF;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.22;
+  text-align: left;
+  white-space: normal;
+  align-self: center;
+}
+
+/* Card description: tighter below headline, less margin above button */
+.columns.columns34 > div > div:last-child > p:not(:first-child) {
+  color: #222;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 8px 0 10px;
+  padding: 0;
+}
+
+/* Button: left-aligned, compact */
+.columns.columns34 > div > div:last-child .button-container {
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.columns.columns34 > div > div:last-child .button-container .button {
+  background-color: #8CD211;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  transition: background 0.2s;
+  text-align: left;
+}
+
+/* Divider line below block */
+.columns.columns34 {
+  border-bottom: 1px solid #E5E5E5;
+  margin-bottom: 44px;
+  margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media (width <= 600px) {
+  .columns.columns34 > div > div:last-child {
+    padding: 8px 2px 10px;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 2px;
+  }
+
+  .columns.columns34 > div {
+    max-width: 100%;
+    padding-bottom: 10px;
+    gap: 6px;
+  }
+
+  .columns.columns34 > div > div:last-child > p:first-child {
+    gap: 6px;
+  }
+
+  .columns.columns34 > div > div:last-child > h2 {
+    margin-left: 6px;
   }
 }
