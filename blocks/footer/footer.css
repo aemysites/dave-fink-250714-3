@@ -6,13 +6,12 @@ footer {
 footer .footer>div {
   margin: auto;
   max-width: 876px;
-  padding: 10px 20px 20px;
+  padding: 36px 20px 20px;
 }
 
 footer .footer p {
-  margin-top: 26px;
+  margin-top: 14px;
   font-size: 13px;
-  line-height: 1.36;
   color: #fff;
   font-weight: normal;
   font-family: "Avenir LT W05_55 Roman", sans-serif;
@@ -25,13 +24,12 @@ footer .footer p a {
 
 footer .section.links > div {
   display: flex;
-  border-bottom: #fff 1px solid;
+  flex-wrap: wrap;
 }
 
 footer .section.links > div > p {
-  margin-bottom: 0;
-  margin-top: 26px;
   padding: 0;
+  margin: 0;
 }
 
 footer .section.links > div > p > a::after {
@@ -52,12 +50,16 @@ footer .section.links > div > p > a {
   border: unset;
   border-radius: unset;
   padding: 0;
-  padding-bottom: 14px;
   margin: 0;
 }
 
 footer .section.columns-container {
   position: relative;
+}
+
+footer .section.links {
+  padding-bottom: 14px;
+  border-bottom: #fff 1px solid;
 }
 
 footer .section.columns-container > div.columns-wrapper > div > div {
@@ -69,14 +71,37 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
   flex: 0 0 66%;
 }
 
+footer .section.columns-container > div.columns-wrapper > div > div > div:nth-child(1) > p:first-child {
+  font-size: 72.4%;
+  line-height: 1.36;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-top: 26px;
+  font-weight: bold;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+}
+
+footer .section.columns-container > div.columns-wrapper > div > div > div:nth-child(1) > p:first-child > sup {
+  font-size: 10px;
+  top: -.8em;
+  vertical-align: baseline;
+  position: relative;
+  line-height: 0;
+}
+
+footer .section.columns-container > div.columns-wrapper > div > div > div:nth-child(1) > p:last-child {
+  margin-top: -20px;
+}
+
 footer .section.columns-container > div.columns-wrapper > div > div > div:nth-child(2) {
   flex: 0 0 23.74%;
   text-align: left;
-  padding-top: 24px;
+  padding-top: 16px;
   position: relative;
   align-self: stretch;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 footer .section.columns-container > div.columns-wrapper > div > div > div:nth-child(2) > p {
   padding-right: 48%;
 }
@@ -93,9 +118,23 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
   height: auto;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
+footer .section.columns-container > div.columns-wrapper > div > div > div:nth-child(2) sup {
+  font-size: 10px;
+  top: -.8em;
+  vertical-align: baseline;
+  position: relative;
+  line-height: 0;
+}
+
 @media (width>=900px) {
   footer .footer p {
+    margin: 0;
+    padding: 0;
     font-size: 11px;
+    line-height: 1.36;
+    color: #fff;
+    margin-bottom: 20px;
   }
 
   footer .section.info-floater-open > p > a {
@@ -110,7 +149,7 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
     content: '|';
     display: inline-block;
     color: #fff;
-    padding: 0 15px;
+    padding: 0 17px;
     font-size: 18px;
     line-height: 1;
   }
@@ -120,7 +159,7 @@ footer .section.columns-container > div.columns-wrapper > div > div > div:nth-ch
   }
 
   footer .footer.block {
-    padding-bottom: 68px
+    padding-bottom: 50px;
   }
 
   footer .section.info-floater > div > p {

@@ -350,7 +350,7 @@
 }
 
 .hero.hero8.block .button-container .button {
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: bold;
   height: 45px;
   line-height: 45px;
@@ -361,7 +361,7 @@
   position: relative;
   cursor: pointer;
   display: inline-block;
-  margin: 0;
+  margin: 5px 0 0;
   white-space: nowrap;
   vertical-align: middle;
   touch-action: manipulation;
@@ -448,6 +448,59 @@
   top: 0.2em;
   position: relative;
   line-height: 0;
+}
+
+.hero.hero37.block > div:first-child > div > p > picture {
+  min-height: 260px;
+}
+
+.hero.hero37.block > div:first-child > div > p > picture > img {
+  min-height: 260px;
+}
+
+.hero.hero37.block > div:first-child > div > p > picture:last-child {
+  display: none;
+}
+
+.hero.hero37.block > div:first-child > div > p > picture:first-child {
+  display: block;
+}
+
+.hero.hero37.block > div:last-child {
+  position: absolute;
+  top: 0;
+  width: 876px;
+  justify-self: center;
+  align-self: anchor-center; /* stylelint-disable-line declaration-property-value-no-unknown, declaration-block-no-redundant-longhand-properties */
+}
+
+.hero.hero37.block > div:last-child > div {
+  justify-items: left;
+}
+
+.hero.hero37.block > div:last-child > div > h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.hero.hero37.block > div:last-child > div > h3 > sup {
+  font-size: 10px;
+  top: 0.2em;
+  position: relative;
+  line-height: 0;
+}
+
+
+.hero.hero37.block > div:last-child > div > p {
+  max-width: 372px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
 }
 
 @media (width > 1320px) {
@@ -640,6 +693,45 @@
     left: 20px;
     line-height: 32px;
   }
+
+  .hero.hero37.block > div:last-child {
+    position: absolute;
+    top: 0;
+    width: 876px;
+    justify-self: center;
+    align-self: anchor-center; /* stylelint-disable-line declaration-property-value-no-unknown, declaration-block-no-redundant-longhand-properties */
+    left: 20px;
+  }
+
+  .hero.hero37.block > div:last-child > div {
+    justify-items: left;
+  }
+
+  .hero.hero37.block > div:last-child > div > h3 {
+    margin: 0;
+    font-weight: normal;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .hero.hero37.block > div:last-child > div > h3 > sup {
+    position: relative;
+    line-height: 0;
+    font-size: 10px;
+    top: -.8em;
+    vertical-align: baseline;
+  }
+
+
+  .hero.hero37.block > div:last-child > div > p {
+    max-width: 372px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.625;
+    font-weight: normal;
+  }
 }
 
 @media (width <= 768px) {
@@ -796,6 +888,54 @@
   .hero.hero5 > div:first-child::before {
     left: -36%;
     width: 100%;
+  }
+
+  .hero.hero37.block > div:first-child > div > p > picture:last-child {
+    display: block;
+  }
+
+  .hero.hero37.block > div:first-child > div > p > picture:first-child {
+    display: none;
+  }
+
+  .hero.hero37.block > div:last-child {
+    position: absolute;
+    top: 0;
+    width: auto;
+    justify-self: center;
+    align-self: anchor-center; /* stylelint-disable-line declaration-property-value-no-unknown, declaration-block-no-redundant-longhand-properties */
+  }
+
+  .hero.hero37.block > div:last-child > div {
+    justify-items: left;
+    width: auto;
+  }
+
+  .hero.hero37.block > div:last-child > div > h3 {
+    margin: 0;
+    font-weight: normal;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+    margin-bottom: 10px;
+    max-width: 164px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .hero.hero37.block > div:last-child > div > h3 > sup {
+    position: relative;
+    line-height: 0;
+    font-size: 10px;
+    top: -.8em;
+  }
+
+
+  .hero.hero37.block > div:last-child > div > p {
+    max-width: 372px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+    display: none;
   }
 }
 

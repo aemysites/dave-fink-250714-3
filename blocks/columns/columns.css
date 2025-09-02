@@ -377,3 +377,1237 @@
 .columns.columns23-variant2 > div > div > p > strong{
   color: #333;
 }
+
+.columns.columns45 {
+  max-width: 876px;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+.columns.columns45 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 68px;
+}
+
+.columns.columns45 > div > div:first-child {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.columns.columns45 h2 {
+  font-weight: 400;
+  margin-top: 0;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  color: #4018ac;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+}
+
+.columns.columns45 h3 {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 6px;
+  color: #4018ac;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.columns.columns45 h3 sup {
+  font-size: 10px;
+  top: -.8em;
+  vertical-align: baseline;
+  position: relative;
+  line-height: 0;
+}
+
+.columns.columns45 p {
+  color: #333;
+  margin-top: 0;
+  font-family: var(--body-font-family);
+  margin-bottom: 36px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.columns.columns45 ol {
+  column-count: 2;
+  column-gap: 15px;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  list-style-position: inside;
+}
+
+.columns.columns45 ol li {
+  color: #333;
+  font-family: var(--body-font-family);
+  text-indent: 0;
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  margin-bottom: 20px;
+  padding-left: 0;
+  height: 80px;
+}
+
+.columns.columns45 ol li::marker {
+  font-weight: 400;
+  font-size: 24px;
+  color: #4018ac;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  line-height: 26px;
+}
+
+.columns.columns45 .columns-img-col {
+  flex: 0 0 368px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  float: right;
+  width: 371px;
+  padding-top: 20px;
+}
+
+.columns.columns45 .columns-img-col picture,
+.columns.columns45 .columns-img-col img {
+  display: block;
+  border-radius: 0;
+  width: 368px;
+  padding-right: 3px;
+}
+
+@media (width <= 768px) {
+  .columns.columns45 {
+    max-width: 876px;
+    margin: 0 auto;
+    padding: 0 5px;
+    margin-bottom: 10px;
+  }
+
+  .columns.columns45 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+  }
+
+  .columns.columns45 > div > div:first-child {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .columns.columns45 h2 {
+    font-weight: 400;
+    margin-top: 0;
+    color: #4018ac;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+  
+  .columns.columns45 h3 {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 12px;
+    color: #4018ac;
+    font-weight: 400;
+    margin-top: 0;
+  }
+  
+  .columns.columns45 h3 sup {
+    font-size: 10px;
+    top: -.8em;
+    vertical-align: baseline;
+    position: relative;
+    line-height: 0;
+  }
+
+  .columns.columns45 p {
+    color: #333;
+    margin-top: 0;
+    font-family: var(--body-font-family);
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .columns.columns45 ol {
+    column-count: 1;
+    column-gap: 15px;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    list-style-position: inside;
+  }
+  
+  .columns.columns45 ol li {
+    color: #333;
+    font-family: var(--body-font-family);
+    text-indent: 0;
+    font-size: 16px;
+    line-height: 26px;
+    width: 100%;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 20px;
+    padding-left: 0;
+    height: auto;
+  }
+
+  .columns.columns45 ol li::marker {
+    font-weight: 400;
+    font-size: 20px;
+    color: #4018ac;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    line-height: 26px;
+  }
+
+  .columns.columns45 .columns-img-col {
+    flex: 0 0 368px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    float: right;
+    width: 371px;
+    padding-top: 20px;
+  }
+  
+  .columns.columns45 .columns-img-col picture,
+  .columns.columns45 .columns-img-col img {
+    display: block;
+    border-radius: 0;
+    width: 368px;
+    padding-right: 3px;
+  }
+}
+
+.default-content-wrapper:has(#what-is-my-subtype) {
+  background-color: #ded1ee;
+  min-width: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.default-content-wrapper:has(#what-is-my-subtype) > h3 {
+  margin: 0 auto;
+  max-width: 906px;
+  padding-top: 53px;
+  color: #4018ac;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.default-content-wrapper:has(#what-is-my-subtype) > p {
+  margin: 0 auto;
+  max-width: 906px;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.default-content-wrapper:has(#what-is-my-subtype) > p > sup {
+  font-size: 10px;
+  top: -.8em;
+}
+
+.columns-wrapper:has(.columns.columns24) {
+  max-width: unset;
+  background: #ded1ee;
+}
+
+
+.columns.columns24 {
+  background: #ded1ee;
+  border-radius: 30px;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 906px;
+  margin: 0 auto;
+}
+
+.columns.columns24 > div {
+  display: flex;
+  flex-direction: row;
+  gap: 112px;
+  align-items: flex-start;
+}
+
+.columns.columns24 > div > div:first-child {
+  min-width: 0;
+  width: 6.4%;
+  flex: 1 1 auto;
+}
+
+.columns.columns24 > div > div:last-child {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 0;
+  padding-top: 20px;
+}
+
+.columns.columns24 > div > div:first-child p {
+  margin-top: 0;
+  font-weight: 500;
+  color: #3e3092;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.625;
+}
+
+.columns.columns24 > div > div:first-child p strong {
+  font-weight: bold;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+}
+
+.columns.columns24 > div > div:first-child p strong sup {
+  position: relative;
+  font-size: 10px;
+  top: -.8em;
+  vertical-align: baseline;
+  line-height: 0;
+}
+
+.columns.columns24 > div > div:first-child p:nth-of-type(3) strong {
+  font-weight: 500;
+  color: #3e3092;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.columns.columns24 > div > div:first-child p:nth-of-type(3) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.columns.columns24 > div > div:first-child p:nth-of-type(2),
+.columns.columns24 > div > div:first-child p:nth-of-type(4) {
+  color: #434343;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.columns.columns24 > div > div:first-child p:last-child {
+  margin-bottom: 56px;
+}
+
+.columns.columns24 > div > div:last-child p:first-child {
+  margin-top: 0;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+
+.columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(-n+5) {
+    padding: 11px 0 10px;
+    background-color: #3e3092;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 26px;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    border-radius: 23.5px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(5) {
+  padding: 11px 0 3px;
+  background-color: #3e3092;
+  font-size: 12px;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  border-radius: 36px;
+  margin-bottom: 15px;
+  line-height: 14px;
+}
+
+.columns.columns24 > div > div:last-child p:nth-child(5) {
+  min-height: 51px;
+  padding: 13px 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 36px;
+}
+
+.columns.columns24 > div > div:last-child p:nth-child(5) br + * {
+  background: none;
+  color: inherit;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  font-weight: 600;
+  display: block;
+  line-height: 15px;
+  font-size: 12px;
+  width: 206px;
+  margin: 0 auto;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+}
+
+.columns.columns24 > div > div:last-child p:last-child {
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+}
+
+@media (width <= 768px) {
+  .default-content-wrapper:has(#what-is-my-subtype) {
+    background-color: #ded1ee;
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .default-content-wrapper:has(#what-is-my-subtype) > h3 {
+    margin: 0 auto;
+    max-width: 906px;
+    padding: 36px 20px 0;
+    color: #4018ac;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .default-content-wrapper:has(#what-is-my-subtype) > p {
+    margin: 0 auto;
+    max-width: 906px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+    color: #333;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .default-content-wrapper:has(#what-is-my-subtype) > p > sup {
+    font-size: 10px;
+    top: -.8em;
+  }
+
+  .columns-wrapper:has(.columns.columns24) {
+    max-width: unset;
+    background: #ded1ee;
+    padding: 0 20px 36px;
+  }
+
+  .columns.columns24 {
+    background: #ded1ee;
+    border-radius: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 906px;
+    margin: 0 auto;
+  }
+
+  .columns.columns24 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .columns.columns24 > div > div:first-child {
+    min-width: 0;
+    width: auto;
+    flex: 1 1 auto;
+  }
+
+  .columns.columns24 > div > div:last-child {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .columns.columns24 > div > div:first-child p {
+    margin-top: 0;
+    font-weight: 500;
+    color: #3e3092;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.625;
+  }
+
+  .columns.columns24 > div > div:first-child p strong {
+    font-weight: bold;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  }
+
+  .columns.columns24 > div > div:first-child p strong sup {
+    position: relative;
+    font-size: 10px;
+    top: -.8em;
+    vertical-align: baseline;
+    line-height: 0;
+  }
+
+  .columns.columns24 > div > div:first-child p:nth-of-type(3) strong {
+    font-weight: 500;
+    color: #3e3092;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .columns.columns24 > div > div:first-child p:nth-of-type(3) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .columns.columns24 > div > div:first-child p:nth-of-type(2),
+  .columns.columns24 > div > div:first-child p:nth-of-type(4) {
+    color: #434343;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .columns.columns24 > div > div:first-child p:last-child {
+    margin-bottom: 20px;
+  }
+
+  .columns.columns24 > div > div:last-child p:first-child {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 5px;
+  }
+
+  .columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(-n+5) {
+      padding: 11px 0 10px;
+      background-color: #3e3092;
+      margin-bottom: 0;
+      font-size: 12px;
+      line-height: 26px;
+      font-family: "Avenir LT W05_85 Heavy", sans-serif;
+      border-radius: 23.5px;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      margin-top: 5px;
+  }
+
+  .columns.columns24 > div > div:last-child p:nth-child(n+2):nth-child(5) {
+    padding: 11px 0 3px;
+    background-color: #3e3092;
+    font-size: 12px;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    border-radius: 36px;
+    margin-bottom: 15px;
+    line-height: 14px;
+  }
+
+  .columns.columns24 > div > div:last-child p:nth-child(5) {
+    min-height: 51px;
+    padding: 13px 12px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 36px;
+  }
+
+  .columns.columns24 > div > div:last-child p:nth-child(5) br + * {
+    background: none;
+    color: inherit;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    font-weight: 600;
+    display: block;
+    line-height: 15px;
+    font-size: 12px;
+    width: 206px;
+    margin: 0 auto;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+  }
+
+  .columns.columns24 > div > div:last-child p:last-child {
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.columns.columns18 {
+  border-bottom: solid 1px #ded2ed;
+  padding: 50px 75px 40px;
+  margin-bottom: 60px;
+}
+
+.columns.columns18 p {
+  margin: 0;
+}
+
+.columns.columns18 > div:first-child > div > p:first-child {
+  color: #4018ac;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.columns.columns18 > div:first-child > div > p:last-child {
+  margin-bottom: 26px;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  color: #333;
+}
+
+
+.columns.columns18 > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 16px;
+  max-width: 900px;
+  width: 100%;
+  align-items: start;
+}
+
+.columns.columns18 .columns-img-col {
+  display: contents;
+}
+
+.columns.columns18 .columns-img-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.columns.columns18 .columns-img-col ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: #333;
+  font-size: 14px;
+  font-family: var(--body-font-family, Avenir LT W05_55 Roman, Arial, sans-serif);
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.columns.columns18 > div:nth-child(2) .columns-img-col ul li:nth-child(1) {
+  grid-row: 2;
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 25px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.columns.columns18 > div:nth-child(2) .columns-img-col ul li:nth-child(2) {
+  grid-column: 2;
+  grid-row: 2;
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 12px;
+  padding-right: 20px;
+}
+
+.columns.columns18 > div:nth-child(2) .columns-img-col ~ .columns-img-col ul li:nth-child(1) { 
+  grid-column: 2; grid-row: 1; 
+}
+
+.columns.columns18 > div:nth-child(2) .columns-img-col ~ .columns-img-col ul li:nth-child(2) { 
+  grid-column: 2; grid-row: 2; 
+}
+
+.columns.columns18 .columns-img-col picture {
+  display: flex;
+  align-items: baseline;
+  margin-right: 12px;
+  flex-shrink: 0;
+  height: 20px;
+}
+
+.columns.columns18 .columns-img-col img {
+  width: 28px;
+  height: 25px;
+  object-fit: contain;
+  display: block;
+}
+
+.columns.columns18 .columns-img-col li sup {
+  font-size: 10px;
+  vertical-align: super;
+  margin-left: 2px;
+  position: relative;
+  top: -0.4em;
+}
+
+@media (width <= 1024px) {
+  .columns.columns18 {
+    padding: 50px 30px 36px;
+    margin-bottom: 49px;
+  }
+}
+
+@media (width <= 768px) {
+  .columns.columns18 {
+    border-bottom: solid 1px #ded2ed;
+    padding: 36px 5px 26px;
+    margin-bottom: 60px;
+  }
+
+  .columns.columns18 p {
+    margin: 0;
+  }
+
+  .columns.columns18 > div:first-child > div > p:first-child {
+    font-size: 20px;
+    line-height: 26px;
+    color: #4018ac;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  .columns.columns18 > div:first-child > div > p:last-child {
+    margin-bottom: 26px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+    color: #333;
+  }
+
+
+  .columns.columns18 > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+    max-width: 900px;
+    width: 100%;
+    align-items: start;
+  }
+
+  .columns.columns18 .columns-img-col {
+    display: contents;
+  }
+
+  .columns.columns18 .columns-img-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .columns.columns18 .columns-img-col ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: #333;
+    font-size: 14px;
+    font-family: var(--body-font-family, Avenir LT W05_55 Roman, Arial, sans-serif);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .columns.columns18 > div:nth-child(2) .columns-img-col ul li:nth-child(1) {
+    grid-row: 2;
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 25px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .columns.columns18 > div:nth-child(2) .columns-img-col ul li:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 12px;
+    padding-right: 20px;
+  }
+  
+  .columns.columns18 > div:nth-child(2) .columns-img-col ~ .columns-img-col ul li:nth-child(1) { 
+    grid-column: 2; grid-row: 1; 
+  }
+
+  .columns.columns18 > div:nth-child(2) .columns-img-col ~ .columns-img-col ul li:nth-child(2) { 
+    grid-column: 2; grid-row: 2; 
+  }
+
+  .columns.columns18 .columns-img-col picture {
+    display: flex;
+    align-items: baseline;
+    margin-right: 12px;
+    flex-shrink: 0;
+    height: 20px;
+  }
+
+  .columns.columns18 .columns-img-col img {
+    width: 28px;
+    height: 25px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .columns.columns18 .columns-img-col li sup {
+    font-size: 10px;
+    vertical-align: super;
+    margin-left: 2px;
+    position: relative;
+    top: -0.4em;
+  }
+}
+
+/* Main columns grid: compact width and gap */
+.columns.columns34 > div {
+  display: flex;
+  gap: 39px;
+  align-items: start;
+  max-width: 876px;
+  margin: 0 auto;
+  width: 100%;
+  flex-direction: row;
+}
+
+.columns.columns34 > div > div:first-child {
+  float: left;
+  width: 48.86%;
+}
+
+/* Left column: headline and paragraph */
+.columns.columns34 > div > div:first-child h2 {
+  margin: 0 0 20px;
+  padding-top: 10px;
+  font-size: 28px;
+  line-height: 40px;
+  color: #4018ac;
+  font-weight: 400;
+}
+
+.columns.columns34 > div > div:first-child p {
+  color: #333;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+}
+
+/* Card styling */
+.columns.columns34 > div > div:last-child {
+  box-sizing: border-box;
+  display: block;
+  flex-direction: column;
+  justify-content: flex-start;
+  float: right;
+  width: 46.68%;
+  background-color: #f5f5f5;
+  padding: 22px 14px 30px 24px;
+}
+
+/* Layout fix: place image and headline side by side */
+
+/* Use flex on a wrapper div: target the first two children (p:first-child and h2) */
+.columns.columns34 > div > div:last-child > p:first-child,
+.columns.columns34 > div > div:last-child > h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.columns.columns34 > div > div:last-child .card-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.columns.columns34 > div > div:last-child .card-row picture {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.columns.columns34 > div > div:last-child .card-row picture img {
+  width: 44px;
+  height: auto;
+  border-radius: 2px;
+  margin: 0;
+}
+
+/* Move headline into card-row flex */
+.columns.columns34 > div > div:last-child .card-row h2 {
+  color: #4F2DAF;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.22;
+  text-align: left;
+  margin: 0;
+  white-space: normal;
+}
+
+/* Simulate card-row using only existing HTML structure */
+.columns.columns34 > div > div:last-child > p:first-child {
+  float: left;
+  margin-right: 26px;
+  max-width: 120px;
+  width: 77px;
+  margin-bottom: 60px;
+  display: inline;
+}
+
+.columns.columns34 > div > div:last-child > p:first-child picture {
+  margin: 0;
+}
+
+.columns.columns34 > div > div:last-child > p:first-child picture img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.columns.columns34 > div > div:last-child > h2 {
+  display: initial;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  white-space: normal;
+  align-self: center;
+  font-size: 20px;
+  color: #8e66c1;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+/* Card description: tighter below headline, less margin above button */
+.columns.columns34 > div > div:last-child > p:not(:first-child) {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.4286;
+  margin-top: 10px;
+}
+
+/* Button: left-aligned, compact */
+.columns.columns34 > div > div:last-child > p.button-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  max-width: 209px;
+  margin-left: 103px;
+}
+
+.columns.columns34 > div > div:last-child .button-container .button {
+  border-radius: 4px;
+  font-size: 16px;
+  box-shadow: none;
+  min-width: 0;
+  white-space: normal;
+  transition: background 0.2s;
+  text-align: left;
+  max-width: 100%;
+  line-height: 1.4286;
+  font-weight: 400;
+  background: #82bc00 url("/icons/download-icon-white.svg") no-repeat center left/66px 23px;
+  width: 100%;
+  color: #fff;
+  margin: 0 auto;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  padding: 10px 35px 10px 47px;
+  height: 45px;
+  box-sizing: border-box;
+}
+
+.columns.columns34 > div > div:last-child .button-container .button:hover {
+  background-color: white;
+  color: #82bc00;
+  border: 1px solid #82bc00;
+  background-image: url("/icons/download-icon-green.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 71px 23px;
+  border-radius: 4px;
+  font-size: 16px;
+  box-shadow: none;
+  min-width: 0;
+  white-space: nowrap;
+  transition: background 0.2s;
+  text-align: left;
+  max-width: 100%;
+  line-height: 1.4286;
+  font-weight: 400;
+  width: 100%;
+  margin: 0 auto;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  padding: 10px 50px;
+  text-overflow: unset;
+  height: 45px;
+  box-sizing: border-box;
+}
+
+/* Divider line below block */
+.columns.columns34 {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #ded2ed;
+  margin-bottom: 60px;
+  box-sizing: border-box;
+}
+
+@media (width < 768px) {
+  /* Main columns grid: compact width and gap */
+  .columns.columns34 > div {
+    display: flex;
+    gap: 0;
+    align-items: start;
+    max-width: 876px;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .columns.columns34 > div > div:first-child {
+    float: left;
+    width: auto;
+  }
+
+  /* Left column: headline and paragraph */
+  .columns.columns34 > div > div:first-child h2 {
+    margin: 0 0 20px;
+    padding-top: 10px;
+    color: #4018ac;
+    font-weight: 400;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .columns.columns34 > div > div:first-child p {
+    color: #333;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+  }
+
+  /* Card styling */
+  .columns.columns34 > div > div:last-child {
+    box-sizing: border-box;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    float: right;
+    width: auto;
+    background-color: #f5f5f5;
+    padding: 22px 14px 24px 24px;
+  }
+
+  /* Layout fix: place image and headline side by side */
+
+  /* Use flex on a wrapper div: target the first two children (p:first-child and h2) */
+  .columns.columns34 > div > div:last-child > p:first-child,
+  .columns.columns34 > div > div:last-child > h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .columns.columns34 > div > div:last-child .card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .columns.columns34 > div > div:last-child .card-row picture {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .columns.columns34 > div > div:last-child .card-row picture img {
+    width: 44px;
+    height: auto;
+    border-radius: 2px;
+    margin: 0;
+  }
+
+  /* Move headline into card-row flex */
+  .columns.columns34 > div > div:last-child .card-row h2 {
+    color: #4F2DAF;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.22;
+    text-align: left;
+    margin: 0;
+    white-space: normal;
+  }
+
+  /* Simulate card-row using only existing HTML structure */
+  .columns.columns34 > div > div:last-child > p:first-child {
+    float: left;
+    margin-right: 26px;
+    max-width: 120px;
+    width: 100px;
+    height: 137px;
+    margin-bottom: 40px;
+    display: inline;
+  }
+
+  .columns.columns34 > div > div:last-child > p:first-child picture {
+    margin: 0;
+  }
+
+  .columns.columns34 > div > div:last-child > p:first-child picture img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .columns.columns34 > div > div:last-child > h2 {
+    display: initial;
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    white-space: normal;
+    align-self: center;
+    font-size: 20px;
+    color: #8e66c1;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  }
+
+  /* Card description: tighter below headline, less margin above button */
+  .columns.columns34 > div > div:last-child > p:not(:first-child) {
+    margin: 0;
+    padding: 0;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    line-height: 1.4286;
+    margin-top: 10px;
+  }
+
+  /* Button: left-aligned, compact */
+  .columns.columns34 > div > div:last-child > p.button-container {
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: block;
+    justify-content: flex-start;
+    padding: 0;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .columns.columns34 > div > div:last-child .button-container .button {
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: none;
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    line-height: 56px;
+    font-weight: 400;
+    background: #82bc00 url("/icons/download-icon-white.svg") no-repeat center left/114px 23px;
+    background-size: 59% 22px;
+    width: 100%;
+    color: #fff;
+    margin: 0 auto;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    height: 56px;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .columns.columns34 > div > div:last-child .button-container .button:hover {
+    background-color: white;
+    color: #82bc00;
+    border: 1px solid #82bc00;
+    background-image: url("/icons/download-icon-green.svg");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 71px 23px;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: none;
+    min-width: 0;
+    white-space: nowrap;
+    transition: background 0.2s;
+    text-align: left;
+    max-width: 100%;
+    line-height: 1.4286;
+    font-weight: 400;
+    width: 100%;
+    margin: 0 auto;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    padding: 10px 50px;
+    text-overflow: unset;
+    height: 45px;
+    box-sizing: border-box;
+  }
+
+  /* Divider line below block */
+  .columns.columns34 {
+    padding: 0 5px 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #ded2ed;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+  }
+}
