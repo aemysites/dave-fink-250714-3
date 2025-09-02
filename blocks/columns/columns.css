@@ -168,7 +168,7 @@
 .columns.columns1 > div > div:last-child ul li {
   color: rgb(130 188 0);
   font-size: 16px;
-  padding: 4.5px 0 0px 24px;
+  padding: 4.5px 0 0 24px;
   min-height: 18px;
   display: flex;
   align-items: center;
@@ -203,7 +203,7 @@
   top: -3px; /* extend into the gap above */
   bottom: -3px; /* extend into the gap below */
   width: 1px;
-  background: rgba(130, 188, 0, 0.4);
+  background: rgb(130 188 0 / 40%);
 }
 
 /* circular marker */
@@ -235,6 +235,7 @@
   color: #444;
   font-weight: 700;
 }
+
 .columns.columns1 > div > div:last-child ul > li.first-li::before,
 .columns.columns1 > div > div:last-child ul > li.first-li::after {
   display: none;
@@ -246,7 +247,7 @@
 
 /* Add anchor-links icon at top of the list */
 .columns.columns1 > div > div:last-child ul::after {
-  font-family: "iconfont";
+  font-family: iconfont, sans-serif;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -260,6 +261,7 @@
 }
 
 /* Decorative top and bottom rules to mirror IBRANCE anchor links */
+
 /* remove extra decoration on UL itself */
 
 
