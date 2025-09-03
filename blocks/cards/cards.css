@@ -989,3 +989,196 @@
     padding-bottom: 30px;
   }
 }
+
+
+.cards.cards31 {
+  padding: 0;
+  background: transparent;
+}
+
+/* 2-column grid, tighter gaps, block centered */
+.cards.cards31 > ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(340px, 1fr));
+  gap: 16px 18px;
+  max-width: 780px;
+  margin: 0 auto;
+  place-items: stretch stretch;
+  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Card: fixed/equal height, overflow hidden so nothing escapes */
+.cards.cards31 > ul > li {
+  background: #fff;
+  border: 1px solid #c1c1c1;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  max-width: 370px;
+  height: 344px;
+  min-height: 344px;
+  position: relative;
+  margin: 0;
+  transition: box-shadow 0.2s;
+}
+
+/* Image area: taller, overflow visible only for tab (not card), tab in stacking context */
+.cards.cards31 .cards-card-image {
+  position: relative;
+  width: 100%;
+  height: 106px;
+  min-height: 106px;
+  max-height: 106px;
+  background: #eee;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: visible;
+  z-index: 1;
+}
+
+.cards.cards31 .cards-card-image picture:first-of-type img {
+  width: 100%;
+  height: 106px;
+  object-fit: cover;
+  display: block;
+}
+
+.cards.cards31 .cards-card-image::after {
+  position: absolute;
+  inset: 0;
+  background: rgb(166 133 214 / 40%);
+  z-index: 1;
+  pointer-events: none;
+
+  /* no content property */
+}
+
+/* Icon tab: position at edge, overlap image/body only, not grid gap */
+.cards.cards31 .cards-card-image picture:last-of-type {
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  transform: translateX(-50%);
+  z-index: 3;
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 9px 16px 5px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 3%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+.cards.cards31 .cards-card-image picture:last-of-type img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+/* Card body: vertical flex, gap for even spacing, button always at bottom */
+.cards.cards31 .cards-card-body {
+  flex: 1 1 auto;
+  padding: 24px 20px 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  min-height: 110px;
+  row-gap: 13px;
+  box-sizing: border-box;
+}
+
+.cards.cards31 .cards-card-body strong {
+  display: block;
+  color: #A685D6;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.cards.cards31 .cards-card-body p {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+/* Button: block, centered, anchor to bottom, no extra margin above */
+.cards.cards31 .cards-card-body a {
+  display: block;
+  width: 100%;
+  max-width: 186px;
+  background: #8BC53F;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 0;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  transition: background 0.2s;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.cards.cards31 .cards-card-body a:hover,
+.cards.cards31 .cards-card-body a:focus {
+  background: #7ab233;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive: 1 column, full width cards on small screens */
+@media (width <= 900px) {
+  .cards.cards31 > ul {
+    grid-template-columns: 1fr;
+    max-width: 98vw;
+    gap: 14px;
+  }
+
+  .cards.cards31 > ul > li {
+    max-width: 98vw;
+    min-width: 0;
+    height: auto;
+    min-height: 260px;
+  }
+}
+
+@media (width <= 700px) {
+  .cards.cards31 .cards-card-image,
+  .cards.cards31 .cards-card-image picture:first-of-type img {
+    height: 80px;
+    min-height: 64px;
+    max-height: 80px;
+  }
+
+  .cards.cards31 .cards-card-body {
+    padding: 16px 8px 11px;
+    row-gap: 9px;
+  }
+
+  .cards.cards31 > ul > li {
+    min-height: 180px;
+  }
+}
