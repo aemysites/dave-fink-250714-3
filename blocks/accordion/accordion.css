@@ -326,7 +326,7 @@ main>.section>div:has(h2#frequently-asked-questions) {
 .accordion.accordion21-variant1 summary p {
   margin: 3px 0 0 27px;
   font-size: 16px;
-  color: rgb(121, 121, 121);
+  color: rgb(121 121 121);
   font-weight: 400;
   font-family: "Avenir LT W05_55 Roman", sans-serif;
   height: 26px;
