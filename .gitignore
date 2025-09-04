@@ -10,3 +10,5 @@ helix-importer-ui
 .iml
 .cursor
 .vscode/*
+package*
+eslint*

@@ -1,8 +1,8 @@
 .embed {
   width: unset;
   text-align: center;
-  max-width: 800px;
-  margin: 32px auto;
+  max-width: 875px;
+  margin: 0 auto;
 }
 
 .embed > div {
