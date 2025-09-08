@@ -60,6 +60,27 @@
   background-color: var(--background-color);
 }
 
+.section.accordion-container:has(div.accordion.accordion21) {
+  background: white;
+  justify-self: center;
+  max-width: 906px;
+  width: 100%;
+  margin: 0;
+}
+
+.default-content-wrapper:has(+ .accordion-wrapper .accordion.accordion21) {
+  padding: 0 60px;
+}
+
+.default-content-wrapper:has(+ .accordion-wrapper .accordion.accordion21) > p {
+  font-size: 19px;
+  line-height: 40px;
+  padding: 10px 0 5px;
+  color: #8463d5;
+  border-bottom: 2px solid;
+  margin: 0;
+}
+
 .accordion.accordion21 {
   background: #fff;
   font-family: var(--body-font-family);
@@ -68,7 +89,6 @@
   max-width: 906px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -91px;
 }
 
 .accordion.accordion21 details {
@@ -100,7 +120,6 @@
   font-size: 16px;
   line-height: 26px;
   padding: 12px 28px 12px 0;
-  border-bottom: 0.5px solid #c1c1c1;
   cursor: pointer;
   position: relative;
 }
@@ -152,44 +171,6 @@
   padding: 0;
 }
 
-
-main>.section>div:has(h2#frequently-asked-questions) {
-  max-width: 100%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 203px;
-  background-color: #3e3092;
-  padding: 54px 0 109px;
-  box-sizing: border-box;
-}
-
-#frequently-asked-questions {
-  max-width: 946px;
-  flex: 1 1 auto;
-  line-height: 40px;
-  color: #fff;
-  font-weight: normal;
-  position: relative;
-  left: 37px;
-  font-size: 30px;
-  margin: 0;
-  top: -8px;
-}
-
-#frequently-asked-questions::before {
-  content: '';
-  display: inline-block;
-  position: relative;
-  left: -17px;
-  top: 17px;
-  background-image: url("/icons/faq-icon.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 43px;
-  height: 48px;
-}
-
 .accordion.accordion21 .accordion-item-body p {
   margin-bottom: 20px;
   margin-top: 0;
@@ -203,9 +184,20 @@ main>.section>div:has(h2#frequently-asked-questions) {
   margin-bottom: 0;
 }
 
+.accordion.accordion21 sup {
+  font-size: 10px;
+  top: -.8em;
+  position: relative;
+  vertical-align: baseline;
+}
+
 @media (width <= 1024px) {
   .accordion.accordion21 summary {
     margin: 0 40px;
+  }
+  
+  .default-content-wrapper:has(+ .accordion-wrapper .accordion.accordion21) {
+    padding: 0 40px;  
   }
 }
 
@@ -217,17 +209,22 @@ main>.section>div:has(h2#frequently-asked-questions) {
 
   .accordion.accordion21 summary {
     font-size: 15px;
-    padding: 14px 14px 14px 8px;
+    padding: 0;
     min-height: 44px;
-    margin: 0 20px;
+    margin: 0 40px;
   }
 
   .accordion.accordion21 summary p {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 12px 28px 12px 0;
+    border-bottom: 0.5px solid #c1c1c1;
+    cursor: pointer;
+    position: relative;
   }
 
   .accordion.accordion21 details .accordion-item-body {
-    padding: 17px 30px;
+    padding: 17px 60px;
   }
 
   .accordion.accordion21 .accordion-item-body p {
@@ -252,4 +249,272 @@ main>.section>div:has(h2#frequently-asked-questions) {
     margin: 0 0 1.4% 4.5%;
     margin-bottom: 20px;
   }
+}
+
+/* accordion21-variant1 - copy of accordion21 styles */
+.accordion.accordion21-variant1 {
+  background: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  width: 100%;
+  max-width: 906px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 9px;
+}
+
+.accordion.accordion21-variant1 details {
+  background: #fff;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  position: relative;
+}
+
+.accordion.accordion21-variant1 details:last-child {
+  border-bottom: none;
+}
+
+.accordion.accordion21-variant1 summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: #222;
+  font-weight: 400;
+  background: #fff;
+  outline: none;
+  border: none;
+  list-style: none;
+  box-sizing: border-box;
+  gap: 8px;
+  margin: 0 60px;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 12px 28px 12px 0;
+  border-bottom: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion.accordion21-variant1 summary::-webkit-details-marker,
+.accordion.accordion21-variant1 summary::marker {
+  display: none;
+}
+
+.accordion.accordion21-variant1 details summary::after {
+  content: ' ⌄';
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  transform: translateY(-4px) translateX(2px);
+  transition: transform 0.2s ease;
+  color: #222;
+  right: auto;
+  top: auto;
+  letter-spacing: normal;
+}
+
+.accordion.accordion21-variant1 details[open] summary::after {
+  content: ' ⌄';
+  transform: translateY(1px) translateX(2px) rotate(180deg);
+}
+
+.accordion.accordion21-variant1 summary p {
+  margin: 3px 0 0 27px;
+  font-size: 16px;
+  color: rgb(121 121 121);
+  font-weight: 400;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  height: 26px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding: 0;
+  line-height: 26px;
+  text-decoration: underline;
+}
+
+.accordion.accordion21-variant1 details .accordion-item-body {
+  color: #333;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  padding: 17px 60px;
+  background-color: #f5f2fa;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+}
+
+.accordion.accordion21-variant1 details .accordion-item-body a {
+  color: #6ca100;
+  text-decoration: underline;
+}
+
+.accordion.accordion21-variant1 details[open] summary,
+.accordion.accordion21-variant1 summary:focus,
+.accordion.accordion21-variant1 summary:hover {
+  background: #fff;
+}
+
+.accordion-wrapper:has(div.accordion.accordion21-variant1) {
+  max-width: 906px;
+  padding: 0;
+}
+
+.accordion.accordion21-variant1 .accordion-item-body p {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.accordion.accordion21-variant1 .accordion-item-body ul li {
+  margin: 0 0 1.4% 4.5%; 
+}
+
+.accordion.accordion21-variant1 .accordion-item-body ul li:last-child {
+  margin-bottom: 0;
+}
+
+@media (width <= 1024px) {
+  .accordion.accordion21-variant1 summary {
+    margin: 0 40px;
+  }
+}
+
+@media (width <= 768px) {
+  .accordion.accordion21-variant1 {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .accordion.accordion21-variant1 summary {
+    font-size: 15px;
+    padding: 14px 14px 14px 8px;
+    min-height: 44px;
+    margin: 0 20px;
+  }
+
+  .accordion.accordion21-variant1 summary p {
+    font-size: 15px;
+  }
+
+  .accordion.accordion21-variant1 details .accordion-item-body {
+    padding: 17px 30px;
+  }
+
+  .accordion.accordion21-variant1 .accordion-item-body p {
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  
+  .accordion.accordion21-variant1 .accordion-item-body ul {
+    margin: 0;
+    padding: 0; 
+  }
+
+  .accordion.accordion21-variant1 .accordion-item-body > ul > li {
+    margin: 0 0 1.4% 4.5%;
+    margin-bottom: 20px; 
+  }
+  
+  .accordion.accordion21-variant1 .accordion-item-body > ul > li:last-child {
+    margin: 0 0 1.4% 4.5%;
+    margin-bottom: 20px;
+  }
+}
+
+.accordion.accordion2 {
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Core row structure: only divider between items */
+.accordion.accordion2 .accordion-item {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0;
+}
+
+/* Remove divider for last row */
+.accordion.accordion2 .accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* FAQ header: flexbox for horizontal layout, compact vertical spacing, accurate padding */
+.accordion.accordion2 .accordion-item-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+/* Hide browser marker for summary (FAQ row) */
+.accordion.accordion2 .accordion-item-label::-webkit-details-marker,
+.accordion.accordion2 .accordion-item-label::marker {
+  display: none;
+}
+
+/* FAQ question text: left-aligned, single line, flex-grow to fill space */
+.accordion.accordion2 .accordion-item-label p {
+  margin: 0;
+  flex: 1 1 auto;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* FAQ body: match header padding */
+.accordion.accordion2 .accordion-item-body {
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+/* Responsive: reduce horizontal padding and font size for smaller screens */
+@media (width <= 600px) {
+  .accordion.accordion2 .accordion-item-label,
+  .accordion.accordion2 .accordion-item-body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .accordion.accordion2 .accordion-item-label {
+    font-size: 15px;
+    min-height: 44px;
+  }
+
+  .accordion.accordion2 .accordion-item-label p {
+    font-size: 15px;
+  }
+}
+
+/* Ensure details stays open/visible when expanded */
+.accordion.accordion2 details[open] > .accordion-item-body {
+  display: block;
 }
