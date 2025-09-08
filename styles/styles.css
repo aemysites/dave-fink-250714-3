@@ -326,7 +326,7 @@ main .section.light, main .section.highlight {
 }
 
 .section.about-text-section1 {
-  margin-top: 47.5px;
+  margin-top: -80px !important;
   margin-bottom: 20px;
 }
 
@@ -345,7 +345,7 @@ main .section.light, main .section.highlight {
 }
 
 .section.about-side-effects-section1 {
-  margin-top: 60px;
+  margin-top: -52px;
   margin-bottom: 60px;
 }
 
