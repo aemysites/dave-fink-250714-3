@@ -112,10 +112,9 @@
 
 .cards.cards38-variant1 {
   background: rgb(245 245 245);
-  margin: 0;
+  margin: 60px 0;
   padding: 22px 14px 20px 22px;
   height: 140px;
-  margin-bottom: 60px;
 }
 
 .cards.cards38-variant1 > ul {
@@ -254,7 +253,7 @@
   text-transform: none;
   font-weight: bold;
   font-size: 20px;
-  margin: 0 0 6px;
+  margin: 0 0 6px 2.5px;
   letter-spacing: 0.5px;
   line-height: 1.2;
   font-family: var(--heading-font-family, Arial, "Helvetica Neue", Helvetica, sans-serif);
@@ -435,7 +434,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: 32px;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
@@ -449,24 +448,24 @@
   flex-direction: row;
   align-items: flex-start;
   background: #f5f5f5;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: none;
   border: none;
   width: 430px;
   min-width: 340px;
   max-width: 440px;
-  min-height: 160px;
-  padding: 28px 32px 32px 28px;
+  min-height: 150px;
+  padding: 22px 24px 24px 22px;
   margin: 0;
   box-sizing: border-box;
 }
 
 .cards.cards44 .cards-card-image {
-  width: 90px;
-  min-width: 90px;
-  max-width: 90px;
-  height: 128px;
-  margin-right: 18px;
+  width: 98px;
+  min-width: 98px;
+  max-width: 98px;
+  height: 130px;
+  margin-right: 16px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -475,10 +474,10 @@
 }
 
 .cards.cards44 .cards-card-image img {
-  width: 90px;
-  height: 128px;
+  width: 98px;
+  height: 130px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 0;
   display: block;
 }
 
@@ -490,13 +489,13 @@
   flex: 1 1 0;
   min-width: 0;
   height: 100%;
-  padding-left: 0;
+  padding-left: 4px;
   box-sizing: border-box;
 }
 
 .cards.cards44 .cards-card-body h2 {
-  color: #6c2eb1;
-  font-size: 18px;
+  color: #8e66c1;
+  font-size: 20px;
   font-weight: 700;
   margin: 0 0 8px;
   letter-spacing: 0;
@@ -507,7 +506,7 @@
 .cards.cards44 .cards-card-body p:not(.button-container) {
   color: #333;
   font-size: 15px;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   line-height: 1.4;
   font-family: var(--body-font-family, Arial, "Helvetica Neue", Helvetica, sans-serif);
   max-width: 100%;
@@ -520,23 +519,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0;
+  margin-top: auto;
+  margin-bottom: 0;
   padding: 0;
 }
 
 .cards.cards44 .cards-card-body .button-container > a.button,
 .cards.cards44 .cards-card-body .button-container > a {
-  background: #8dc63f;
+  background: #82bc00;
   color: #fff;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 4px;
   border: none;
-  padding: 10px 36px;
+  padding: 8px 28px;
+  line-height: 1.2;
   text-align: center;
-  letter-spacing: 0.04em;
+  letter-spacing: 1px;
   margin: 0;
+  margin-bottom: 0;
   box-shadow: none;
   text-decoration: none;
   display: inline-block;
@@ -987,5 +989,452 @@
     padding: 0;
     margin: 0;
     padding-bottom: 30px;
+  }
+}
+
+.cards-wrapper:has(.cards.cards31) {
+  max-width: 906px;
+}
+
+.cards.cards31 {
+  max-width: 906px;
+  background: transparent;
+}
+
+/* 2-column grid, tighter gaps, block centered */
+.cards.cards31 > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 2.3%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 17px 60px 15px;
+  box-sizing: border-box;
+}
+
+/* Card: fixed/equal height, overflow hidden so nothing escapes */
+.cards.cards31 > ul > li {
+  background: #fff;
+  border: 1px solid #636363;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  transition: box-shadow 0.2s;
+}
+
+/* Image area: taller, overflow visible only for tab (not card), tab in stacking context */
+.cards.cards31 .cards-card-image {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  z-index: 1;
+}
+
+.cards.cards31 .cards-card-image > p {
+  margin: 0;
+  padding: 0;
+}
+
+.cards.cards31 .cards-card-image picture:first-of-type img {
+  width: 569px;
+  height: 120px;
+  object-fit: unset;
+  display: block;
+  max-width: unset; 
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  aspect-ratio: auto 569 / 135;
+}
+
+.cards.cards31 .cards-card-image picture:first-of-type::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: rgb(142 102 193 / 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.cards.cards31 .cards-card-image::after {
+  position: absolute;
+  inset: 0;
+  background: rgb(166 133 214 / 40%);
+  z-index: 1;
+  pointer-events: none;
+
+  /* no content property */
+}
+
+/* Icon tab: position at edge, overlap image/body only, not grid gap */
+.cards.cards31 .cards-card-image picture:last-of-type {
+  position: absolute;
+  left: 50%;
+  top: 78px;
+  transform: translateX(-50%);
+  z-index: 3;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 91px;
+  box-sizing: border-box;
+}
+
+.cards.cards31 .cards-card-image picture:last-of-type img {
+  height: auto;
+  object-fit: contain;
+  padding-top: 10px;
+}
+
+/* Card body: vertical flex, gap for even spacing, button always at bottom */
+.cards.cards31 .cards-card-body {
+  flex: 1 1 auto;
+  padding: 53px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.cards.cards31 .cards-card-body strong {
+  display: block;
+  color: #8a65c7;
+  text-transform: uppercase;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+  letter-spacing: 0.4px;
+}
+
+.cards.cards31 .cards-card-body p {
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  display: block;
+}
+
+.cards.cards31 .cards-card-body p:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+/* Button: block, centered, anchor to bottom, no extra margin above */
+.cards.cards31 .cards-card-body a {
+  display: block;
+  width: 100%;
+  background: #8BC53F;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 0;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  transition: background 0.2s;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.cards.cards31 .cards-card-body a:hover,
+.cards.cards31 .cards-card-body a:focus {
+  background: #7ab233;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.cards.cards31 .cards-card-body .button-container {
+  margin-top: auto;
+}
+
+.cards.cards31 .cards-card-body .button-container a:hover {
+  outline: none;
+  box-shadow: 0 10px 35px 0 rgb(0 0 0 / 20%);
+}
+
+
+.cards.cards31 .cards-card-body .button-container > a {
+  margin: 0 auto 30px;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.51px;
+  font-weight: bold;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background: #82bc00;
+  border-radius: 4px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none;
+  border: none;
+  padding: 0 25px;
+  user-select: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  box-sizing: border-box;
+  width: auto;
+  text-decoration: none;
+}
+
+/* Responsive: 1 column, full width cards on small screens */
+@media (width <= 1024px) {
+  .cards.cards31 .cards-card-body .button-container > a {
+    padding: 0 20px;
+  }
+}
+
+@media (width < 768px) {
+  .cards-wrapper:has(.cards.cards31) {
+    max-width: 906px;
+  }
+  
+  .cards.cards31 {
+    max-width: 906px;
+    background: transparent;
+  }
+  
+  /* 2-column grid, tighter gaps, block centered */
+  .cards.cards31 > ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px 2.3%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 6px 60px 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Card: fixed/equal height, overflow hidden so nothing escapes */
+  .cards.cards31 > ul > li {
+    background: #fff;
+    border: 1px solid #636363;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    transition: box-shadow 0.2s;
+  }
+  
+  /* Image area: taller, overflow visible only for tab (not card), tab in stacking context */
+  .cards.cards31 .cards-card-image {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    z-index: 1;
+  }
+  
+  .cards.cards31 .cards-card-image > p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards.cards31 .cards-card-image picture:first-of-type img {
+    width: 569px;
+    height: 120px;
+    object-fit: unset;
+    display: block;
+    max-width: unset; 
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    aspect-ratio: auto 569 / 135;
+  }
+  
+  .cards.cards31 .cards-card-image picture:first-of-type::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background: rgb(142 102 193 / 70%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  
+  .cards.cards31 .cards-card-image::after {
+    position: absolute;
+    inset: 0;
+    background: rgb(166 133 214 / 40%);
+    z-index: 1;
+    pointer-events: none;
+  
+    /* no content property */
+  }
+  
+  /* Icon tab: position at edge, overlap image/body only, not grid gap */
+  .cards.cards31 .cards-card-image picture:last-of-type {
+    position: absolute;
+    left: 50%;
+    top: 78px;
+    transform: translateX(-50%);
+    z-index: 3;
+    background: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 170px;
+    height: 91px;
+    box-sizing: border-box;
+  }
+  
+  .cards.cards31 .cards-card-image picture:last-of-type img {
+    height: auto;
+    object-fit: contain;
+    padding-top: 10px;
+  }
+  
+  /* Card body: vertical flex, gap for even spacing, button always at bottom */
+  .cards.cards31 .cards-card-body {
+    flex: 1 1 auto;
+    padding: 53px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    height: auto;
+  }
+  
+  .cards.cards31 .cards-card-body strong {
+    display: block;
+    color: #8a65c7;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+    letter-spacing: 0.4px;
+  }
+  
+  .cards.cards31 .cards-card-body p {
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+    letter-spacing: 0.4px;
+    text-align: center;
+    display: block;
+  }
+  
+  /* Button: block, centered, anchor to bottom, no extra margin above */
+  .cards.cards31 .cards-card-body a {
+    display: block;
+    width: 100%;
+    background: #8BC53F;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 0;
+    border-radius: 4px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
+    transition: background 0.2s;
+    align-self: center;
+    margin: 0 auto;
+  }
+  
+  .cards.cards31 .cards-card-body a:hover,
+  .cards.cards31 .cards-card-body a:focus {
+    background: #7ab233;
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .cards.cards31 .cards-card-body .button-container {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    max-width: unset;
+  }
+  
+  .cards.cards31 .cards-card-body .button-container > a {
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.51px;
+    font-weight: bold;
+    text-align: center;
+    background: #82bc00;
+    border-radius: 4px;
+    color: #fff;
+    position: relative;
+    white-space: nowrap;
+    touch-action: manipulation;
+    background-image: none;
+    border: none;
+    user-select: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    box-sizing: border-box;
+    margin: 0;
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    text-decoration: none;
+  }
+
+  .cards.cards31 .cards-card-body .button-container a:hover {
+    outline: none;
+    box-shadow: 0 10px 35px 0 rgb(0 0 0 / 20%);
   }
 }

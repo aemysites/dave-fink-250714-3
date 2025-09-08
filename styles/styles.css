@@ -299,6 +299,7 @@ main .section.light, main .section.highlight {
 }
 
 .section.about1 {
+  margin-top: 62.5px;
   margin-bottom:20px;
 }
 
@@ -323,7 +324,78 @@ main .section.light, main .section.highlight {
   font-size: 10px;
   top: -.8em;
 }
- 
+
+.section.about-text-section1 {
+  margin-top: 47.5px;
+  margin-bottom: 20px;
+}
+
+.section.about-text-section1 h2 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #3e3092;
+}
+
+.section.about-text-section1 p {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(51 51 51);
+  margin-top: 22px;
+  margin-bottom: 20px;
+}
+
+.section.about-side-effects-section1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.section.about-side-effects-section1 h1,
+.section.about-side-effects-section1 h2 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #3e3092;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.section.about-side-effects-section1 p {
+  font-size: 16px;
+  line-height: 1.625;
+  color: #333;
+  margin: 0 0 20px;
+  font-weight: normal;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section.about-side-effects-section1 p.purple {
+  color: #8e66c1;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.section.about-side-effects-section1 a {
+  color: #6ca100;
+  text-decoration: underline;
+}
+
+.section.about-side-effects-section1 a:hover {
+  color: #3e3092;
+}
+
+.section.about-side-effects-section1 sup {
+  font-size: 10px;
+  top: -0.8em;
+  vertical-align: super;
+}
+
 .section.dosing-tips {
   margin: 71px 0 60px;
 }
@@ -453,6 +525,8 @@ h2#tips-to-manage-possible-side-effects + p {
   font-weight: 400;
 }
 
+
+
 /* stylelint-disable-next-line no-descending-specificity */
 .section.still-questions > .default-content-wrapper > h1 + p {
   margin: 0;
@@ -466,6 +540,8 @@ h2#tips-to-manage-possible-side-effects + p {
   color: #6ca100;
   text-decoration: underline;
 }
+
+
 
 /* stylelint-disable-next-line no-descending-specificity */
 .section.still-questions > .default-content-wrapper > h1 + p + p {
