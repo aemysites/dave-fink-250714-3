@@ -3,9 +3,9 @@ version: 1
 indices:
   pages:
     include:
-      - '/**'
+      - "/**"
     exclude:
-      - '/**.json'
+      - "/**.json"
     target: /query-index.json
     properties:
       lastModified:
@@ -13,4 +13,10 @@ indices:
         value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
       robots:
         select: head > meta[name="robots"]
+        value: attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      path:
+        select: head > meta[property="og:url"]
         value: attribute(el, "content")
