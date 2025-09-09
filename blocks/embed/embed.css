@@ -5,6 +5,16 @@
   margin: 0 auto;
 }
 
+.embed.embedvideo36 {
+  margin-top: -20px;
+}
+
+.embed.embedvideo36 .embed-placeholder {
+  aspect-ratio: unset;
+  height: calc(16 / 9 * 875px + 20px);
+  max-height: calc(492px + 20px);
+}
+
 .embed > div {
   display: flex;
   justify-content: center;
