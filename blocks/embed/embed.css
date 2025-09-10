@@ -20,6 +20,22 @@ main>.section>div:has(.embed.embedvideo36) {
   min-height: 512px;
 }
 
+.embed.embedvideo36 .embed-placeholder-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 20px), calc(-50% + 20px)) !important;
+  z-index: 10;
+}
+
+.embed.embedvideo36 .embed-placeholder-play button {
+  background-color: transparent !important;
+  border: none !important;
+  transform: scale(11.25) !important;
+}
+
+
+
 .embed > div {
   display: flex;
   justify-content: center;
