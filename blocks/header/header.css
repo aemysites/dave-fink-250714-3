@@ -9,6 +9,7 @@ header .nav-wrapper {
   border-bottom: 1px solid #e1e1e1;
 }
 
+
 header nav {
   box-sizing: border-box;
   display: grid;
@@ -252,6 +253,60 @@ header .menu-item-expanded {
   font-size: 40px;
 }
 
+/* Breadcrumbs styles for mobile */
+header .breadcrumbs {
+  background-color: var(--background-color);
+  width: 100%;
+  position: fixed;
+  top: var(--nav-height);
+  z-index: 9;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 8px 20px;
+  box-sizing: border-box;
+}
+
+header .breadcrumbs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+header .breadcrumbs-item {
+  display: flex;
+  align-items: center;
+}
+
+header .breadcrumbs-item:not(:last-child)::after {
+  content: '>';
+  margin: 0 6px;
+  color: #636363;
+  font-size: 10px;
+}
+
+header .breadcrumbs .breadcrumbs-item a {
+  color: #6ca100;
+  text-decoration: none;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  font-weight: 400;
+  padding: 4px 0;
+}
+
+header .breadcrumbs .breadcrumbs-item a:hover {
+  text-decoration: underline;
+  color: #3e3092;
+}
+
+header .breadcrumbs-item.active {
+  color: #636363;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  font-weight: 400;
+}
+
 }
 
 @media (width >= 1024px) {
@@ -264,6 +319,7 @@ header .menu-item-expanded {
     height: var(--nav-height);
     border-bottom: 1px solid #e1e1e1;
   }
+
 
   header nav {
     box-sizing: border-box;
@@ -551,5 +607,60 @@ header .menu-item-expanded {
 
   header .menu-item-expanded {
     display: none;
+  }
+
+  /* Breadcrumbs styles for desktop */
+  header .breadcrumbs {
+    background-color: var(--background-color);
+    width: 100%;
+    position: fixed;
+    top: var(--nav-height);
+    z-index: 9;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+
+  header .breadcrumbs-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 32px;
+    max-width: 1248px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  header .breadcrumbs-item {
+    display: flex;
+    align-items: center;
+  }
+
+  header .breadcrumbs-item:not(:last-child)::after {
+    content: '>';
+    margin: 0 8px;
+    color: #636363;
+    font-size: 11px;
+  }
+
+  header .breadcrumbs .breadcrumbs-item a {
+    color: #6ca100;
+    text-decoration: none;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+    font-weight: 400;
+    padding: 4px 0;
+  }
+
+  header .breadcrumbs .breadcrumbs-item a:hover {
+    text-decoration: underline;
+    color: #3e3092;
+  }
+
+  header .breadcrumbs-item.active {
+    color: #636363;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+    font-weight: 400;
   }
 }

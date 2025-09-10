@@ -1,6 +1,138 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
+// Cache for query index data
+let queryIndexCache = null;
+
+/**
+ * Fetches the query index data for breadcrumbs
+ * @returns {Promise<Array>} Array of page data with path and title
+ */
+async function fetchQueryIndex() {
+  if (queryIndexCache) {
+    return queryIndexCache;
+  }
+
+  try {
+    const response = await fetch('/query-index.json');
+    if (response.ok) {
+      const data = await response.json();
+      queryIndexCache = data.data || [];
+      return queryIndexCache;
+    }
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.warn('Failed to fetch query index for breadcrumbs:', error);
+  }
+
+  return [];
+}
+
+/**
+ * Generates breadcrumb trail based on current URL and query index
+ * @param {string} currentPath Current page path
+ * @param {Array} queryData Query index data
+ * @returns {Array} Array of breadcrumb items
+ */
+function generateBreadcrumbs(currentPath, queryData) {
+  const breadcrumbs = [];
+
+  // Always start with Home
+  breadcrumbs.push({
+    title: 'Home',
+    path: '/',
+    isActive: currentPath === '/',
+  });
+
+  // If we're not on home page, build the breadcrumb trail
+  if (currentPath !== '/') {
+    const pathSegments = currentPath.split('/').filter((segment) => segment);
+    let currentSegmentPath = '';
+
+    pathSegments.forEach((segment) => {
+      currentSegmentPath += `/${segment}`;
+
+      // Find matching page in query data
+      const pageData = queryData.find((item) => {
+        const itemPath = new URL(item.path).pathname;
+        return itemPath === currentSegmentPath;
+      });
+
+      const isActive = currentSegmentPath === currentPath;
+
+      breadcrumbs.push({
+        title: pageData ? pageData.title.replace(' | IBRANCE (palbociclib) NZ', '') : segment.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+        path: currentSegmentPath,
+        isActive,
+      });
+    });
+  }
+
+  return breadcrumbs;
+}
+
+/**
+ * Creates and renders breadcrumbs navigation
+ * @param {Array} breadcrumbs Array of breadcrumb items
+ * @returns {HTMLElement} Breadcrumbs navigation element
+ */
+function createBreadcrumbsNav(breadcrumbs) {
+  const nav = document.createElement('nav');
+  nav.className = 'breadcrumbs';
+  nav.setAttribute('aria-label', 'Breadcrumb');
+
+  const ol = document.createElement('ol');
+  ol.className = 'breadcrumbs-list';
+
+  breadcrumbs.forEach((crumb) => {
+    const li = document.createElement('li');
+    li.className = 'breadcrumbs-item';
+
+    if (crumb.isActive) {
+      li.classList.add('active');
+      li.setAttribute('aria-current', 'page');
+      li.textContent = crumb.title;
+    } else {
+      const link = document.createElement('a');
+      link.href = crumb.path;
+      link.textContent = crumb.title;
+      li.appendChild(link);
+    }
+
+    ol.appendChild(li);
+  });
+
+  nav.appendChild(ol);
+  return nav;
+}
+
+/**
+ * Adds breadcrumbs to the header if enabled
+ * @param {Element} headerBlock The header block element
+ */
+async function addBreadcrumbs(headerBlock) {
+  // Check if breadcrumbs are enabled via metadata
+  const breadcrumbsEnabled = getMetadata('breadcrumbs');
+  if (breadcrumbsEnabled !== 'true') {
+    return;
+  }
+
+  const currentPath = window.location.pathname;
+  const queryData = await fetchQueryIndex();
+  const breadcrumbs = generateBreadcrumbs(currentPath, queryData);
+
+  // Only show breadcrumbs if we have more than just "Home"
+  if (breadcrumbs.length > 1) {
+    const breadcrumbsNav = createBreadcrumbsNav(breadcrumbs);
+
+    // Insert breadcrumbs after the nav wrapper
+    const navWrapper = headerBlock.querySelector('.nav-wrapper');
+    if (navWrapper) {
+      navWrapper.insertAdjacentElement('afterend', breadcrumbsNav);
+    }
+  }
+}
+
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 1024px)');
 
@@ -336,6 +468,9 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // Add breadcrumbs if enabled
+  await addBreadcrumbs(block);
 
   // add hover event listeners to .nav-drop
   const navDrops = nav.querySelectorAll('.nav-drop');
