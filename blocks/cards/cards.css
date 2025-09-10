@@ -886,6 +886,7 @@
   background-color: white;
 }
 
+
 @media (width <= 768px) {
   .cards.cards22 {
     max-width: 890px;
@@ -990,6 +991,154 @@
     margin: 0;
     padding-bottom: 30px;
   }
+}
+
+.cards.cards12 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding-right: 14px;
+}
+
+.cards.cards12 ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  justify-content: center;
+  gap: 0 14px;
+}
+
+.cards.cards12 ul > li {
+  background: #fff;
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+  border: none;
+  margin-bottom: 60px;
+  padding-right: 14px;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.cards.cards12 .cards-card-image {
+  margin-bottom: 14px;
+}
+
+.cards.cards12 .cards-card-image img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.cards.cards12 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.cards.cards12 .cards-card-body > p {
+  margin: 0;
+  width: auto;
+  word-break: normal;
+}
+
+.cards.cards12 .cards-card-body > p:first-child {
+  color: #6ca100;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  margin-bottom: 0;
+  line-height: 26px;
+  letter-spacing: 0.3px;
+}
+
+.cards.cards12 .cards-card-body > p:nth-child(2) strong {
+  color: #430098;
+  font-size: 20px;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  display: block;
+  margin-bottom: 7px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  padding-right: 20px;
+}
+
+.cards.cards12 .cards-card-body > p:nth-child(3) {
+  color: #373737;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.cards.cards12 .cards-card-body .button-container {
+  margin-top: auto;
+  padding-top: 19px;
+}
+
+.cards.cards12 .cards-card-body .button-container .button {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 16px;
+  background: #82bc00;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.51px;
+  margin: 0;
+  line-height: 26px;
+  display: inline-block;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+}
+
+.cards.cards12 .cards-card-body .button-container .button:hover,
+.cards.cards12 .cards-card-body .button-container .button:focus {
+  box-shadow: 0 8px 8px rgb(0 0 0 / 30%);
+}
+
+@media (width <= 1024px) {
+  .cards.cards12 ul > li {
+    margin-bottom: 40px;
+  }
+}
+
+@media (width <= 767px) {
+  .cards.cards12{
+    padding: 0 15px;
+  }
+
+  .cards.cards12 ul {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cards.cards12 ul > li {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .cards.cards12 .cards-card-body > p:nth-child(2) strong {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .cards.cards12 .cards-card-body .button-container {
+    width: 100%;
+  }
+
+  .cards.cards12 .cards-card-body .button-container .button {
+    width: 100%;
+    padding: 15px 14px;
+    margin-right: 0;
+  }
+
 }
 
 .cards-wrapper:has(.cards.cards31) {
