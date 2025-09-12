@@ -20,6 +20,8 @@
 .hero p {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--background-color);
 }
 

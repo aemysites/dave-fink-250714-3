@@ -1,5 +1,11 @@
 @media (width < 1024px) {
 /* header and nav layout */
+
+header.header-wrapper {
+ height:112px;
+  border-bottom:1px solid #e1e1e1;
+}
+  
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
@@ -8,6 +14,7 @@ header .nav-wrapper {
   height: var(--nav-height);
   border-bottom: 1px solid #e1e1e1;
 }
+
 
 header nav {
   box-sizing: border-box;
@@ -252,6 +259,175 @@ header .menu-item-expanded {
   font-size: 40px;
 }
 
+/* Breadcrumbs styles for mobile */
+header .breadcrumbs {
+  width: 100%;
+  background-color: var(--background-color);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--nav-height);
+  z-index: 9;
+  /* border-top: 1px solid #e1e1e1; */
+  /* border-bottom: 1px solid #e1e1e1; */
+  /* box-sizing: border-box; */
+  margin: 0;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  overflow: hidden;
+  padding: 0;
+  margin-left: 20px;
+}
+
+header .breadcrumbs-list {
+  list-style: none;
+  margin: 0 0 0 -10px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  line-height: 1.2;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+header .breadcrumbs-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* flex: 0 1 auto; */
+}
+
+/* Remove separators - we don't need them */
+header .breadcrumbs-item.home-breadcrumb {
+  /* overflow: hidden; */
+}
+
+header .breadcrumbs .breadcrumbs-item a {
+  color: #6ca100;
+  text-decoration: none;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  font-weight: 400;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  background-color: #f5f2fa;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  margin-right: -1px;
+  position: relative;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  height: 23px;
+  box-sizing: border-box;
+}
+
+header .breadcrumbs .breadcrumbs-item:not(.home-breadcrumb) a {
+  transform: skew(-35deg, 0deg);
+}
+
+header .breadcrumbs .breadcrumbs-item a:hover {
+  background-color: #6ca100;
+  color: white;
+  border-color: #6ca100;
+  z-index: 2;
+}
+
+header .breadcrumbs .breadcrumbs-item a span {
+  transform: skew(35deg, 0deg);
+  display: inline-block;
+}
+
+header .breadcrumbs-item.active:not(.home-breadcrumb):hover {
+  background-color: #6ca100;
+  color: white;
+  border-color: #6ca100;
+  cursor: pointer;
+}
+
+header .breadcrumbs-item.active {
+  color: #636363;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: #ece5f4;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  margin-right: -1px;
+  position: relative;
+  text-transform: uppercase;
+  height: 24px;
+  box-sizing: border-box;
+}
+
+header .breadcrumbs-item.active:not(.home-breadcrumb) {
+  transform: skew(-35deg, 0deg);
+}
+
+header .breadcrumbs-item.active span {
+  transform: skew(35deg, 0deg);
+  display: inline-block;
+}
+
+/* Home breadcrumb specific styles - simple flat button */
+header .breadcrumbs-item.home-breadcrumb a,
+header .breadcrumbs-item.home-breadcrumb.active {
+  border-left: none;
+  border-right: 1px solid #e1e1e1;
+  text-transform: none !important;
+  transform: skew(-35deg, 0deg);
+  position: relative;
+  background-color: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+header .breadcrumbs-item.home-breadcrumb a:hover,
+header .breadcrumbs-item.home-breadcrumb.active:hover {
+  background-color: #f5f5f5;
+  border-left: none;
+  border-right: 1px solid #e1e1e1;
+}
+
+header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
+  content: "\e610";
+  font-family: iconfont, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-right: 5px;
+  font-size: 13px;
+  color: #adadad;
+}
+
+  header .breadcrumbs-item.home-breadcrumb a span,
+  header .breadcrumbs-item.home-breadcrumb.active span {
+    transform: skew(35deg, 0deg);
+    color: #636363;
+  }
+
+  /* Header progress bar styles for mobile */
+  header .header-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #e1e1e1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--nav-height);
+    z-index: 9;
+    display: none;
+  }
+
+  header .header-bar-green {
+    height: 100%;
+    background-color: #6ca100;
+    width: 0%;
+    transition: width 0.1s ease-out;
+  }
+
 }
 
 @media (width >= 1024px) {
@@ -264,6 +440,7 @@ header .menu-item-expanded {
     height: var(--nav-height);
     border-bottom: 1px solid #e1e1e1;
   }
+
 
   header nav {
     box-sizing: border-box;
@@ -551,5 +728,168 @@ header .menu-item-expanded {
 
   header .menu-item-expanded {
     display: none;
+  }
+
+  /* Breadcrumbs styles for desktop */
+  header .breadcrumbs {
+    background-color: var(--background-color);
+    max-width: 876px;
+    position: absolute;
+    left: 0;
+    right:0;
+    top: var(--nav-height);
+    /* border-top: 1px solid #e1e1e1; */
+    /* border-bottom: 1px solid #e1e1e1; */
+    justify-content: start;
+    overflow: hidden;
+    z-index: 9;
+  }
+
+  header .breadcrumbs-list {
+    list-style: none;
+    margin: 0 0 0 -10px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    line-height: 1.2;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  header .breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 0 1 auto;
+  }
+
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb {
+    /* overflow: hidden; */
+  }
+
+  /* Remove separators - we don't need them */
+
+  header .breadcrumbs .breadcrumbs-item a {
+    color: #636363;
+    text-decoration: none;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+    font-weight: 400;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    background-color: #f5f2fa;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    margin-right: -1px;
+    position: relative;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    height: 23px;
+    box-sizing: border-box;
+  }
+
+  header .breadcrumbs .breadcrumbs-item:not(.home-breadcrumb) a {
+    transform: skew(-35deg, 0deg);
+  }
+
+  header .breadcrumbs .breadcrumbs-item a:hover {
+    background-color: #6ca100;
+    color: white;
+    /* border-color: #6ca100; */
+    z-index: 2;
+  }
+
+  header .breadcrumbs .breadcrumbs-item a span {
+    display: inline-block;
+    transform: skew(35deg, 0deg);
+  }
+
+  header .breadcrumbs-item.active:not(.home-breadcrumb):hover {
+    background-color: #6ca100;
+    color: white;
+    border-color: #6ca100;
+    cursor: pointer;
+    height: 23px;
+  }
+
+  header .breadcrumbs-item.active {
+    color: #636363;
+    font-family: "Avenir LT W05_55 Roman", sans-serif;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    margin-right: -1px;
+    position: relative;
+    text-transform: uppercase;
+    height: 24px;
+    box-sizing: border-box;
+  }
+
+  header .breadcrumbs-item.active:not(.home-breadcrumb) {
+    transform: skew(-35deg, 0deg);
+    background-color: #ece5f4;
+  }
+
+  header .breadcrumbs-item.active span {
+    transform: skew(35deg, 0deg);
+    display: inline-block;
+  }
+
+  /* Home breadcrumb specific styles - simple flat button */
+  header .breadcrumbs-item.home-breadcrumb a,
+  header .breadcrumbs-item.home-breadcrumb.active {
+    border-left: none;
+    border-right: 1px solid #e1e1e1;
+    text-transform: none !important;
+    transform: skew(-35deg, 0deg);
+    position: relative;
+    background-color: #fff;
+  }
+
+  header .breadcrumbs-item.home-breadcrumb a:hover,
+  header .breadcrumbs-item.home-breadcrumb.active:hover {
+    background-color: #f5f5f5;
+    border-left: none;
+    border-right: 1px solid #e1e1e1;
+  }
+
+  header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
+    content: "\e610";
+    font-family: iconfont, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-right: 5px;
+    font-size: 13px;
+    color: #adadad;
+  }
+
+  header .breadcrumbs-item.home-breadcrumb a span,
+  header .breadcrumbs-item.home-breadcrumb.active span {
+  transform: skew(35deg, 0deg);
+  color: #636363;
+  } 
+
+  /* Header progress bar styles */
+  header .header-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #e1e1e1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--nav-height);
+    z-index: 9;
+    display: none;
+  }
+
+  header .header-bar-green {
+    height: 100%;
+    background-color: #6ca100;
+    width: 0%;
+    transition: width 0.1s ease-out;
   }
 }
