@@ -91,11 +91,36 @@ function createBreadcrumbsNav(breadcrumbs) {
     if (crumb.isActive) {
       li.classList.add('active');
       li.setAttribute('aria-current', 'page');
-      li.textContent = crumb.title;
+
+      // Add content for breadcrumb
+      if (crumb.title === 'Home') {
+        li.classList.add('home-breadcrumb');
+        const contentSpan = document.createElement('span');
+        contentSpan.className = 'breadcrumb-content';
+        contentSpan.textContent = 'Home';
+        li.appendChild(contentSpan);
+      } else {
+        const textSpan = document.createElement('span');
+        textSpan.textContent = crumb.title;
+        li.appendChild(textSpan);
+      }
     } else {
       const link = document.createElement('a');
       link.href = crumb.path;
-      link.textContent = crumb.title;
+
+      // Add content for breadcrumb
+      if (crumb.title === 'Home') {
+        li.classList.add('home-breadcrumb');
+        const contentSpan = document.createElement('span');
+        contentSpan.className = 'breadcrumb-content';
+        contentSpan.textContent = 'Home';
+        link.appendChild(contentSpan);
+      } else {
+        const textSpan = document.createElement('span');
+        textSpan.textContent = crumb.title;
+        link.appendChild(textSpan);
+      }
+
       li.appendChild(link);
     }
 
@@ -107,6 +132,102 @@ function createBreadcrumbsNav(breadcrumbs) {
 }
 
 /**
+ * Creates and adds the header progress bar
+ * @param {Element} headerBlock The header block element
+ */
+function createHeaderBar(headerBlock) {
+  const headerBar = document.createElement('div');
+  headerBar.className = 'header-bar';
+
+  const progressBar = document.createElement('div');
+  progressBar.className = 'header-bar-green';
+
+  headerBar.appendChild(progressBar);
+
+  // Insert header bar after the nav wrapper
+  const navWrapper = headerBlock.querySelector('.nav-wrapper');
+  if (navWrapper) {
+    navWrapper.insertAdjacentElement('afterend', headerBar);
+  }
+
+  return { headerBar, progressBar };
+}
+
+/**
+ * Updates the progress bar based on scroll position
+ * @param {Element} progressBar The progress bar element
+ * @param {number} bannerThreshold The scroll position where banner reaches nav-wrapper
+ */
+function updateProgressBar(progressBar, bannerThreshold) {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  
+  // Calculate progress starting from when banner reaches nav-wrapper
+  const adjustedScrollTop = Math.max(0, scrollTop - bannerThreshold);
+  const adjustedDocHeight = docHeight - bannerThreshold;
+  const scrollPercent = adjustedDocHeight > 0 ? (adjustedScrollTop / adjustedDocHeight) * 100 : 0;
+
+  progressBar.style.width = `${Math.min(Math.max(scrollPercent, 0), 100)}%`;
+}
+
+/**
+ * Calculates the scroll position where the banner reaches the nav-wrapper
+ * @returns {number} The threshold scroll position
+ */
+function calculateBannerThreshold() {
+  // Find the main content area (usually after header)
+  const header = document.querySelector('header.header-wrapper');
+  if (!header) return 0;
+
+  // Get the first main content element after header
+  let mainContent = header.nextElementSibling;
+  while (mainContent && (mainContent.tagName === 'NAV' || mainContent.classList.contains('breadcrumbs') || mainContent.classList.contains('header-bar'))) {
+    mainContent = mainContent.nextElementSibling;
+  }
+
+  if (!mainContent) {
+    // Fallback: use viewport height minus nav height
+    const navHeight = getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '70px';
+    return window.innerHeight - parseInt(navHeight, 10);
+  }
+
+  // Calculate when the main content reaches the nav-wrapper
+  const mainContentRect = mainContent.getBoundingClientRect();
+  const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const mainContentTop = mainContentRect.top + currentScrollTop;
+  
+  // The threshold is when main content top reaches the nav height
+  const navHeight = getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '70px';
+  return Math.max(0, mainContentTop - parseInt(navHeight, 10));
+}
+
+/**
+ * Handles scroll behavior for breadcrumbs and progress bar
+ * @param {Element} breadcrumbs The breadcrumbs element (can be null)
+ * @param {Element} headerBar The header bar element
+ * @param {Element} progressBar The progress bar element
+ */
+function handleScroll(breadcrumbs, headerBar, progressBar) {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const bannerThreshold = calculateBannerThreshold();
+
+  if (scrollTop >= bannerThreshold) {
+    // Hide breadcrumbs and show progress bar when banner reaches nav-wrapper
+    if (breadcrumbs) {
+      breadcrumbs.style.display = 'none';
+    }
+    headerBar.style.display = 'block';
+    updateProgressBar(progressBar, bannerThreshold);
+  } else {
+    // Show breadcrumbs and hide progress bar when above threshold
+    if (breadcrumbs) {
+      breadcrumbs.style.display = 'flex';
+    }
+    headerBar.style.display = 'none';
+  }
+}
+
+/**
  * Adds breadcrumbs to the header if enabled
  * @param {Element} headerBlock The header block element
  */
@@ -114,7 +235,7 @@ async function addBreadcrumbs(headerBlock) {
   // Check if breadcrumbs are enabled via metadata
   const breadcrumbsEnabled = getMetadata('breadcrumbs');
   if (breadcrumbsEnabled !== 'true') {
-    return;
+    return null;
   }
 
   const currentPath = window.location.pathname;
@@ -130,7 +251,11 @@ async function addBreadcrumbs(headerBlock) {
     if (navWrapper) {
       navWrapper.insertAdjacentElement('afterend', breadcrumbsNav);
     }
+
+    return breadcrumbsNav;
   }
+
+  return null;
 }
 
 // media query match that indicates mobile/tablet width
@@ -470,7 +595,37 @@ export default async function decorate(block) {
   block.append(navWrapper);
 
   // Add breadcrumbs if enabled
-  await addBreadcrumbs(block);
+  const breadcrumbsNav = await addBreadcrumbs(block);
+
+  // Create header progress bar
+  const { headerBar, progressBar } = createHeaderBar(block);
+
+  // Set up scroll event listener for breadcrumbs/progress bar toggle
+  let ticking = false;
+  let cachedThreshold = null;
+  
+  const scrollHandler = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        handleScroll(breadcrumbsNav, headerBar, progressBar);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  // Recalculate threshold on resize
+  const resizeHandler = () => {
+    cachedThreshold = null; // Clear cache to force recalculation
+  };
+
+  window.addEventListener('scroll', scrollHandler);
+  window.addEventListener('resize', resizeHandler);
+
+  // Initial call to set correct state (with a small delay to ensure layout is complete)
+  setTimeout(() => {
+    handleScroll(breadcrumbsNav, headerBar, progressBar);
+  }, 100);
 
   // add hover event listeners to .nav-drop
   const navDrops = nav.querySelectorAll('.nav-drop');
