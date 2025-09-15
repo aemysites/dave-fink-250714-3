@@ -166,7 +166,7 @@ function createHeaderBar(headerBlock) {
 function updateProgressBar(progressBar, bannerThreshold) {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  
+
   // Calculate progress starting from when banner reaches nav-wrapper
   const adjustedScrollTop = Math.max(0, scrollTop - bannerThreshold);
   const adjustedDocHeight = docHeight - bannerThreshold;
@@ -200,7 +200,7 @@ function calculateBannerThreshold() {
   const mainContentRect = mainContent.getBoundingClientRect();
   const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
   const mainContentTop = mainContentRect.top + currentScrollTop;
-  
+
   // The threshold is when main content top reaches the nav height
   const navHeight = getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '70px';
   return Math.max(0, mainContentTop - parseInt(navHeight, 10));
@@ -214,25 +214,11 @@ function calculateBreadcrumbsThreshold() {
   // Get the nav height
   const navHeight = getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '70px';
   const navHeightPx = parseInt(navHeight, 10);
-  
+
   // Breadcrumbs are positioned at top: var(--nav-height), so they start getting cut off
   // as soon as any scrolling begins that would push them above the viewport
   // We want to hide them when they start getting cut off, which is very early in the scroll
   return navHeightPx * 0.1; // Hide when scrolled just 10% of nav height
-}
-
-/**
- * Calculates when to trigger upward auto-scroll to show breadcrumbs fully
- * @returns {number} The scroll position where upward auto-scroll should trigger
- */
-function calculateUpwardScrollThreshold() {
-  // Get the nav height and breadcrumb height
-  const navHeight = getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '70px';
-  const navHeightPx = parseInt(navHeight, 10);
-  
-  // Trigger auto-scroll earlier when going up to ensure breadcrumbs are fully visible
-  // Use a larger threshold (30% of nav height) to give more "push effect"
-  return navHeightPx * 0.3;
 }
 
 /**
@@ -250,12 +236,12 @@ function handleScroll(breadcrumbs, headerBar, progressBar) {
     // Hide breadcrumbs and automatically scroll to show progress bar
     if (breadcrumbs && breadcrumbs.style.display !== 'none') {
       breadcrumbs.style.display = 'none';
-      
+
       // Automatically scroll to the banner threshold to show progress bar immediately
       // Use smooth scrolling for better UX
       window.scrollTo({
         top: bannerThreshold,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
       return; // Exit early to prevent conflicting scroll handling
     }
@@ -270,7 +256,7 @@ function handleScroll(breadcrumbs, headerBar, progressBar) {
     // Show progress bar when banner reaches nav-wrapper
     headerBar.style.display = 'block';
     updateProgressBar(progressBar, bannerThreshold);
-    
+
     // Ensure breadcrumbs are hidden when progress bar is shown
     if (breadcrumbs) {
       breadcrumbs.style.display = 'none';
@@ -280,17 +266,16 @@ function handleScroll(breadcrumbs, headerBar, progressBar) {
     // Immediately push to top to show breadcrumbs fully
     if (headerBar.style.display === 'block') {
       headerBar.style.display = 'none';
-      
+
       // Push all the way to top immediately when entering breadcrumbs zone
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
       return; // Exit early to prevent conflicting scroll handling
-    } else {
-      // Hide progress bar when above threshold
-      headerBar.style.display = 'none';
     }
+    // Hide progress bar when above threshold
+    headerBar.style.display = 'none';
   }
 }
 
@@ -669,8 +654,6 @@ export default async function decorate(block) {
 
   // Set up scroll event listener for breadcrumbs/progress bar toggle
   let ticking = false;
-  let cachedThreshold = null;
-  
   const scrollHandler = () => {
     if (!ticking) {
       requestAnimationFrame(() => {
@@ -683,7 +666,7 @@ export default async function decorate(block) {
 
   // Recalculate threshold on resize
   const resizeHandler = () => {
-    cachedThreshold = null; // Clear cache to force recalculation
+    // Force recalculation on resize
   };
 
   window.addEventListener('scroll', scrollHandler);
