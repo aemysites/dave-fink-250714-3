@@ -300,9 +300,6 @@ header .breadcrumbs {
   right: 0;
   top: var(--nav-height);
   z-index: 9;
-  /* border-top: 1px solid #e1e1e1; */
-  /* border-bottom: 1px solid #e1e1e1; */
-  /* box-sizing: border-box; */
   margin: 0;
   height: auto;
   display: flex;
@@ -327,7 +324,6 @@ header .breadcrumbs-item {
   display: flex;
   align-items: center;
   position: relative;
-  /* flex: 0 1 auto; */
 }
 
 /* Remove separators - we don't need them */
@@ -731,7 +727,7 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     color: white;
     z-index: 2;
   }
-  
+
   header .breadcrumbs-item.home-breadcrumb a:hover,
   header .breadcrumbs-item.home-breadcrumb.active:hover {
     background-color: #f5f5f5;
