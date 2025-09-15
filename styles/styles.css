@@ -335,20 +335,20 @@ main .section.light, main .section.highlight {
   font-weight: 400;
   line-height: 40px;
   font-family: "Avenir LT W05_55 Roman", sans-serif;
-  margin: -36px 0 0px;
+  margin: -36px 0 0;
   position: relative;
   z-index: 20;
   padding: 10px 0;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-/* Override section container overflow to prevent helpful-resources clipping */
-main>.section>div:has(#helpful-resources) {
-  overflow: visible;
+  background-color: rgb(255 255 255 / 90%);
 }
 
 /* Override section container overflow to prevent cards44 clipping */
 main>.section>div:has(.cards.cards44) {
+  overflow: visible;
+}
+
+/* Override section container overflow to prevent helpful-resources clipping */
+main>.section>div:has(#helpful-resources) {
   overflow: visible;
 }
 
