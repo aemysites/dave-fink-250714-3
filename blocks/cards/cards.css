@@ -1150,7 +1150,6 @@
   background: transparent;
 }
 
-/* 2-column grid, tighter gaps, block centered */
 .cards.cards31 > ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1161,7 +1160,6 @@
   box-sizing: border-box;
 }
 
-/* Card: fixed/equal height, overflow hidden so nothing escapes */
 .cards.cards31 > ul > li {
   background: #fff;
   border: 1px solid #636363;
@@ -1180,7 +1178,6 @@
   transition: box-shadow 0.2s;
 }
 
-/* Image area: taller, overflow visible only for tab (not card), tab in stacking context */
 .cards.cards31 .cards-card-image {
   position: relative;
   width: 100%;
@@ -1227,11 +1224,8 @@
   background: rgb(166 133 214 / 40%);
   z-index: 1;
   pointer-events: none;
-
-  /* no content property */
 }
 
-/* Icon tab: position at edge, overlap image/body only, not grid gap */
 .cards.cards31 .cards-card-image picture:last-of-type {
   position: absolute;
   left: 50%;
@@ -1253,7 +1247,6 @@
   padding-top: 10px;
 }
 
-/* Card body: vertical flex, gap for even spacing, button always at bottom */
 .cards.cards31 .cards-card-body {
   flex: 1 1 auto;
   padding: 53px 30px 30px;
@@ -1295,7 +1288,6 @@
   margin-bottom: 20px;
 }
 
-/* Button: block, centered, anchor to bottom, no extra margin above */
 .cards.cards31 .cards-card-body a {
   display: block;
   width: 100%;
@@ -1362,7 +1354,6 @@
   text-decoration: none;
 }
 
-/* Responsive: 1 column, full width cards on small screens */
 @media (width <= 1024px) {
   .cards.cards31 .cards-card-body .button-container > a {
     padding: 0 20px;
@@ -1378,8 +1369,7 @@
     max-width: 906px;
     background: transparent;
   }
-  
-  /* 2-column grid, tighter gaps, block centered */
+
   .cards.cards31 > ul {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -1389,8 +1379,7 @@
     padding: 0 6px 60px 5px;
     box-sizing: border-box;
   }
-  
-  /* Card: fixed/equal height, overflow hidden so nothing escapes */
+
   .cards.cards31 > ul > li {
     background: #fff;
     border: 1px solid #636363;
@@ -1408,8 +1397,7 @@
     padding: 0;
     transition: box-shadow 0.2s;
   }
-  
-  /* Image area: taller, overflow visible only for tab (not card), tab in stacking context */
+
   .cards.cards31 .cards-card-image {
     position: relative;
     width: 100%;
@@ -1456,11 +1444,8 @@
     background: rgb(166 133 214 / 40%);
     z-index: 1;
     pointer-events: none;
-  
-    /* no content property */
   }
-  
-  /* Icon tab: position at edge, overlap image/body only, not grid gap */
+
   .cards.cards31 .cards-card-image picture:last-of-type {
     position: absolute;
     left: 50%;
@@ -1481,8 +1466,7 @@
     object-fit: contain;
     padding-top: 10px;
   }
-  
-  /* Card body: vertical flex, gap for even spacing, button always at bottom */
+
   .cards.cards31 .cards-card-body {
     flex: 1 1 auto;
     padding: 53px 20px 20px;
@@ -1520,8 +1504,7 @@
     text-align: center;
     display: block;
   }
-  
-  /* Button: block, centered, anchor to bottom, no extra margin above */
+
   .cards.cards31 .cards-card-body a {
     display: block;
     width: 100%;
@@ -1585,5 +1568,159 @@
   .cards.cards31 .cards-card-body .button-container a:hover {
     outline: none;
     box-shadow: 0 10px 35px 0 rgb(0 0 0 / 20%);
+  }
+}
+
+
+.cards.cards17 {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto 24px;
+  padding: 0;
+  background: transparent;
+}
+
+/* Reduce gap for even tighter grid, let columns expand */
+.cards.cards17 > ul {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 6px 12px;
+  width: 100%;
+  place-items: stretch stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cards: maximize width, ensure consistent height, even more compact */
+.cards.cards17 > ul > li {
+  background: #f7f7fa;
+  border-radius: 20px;
+  padding: 22px 22px 18px 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 198px;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 4px rgb(66 47 99 / 3%);
+  max-width: 100%;
+  flex: 1 1 0;
+}
+
+/* Image container: tight to content */
+.cards.cards17 .cards-card-image {
+  flex: 0 0 86px;
+  width: 86px;
+  margin-right: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.cards.cards17 .cards-card-image img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Card body: fill space, heading grouped tight to image */
+.cards.cards17 .cards-card-body {
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4px;
+  min-width: 0;
+  padding: 0 0 0 2px;
+}
+
+/* Heading: tight to image, slightly smaller for compact look */
+.cards.cards17 .cards-card-body h3 {
+  color: #7a39ce;
+  font-size: 1.12rem;
+  font-weight: 600;
+  margin: 0 0 1px;
+  line-height: 1.2;
+  word-break: normal;
+}
+
+/* Paragraphs: tighter spacing, optimal line length */
+.cards.cards17 .cards-card-body p {
+  color: #444;
+  font-size: 1rem;
+  margin: 0 0 6px;
+  line-height: 1.38;
+  font-weight: 400;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 99%;
+}
+
+/* Download button container: visually centered, minimal gap */
+.cards.cards17 .button-container {
+  margin-top: auto;
+  width: 100%;
+  padding-top: 2px;
+  display: flex;
+}
+
+/* Button: fill width, standard padding and radius */
+.cards.cards17 .button-container .button {
+  display: block;
+  width: 100%;
+  background: #95c11f;
+  color: #fff;
+  font-size: 1.07rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  padding: 13px 0;
+  text-align: center;
+  margin: 0;
+  transition: background 0.2s;
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.cards.cards17 .button-container .button:hover,
+.cards.cards17 .button-container .button:focus {
+  background: #7a39ce;
+  color: #fff;
+}
+
+/* Make sure cards fill grid column width */
+
+/* Responsive: stack cards vertically at smaller breakpoints */
+@media (width <= 900px) {
+  .cards.cards17 {
+    max-width: 100%;
+    padding: 0 2px;
+  }
+
+  .cards.cards17 > ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 8px;
+  }
+
+  .cards.cards17 > ul > li {
+    min-height: 136px;
+    padding: 10px;
+    flex-direction: row;
+  }
+
+  .cards.cards17 .cards-card-image {
+    margin-right: 3px;
   }
 }
