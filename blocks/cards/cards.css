@@ -994,7 +994,7 @@
 }
 
 .cards.cards12 {
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
   border: 0;
   font-size: 100%;
@@ -1007,7 +1007,7 @@
   grid-template-columns: repeat(3, 1fr);
   list-style: none;
   justify-content: center;
-  gap: 0 14px;
+  gap: 1px 14px;
 }
 
 .cards.cards12 ul > li {

@@ -734,6 +734,7 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
   header .breadcrumbs {
     background-color: var(--background-color);
     max-width: 876px;
+    height: 24px;
     position: absolute;
     left: 0;
     right:0;
@@ -747,7 +748,7 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
 
   header .breadcrumbs-list {
     list-style: none;
-    margin: 0 0 0 -10px;
+    margin: 0 0 0 -9px;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -775,17 +776,13 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     text-decoration: none;
     font-family: "Avenir LT W05_55 Roman", sans-serif;
     font-weight: 400;
-    padding: 5px 15px;
+    padding: 0;
     display: flex;
     align-items: center;
     background-color: #f5f2fa;
-    border-left: 1px solid #e1e1e1;
-    border-right: 1px solid #e1e1e1;
-    margin-right: -1px;
     position: relative;
     transition: all 0.2s ease;
     text-transform: uppercase;
-    height: 23px;
     box-sizing: border-box;
   }
 
@@ -796,12 +793,12 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
   header .breadcrumbs .breadcrumbs-item a:hover {
     background-color: #6ca100;
     color: white;
-    /* border-color: #6ca100; */
     z-index: 2;
   }
 
   header .breadcrumbs .breadcrumbs-item a span {
     display: inline-block;
+    padding: 4px 14px;
     transform: skew(35deg, 0deg);
   }
 
@@ -810,7 +807,6 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     color: white;
     border-color: #6ca100;
     cursor: pointer;
-    height: 23px;
   }
 
   header .breadcrumbs-item.active {
@@ -819,13 +815,8 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     font-weight: 400;
     display: flex;
     align-items: center;
-    padding: 5px 15px;
-    border-left: 1px solid #e1e1e1;
-    border-right: 1px solid #e1e1e1;
-    margin-right: -1px;
-    position: relative;
+    padding: 0;
     text-transform: uppercase;
-    height: 24px;
     box-sizing: border-box;
   }
 
@@ -837,6 +828,7 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
   header .breadcrumbs-item.active span {
     transform: skew(35deg, 0deg);
     display: inline-block;
+    padding: 4px 18px;
   }
 
   /* Home breadcrumb specific styles - simple flat button */
@@ -862,7 +854,7 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     font-family: iconfont, sans-serif;
     font-style: normal;
     font-weight: normal;
-    margin-right: 5px;
+    margin-right: 4px;
     font-size: 13px;
     color: #adadad;
   }

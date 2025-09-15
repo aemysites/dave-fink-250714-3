@@ -77,6 +77,9 @@ function generateBreadcrumbs(currentPath, queryData) {
  * @returns {HTMLElement} Breadcrumbs navigation element
  */
 function createBreadcrumbsNav(breadcrumbs) {
+  // Create the wrapper div first
+  const div = document.createElement('div');
+
   const nav = document.createElement('nav');
   nav.className = 'breadcrumbs';
   nav.setAttribute('aria-label', 'Breadcrumb');
@@ -127,8 +130,10 @@ function createBreadcrumbsNav(breadcrumbs) {
     ol.appendChild(li);
   });
 
+  // Append ol to nav, then nav to div
   nav.appendChild(ol);
-  return nav;
+  div.appendChild(nav);
+  return div;
 }
 
 /**
@@ -202,6 +207,35 @@ function calculateBannerThreshold() {
 }
 
 /**
+ * Calculates when breadcrumbs start getting cut off
+ * @returns {number} The scroll position where breadcrumbs should be hidden
+ */
+function calculateBreadcrumbsThreshold() {
+  // Get the nav height
+  const navHeight = getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '70px';
+  const navHeightPx = parseInt(navHeight, 10);
+  
+  // Breadcrumbs are positioned at top: var(--nav-height), so they start getting cut off
+  // as soon as any scrolling begins that would push them above the viewport
+  // We want to hide them when they start getting cut off, which is very early in the scroll
+  return navHeightPx * 0.1; // Hide when scrolled just 10% of nav height
+}
+
+/**
+ * Calculates when to trigger upward auto-scroll to show breadcrumbs fully
+ * @returns {number} The scroll position where upward auto-scroll should trigger
+ */
+function calculateUpwardScrollThreshold() {
+  // Get the nav height and breadcrumb height
+  const navHeight = getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '70px';
+  const navHeightPx = parseInt(navHeight, 10);
+  
+  // Trigger auto-scroll earlier when going up to ensure breadcrumbs are fully visible
+  // Use a larger threshold (30% of nav height) to give more "push effect"
+  return navHeightPx * 0.3;
+}
+
+/**
  * Handles scroll behavior for breadcrumbs and progress bar
  * @param {Element} breadcrumbs The breadcrumbs element (can be null)
  * @param {Element} headerBar The header bar element
@@ -209,21 +243,54 @@ function calculateBannerThreshold() {
  */
 function handleScroll(breadcrumbs, headerBar, progressBar) {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const breadcrumbsThreshold = calculateBreadcrumbsThreshold();
   const bannerThreshold = calculateBannerThreshold();
 
-  if (scrollTop >= bannerThreshold) {
-    // Hide breadcrumbs and show progress bar when banner reaches nav-wrapper
-    if (breadcrumbs) {
+  if (scrollTop >= breadcrumbsThreshold && scrollTop < bannerThreshold) {
+    // Hide breadcrumbs and automatically scroll to show progress bar
+    if (breadcrumbs && breadcrumbs.style.display !== 'none') {
       breadcrumbs.style.display = 'none';
+      
+      // Automatically scroll to the banner threshold to show progress bar immediately
+      // Use smooth scrolling for better UX
+      window.scrollTo({
+        top: bannerThreshold,
+        behavior: 'smooth'
+      });
+      return; // Exit early to prevent conflicting scroll handling
     }
-    headerBar.style.display = 'block';
-    updateProgressBar(progressBar, bannerThreshold);
-  } else {
-    // Show breadcrumbs and hide progress bar when above threshold
+  } else if (scrollTop < breadcrumbsThreshold) {
+    // Show breadcrumbs when at the top
     if (breadcrumbs) {
       breadcrumbs.style.display = 'flex';
     }
-    headerBar.style.display = 'none';
+  }
+
+  if (scrollTop >= bannerThreshold) {
+    // Show progress bar when banner reaches nav-wrapper
+    headerBar.style.display = 'block';
+    updateProgressBar(progressBar, bannerThreshold);
+    
+    // Ensure breadcrumbs are hidden when progress bar is shown
+    if (breadcrumbs) {
+      breadcrumbs.style.display = 'none';
+    }
+  } else if (scrollTop < bannerThreshold) {
+    // When scrolling up and leaving the progress bar area
+    // Immediately push to top to show breadcrumbs fully
+    if (headerBar.style.display === 'block') {
+      headerBar.style.display = 'none';
+      
+      // Push all the way to top immediately when entering breadcrumbs zone
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      return; // Exit early to prevent conflicting scroll handling
+    } else {
+      // Hide progress bar when above threshold
+      headerBar.style.display = 'none';
+    }
   }
 }
 
