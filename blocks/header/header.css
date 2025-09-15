@@ -72,7 +72,7 @@ header nav .nav-sections ul > li > ul > li > a {
 }
 
 header .breadcrumbs .breadcrumbs-item a {
-  color: #6ca100;
+  /* color: #6ca100; */
   text-decoration: none;
   font-family: "Avenir LT W05_55 Roman", sans-serif;
   font-weight: 400;
@@ -300,11 +300,8 @@ header .breadcrumbs {
   right: 0;
   top: var(--nav-height);
   z-index: 9;
-
   /* border-top: 1px solid #e1e1e1; */
-
   /* border-bottom: 1px solid #e1e1e1; */
-
   /* box-sizing: border-box; */
   margin: 0;
   height: auto;
@@ -330,7 +327,6 @@ header .breadcrumbs-item {
   display: flex;
   align-items: center;
   position: relative;
-
   /* flex: 0 1 auto; */
 }
 
