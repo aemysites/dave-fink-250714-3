@@ -60,3 +60,32 @@
   top: 4px;
   left: 7px;
 }
+
+.embed.embedvideo36 {
+  margin-top: -40px;
+}
+
+/* Override section container overflow to prevent video clipping */
+main>.section>div:has(.embed.embedvideo36) {
+  overflow: visible;
+}
+
+.embed.embedvideo36 .embed-placeholder {
+  aspect-ratio: unset;
+  height: 512px;
+  min-height: 512px;
+}
+
+.embed.embedvideo36 .embed-placeholder-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 20px), calc(-50% + 20px)) !important;
+  z-index: 10;
+}
+
+.embed.embedvideo36 .embed-placeholder-play button {
+  background-color: transparent !important;
+  border: none !important;
+  transform: scale(11.25) !important;
+}

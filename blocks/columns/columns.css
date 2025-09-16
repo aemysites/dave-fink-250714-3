@@ -121,19 +121,27 @@
 .columns.columns1 > div > div:first-child p {
   color: #222;
   font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
+  line-height: 1.625;
+  font-weight: normal;
+  margin: 0 0 20px;
   padding: 0;
   text-align: left;
 }
 
-.columns.columns1 > div > div:first-child p:nth-child(2) {
+.columns.columns1 p {
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
   margin-bottom: 20px;
 }
 
 .columns.columns1 > div > div:first-child strong {
   color: #8a69cc;
   font-weight: 700;
+}
+
+.columns.columns1 > div > div:first-child p:has(strong) {
+  margin-bottom: 0;
 }
 
 .columns.columns1 > div > div:last-child {
@@ -176,6 +184,7 @@
   line-height: 1.4;
   width: 100%;
   text-align: left;
+  letter-spacing: -0.2px;
 }
 
 .columns.columns1 > div > div:last-child ul li a {
@@ -347,15 +356,28 @@
   line-height: 1;
 }
 
+.columns.columns23-variant1 {
+  position: relative;
+  z-index: 20;
+}
+
+/* Override the section container overflow to prevent text clipping */
+main>.section>div:has(.columns.columns23-variant1),
+main>.section>div:has(.columns.columns23-variant2) {
+  overflow: visible;
+}
+
 .columns.columns23-variant1 > div > div:first-child p {
   color: rgb(225 225 225);
-  margin-left: 15px;
-  margin-top: -5px;
+  margin-left: 17px;
+  position: relative;
+  top: -10px;
 }
 
 .columns.columns23-variant1 > div > div:last-child p {
-  margin-top: -20px;
-  margin-left: -5px;
+  margin-left: -6px;
+  position: relative;
+  top: -23px;
 }
 
 .columns.columns23-variant1 > div > div > p > strong{
@@ -368,12 +390,16 @@
 
 .columns.columns23-variant2 > div > div:first-child p {
   color: rgb(225 225 225);
-  margin-left: 15px;
+  margin-left: 16px;
   margin-top: 15px;
+  position: relative;
+  top: -25px;
 }
 
 .columns.columns23-variant2 > div > div:last-child p {
-  margin-left: -5px;
+  margin-left: -7px;
+  position: relative;
+  top: -25px;
 }
 
 .columns.columns23-variant2 > div > div > p > strong{

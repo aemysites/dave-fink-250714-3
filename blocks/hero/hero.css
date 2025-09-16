@@ -961,6 +961,7 @@
   box-sizing: border-box;
   overflow: hidden;
   gap: 0;               /* We'll manage spacing with column paddings for finer control */
+  transform: translateY(-13px);
 }
 
 /* Text Column - ensure it's on the left, aligns vertically center */
@@ -1010,8 +1011,8 @@
   object-position: right bottom; /* keep visual content anchored bottom-right */
   display: block;
   align-self: flex-start;  /* allow positioning from top */
-  margin-top: 20px; /* nudge image down 20px total */
-  margin-left: -30px; /* nudge image left 30px */
+  margin-top: 24px; /* nudge image down 24px total */
+  margin-left: -32px; /* nudge image left 32px */
 }
 
 /* Typography */
@@ -1022,6 +1023,7 @@
   font-family: "Avenir LT W05_55 Roman", sans-serif;
   font-size: 30px;
   margin: 0 0 0.4rem;
+  transform: translateX(3px);
 }
 
 .hero.hero33 h2 + p {
@@ -1030,6 +1032,8 @@
   font-family: "Avenir LT W05_55 Roman", "Avenir LT W05_55 Roman Fallback", sans-serif;
   text-decoration: none;
   margin: 0 0 1rem;
+  transform: translateY(6px) translateX(3px);
+  letter-spacing: -0.4px;
 }
 
 .hero.hero33 h2 + p + p {
@@ -1038,6 +1042,7 @@
   line-height: 1.625;
   font-weight: normal;
   margin: 0;
+  transform: translateY(1px) translateX(2px);
 }
 
 
@@ -1050,7 +1055,7 @@ a {
 .hero.hero33 sup {
   font-size: 0.7em;
   position: relative;
-  top: -.3em;
+  top: calc(-.3em + 2px);
 }
 
 /* Responsive: Stack vertically on small screens */
