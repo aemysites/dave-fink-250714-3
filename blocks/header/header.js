@@ -81,7 +81,7 @@ function createBreadcrumbsNav(breadcrumbs) {
   const div = document.createElement('div');
 
   const nav = document.createElement('nav');
-  nav.className = 'breadcrumbs';
+  nav.className = 'breadcrumbs breadcrumbs-visible';
   nav.setAttribute('aria-label', 'Breadcrumb');
 
   const ol = document.createElement('ol');
@@ -142,7 +142,7 @@ function createBreadcrumbsNav(breadcrumbs) {
  */
 function createHeaderBar(headerBlock) {
   const headerBar = document.createElement('div');
-  headerBar.className = 'header-bar';
+  headerBar.className = 'header-bar header-bar-hidden';
 
   const progressBar = document.createElement('div');
   progressBar.className = 'header-bar-green';
@@ -234,8 +234,9 @@ function handleScroll(breadcrumbs, headerBar, progressBar) {
 
   if (scrollTop >= breadcrumbsThreshold && scrollTop < bannerThreshold) {
     // Hide breadcrumbs and automatically scroll to show progress bar
-    if (breadcrumbs && breadcrumbs.style.display !== 'none') {
-      breadcrumbs.style.display = 'none';
+    if (breadcrumbs && !breadcrumbs.classList.contains('breadcrumbs-hidden')) {
+      breadcrumbs.classList.remove('breadcrumbs-visible');
+      breadcrumbs.classList.add('breadcrumbs-hidden');
 
       // Automatically scroll to the banner threshold to show progress bar immediately
       // Use smooth scrolling for better UX
@@ -248,24 +249,28 @@ function handleScroll(breadcrumbs, headerBar, progressBar) {
   } else if (scrollTop < breadcrumbsThreshold) {
     // Show breadcrumbs when at the top
     if (breadcrumbs) {
-      breadcrumbs.style.display = 'flex';
+      breadcrumbs.classList.remove('breadcrumbs-hidden');
+      breadcrumbs.classList.add('breadcrumbs-visible');
     }
   }
 
   if (scrollTop >= bannerThreshold) {
     // Show progress bar when banner reaches nav-wrapper
-    headerBar.style.display = 'block';
+    headerBar.classList.remove('header-bar-hidden');
+    headerBar.classList.add('header-bar-visible');
     updateProgressBar(progressBar, bannerThreshold);
 
     // Ensure breadcrumbs are hidden when progress bar is shown
     if (breadcrumbs) {
-      breadcrumbs.style.display = 'none';
+      breadcrumbs.classList.remove('breadcrumbs-visible');
+      breadcrumbs.classList.add('breadcrumbs-hidden');
     }
   } else if (scrollTop < bannerThreshold) {
     // When scrolling up and leaving the progress bar area
     // Immediately push to top to show breadcrumbs fully
-    if (headerBar.style.display === 'block') {
-      headerBar.style.display = 'none';
+    if (headerBar.classList.contains('header-bar-visible')) {
+      headerBar.classList.remove('header-bar-visible');
+      headerBar.classList.add('header-bar-hidden');
 
       // Push all the way to top immediately when entering breadcrumbs zone
       window.scrollTo({
@@ -275,7 +280,8 @@ function handleScroll(breadcrumbs, headerBar, progressBar) {
       return; // Exit early to prevent conflicting scroll handling
     }
     // Hide progress bar when above threshold
-    headerBar.style.display = 'none';
+    headerBar.classList.remove('header-bar-visible');
+    headerBar.classList.add('header-bar-hidden');
   }
 }
 
