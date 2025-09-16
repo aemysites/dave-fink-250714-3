@@ -95,8 +95,16 @@ body.appear {
   display: block;
 }
 
+header.header-wrapper {
+ height:122px;
+ border-bottom: 1px solid #e1e1e1;
+}
+
 header .header, footer .footer {
   visibility: hidden;
+  height: auto;
+  width: 100%;
+  position: relative;
 }
 
 header .header[data-block-status="loaded"], footer .footer[data-block-status="loaded"] {
@@ -154,7 +162,7 @@ pre {
 }
 
 main {
-  padding-top: 110px;
+  /* padding-top: 110px; */
 }
 
 main>div {
