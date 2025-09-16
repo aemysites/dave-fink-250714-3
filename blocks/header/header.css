@@ -90,23 +90,23 @@ header .breadcrumbs .breadcrumbs-item a {
   box-sizing: border-box;
 }
 
+header nav a:any-link:hover {
+  color: #6ca100;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
 /* Home breadcrumb specific styles - simple flat button */
-header .breadcrumbs-item.home-breadcrumb a,
-header .breadcrumbs-item.home-breadcrumb.active {
+header .breadcrumbs .breadcrumbs-item.home-breadcrumb a,
+header .breadcrumbs .breadcrumbs-item.home-breadcrumb.active {
   border-left: none;
   border-right: 1px solid #e1e1e1;
-  text-transform: none !important;
+  text-transform: none;
   transform: skew(-35deg, 0deg);
   position: relative;
   background-color: #fff;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-}
-
-header nav a:any-link:hover {
-  color: #6ca100;
-  transition: color 0.2s ease;
-  text-decoration: none;
 }
 
 /* hamburger */
@@ -389,14 +389,14 @@ header .breadcrumbs-item.active:not(.home-breadcrumb):hover {
   cursor: pointer;
 }
 
-header .breadcrumbs-item.home-breadcrumb a:hover,
-header .breadcrumbs-item.home-breadcrumb.active:hover {
+header .breadcrumbs .breadcrumbs-item.home-breadcrumb a:hover,
+header .breadcrumbs .breadcrumbs-item.home-breadcrumb.active:hover {
   background-color: #f5f5f5;
   border-left: none;
   border-right: 1px solid #e1e1e1;
 }
 
-header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
+header .breadcrumbs .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
   content: "\e610";
   font-family: iconfont, sans-serif;
   font-style: normal;
@@ -406,8 +406,8 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
   color: #adadad;
 }
 
-  header .breadcrumbs-item.home-breadcrumb a span,
-  header .breadcrumbs-item.home-breadcrumb.active span {
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb a span,
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb.active span {
     transform: skew(35deg, 0deg);
     color: #636363;
   }
@@ -509,20 +509,30 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     box-sizing: border-box;
   }
 
-  header .breadcrumbs-item.home-breadcrumb a,
-  header .breadcrumbs-item.home-breadcrumb.active {
-    border-left: none;
-    border-right: 1px solid #e1e1e1;
-    text-transform: none !important;
-    transform: skew(-35deg, 0deg);
-    position: relative;
-    background-color: #fff;
-  }
-
   header nav a:any-link:hover {
     color: #6ca100;
     transition: color 0.2s ease;
     text-decoration: none;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li > a {
+    font-size: 13px;
+    color: #636363;
+    line-height: 18px;
+    display: block;
+    padding: 10px 0;
+    font-weight: 500;
+    text-align: left;
+    }
+
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb a,
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb.active {
+    border-left: none;
+    border-right: 1px solid #e1e1e1;
+    text-transform: none;
+    transform: skew(-35deg, 0deg);
+    position: relative;
+    background-color: #fff;
   }
 
   /* hamburger */
@@ -726,16 +736,6 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     padding: 10px 30px;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li > a {
-  font-size: 13px;
-  color: #636363;
-  line-height: 18px;
-  display: block;
-  padding: 10px 0;
-  font-weight: 500;
-  text-align: left;
-  }
-
   header .breadcrumbs .breadcrumbs-item:not(.home-breadcrumb) a {
     transform: skew(-35deg, 0deg);
   }
@@ -746,17 +746,17 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     z-index: 2;
   }
 
-  header .breadcrumbs-item.home-breadcrumb a:hover,
-  header .breadcrumbs-item.home-breadcrumb.active:hover {
-    background-color: #f5f5f5;
-    border-left: none;
-    border-right: 1px solid #e1e1e1;
-  }
-
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li > a:hover {
     color: #6ca100;
     transition: color 0.2s ease;
     text-decoration: none;
+  }
+
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb a:hover,
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb.active:hover {
+    background-color: #f5f5f5;
+    border-left: none;
+    border-right: 1px solid #e1e1e1;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li > a:any-link::after {
@@ -870,7 +870,7 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     cursor: pointer;
   }
 
-  header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     content: "\e610";
     font-family: iconfont, sans-serif;
     font-style: normal;
@@ -880,8 +880,8 @@ header .breadcrumbs-item.home-breadcrumb .breadcrumb-content::before {
     color: #adadad;
   }
 
-  header .breadcrumbs-item.home-breadcrumb a span,
-  header .breadcrumbs-item.home-breadcrumb.active span {
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb a span,
+  header .breadcrumbs .breadcrumbs-item.home-breadcrumb.active span {
   transform: skew(35deg, 0deg);
   color: #636363;
   } 
