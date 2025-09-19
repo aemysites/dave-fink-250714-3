@@ -333,6 +333,34 @@ main .section.light, main .section.highlight {
   top: -.8em;
 }
 
+/* about2 variant - based on about1 with modifications */
+.section.about2 {
+  margin-top: -52px;
+  margin-bottom: 20px;
+}
+
+.section.about2 h1 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #3e3092;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.section.about2 a {
+  color: #6ca100; 
+  text-decoration: underline; 
+}
+
+.section.about2 a:hover {
+  color: #3e3092;
+}
+
+.section.about2 sup {
+  font-size: 10px;
+  top: -.8em;
+}
+
 #which-type-of-breast-cancer-is-ibrance-for1 {
   margin-top: 0;
 }

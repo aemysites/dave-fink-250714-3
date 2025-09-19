@@ -273,6 +273,270 @@
 
 /* remove extra decoration on UL itself */
 
+/* columns1-variant1 - based on columns1 with modifications */
+.columns.columns1-variant1 {
+  background: #fff;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.columns.columns1-variant1 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (width <= 700px) {
+  .columns.columns1-variant1 > div {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .columns.columns1-variant1 > div > div:first-child {
+    width: 94vw !important;
+    margin-left: calc(-49vw + 50%) !important;
+    margin-right: 0 !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+    max-width: 49% !important;
+  }
+
+  .columns.columns1-variant1 > div > div:first-child p {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+    text-align: justify !important;
+  }
+
+  .columns.columns1-variant1 > div > div:first-child p:nth-child(2) {
+    margin-bottom: 20px;
+  }
+
+  .columns.columns1-variant1 > div > div:last-child {
+    margin: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    align-items: flex-start;
+    text-align: justify;
+  }
+}
+
+.columns.columns1-variant1 > div > div:first-child {
+  flex: 1 1 0%;
+  max-width: 56%;
+  color: #222;
+  font-size: 16px;
+  font-family: var(--body-font-family);
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: -3px;
+  text-align: justify;
+  letter-spacing: 0.4px;
+}
+
+.columns.columns1-variant1 > div > div:first-child a {
+  color: #6ca100;
+}
+
+.columns.columns1-variant1 > div > div:first-child sup {
+  font-size: 0.6em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.columns.columns1-variant1 > div > div:first-child p {
+  color: #222;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+  margin: 0 0 20px;
+  padding: 0;
+  text-align: left;
+}
+
+.columns.columns1-variant1 p {
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.columns.columns1-variant1 > div > div:first-child strong {
+  color: #8a69cc;
+  font-weight: 700;
+}
+
+.columns.columns1-variant1 > div > div:first-child p:has(strong) {
+  margin-bottom: 0;
+}
+
+.columns.columns1-variant1 > div > div:first-child h2 {
+  margin-top: 15px;
+  transform: translateY(20px) !important;
+  position: relative;
+}
+
+.columns.columns1-variant1 > div > div:first-child h2 + p {
+  transform: translateY(35px) !important;
+  position: relative;
+  width: calc(100% - 20px);
+  letter-spacing: 0.53px;
+}
+
+.columns.columns1-variant1 > div > div:first-child h2 + p + p {
+  transform: translateY(15px) !important;
+  position: relative;
+  letter-spacing: -0.12px;
+  width: calc(100% - 20px);
+}
+
+.columns.columns1-variant1 > div > div:first-child h2 + p + p + p {
+  letter-spacing: -0.25px;
+  transform: translateY(40px) !important;
+  position: relative;
+}
+
+.columns.columns1-variant1 > div > div:last-child {
+  flex: 0 1 4cqh;
+  min-width: 180px;
+  max-width: 400px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  color: #82bc00;
+  margin: 0 0 0 calc(10% + 10px);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+.columns.columns1-variant1 > div > div:last-child ul {
+  list-style: none;
+  margin: 15px 0 0 -5px;
+  padding: 0;
+  width: calc(100% + 50px);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  position: relative;
+}
+
+.columns.columns1-variant1 > div > div:last-child ul li {
+  color: rgb(130 188 0);
+  font-size: 16px;
+  padding: 4.5px 0 0 20px;
+  min-height: 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  line-height: 1.4;
+  width: 100%;
+  text-align: left;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.columns.columns1-variant1 > div > div:last-child ul li a {
+  color: rgb(130 188 0);
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  transition: color 0.2s;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.columns.columns1-variant1 > div > div:last-child ul li a:hover,
+.columns.columns1-variant1 > div > div:last-child ul li a:focus {
+  color: #7bb523;
+}
+
+/* vertical connector line */
+.columns.columns1-variant1 > div > div:last-child ul li::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: -3px; /* extend into the gap above */
+  bottom: -3px; /* extend into the gap below */
+  width: 1px;
+  background: rgb(130 188 0 / 40%);
+}
+
+/* circular marker */
+.columns.columns1-variant1 > div > div:last-child ul li::after {
+  content: "";
+  position: absolute;
+  left: 4px; /* centers the circle over the 8px line */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #82bc00;
+}
+
+/* hide circle on first bullet */
+.columns.columns1-variant1 > div > div:last-child ul > li:first-child::after {
+  display: none;
+}
+
+/* trim the connector above the first bullet and below the last bullet */
+.columns.columns1-variant1 > div > div:last-child ul > li:first-child::before { display: none; }
+.columns.columns1-variant1 > div > div:last-child ul > li:last-child::before { bottom: 50%; }
+
+/* if the first item is a label (like .first-li), hide its markers and start the line from the next item */
+.columns.columns1-variant1 > div > div:last-child ul > li.first-li {
+  padding-left: 0;
+  color: #444;
+  font-weight: 700;
+}
+
+.columns.columns1-variant1 > div > div:last-child ul > li.first-li::before,
+.columns.columns1-variant1 > div > div:last-child ul > li.first-li::after {
+  display: none;
+}
+.columns.columns1-variant1 > div > div:last-child ul > li.first-li + li::before { top: 50%; }
+
+/* if the first bullet is a normal item (not .first-li), avoid connecting line to the second */
+.columns.columns1-variant1 > div > div:last-child ul > li:nth-child(2)::before { top: 50%; }
+
+/* Add anchor-links icon at top of the list */
+.columns.columns1-variant1 > div > div:last-child ul::after {
+  font-family: iconfont, sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  content: "\e60b";
+  position: absolute;
+  left: -5px;
+  top: -2px;
+  font-size: 26px;
+  color: #82bc00;
+}
+
 
 .columns.columns23 {
   background: #fff;
