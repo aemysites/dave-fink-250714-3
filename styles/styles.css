@@ -80,9 +80,6 @@
     --heading-font-size-s: 16px;
     --heading-font-size-xs: 16px;
     --nav-height: 98px;
-    background-image: url(/icons/1.png);
-    background-size: contain;
-    padding-top: 49px;
   }
 }
 
