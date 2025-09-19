@@ -30,8 +30,6 @@
   --heading-font-size-xs: 16px;
   --nav-height: 88px;
   --header-height: var(--nav-height);
-  -
-  image: url(/icons/2.png);
 }
 
 /* fallback fonts */
