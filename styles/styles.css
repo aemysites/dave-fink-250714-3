@@ -30,9 +30,8 @@
   --heading-font-size-xs: 16px;
   --nav-height: 88px;
   --header-height: var(--nav-height);
-  background-image: url(/icons/2.png);
-  background-size: contain;
-  padding-top: 12px;
+  -
+  image: url(/icons/2.png);
 }
 
 /* fallback fonts */
@@ -95,8 +94,6 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.596;
-  /* opacity: 0.8; */
-  /* filter: invert(1); */
 }
 
 body.appear {
