@@ -30,6 +30,9 @@
   --heading-font-size-xs: 16px;
   --nav-height: 88px;
   --header-height: var(--nav-height);
+  background-image: url(/icons/2.png);
+  background-size: contain;
+  padding-top: 12px;
 }
 
 /* fallback fonts */
@@ -78,6 +81,9 @@
     --heading-font-size-s: 16px;
     --heading-font-size-xs: 16px;
     --nav-height: 98px;
+    background-image: url(/icons/1.png);
+    background-size: contain;
+    padding-top: 49px;
   }
 }
 
@@ -89,6 +95,8 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.596;
+  /* opacity: 0.8; */
+  /* filter: invert(1); */
 }
 
 body.appear {
@@ -122,6 +130,10 @@ h2 {
 
 h3 {
   font-size: var(--heading-font-size-l);
+  color: #430098;
+  line-height: 30px;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
 h4 {
