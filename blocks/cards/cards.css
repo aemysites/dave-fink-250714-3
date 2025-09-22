@@ -1697,6 +1697,7 @@
   font-size: 14px;
   color: #333;
   font-weight: 700;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
   line-height: 1.4;
   transition: all 0.2s ease;
   user-select: none;
@@ -1756,6 +1757,7 @@
   font-size: 14px;
   color: #333;
   font-weight: 400;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
   cursor: pointer;
   transition: background-color 0.2s ease;
   position: relative;
@@ -1777,11 +1779,13 @@
 
 .cards.cards17 .cards-card-body .custom-language-selector .selector-option.selected {
   font-weight: 700;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
 }
 
 /* Ensure selected option in dropdown is always bold */
 .cards.cards17 .cards-card-body .custom-language-selector .selector-option.selected span {
   font-weight: 700;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
 }
 
 /* Download button container: positioned at bottom */
