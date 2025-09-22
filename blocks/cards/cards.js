@@ -268,6 +268,9 @@ function setupLanguageSelector(card) {
   selectorWrapper.className = 'language-selector-wrapper';
   selectorWrapper.appendChild(selector);
 
+  // Add class to card to indicate it has a selector (for CSS styling)
+  card.classList.add('has-selector');
+
   // Create or find bottom section container
   let bottomSection = cardBody.querySelector('.bottom-section');
   if (!bottomSection) {
