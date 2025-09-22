@@ -1669,6 +1669,7 @@
   min-width: 180px;
   font-family: "Avenir LT W05_55 Roman", sans-serif;
   cursor: pointer;
+
   --dropdown-bg: white;
   --dropdown-border: #333;
   --dropdown-shadow: none;
@@ -1871,7 +1872,7 @@
   }
 
   .cards.cards17 > ul > li:not(:has(.language-selector-wrapper)) {
-    padding: 20px 20px 20px;
+    padding: 20px;
   }
 
 
@@ -1951,10 +1952,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-  
-  .cards.cards17 .button-container .button, 
-  .cards.cards17 .button-container a {
     background-size: 59% 22px;
   }
   
@@ -1964,7 +1961,6 @@
   }
 
   .cards.cards17 .cards-card-body .custom-language-selector .selector-selected {
-    padding: 15px 15px;
+    padding: 15px;
   }
-  
 }
