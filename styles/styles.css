@@ -325,7 +325,7 @@ main .section.light, main .section.highlight {
 
 /* about2 variant - based on about1 with modifications */
 .section.about2 {
-  margin-top: -52px;
+  margin-top: -12px !important;
   margin-bottom: 20px;
 }
 

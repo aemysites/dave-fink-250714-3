@@ -274,10 +274,15 @@
 /* remove extra decoration on UL itself */
 
 /* columns1-variant1 - based on columns1 with modifications */
+.columns-container:has(.columns.columns1-variant1) {
+  margin: 0;
+  padding: 0;
+}
+
 .columns.columns1-variant1 {
   background: #fff;
   padding: 0;
-  margin-top: 20px;
+  margin-top: -15px;
 }
 
 .columns.columns1-variant1 > div {
@@ -332,7 +337,7 @@
 
 .columns.columns1-variant1 > div > div:first-child {
   flex: 1 1 0%;
-  max-width: 56%;
+  max-width: calc(56% + 15px);
   color: #222;
   font-size: 16px;
   font-family: var(--body-font-family);
@@ -368,6 +373,11 @@
   text-align: left;
 }
 
+.columns.columns1-variant1 > div > div:first-child p:first-of-type {
+  color: #8a69cc;
+  margin-top: -20px;
+}
+
 .columns.columns1-variant1 p {
   font-size: 16px;
   line-height: 1.625;
@@ -385,28 +395,33 @@
 }
 
 .columns.columns1-variant1 > div > div:first-child h2 {
+  font-size: 28px;
+  line-height: 40px;
+  color: #3e3092;
+  margin-bottom: 20px;
+  font-weight: 400;
   margin-top: 15px;
   transform: translateY(20px) !important;
   position: relative;
 }
 
 .columns.columns1-variant1 > div > div:first-child h2 + p {
-  transform: translateY(35px) !important;
+  transform: translateY(40px) !important;
   position: relative;
   width: calc(100% - 20px);
-  letter-spacing: 0.53px;
+  letter-spacing: 0.33px;
 }
 
 .columns.columns1-variant1 > div > div:first-child h2 + p + p {
-  transform: translateY(15px) !important;
+  transform: translateY(20px) !important;
   position: relative;
-  letter-spacing: -0.12px;
+  letter-spacing: 0.38px;
   width: calc(100% - 20px);
 }
 
 .columns.columns1-variant1 > div > div:first-child h2 + p + p + p {
-  letter-spacing: -0.25px;
-  transform: translateY(40px) !important;
+  letter-spacing: 0.38px;
+  transform: translateY(20px) !important;
   position: relative;
 }
 
@@ -425,6 +440,7 @@
   justify-content: flex-start;
   text-align: center;
   letter-spacing: 0.4px;
+  transform: translateY(10px);
 }
 
 .columns.columns1-variant1 > div > div:last-child ul {
@@ -437,6 +453,7 @@
   gap: 0;
   align-items: flex-start;
   position: relative;
+  left: -5px;
 }
 
 .columns.columns1-variant1 > div > div:last-child ul li {
