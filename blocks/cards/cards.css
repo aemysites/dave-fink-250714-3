@@ -2051,3 +2051,400 @@
     padding-top: 18px;
   }
 }
+
+.cards.cards17 {
+  width: 100%;
+  padding-bottom: 8.5px;
+  background: transparent;
+  overflow: visible;
+}
+
+.cards.cards17 > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 23px 18px;
+  overflow: visible;
+}
+
+.cards.cards17 > ul > li {
+  background: #f5f5f5;
+  border-radius: 0;
+  padding: 24px 24px 0 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  min-width: 0;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+}
+
+.cards.cards17 .cards-card-image {
+  flex: 0 0 122px;
+  justify-content: center;
+}
+
+.cards.cards17 .cards-card-image img {
+  width: 94px;
+  height: auto;
+  float: left;
+  object-fit: contain;
+  display: block;
+  max-height: 140px;
+}
+
+.cards.cards17 .cards-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+  padding: 0;
+  height: 100%;
+  overflow: visible;
+}
+
+.cards.cards17 .cards-card-body h3 {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+  margin-left: -2px;
+  margin-top: 0;
+  color: #8e66c1;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+}
+
+.cards.cards17 .cards-card-body p {
+  color: #333;
+  font-size: 100%;
+  margin: 0 0 0 -2px;
+  line-height: 1.4286;
+  font-weight: 400;
+  margin-bottom: 19px;
+  padding-top: 0;
+}
+
+.cards.cards17 .cards-card-body .bottom-section {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.cards.cards17 .cards-card-body .language-selector-wrapper {
+  margin: -10px 0 6px -2px;
+  padding: 0;
+  overflow: visible;
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: 209px;
+  min-width: 180px;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  cursor: pointer;
+
+  --dropdown-bg: white;
+  --dropdown-border: #333;
+  --dropdown-shadow: none;
+  --dropdown-z-index: 9999;
+  --dropdown-border-radius: 4px;
+  --dropdown-transition: all 0.2s ease;
+  --dropdown-gap: 4px;
+  --dropdown-positioning-gap: var(--dropdown-gap);
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector .selector-options.no-transition {
+  transition: none !important;
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector .selector-options.positioned {
+  /* This class is added after positioning to enable smooth animations */
+  transition: var(--dropdown-transition);
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector .selector-selected {
+  padding: 10px 15px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector:hover .selector-selected {
+  border-color: #666;
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector:focus .selector-selected,
+.cards.cards17 .cards-card-body .custom-language-selector.open .selector-selected {
+  outline: none;
+  border-color: #333;
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector .selector-arrow {
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector.open .selector-arrow {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector .selector-options {
+  position: fixed;
+  top: var(--dropdown-top, -9999px);
+  left: var(--dropdown-left, -9999px);
+  width: var(--dropdown-width, 200px);
+  background: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border);
+  border-radius: var(--dropdown-border-radius);
+  box-shadow: var(--dropdown-shadow);
+  z-index: var(--dropdown-z-index);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--dropdown-transition);
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector.open .selector-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector .selector-option {
+  padding: 8px 14px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector .selector-option:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background-color: #333;
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector .selector-option:hover {
+  background-color: #f5f5f5;
+}
+
+.cards.cards17 .cards-card-body .custom-language-selector .selector-option.selected {
+  font-weight: 700;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+}
+
+/* Ensure selected option in dropdown is always bold */
+.cards.cards17 .cards-card-body .custom-language-selector .selector-option.selected span {
+  font-weight: 700;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+}
+
+/* Download button container: positioned at bottom */
+.cards.cards17 .cards-card-body .button-container {
+  width: 100%;
+  display: flex;
+}
+
+/* Button: match target design green color and styling */
+.cards.cards17 .button-container .button,
+.cards.cards17 .button-container a {
+  display: block;
+  background: #82bc00 url("/icons/download-icon-white.svg") no-repeat center left / 66px 23px;
+  width: 100%;
+  max-width: 209px;
+  min-width: 180px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+  border: none;
+  padding: 12px 14px;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+  font-family: "Avenir LT W05_55 Roman", sans-serif;
+  position: relative;
+  transition: none;
+}
+
+.cards.cards17 .button-container .button:hover,
+.cards.cards17 .button-container .button:focus,
+.cards.cards17 .button-container a:hover,
+.cards.cards17 .button-container a:focus {
+  background: #fff url("/icons/download-icon-green.svg") no-repeat center left / 66px 23px;
+  color: #82bc00;
+  border: 1px solid #82bc00;
+  transition: none;
+}
+
+.cards.cards17 .button-container .button:hover::after,
+.cards.cards17 .button-container .button:focus::after,
+.cards.cards17 .button-container a:hover::after,
+.cards.cards17 .button-container a:focus::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #82bc00;
+}
+
+
+
+/* Responsive: stack cards vertically at smaller breakpoints */
+@media (width < 768px) {
+ h3 {
+  color: #430098;
+  font-family: "Avenir LT W05_85 Heavy", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  padding-left: 5px;
+  }
+  
+  .cards.cards17 {
+    max-width: 100%;
+
+    /* padding: 0px 0px 0px 5px; */
+    margin: 0 auto 10px;
+  }
+
+  .cards.cards17 > ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 20px;
+  }
+
+  .cards.cards17 > ul > li {
+    min-height: 261px;
+    padding: 20px 20px 120px;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .cards.cards17 > ul > li:not(:has(.language-selector-wrapper)) {
+    padding: 20px;
+  }
+
+
+  .cards.cards17 > ul > li:has(.custom-language-selector),
+  .cards.cards17 > ul > li.has-selector {
+  min-height: 316px; 
+  }
+
+  .cards.cards17 .cards-card-image {
+    flex: 0 0 110px;
+    width: 100%;
+    min-width: 110px;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+
+  .cards.cards17 .cards-card-image img {
+    width: auto;
+    height: auto;
+  }
+
+  .cards.cards17 .cards-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .cards.cards17 .cards-card-body h3 {
+    font-size: 16px;
+    font-family: "Avenir LT W05_85 Heavy", sans-serif;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  .cards.cards17 .cards-card-body p {
+    font-size: 16px;
+    margin: 0 0 12px;
+    line-height: 26px;
+  }
+
+  .cards.cards17 .cards-card-body .language-selector-wrapper {
+    position: absolute;
+    bottom: 85px;
+    left: 20px;
+    right: 25px;
+    width: calc(100% - 50px);
+    margin: 0;
+  }
+
+  .cards.cards17 .cards-card-body .custom-language-selector {
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+  }
+
+  .cards.cards17 .cards-card-body .button-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 25px;
+    width: calc(100% - 50px);
+    height: 56px;
+    line-height: 56px;
+    margin: 0;
+  }
+
+  .cards.cards17 .button-container .button,
+  .cards.cards17 .button-container a {
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: 59% 22px;
+  }
+  
+  .cards.cards17 .button-container .button:hover,
+  .cards.cards17 .button-container a:hover {
+    background-size: 59% 22px;
+  }
+
+  .cards.cards17 .cards-card-body .custom-language-selector .selector-selected {
+    padding: 15px;
+  }
+}
