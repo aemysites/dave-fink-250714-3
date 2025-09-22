@@ -229,6 +229,10 @@ div.section.table-container {
   width: 100%;
   margin-bottom: 44px;
   max-width: 906px;
+  transform: translateY(59.5px);
+  position: relative;
+  z-index: 100;
+  padding-bottom: 20px;
 }
 
 .table.tablenoheader26 table {
