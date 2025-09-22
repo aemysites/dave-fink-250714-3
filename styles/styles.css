@@ -130,6 +130,10 @@ h2 {
 
 h3 {
   font-size: var(--heading-font-size-l);
+  color: #430098;
+  line-height: 30px;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
 h4 {
