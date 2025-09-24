@@ -1093,113 +1093,170 @@ a {
   }
 }
 
-.hero.hero47 {
-  background: #423298;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-height: 540px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0;
-  gap: 36px; /* Reduced gap for tighter columns */
+.hero.hero47.block {
+    width: 100%;
+    background: #432995;
+    box-sizing: border-box;
+    display: block;
+    margin: 20px 0 0;
+    min-height: 314px;
 }
 
-/* Left column: phone image */
-.hero.hero47 > div:first-child {
-  flex: 0 1 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  margin-right: 0;
-  min-width: 340px;
-  max-width: 500px;
+.hero.hero47.block > div:first-child {
+    display: block;
+    position: absolute;
+    width: 906px;
+    height: 314px;
+    justify-self: center;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none; /* Allow clicks to pass through */
 }
 
-.hero.hero47 > div:first-child > div {
-  width: 460px;
-  max-width: 98vw;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-left: -26px; /* Visually shift image closer to edge */
+.hero.hero47.block > div:first-child > div {
+      display: block;
+    width: auto;
+    position: absolute;
+    right: 18%;
+    bottom: 0;
 }
 
-.hero.hero47 > div:first-child picture,
-.hero.hero47 > div:first-child img {
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-  object-fit: cover;
+.hero.hero47.block > div:first-child picture,
+.hero.hero47.block > div:first-child img {
+    display: block;
+    width: 186px;
+    max-width: 310px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.hero.hero47.block > div:last-child {
   display: block;
-  margin-left: auto;
+    width: 906px;
+    justify-self: center;
+    position: relative;
+    padding: 34px 15px 18px;
+    box-sizing: border-box;
 }
 
-/* Right column: text content */
-.hero.hero47 > div:last-child {
-  flex: 1 1 710px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  min-width: 320px;
-  max-width: 670px;
-  padding-left: 0;
-  box-sizing: border-box;
+.hero.hero47.block > div:last-child > div {
+    width: 100%;
+    max-width: 440px;
+    margin: 0;
+    line-height: 1.5; /* Ensure proper inline layout for app store images */
 }
 
-.hero.hero47 > div:last-child > div {
-  width: 100%;
-  max-width: 600px;
+.hero.hero47.block > div:last-child > div > *:has(a[href*="play.google.com"]),
+.hero.hero47.block > div:last-child > div > *:has(a[href*="apps.apple.com"]) {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.hero.hero47.block > div:last-child > div > *:has(a[href*="apps.apple.com"]):last-child {
   margin: 0;
+}
+
+.hero.hero47.block > div:last-child > div > p:last-child,
+.hero.hero47.block > div:last-child > div > *:has(picture) {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  flex-flow: row nowrap;
+  gap: 16px;
+  align-items: center;
+  margin-top: 22px;
 }
 
-/* Heading styles */
-.hero.hero47 h1,
-.hero.hero47 h1#caremate-mbc {
-  color: #fff;
-  font-size: 2.9rem;
-  font-weight: 600;
-  margin: 0 0 28px; /* Increased margin for looser spacing */
-  line-height: 1.1;
-  text-align: left;
+.hero.hero47.block h2 {
+    margin: 0 0 20px;
+    text-align: left;
+    max-width: 428px;
+    font-size: 30px;
+    line-height: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 400;
 }
 
-/* Paragraph styles */
-.hero.hero47 p {
-  color: #e8e8e8;
-  font-size: 1.13rem;
-  margin: 0 0 18px;
-  line-height: 1.74; /* Looser line-height for readability */
-  text-align: left;
-  max-width: 99%;
+.hero.hero47.block > div:last-child > div p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+    margin-bottom: 20px;
 }
 
-/* Link styles */
+.hero.hero47.block > div:last-child > div p:last-child {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.hero.hero47.block > div:last-child > div p:nth-child(4),
+.hero.hero47.block > div:last-child > div p:nth-child(5) {
+  display: inline-flex;
+}
+
 .hero.hero47 a {
-  color: #53d1d0;
   text-decoration: underline;
   font-weight: 500;
+  --link-hover-color: #6ca100;
 }
 
-/* App badges row */
 .hero.hero47 > div:last-child p:last-child {
-  margin-top: 22px; /* Closer spacing to paragraph above */
+  margin-top: 22px;
   display: flex;
-  flex-direction: row;
-  gap: 24px;
+  flex-flow: row nowrap;
+  gap: 16px;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
-.hero.hero47 > div:last-child p:last-child picture {
-  margin: 0;
-  display: block;
+.hero.hero47 > div:last-child p:has(picture) {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  vertical-align: top;
+}
+
+.hero.hero47 > div:last-child p:has(a[href*="play.google.com"]),
+.hero.hero47 > div:last-child p:has(a[href*="apps.apple.com"]) {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.hero.hero47 a[href*="play.google.com"],
+.hero.hero47 a[href*="apps.apple.com"] {
+  display: inline-block;
+  margin-right: 16px;
+  vertical-align: top;
+}
+
+.hero.hero47 a[href*="apps.apple.com"]:last-of-type {
+  margin-right: 0;
+}
+
+.hero.hero47 > div:last-child p:last-child a,
+.hero.hero47 > div:last-child p a[href*="play.google.com"],
+.hero.hero47 > div:last-child p a[href*="apps.apple.com"] {
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+  margin-right: 16px;
+}
+
+.hero.hero47 > div:last-child p a[href*="apps.apple.com"]:last-of-type {
+  margin-right: 0;
+}
+
+.hero.hero47 > div:last-child p:last-child a:hover {
+  opacity: 0.8;
 }
 
 .hero.hero47 > div:last-child p:last-child img {
