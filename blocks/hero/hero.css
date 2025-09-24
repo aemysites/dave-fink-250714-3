@@ -469,8 +469,7 @@
   position: absolute;
   top: 0;
   width: 876px;
-  justify-self: center;
-  align-self: anchor-center; /* stylelint-disable-line declaration-property-value-no-unknown, declaration-block-no-redundant-longhand-properties */
+  place-self: center;
 }
 
 .hero.hero37.block > div:last-child > div {
@@ -693,13 +692,12 @@
     line-height: 32px;
   }
 
-  .hero.hero37.block > div:last-child {
+.hero.hero37.block > div:last-child {
     position: absolute;
     top: 0;
     width: 876px;
-    justify-self: center;
-    align-self: anchor-center; /* stylelint-disable-line declaration-property-value-no-unknown, declaration-block-no-redundant-longhand-properties */
     left: 20px;
+    place-self: center center;
   }
 
   .hero.hero37.block > div:last-child > div {
@@ -897,12 +895,11 @@
     display: none;
   }
 
-  .hero.hero37.block > div:last-child {
+.hero.hero37.block > div:last-child {
     position: absolute;
     top: 0;
     width: auto;
-    justify-self: center;
-    align-self: anchor-center; /* stylelint-disable-line declaration-property-value-no-unknown, declaration-block-no-redundant-longhand-properties */
+    align-self: center;
   }
 
   .hero.hero37.block > div:last-child > div {
@@ -960,18 +957,17 @@
   padding: 63px 296px 60px 72px;
   box-sizing: border-box;
   overflow: hidden;
-  gap: 0;               /* We'll manage spacing with column paddings for finer control */
+  gap: 0;
   transform: translateY(-13px);
 }
 
-/* Text Column - ensure it's on the left, aligns vertically center */
 .hero.hero33 > div:last-child {
   order: 1;
   flex: 1 1 0;
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 16px 0 0;  /* Add small right padding for tight text-image gap */
+  padding: 0 16px 0 0;
   margin: 0;
   box-sizing: border-box;
 }
@@ -984,19 +980,18 @@
   max-width: 508px;
   height: 130px;
   gap: 0.5rem;
-  margin-left: -3px; /* nudged left another 25px from 22px */
-  margin-top: -15px; /* nudged up 15px */
+  margin-left: -3px;
+  margin-top: -15px;
 }
 
-/* Image Column - on the right, maximize image size and flush right */
 .hero.hero33 > div:first-child {
   order: 2;
-  flex: 0 0 336px;      /* Wider image column for more immersion */
+  flex: 0 0 336px;
   display: flex;
-  align-items: flex-start; /* allow image to move from top */
+  align-items: flex-start;
   justify-content: flex-end;
   height: 100%;
-  padding: 0 20px 0 0;  /* add some right padding to prevent flush positioning */
+  padding: 0 20px 0 0;
   margin: 0;
   box-sizing: border-box;
 }
@@ -1008,14 +1003,13 @@
   max-width: none;
   max-height: none;
   object-fit: contain;
-  object-position: right bottom; /* keep visual content anchored bottom-right */
+  object-position: right bottom;
   display: block;
-  align-self: flex-start;  /* allow positioning from top */
-  margin-top: 24px; /* nudge image down 24px total */
-  margin-left: -32px; /* nudge image left 32px */
+  align-self: flex-start;
+  margin-top: 24px;
+  margin-left: -32px;
 }
 
-/* Typography */
 .hero.hero33 h2 {
   color: #3e3092;
   font-weight: 400;
@@ -1058,7 +1052,6 @@ a {
   top: calc(-.3em + 2px);
 }
 
-/* Responsive: Stack vertically on small screens */
 @media (width <= 950px) {
   .hero.hero33 {
     flex-direction: column;
@@ -1088,14 +1081,258 @@ a {
     width: 140px;
     max-width: 140px;
     max-height: 110px;
-    margin-right: 0; /* reset spacing on mobile */
-    transform: none; /* reset nudge on mobile */
+    margin-right: 0;
+    transform: none;
   }
 
   .hero.hero33 > div:last-child > div {
     max-width: 100%;
     width: 100%;
     height: auto;
-    margin-left: 0; /* reset on small screens */
+    margin-left: 0;
+  }
+}
+
+.hero.hero47.block {
+    width: 100%;
+    background: #432995;
+    box-sizing: border-box;
+    display: block;
+    margin: 20px 0 0;
+    min-height: 314px;
+}
+
+.hero.hero47.block > div:first-child {
+    display: block;
+    position: absolute;
+    width: 906px;
+    height: 314px;
+    justify-self: center;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.hero.hero47.block > div:first-child > div {
+      display: block;
+    width: auto;
+    position: absolute;
+    right: 18%;
+    bottom: 0;
+}
+
+.hero.hero47.block > div:first-child picture,
+.hero.hero47.block > div:first-child img {
+    display: block;
+    width: 186px;
+    max-width: 310px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.hero.hero47.block > div:last-child {
+  display: block;
+    width: 906px;
+    justify-self: center;
+    position: relative;
+    padding: 34px 15px 18px;
+    box-sizing: border-box;
+}
+
+.hero.hero47.block > div:last-child > div {
+    width: 100%;
+    max-width: 440px;
+    margin: 0;
+    line-height: 1.5; /* Ensure proper inline layout for app store images */
+}
+
+.hero.hero47.block > div:last-child > div > *:has(a[href*="play.google.com"]),
+.hero.hero47.block > div:last-child > div > *:has(a[href*="apps.apple.com"]) {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.hero.hero47.block > div:last-child > div > *:has(a[href*="apps.apple.com"]):last-child {
+  margin: 0;
+}
+
+.hero.hero47.block > div:last-child > div > p:last-child,
+.hero.hero47.block > div:last-child > div > *:has(picture) {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.hero.hero47.block h2 {
+    margin: 0 0 20px;
+    text-align: left;
+    max-width: 428px;
+    font-size: 30px;
+    line-height: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.hero.hero47.block > div:last-child > div p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero.hero47.block > div:last-child > div p:last-child {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.hero.hero47.block > div:last-child > div p:nth-child(4),
+.hero.hero47.block > div:last-child > div p:nth-child(5) {
+  display: inline-flex;
+}
+
+.hero.hero47 a {
+  text-decoration: underline;
+  font-weight: 500;
+  --link-hover-color: #6ca100;
+}
+
+.hero.hero47 > div:last-child p:last-child {
+  margin-top: 22px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero.hero47 > div:last-child p:has(picture) {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  vertical-align: top;
+}
+
+.hero.hero47 > div:last-child p:has(a[href*="play.google.com"]),
+.hero.hero47 > div:last-child p:has(a[href*="apps.apple.com"]) {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.hero.hero47 a[href*="play.google.com"],
+.hero.hero47 a[href*="apps.apple.com"] {
+  display: inline-block;
+  margin-right: 16px;
+  vertical-align: top;
+}
+
+.hero.hero47 a[href*="apps.apple.com"]:last-of-type {
+  margin-right: 0;
+}
+
+.hero.hero47 > div:last-child p:last-child a,
+.hero.hero47 > div:last-child p a[href*="play.google.com"],
+.hero.hero47 > div:last-child p a[href*="apps.apple.com"] {
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+  margin-right: 16px;
+}
+
+.hero.hero47 > div:last-child p a[href*="apps.apple.com"]:last-of-type {
+  margin-right: 0;
+}
+
+.hero.hero47 > div:last-child p:last-child a:hover {
+  opacity: 0.8;
+}
+
+.hero.hero47 > div:last-child p:last-child img {
+  display: block;
+  width: auto;
+  max-height: 42px;
+}
+
+.hero.hero47 picture {
+  z-index: unset;
+}
+
+/* Ensure vertical centering in nested flexboxes */
+.hero.hero47 > div,
+.hero.hero47 > div > div {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive stacking for smaller screens */
+@media (width <= 900px) {
+  .hero.hero47 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: unset;
+    padding: 32px 0;
+    gap: 16px;
+  }
+
+  .hero.hero47 > div:first-child,
+  .hero.hero47 > div:last-child {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    min-width: unset;
+  }
+
+  .hero.hero47 > div:first-child > div {
+    width: 320px;
+    max-width: 90vw;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .hero.hero47 > div:first-child img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hero.hero47 > div:last-child > div {
+    max-width: 95vw;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .hero.hero47 h1,
+  .hero.hero47 h1#caremate-mbc {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .hero.hero47 p {
+    text-align: center;
+    font-size: 1rem;
+    max-width: 95vw;
+  }
+
+  .hero.hero47 > div:last-child p:last-child {
+    justify-content: center;
+    margin-top: 18px;
+    gap: 14px;
   }
 }
