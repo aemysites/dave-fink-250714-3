@@ -66,11 +66,6 @@
   line-height: 0;
 }
 
-.cards.cards9.block > ul > li .cards-card-image img {
-  width: 67px;
-  height: 67px;
-}
-
 .cards .cards-card-body .button-container {
   width: 166px;
   height: 45px;
@@ -1780,7 +1775,6 @@
 }
 
 .cards.cards17 .cards-card-body .custom-language-selector .selector-options.positioned {
-  /* This class is added after positioning to enable smooth animations */
   transition: var(--dropdown-transition);
 }
 
@@ -1877,19 +1871,16 @@
   font-family: "Avenir LT W05_85 Heavy", sans-serif;
 }
 
-/* Ensure selected option in dropdown is always bold */
 .cards.cards17 .cards-card-body .custom-language-selector .selector-option.selected span {
   font-weight: 700;
   font-family: "Avenir LT W05_85 Heavy", sans-serif;
 }
 
-/* Download button container: positioned at bottom */
 .cards.cards17 .cards-card-body .button-container {
   width: 100%;
   display: flex;
 }
 
-/* Button: match target design green color and styling */
 .cards.cards17 .button-container .button,
 .cards.cards17 .button-container a {
   display: block;
@@ -1935,9 +1926,6 @@
   border-bottom: 15px solid #82bc00;
 }
 
-
-
-/* Responsive: stack cards vertically at smaller breakpoints */
 @media (width < 768px) {
  h3 {
   color: #430098;
@@ -1951,8 +1939,6 @@
   
   .cards.cards17 {
     max-width: 100%;
-
-    /* padding: 0px 0px 0px 5px; */
     margin: 0 auto 10px;
   }
 
@@ -2061,5 +2047,141 @@
 
   .cards.cards17 .cards-card-body .custom-language-selector .selector-selected {
     padding: 15px;
+  }
+}
+
+.cards.cards9 > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 44px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cards.cards9 > ul > li {
+  background: #4B2C83;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 420px;
+  min-width: 360px;
+  width: 100%;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.cards.cards9 .cards-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 18px;
+}
+
+.cards.cards9 .cards-card-image picture,
+.cards.cards9 .cards-card-image img {
+  background: #fff;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  padding: 8px;
+  object-fit: contain;
+  box-shadow: 0 2px 4px rgb(75 44 131 / 10%);
+}
+
+.cards.cards9 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 360px;
+  justify-content: flex-start;
+  padding: 12px 36px 36px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.cards.cards9 .cards-card-body p strong {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+.cards.cards9 .cards-card-body p {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0 0 14px;
+  line-height: 1.5;
+  text-align: left;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.cards.cards9 .cards-card-body .button-container {
+  text-align: left;
+  margin-top: 8px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.cards.cards9 .cards-card-body .button {
+  background: #7AC143;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 8px;
+  border: none;
+  padding: 18px 44px;
+  text-transform: uppercase;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+  transition: background 0.2s;
+  line-height: 1.25;
+  text-align: center;
+  margin: 0;
+}
+
+.cards.cards9 .cards-card-body .button:hover,
+.cards.cards9 .cards-card-body .button:focus {
+  background: #64a131;
+  color: #fff;
+}
+
+.cards.cards9 .cards-card-body p:last-child {
+  margin-top: auto;
+}
+
+.cards.cards9 .cards-card-body p:last-child picture,
+.cards.cards9 .cards-card-body p:last-child img {
+  width: 100%;
+  border-radius: 24px 24px 0 0;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+@media (width <= 900px) {
+  .cards.cards9 > ul {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .cards.cards9 > ul > li {
+    max-width: 97vw;
+    min-width: 280px;
+    width: 100%;
   }
 }
