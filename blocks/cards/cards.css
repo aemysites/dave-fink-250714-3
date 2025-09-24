@@ -66,11 +66,6 @@
   line-height: 0;
 }
 
-.cards.cards9.block > ul > li .cards-card-image img {
-  width: 67px;
-  height: 67px;
-}
-
 .cards .cards-card-body .button-container {
   width: 166px;
   height: 45px;
@@ -1780,7 +1775,6 @@
 }
 
 .cards.cards17 .cards-card-body .custom-language-selector .selector-options.positioned {
-  /* This class is added after positioning to enable smooth animations */
   transition: var(--dropdown-transition);
 }
 
@@ -1877,19 +1871,16 @@
   font-family: "Avenir LT W05_85 Heavy", sans-serif;
 }
 
-/* Ensure selected option in dropdown is always bold */
 .cards.cards17 .cards-card-body .custom-language-selector .selector-option.selected span {
   font-weight: 700;
   font-family: "Avenir LT W05_85 Heavy", sans-serif;
 }
 
-/* Download button container: positioned at bottom */
 .cards.cards17 .cards-card-body .button-container {
   width: 100%;
   display: flex;
 }
 
-/* Button: match target design green color and styling */
 .cards.cards17 .button-container .button,
 .cards.cards17 .button-container a {
   display: block;
@@ -1935,9 +1926,6 @@
   border-bottom: 15px solid #82bc00;
 }
 
-
-
-/* Responsive: stack cards vertically at smaller breakpoints */
 @media (width < 768px) {
  h3 {
   color: #430098;
@@ -1951,8 +1939,6 @@
   
   .cards.cards17 {
     max-width: 100%;
-
-    /* padding: 0px 0px 0px 5px; */
     margin: 0 auto 10px;
   }
 
@@ -2061,5 +2047,167 @@
 
   .cards.cards17 .cards-card-body .custom-language-selector .selector-selected {
     padding: 15px;
+  }
+}
+
+.cards.cards9 > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cards.cards9 > ul > li {
+  background: #4731A3;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgb(47 31 163 / 6%);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 320px;
+  max-width: 350px;
+  flex: 1 1 0;
+  min-height: 560px;
+  padding: 0;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+/* Centered icon at the top with more space below */
+.cards.cards9 .cards-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 0 0;
+}
+
+.cards.cards9 .cards-card-image picture,
+.cards.cards9 .cards-card-image img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 5%);
+}
+
+/* Card content area with margin-top for more space under icon */
+.cards.cards9 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  padding: 0 20px;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+
+.cards.cards9 .cards-card-body > p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+
+.cards.cards9 .cards-card-body > p strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Center the button and set fixed width with extra vertical spacing */
+.cards.cards9 .cards-card-body .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.cards.cards9 .cards-card-body .button-container > a.button,
+.cards.cards9 .cards-card-body .button-container > a {
+  background: #7CB342;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+  padding: 14px 0;
+  width: 220px;
+  max-width: 220px;
+  min-width: 160px;
+  box-shadow: none;
+  letter-spacing: 0.5px;
+  text-align: center;
+  transition: background 0.2s;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  line-height: 1.2;
+}
+
+.cards.cards9 .cards-card-body .button-container > a.button:hover,
+.cards.cards9 .cards-card-body .button-container > a:hover,
+.cards.cards9 .cards-card-body .button-container > a.button:focus,
+.cards.cards9 .cards-card-body .button-container > a:focus {
+  background: #689F38;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Bottom image styles */
+.cards.cards9 .cards-card-body > p:last-child {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.cards.cards9 .cards-card-body > p:last-child picture,
+.cards.cards9 .cards-card-body > p:last-child img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 32px 32px 0 0;
+  margin: 0;
+  background: #eee;
+}
+
+/* Make all cards the same height */
+
+/* Responsive: stack vertically on smaller screens */
+@media (width <= 900px) {
+  .cards.cards9 > ul {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .cards.cards9 > ul > li {
+    min-width: 0;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .cards.cards9 .cards-card-body {
+    padding: 0 12px;
+    margin-top: 18px;
+  }
+
+  .cards.cards9 .cards-card-image {
+    padding-left: 0;
   }
 }
